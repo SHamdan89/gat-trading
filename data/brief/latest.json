@@ -1,0 +1,290 @@
+{
+ "date": "2026-08-20",
+ "generated_utc": "2026-08-20T02:08:32Z",
+ "lookback_days": 7,
+ "sections": [
+  {
+   "name": "Tech",
+   "items": [
+    {
+     "headline": "Big tech sells off on AI spending, not AI demand",
+     "why": "Investors are no longer rewarding capex announcements on faith and are asking to see margin improvement from AI workloads first, which turns spending plans into a downside catalyst rather than an upside one.",
+     "sources": [
+      {
+       "title": "Yahoo Finance - Aug 18 market wrap",
+       "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-18-dow-sp-500-nasdaq-080822735.html"
+      },
+      {
+       "title": "AI stocks daily, Aug 17",
+       "url": "https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-08-17"
+      }
+     ]
+    },
+    {
+     "headline": "Chip equipment makers outperform the chip designers",
+     "why": "Money is rotating toward the companies selling the tools rather than the ones buying them, which is what a capacity build-out looks like before it shows up in end demand.",
+     "sources": [
+      {
+       "title": "AI stocks daily, Aug 17",
+       "url": "https://www.startuphub.ai/ai-news/ai-stocks-daily/2026/ai-stocks-2026-08-17"
+      }
+     ]
+    },
+    {
+     "headline": "Advanced packaging capacity is still the binding constraint on AI chips",
+     "why": "The bottleneck is packaging rather than wafer supply, so extra fab capacity does not translate into more shipped accelerators until packaging catches up.",
+     "sources": [
+      {
+       "title": "Semiconductor weekly, Aug 17",
+       "url": "https://www.originbrief.app/en/reports/semiconductor-chip-industry/2026-08-17/weekly"
+      }
+     ]
+    },
+    {
+     "headline": "Moderna jumps on late-stage melanoma vaccine results with Merck",
+     "why": "A single trial readout moved a large-cap more than the whole index moved that day, a reminder that healthcare event risk is still the biggest single-name mover in this market.",
+     "sources": [
+      {
+       "title": "Yahoo Finance - Aug 19",
+       "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-august-19-dow-sp-500-nasdaq-081116064.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Crypto",
+   "items": [
+    {
+     "headline": "Short squeeze drives the sharpest crypto rally in weeks",
+     "why": "Roughly $1.44bn of short positions were liquidated, meaning the move was driven by forced buying rather than new money, and squeezes of that kind fade unless spot demand follows.",
+     "sources": [
+      {
+       "title": "KuCoin - short liquidations",
+       "url": "https://www.kucoin.com/news/flash/crypto-market-surges-as-1-44b-short-liquidation-triggers-rally"
+      },
+      {
+       "title": "Stocktwits - $69K rally",
+       "url": "https://stocktwits.com/news-articles/markets/equity/solana-ethereum-xrp-outperform-bitcoin-69k-rally-1-5b-liquidations/cZYdVZyRJlf"
+      }
+     ]
+    },
+    {
+     "headline": "Ether, Solana and XRP outrun Bitcoin on the bounce",
+     "why": "The higher-beta majors leading a recovery is the usual early signature of risk appetite returning, and it is also what makes the move fragile if the macro trigger reverses.",
+     "sources": [
+      {
+       "title": "Stocktwits",
+       "url": "https://stocktwits.com/news-articles/markets/equity/solana-ethereum-xrp-outperform-bitcoin-69k-rally-1-5b-liquidations/cZYdVZyRJlf"
+      },
+      {
+       "title": "Crypto Briefing - market cap +$113B",
+       "url": "https://cryptobriefing.com/crypto-market-cap-113b-bitcoin-ethereum-rally/"
+      }
+     ]
+    },
+    {
+     "headline": "The rally still leaves the asset class far below its 2025 peak",
+     "why": "Total market value remains roughly 40% under the 2025 high, so this is a recovery inside a drawdown rather than a new cycle, and the year-to-date numbers stay deeply negative.",
+     "sources": [
+      {
+       "title": "Crypto Briefing",
+       "url": "https://cryptobriefing.com/crypto-market-cap-113b-bitcoin-ethereum-rally/"
+      }
+     ]
+    },
+    {
+     "headline": "The trigger came from the bond market, not from crypto",
+     "why": "Digital assets rallied on a US Treasury liquidity decision, which shows the sector is currently trading as a leveraged bet on dollar liquidity rather than on anything native to it.",
+     "sources": [
+      {
+       "title": "CNBC - Treasury buybacks",
+       "url": "https://www.cnbc.com/2026/08/19/treasury-announces-upscaled-buyback-operation-for-longer-term-debt-sending-yields-lower.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Macro & Geopolitics",
+   "items": [
+    {
+     "headline": "US Treasury doubles buybacks of long-dated debt",
+     "why": "Raising the cap from $2bn to at least $4bn per operation is the government stepping in to support demand at the long end, and it repriced yields, the dollar and every risk asset in a single session.",
+     "sources": [
+      {
+       "title": "CNBC",
+       "url": "https://www.cnbc.com/2026/08/19/treasury-announces-upscaled-buyback-operation-for-longer-term-debt-sending-yields-lower.html"
+      },
+      {
+       "title": "NBC News",
+       "url": "https://www.nbcnews.com/business/economy/bonds-bessent-treasury-debt-repurchase-rcna593319"
+      }
+     ]
+    },
+    {
+     "headline": "Thirty-year yields had just hit their highest since 2007",
+     "why": "The intervention follows long yields reaching levels not seen in nearly two decades, which frames the buyback as a response to stress rather than a routine liquidity adjustment.",
+     "sources": [
+      {
+       "title": "TheStreet - Aug 18",
+       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-18-2026"
+      },
+      {
+       "title": "CNN Business",
+       "url": "https://www.cnn.com/2026/08/19/investing/bond-market-treasury-bessent"
+      }
+     ]
+    },
+    {
+     "headline": "US public debt passes $40 trillion for the first time",
+     "why": "Crossing that line while long-term borrowing costs are near two-decade highs is what makes the interest bill, rather than the debt total itself, the number that constrains policy from here.",
+     "sources": [
+      {
+       "title": "CNBC",
+       "url": "https://www.cnbc.com/2026/08/19/treasury-announces-upscaled-buyback-operation-for-longer-term-debt-sending-yields-lower.html"
+      }
+     ]
+    },
+    {
+     "headline": "UAE suspends economic dealings with Iran as shipping is disrupted",
+     "why": "Vessels turning back and a reported strike near the strait put a live risk premium under crude, independent of inventories or demand.",
+     "sources": [
+      {
+       "title": "Trading Economics - crude",
+       "url": "https://tradingeconomics.com/commodity/crude-oil"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Commodities",
+   "items": [
+    {
+     "headline": "Gold and silver surge as yields and the dollar drop",
+     "why": "Both metals moved on the same Treasury announcement, confirming this leg is a real-rate and dollar story rather than a fresh safe-haven bid.",
+     "sources": [
+      {
+       "title": "Exchange Rates UK",
+       "url": "https://www.exchangerates.org.uk/news/46908/2026-08-19-gold-and-silver-prices-surge-as-treasury-move-hits-yields-and-dollar.html"
+      },
+      {
+       "title": "Forbes - gold two-month high",
+       "url": "https://www.forbes.com/sites/conormurray/2026/08/19/gold-price-hits-two-month-high-after-mostly-stagnant-summer/"
+      }
+     ]
+    },
+    {
+     "headline": "Silver outpaces gold again on the move up",
+     "why": "Silver's larger percentage gain is the pattern that compresses the gold-to-silver ratio, and it is why the ratio is worth watching as a gauge of how speculative the metals bid is.",
+     "sources": [
+      {
+       "title": "Fortune - silver price",
+       "url": "https://fortune.com/article/current-price-of-silver-8-19-2026/"
+      },
+      {
+       "title": "Trading Economics - silver",
+       "url": "https://tradingeconomics.com/commodity/silver"
+      }
+     ]
+    },
+    {
+     "headline": "US crude inventories build by 4.4 million barrels",
+     "why": "A sizeable build alongside distillate stocks at a one-month low points to a market that is well supplied in crude but tight in refined product, which supports refining margins more than the barrel.",
+     "sources": [
+      {
+       "title": "Trading Economics - crude",
+       "url": "https://tradingeconomics.com/commodity/crude-oil"
+      }
+     ]
+    },
+    {
+     "headline": "US refinery run rates reach their highest since 2019",
+     "why": "Refiners running this hard caps how much further product cracks can widen and pulls crude out of storage, so it works against the inventory build above.",
+     "sources": [
+      {
+       "title": "Trading Economics - crude",
+       "url": "https://tradingeconomics.com/commodity/crude-oil"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Market TA",
+   "items": [
+    {
+     "headline": "S&P 500 snaps a three-day losing streak, closing near 7,708",
+     "why": "The index recovered only after the bond move, so the equity bid is currently contingent on yields staying lower rather than on anything in earnings.",
+     "sources": [
+      {
+       "title": "The Motley Fool - Aug 19",
+       "url": "https://www.fool.com/coverage/stock-market-today/2026/08/19/stock-market-today-aug-19-stocks-edge-higher-ending-3-day-losing-streak/"
+      },
+      {
+       "title": "TheStreet - Aug 19",
+       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-19-2026"
+      }
+     ]
+    },
+    {
+     "headline": "Breadth carried the tape while technology lagged",
+     "why": "Healthcare and cyclicals did the lifting on an up day for the index, and a rally that works without the largest sector is a different market than the one traded for most of this year.",
+     "sources": [
+      {
+       "title": "TheStreet - Aug 19",
+       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-19-2026"
+      }
+     ]
+    },
+    {
+     "headline": "The dollar index fell to its lowest since mid-May",
+     "why": "A roughly 0.8% single-day drop is a large move for a currency index and it is the mechanical link between the bond announcement and the strength in metals and crypto.",
+     "sources": [
+      {
+       "title": "Exchange Rates UK",
+       "url": "https://www.exchangerates.org.uk/news/46908/2026-08-19-gold-and-silver-prices-surge-as-treasury-move-hits-yields-and-dollar.html"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Watchlist filter",
+   "items": [
+    {
+     "headline": "One event is driving most of today's table",
+     "why": "Gold, silver, the dollar index and the whole crypto block all moved on the same Treasury buyback decision, so treat those green numbers as one correlated bet, not four separate signals.",
+     "sources": [
+      {
+       "title": "CNBC",
+       "url": "https://www.cnbc.com/2026/08/19/treasury-announces-upscaled-buyback-operation-for-longer-term-debt-sending-yields-lower.html"
+      }
+     ]
+    },
+    {
+     "headline": "Meta and Microsoft are the weak names on the list",
+     "why": "Both are being marked down for AI spending rather than for trading results, which is why they lag the index on the 7-day and 30-day columns.",
+     "sources": [
+      {
+       "title": "Yahoo Finance - Aug 18",
+       "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-18-dow-sp-500-nasdaq-080822735.html"
+      }
+     ]
+    },
+    {
+     "headline": "Oil and gas names carry a shipping risk premium",
+     "why": "Disruption near the strait supports crude and the producers listed here, and it is a headline risk that can reverse faster than the supply and demand data underneath it.",
+     "sources": [
+      {
+       "title": "Trading Economics - crude",
+       "url": "https://tradingeconomics.com/commodity/crude-oil"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "published_utc": "2026-08-20T02:09:26Z"
+}
