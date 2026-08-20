@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gat.trading</title>
+<meta name="description" content="Daily asset prices and market brief.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark">gat</span><span class="dot">.</span><span class="tld">trading</span>
+    </div>
+    <div class="stamp" id="stamp">loading…</div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <div class="wrap">
+    <button class="tab is-active" role="tab" aria-selected="true"  data-panel="markets">Markets</button>
+    <button class="tab"           role="tab" aria-selected="false" data-panel="brief">Daily Brief</button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="markets" class="panel is-active" role="tabpanel">
+    <div id="status" class="status">Loading market data…</div>
+    <div id="tables"></div>
+
+    <details class="notes">
+      <summary>Sources &amp; method</summary>
+      <ul>
+        <li><b>How it works.</b> Prices are pulled once a day by a scheduled job and stored. This page reads that stored file — it never calls a price API itself, so it costs nothing to visit and behaves the same at any level of traffic.</li>
+        <li><b>Crypto</b> — CoinGecko. <b>Equities, indices, DXY, oil &amp; gas</b> — Yahoo Finance. <b>Gold, silver, copper</b> — live spot, with gold and silver history from the LBMA official benchmark fixes. <b>US M2</b> — the St.&nbsp;Louis Fed (FRED).</li>
+        <li><b>Oil and natural gas</b> are front-month futures. There is no free spot feed for either, and the front-month contract is the price the market actually quotes.</li>
+        <li><b>US M2</b> is published weekly and in arrears, so its date is older than the rest of the table and it has no 24h figure. Its changes are measured from the publication date, not from today.</li>
+        <li><b>N/A</b> means the figure genuinely cannot be computed yet — not zero. Copper has no free spot history, so its changes fill in as days accumulate. SpaceX listed in June 2026, so it has no year-start price to measure against.</li>
+        <li>Percentages come from each source's own history where it exists, so a missed day never distorts a number.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="brief" class="panel" role="tabpanel">
+    <div class="empty">
+      <h2>The daily brief isn't running yet</h2>
+      <p>This tab will carry a written market brief — tech, crypto, macro and geopolitics,
+         commodities, and technical levels — generated once a day and filtered down to what
+         actually moved.</p>
+      <p class="muted">Nothing is shown here rather than showing something unverified.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>gat.trading</span>
+  <span class="muted">Information only. Not advice, not a recommendation, and not a live quote.</span>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
