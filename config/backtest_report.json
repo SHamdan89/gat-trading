@@ -1,0 +1,1287 @@
+{
+ "generated_utc": "2026-08-20T22:36:15Z",
+ "years": 10,
+ "provenance": {
+  "gold": {
+   "source": "lbma",
+   "symbol": "gold_pm",
+   "fetched_utc": "2026-08-20T22:36:10Z",
+   "rows": 2512,
+   "first": "2016-08-11",
+   "last": "2026-08-19"
+  },
+  "silver": {
+   "source": "lbma",
+   "symbol": "silver",
+   "fetched_utc": "2026-08-20T22:36:10Z",
+   "rows": 2532,
+   "first": "2016-08-11",
+   "last": "2026-08-19"
+  },
+  "wti": {
+   "source": "yahoo",
+   "symbol": "CL=F",
+   "fetched_utc": "2026-08-20T22:36:11Z",
+   "rows": 2513,
+   "first": "2016-08-22",
+   "last": "2026-08-20",
+   "nonpositive_rows_dropped": 1
+  },
+  "btc": {
+   "source": "yahoo",
+   "symbol": "BTC-USD",
+   "fetched_utc": "2026-08-20T22:36:12Z",
+   "rows": 3653,
+   "first": "2016-08-20",
+   "last": "2026-08-20"
+  },
+  "spx": {
+   "source": "yahoo",
+   "symbol": "^GSPC",
+   "fetched_utc": "2026-08-20T22:36:13Z",
+   "rows": 2513,
+   "first": "2016-08-22",
+   "last": "2026-08-20"
+  },
+  "ndx": {
+   "source": "yahoo",
+   "symbol": "^NDX",
+   "fetched_utc": "2026-08-20T22:36:14Z",
+   "rows": 2513,
+   "first": "2016-08-22",
+   "last": "2026-08-20"
+  },
+  "dxy": {
+   "source": "yahoo",
+   "symbol": "DX-Y.NYB",
+   "fetched_utc": "2026-08-20T22:36:15Z",
+   "rows": 2513,
+   "first": "2016-08-22",
+   "last": "2026-08-20"
+  }
+ },
+ "instruments": {
+  "gold": {
+   "name": "Gold (spot)",
+   "rows": 2512,
+   "garch_refits": {
+    "at": "2025-10-16",
+    "alpha": 0.06,
+    "beta": 0.92
+   },
+   "ewma94": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.8076,
+     "coverage_ci95": [
+      0.7642,
+      0.8509
+     ],
+     "mean_interval_score": 0.088193,
+     "median_width": 0.052134,
+     "christoffersen_lr": 8.789,
+     "christoffersen_p": 0.003
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.7816,
+     "coverage_ci95": [
+      0.7196,
+      0.8387
+     ],
+     "mean_interval_score": 0.168076,
+     "median_width": 0.111183,
+     "christoffersen_lr": 61.738,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 358,
+     "coverage": 0.7654,
+     "coverage_ci95": [
+      0.6592,
+      0.8688
+     ],
+     "mean_interval_score": 0.460859,
+     "median_width": 0.256543,
+     "christoffersen_lr": 232.133,
+     "christoffersen_p": 0.0
+    }
+   },
+   "ewma97": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.8022,
+     "coverage_ci95": [
+      0.7588,
+      0.8428
+     ],
+     "mean_interval_score": 0.08817,
+     "median_width": 0.052649,
+     "christoffersen_lr": 5.62,
+     "christoffersen_p": 0.0178
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.7742,
+     "coverage_ci95": [
+      0.7121,
+      0.8337
+     ],
+     "mean_interval_score": 0.161119,
+     "median_width": 0.108949,
+     "christoffersen_lr": 58.174,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 358,
+     "coverage": 0.757,
+     "coverage_ci95": [
+      0.648,
+      0.8659
+     ],
+     "mean_interval_score": 0.442845,
+     "median_width": 0.262924,
+     "christoffersen_lr": 264.272,
+     "christoffersen_p": 0.0
+    }
+   },
+   "garch": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.7805,
+     "coverage_ci95": [
+      0.7344,
+      0.8266
+     ],
+     "mean_interval_score": 0.087435,
+     "median_width": 0.04708,
+     "christoffersen_lr": 4.481,
+     "christoffersen_p": 0.0343
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.7469,
+     "coverage_ci95": [
+      0.6774,
+      0.8114
+     ],
+     "mean_interval_score": 0.163855,
+     "median_width": 0.097569,
+     "christoffersen_lr": 83.159,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 358,
+     "coverage": 0.7374,
+     "coverage_ci95": [
+      0.6256,
+      0.8492
+     ],
+     "mean_interval_score": 0.439595,
+     "median_width": 0.227444,
+     "christoffersen_lr": 242.273,
+     "christoffersen_p": 0.0
+    }
+   },
+   "trend_1m": {
+    "n": 403,
+    "median_ae_nochange": 0.026646,
+    "median_ae_trend": 0.031499,
+    "mean_ae_diff_ci95": [
+     -0.006593,
+     0.000516
+    ],
+    "trend_better_pooledMAE": false,
+    "trend_sig_better": false,
+    "dir_accuracy": 0.5136,
+    "best_constant_base_rate": 0.5955,
+    "dir_beats_base": false,
+    "brier_trend": 0.2696,
+    "brier_base": 0.2409
+   },
+   "stance_1w": {
+    "Buy": {
+     "n": 1,
+     "hit_rate": 0.0
+    },
+    "Flat": {
+     "n": 109,
+     "hit_rate": 0.8073
+    },
+    "Hold": {
+     "n": 206,
+     "hit_rate": 0.568
+    },
+    "Sell": {
+     "n": 25,
+     "hit_rate": 0.36
+    },
+    "Wait": {
+     "n": 28,
+     "hit_rate": 0.25
+    }
+   }
+  },
+  "silver": {
+   "name": "Silver (spot)",
+   "rows": 2532,
+   "garch_refits": {
+    "at": "2025-10-09",
+    "alpha": 0.08,
+    "beta": 0.9
+   },
+   "ewma94": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.7805,
+     "coverage_ci95": [
+      0.7398,
+      0.8211
+     ],
+     "mean_interval_score": 0.189959,
+     "median_width": 0.099031,
+     "christoffersen_lr": 0.245,
+     "christoffersen_p": 0.6207
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.7767,
+     "coverage_ci95": [
+      0.7122,
+      0.8313
+     ],
+     "mean_interval_score": 0.345234,
+     "median_width": 0.188203,
+     "christoffersen_lr": 78.439,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 358,
+     "coverage": 0.6676,
+     "coverage_ci95": [
+      0.5418,
+      0.7933
+     ],
+     "mean_interval_score": 1.158637,
+     "median_width": 0.440363,
+     "christoffersen_lr": 260.507,
+     "christoffersen_p": 0.0
+    }
+   },
+   "ewma97": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.7778,
+     "coverage_ci95": [
+      0.7344,
+      0.8211
+     ],
+     "mean_interval_score": 0.190787,
+     "median_width": 0.100406,
+     "christoffersen_lr": 0.0,
+     "christoffersen_p": 0.9882
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.7643,
+     "coverage_ci95": [
+      0.6972,
+      0.8213
+     ],
+     "mean_interval_score": 0.343614,
+     "median_width": 0.189418,
+     "christoffersen_lr": 77.229,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 358,
+     "coverage": 0.6899,
+     "coverage_ci95": [
+      0.5642,
+      0.8045
+     ],
+     "mean_interval_score": 1.152014,
+     "median_width": 0.443227,
+     "christoffersen_lr": 269.151,
+     "christoffersen_p": 0.0
+    }
+   },
+   "garch": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.7398,
+     "coverage_ci95": [
+      0.6965,
+      0.7832
+     ],
+     "mean_interval_score": 0.191334,
+     "median_width": 0.088881,
+     "christoffersen_lr": 0.045,
+     "christoffersen_p": 0.8315
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.7097,
+     "coverage_ci95": [
+      0.6427,
+      0.7667
+     ],
+     "mean_interval_score": 0.341947,
+     "median_width": 0.167414,
+     "christoffersen_lr": 68.05,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 358,
+     "coverage": 0.6173,
+     "coverage_ci95": [
+      0.486,
+      0.7403
+     ],
+     "mean_interval_score": 1.170926,
+     "median_width": 0.393198,
+     "christoffersen_lr": 252.126,
+     "christoffersen_p": 0.0
+    }
+   },
+   "trend_1m": {
+    "n": 403,
+    "median_ae_nochange": 0.050808,
+    "median_ae_trend": 0.057289,
+    "mean_ae_diff_ci95": [
+     -0.01516,
+     -0.000262
+    ],
+    "trend_better_pooledMAE": false,
+    "trend_sig_better": false,
+    "dir_accuracy": 0.4925,
+    "best_constant_base_rate": 0.5558,
+    "dir_beats_base": false,
+    "brier_trend": 0.2729,
+    "brier_base": 0.2469
+   },
+   "stance_1w": {
+    "Buy": {
+     "n": 3,
+     "hit_rate": 0.0
+    },
+    "Flat": {
+     "n": 132,
+     "hit_rate": 0.8333
+    },
+    "Hold": {
+     "n": 179,
+     "hit_rate": 0.5754
+    },
+    "Sell": {
+     "n": 3,
+     "hit_rate": 1.0
+    },
+    "Wait": {
+     "n": 52,
+     "hit_rate": 0.4038
+    }
+   }
+  },
+  "wti": {
+   "name": "Oil (WTI)",
+   "rows": 2512,
+   "garch_refits": {
+    "at": "2025-10-23",
+    "alpha": 0.14,
+    "beta": 0.84
+   },
+   "ewma94": {
+    "1w": {
+     "n": 368,
+     "coverage": 0.7908,
+     "coverage_ci95": [
+      0.7473,
+      0.8342
+     ],
+     "mean_interval_score": 0.212436,
+     "median_width": 0.115119,
+     "christoffersen_lr": 1.411,
+     "christoffersen_p": 0.235
+    },
+    "1m": {
+     "n": 402,
+     "coverage": 0.8134,
+     "coverage_ci95": [
+      0.7537,
+      0.8657
+     ],
+     "mean_interval_score": 0.454356,
+     "median_width": 0.253745,
+     "christoffersen_lr": 29.853,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 356,
+     "coverage": 0.9494,
+     "coverage_ci95": [
+      0.9073,
+      0.9831
+     ],
+     "mean_interval_score": 0.825059,
+     "median_width": 0.596279,
+     "christoffersen_lr": 43.673,
+     "christoffersen_p": 0.0
+    }
+   },
+   "ewma97": {
+    "1w": {
+     "n": 368,
+     "coverage": 0.769,
+     "coverage_ci95": [
+      0.7228,
+      0.8152
+     ],
+     "mean_interval_score": 0.213045,
+     "median_width": 0.110312,
+     "christoffersen_lr": 0.452,
+     "christoffersen_p": 0.5013
+    },
+    "1m": {
+     "n": 402,
+     "coverage": 0.8284,
+     "coverage_ci95": [
+      0.7786,
+      0.8756
+     ],
+     "mean_interval_score": 0.446951,
+     "median_width": 0.245764,
+     "christoffersen_lr": 26.828,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 356,
+     "coverage": 0.9719,
+     "coverage_ci95": [
+      0.941,
+      0.9944
+     ],
+     "mean_interval_score": 0.805657,
+     "median_width": 0.637058,
+     "christoffersen_lr": 18.189,
+     "christoffersen_p": 0.0
+    }
+   },
+   "garch": {
+    "1w": {
+     "n": 368,
+     "coverage": 0.7717,
+     "coverage_ci95": [
+      0.7309,
+      0.8126
+     ],
+     "mean_interval_score": 0.208402,
+     "median_width": 0.107449,
+     "christoffersen_lr": 0.133,
+     "christoffersen_p": 0.7154
+    },
+    "1m": {
+     "n": 402,
+     "coverage": 0.7886,
+     "coverage_ci95": [
+      0.7288,
+      0.8433
+     ],
+     "mean_interval_score": 0.438236,
+     "median_width": 0.230303,
+     "christoffersen_lr": 45.06,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 356,
+     "coverage": 0.927,
+     "coverage_ci95": [
+      0.8764,
+      0.9691
+     ],
+     "mean_interval_score": 0.754789,
+     "median_width": 0.547744,
+     "christoffersen_lr": 63.682,
+     "christoffersen_p": 0.0
+    }
+   },
+   "trend_1m": {
+    "n": 402,
+    "median_ae_nochange": 0.061478,
+    "median_ae_trend": 0.067437,
+    "mean_ae_diff_ci95": [
+     -0.017138,
+     -0.001209
+    ],
+    "trend_better_pooledMAE": false,
+    "trend_sig_better": false,
+    "dir_accuracy": 0.5299,
+    "best_constant_base_rate": 0.5274,
+    "dir_beats_base": true,
+    "brier_trend": 0.2714,
+    "brier_base": 0.2493
+   },
+   "stance_1w": {
+    "Buy": {
+     "n": 11,
+     "hit_rate": 0.5455
+    },
+    "Flat": {
+     "n": 160,
+     "hit_rate": 0.775
+    },
+    "Hold": {
+     "n": 109,
+     "hit_rate": 0.5413
+    },
+    "Sell": {
+     "n": 7,
+     "hit_rate": 0.4286
+    },
+    "Wait": {
+     "n": 81,
+     "hit_rate": 0.4198
+    }
+   }
+  },
+  "btc": {
+   "name": "Bitcoin",
+   "rows": 3653,
+   "garch_refits": {
+    "at": "2026-06-11",
+    "alpha": 0.1,
+    "beta": 0.86
+   },
+   "ewma94": {
+    "1w": {
+     "n": 385,
+     "coverage": 0.8104,
+     "coverage_ci95": [
+      0.774,
+      0.8468
+     ],
+     "mean_interval_score": 0.328288,
+     "median_width": 0.195307,
+     "christoffersen_lr": 0.324,
+     "christoffersen_p": 0.569
+    },
+    "1m": {
+     "n": 419,
+     "coverage": 0.7852,
+     "coverage_ci95": [
+      0.7303,
+      0.8401
+     ],
+     "mean_interval_score": 0.736288,
+     "median_width": 0.441581,
+     "christoffersen_lr": 114.338,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 373,
+     "coverage": 0.6676,
+     "coverage_ci95": [
+      0.555,
+      0.7695
+     ],
+     "mean_interval_score": 2.026132,
+     "median_width": 1.114041,
+     "christoffersen_lr": 228.474,
+     "christoffersen_p": 0.0
+    }
+   },
+   "ewma97": {
+    "1w": {
+     "n": 385,
+     "coverage": 0.8104,
+     "coverage_ci95": [
+      0.774,
+      0.8468
+     ],
+     "mean_interval_score": 0.322221,
+     "median_width": 0.194428,
+     "christoffersen_lr": 0.053,
+     "christoffersen_p": 0.8179
+    },
+    "1m": {
+     "n": 419,
+     "coverage": 0.7828,
+     "coverage_ci95": [
+      0.7255,
+      0.8378
+     ],
+     "mean_interval_score": 0.708707,
+     "median_width": 0.445476,
+     "christoffersen_lr": 99.516,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 373,
+     "coverage": 0.689,
+     "coverage_ci95": [
+      0.571,
+      0.7963
+     ],
+     "mean_interval_score": 1.934321,
+     "median_width": 1.159268,
+     "christoffersen_lr": 262.169,
+     "christoffersen_p": 0.0
+    }
+   },
+   "garch": {
+    "1w": {
+     "n": 385,
+     "coverage": 0.8494,
+     "coverage_ci95": [
+      0.8182,
+      0.8805
+     ],
+     "mean_interval_score": 0.33385,
+     "median_width": 0.213913,
+     "christoffersen_lr": 2.352,
+     "christoffersen_p": 0.1251
+    },
+    "1m": {
+     "n": 419,
+     "coverage": 0.8138,
+     "coverage_ci95": [
+      0.7637,
+      0.8663
+     ],
+     "mean_interval_score": 0.734833,
+     "median_width": 0.487784,
+     "christoffersen_lr": 95.457,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 373,
+     "coverage": 0.7453,
+     "coverage_ci95": [
+      0.646,
+      0.8365
+     ],
+     "mean_interval_score": 1.944415,
+     "median_width": 1.211347,
+     "christoffersen_lr": 161.741,
+     "christoffersen_p": 0.0
+    }
+   },
+   "trend_1m": {
+    "n": 419,
+    "median_ae_nochange": 0.101343,
+    "median_ae_trend": 0.124233,
+    "mean_ae_diff_ci95": [
+     -0.026767,
+     -0.004055
+    ],
+    "trend_better_pooledMAE": false,
+    "trend_sig_better": false,
+    "dir_accuracy": 0.5131,
+    "best_constant_base_rate": 0.5442,
+    "dir_beats_base": false,
+    "brier_trend": 0.2676,
+    "brier_base": 0.2481
+   },
+   "stance_1w": {
+    "Buy": {
+     "n": 21,
+     "hit_rate": 0.381
+    },
+    "Flat": {
+     "n": 114,
+     "hit_rate": 0.807
+    },
+    "Hold": {
+     "n": 168,
+     "hit_rate": 0.5952
+    },
+    "Sell": {
+     "n": 17,
+     "hit_rate": 0.5882
+    },
+    "Wait": {
+     "n": 65,
+     "hit_rate": 0.4462
+    }
+   }
+  },
+  "spx": {
+   "name": "S&P 500",
+   "rows": 2513,
+   "garch_refits": {
+    "at": "2025-10-23",
+    "alpha": 0.14,
+    "beta": 0.84
+   },
+   "ewma94": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.794,
+     "coverage_ci95": [
+      0.7479,
+      0.8347
+     ],
+     "mean_interval_score": 0.081809,
+     "median_width": 0.044046,
+     "christoffersen_lr": 0.298,
+     "christoffersen_p": 0.5854
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.8263,
+     "coverage_ci95": [
+      0.7717,
+      0.876
+     ],
+     "mean_interval_score": 0.170616,
+     "median_width": 0.100108,
+     "christoffersen_lr": 51.05,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 357,
+     "coverage": 0.8095,
+     "coverage_ci95": [
+      0.7311,
+      0.8768
+     ],
+     "mean_interval_score": 0.372754,
+     "median_width": 0.26432,
+     "christoffersen_lr": 71.386,
+     "christoffersen_p": 0.0
+    }
+   },
+   "ewma97": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.7832,
+     "coverage_ci95": [
+      0.7371,
+      0.8293
+     ],
+     "mean_interval_score": 0.082389,
+     "median_width": 0.043254,
+     "christoffersen_lr": 0.39,
+     "christoffersen_p": 0.5321
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.8437,
+     "coverage_ci95": [
+      0.7916,
+      0.8909
+     ],
+     "mean_interval_score": 0.172594,
+     "median_width": 0.100034,
+     "christoffersen_lr": 49.827,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 357,
+     "coverage": 0.8095,
+     "coverage_ci95": [
+      0.7339,
+      0.8824
+     ],
+     "mean_interval_score": 0.374032,
+     "median_width": 0.265249,
+     "christoffersen_lr": 82.133,
+     "christoffersen_p": 0.0
+    }
+   },
+   "garch": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.7913,
+     "coverage_ci95": [
+      0.7534,
+      0.8293
+     ],
+     "mean_interval_score": 0.080339,
+     "median_width": 0.044889,
+     "christoffersen_lr": 2.379,
+     "christoffersen_p": 0.1229
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.8089,
+     "coverage_ci95": [
+      0.7643,
+      0.8561
+     ],
+     "mean_interval_score": 0.164232,
+     "median_width": 0.09544,
+     "christoffersen_lr": 18.562,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 357,
+     "coverage": 0.6863,
+     "coverage_ci95": [
+      0.5994,
+      0.7675
+     ],
+     "mean_interval_score": 0.382311,
+     "median_width": 0.243239,
+     "christoffersen_lr": 55.485,
+     "christoffersen_p": 0.0
+    }
+   },
+   "trend_1m": {
+    "n": 403,
+    "median_ae_nochange": 0.03063,
+    "median_ae_trend": 0.024432,
+    "mean_ae_diff_ci95": [
+     -0.002984,
+     0.002792
+    ],
+    "trend_better_pooledMAE": true,
+    "trend_sig_better": false,
+    "dir_accuracy": 0.603,
+    "best_constant_base_rate": 0.6749,
+    "dir_beats_base": false,
+    "brier_trend": 0.2426,
+    "brier_base": 0.2194
+   },
+   "stance_1w": {
+    "Buy": {
+     "n": 2,
+     "hit_rate": 0.5
+    },
+    "Flat": {
+     "n": 81,
+     "hit_rate": 0.8025
+    },
+    "Hold": {
+     "n": 218,
+     "hit_rate": 0.6284
+    },
+    "Sell": {
+     "n": 35,
+     "hit_rate": 0.3143
+    },
+    "Wait": {
+     "n": 33,
+     "hit_rate": 0.4242
+    }
+   }
+  },
+  "ndx": {
+   "name": "Nasdaq 100",
+   "rows": 2513,
+   "garch_refits": {
+    "at": "2025-10-23",
+    "alpha": 0.12,
+    "beta": 0.86
+   },
+   "ewma94": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.7859,
+     "coverage_ci95": [
+      0.7425,
+      0.8266
+     ],
+     "mean_interval_score": 0.103147,
+     "median_width": 0.062829,
+     "christoffersen_lr": 0.102,
+     "christoffersen_p": 0.7489
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.804,
+     "coverage_ci95": [
+      0.7419,
+      0.8635
+     ],
+     "mean_interval_score": 0.210411,
+     "median_width": 0.129076,
+     "christoffersen_lr": 50.918,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 357,
+     "coverage": 0.8263,
+     "coverage_ci95": [
+      0.7395,
+      0.8936
+     ],
+     "mean_interval_score": 0.473705,
+     "median_width": 0.339904,
+     "christoffersen_lr": 107.305,
+     "christoffersen_p": 0.0
+    }
+   },
+   "ewma97": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.7724,
+     "coverage_ci95": [
+      0.729,
+      0.8157
+     ],
+     "mean_interval_score": 0.102951,
+     "median_width": 0.059614,
+     "christoffersen_lr": 0.059,
+     "christoffersen_p": 0.8075
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.8089,
+     "coverage_ci95": [
+      0.7469,
+      0.866
+     ],
+     "mean_interval_score": 0.209425,
+     "median_width": 0.128542,
+     "christoffersen_lr": 60.017,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 357,
+     "coverage": 0.8123,
+     "coverage_ci95": [
+      0.7227,
+      0.8824
+     ],
+     "mean_interval_score": 0.477603,
+     "median_width": 0.334355,
+     "christoffersen_lr": 119.542,
+     "christoffersen_p": 0.0
+    }
+   },
+   "garch": {
+    "1w": {
+     "n": 369,
+     "coverage": 0.832,
+     "coverage_ci95": [
+      0.7967,
+      0.8672
+     ],
+     "mean_interval_score": 0.102804,
+     "median_width": 0.066909,
+     "christoffersen_lr": 0.299,
+     "christoffersen_p": 0.5848
+    },
+    "1m": {
+     "n": 403,
+     "coverage": 0.8213,
+     "coverage_ci95": [
+      0.7717,
+      0.8685
+     ],
+     "mean_interval_score": 0.214605,
+     "median_width": 0.140886,
+     "christoffersen_lr": 38.825,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 357,
+     "coverage": 0.8095,
+     "coverage_ci95": [
+      0.7227,
+      0.8796
+     ],
+     "mean_interval_score": 0.501581,
+     "median_width": 0.351005,
+     "christoffersen_lr": 93.717,
+     "christoffersen_p": 0.0
+    }
+   },
+   "trend_1m": {
+    "n": 403,
+    "median_ae_nochange": 0.042042,
+    "median_ae_trend": 0.036324,
+    "mean_ae_diff_ci95": [
+     -0.00329,
+     0.004278
+    ],
+    "trend_better_pooledMAE": true,
+    "trend_sig_better": false,
+    "dir_accuracy": 0.6129,
+    "best_constant_base_rate": 0.6576,
+    "dir_beats_base": false,
+    "brier_trend": 0.2464,
+    "brier_base": 0.2252
+   },
+   "stance_1w": {
+    "Buy": {
+     "n": 2,
+     "hit_rate": 1.0
+    },
+    "Flat": {
+     "n": 63,
+     "hit_rate": 0.8095
+    },
+    "Hold": {
+     "n": 234,
+     "hit_rate": 0.6026
+    },
+    "Sell": {
+     "n": 31,
+     "hit_rate": 0.5161
+    },
+    "Wait": {
+     "n": 39,
+     "hit_rate": 0.5128
+    }
+   }
+  },
+  "dxy": {
+   "name": "US Dollar Index",
+   "rows": 2513,
+   "garch_refits": {
+    "at": "2025-10-23",
+    "alpha": 0.04,
+    "beta": 0.94
+   },
+   "ewma94": {
+    "1w": {
+     "n": 368,
+     "coverage": 0.7962,
+     "coverage_ci95": [
+      0.7582,
+      0.8342
+     ],
+     "mean_interval_score": 0.0343,
+     "median_width": 0.021958,
+     "christoffersen_lr": 0.398,
+     "christoffersen_p": 0.5281
+    },
+    "1m": {
+     "n": 402,
+     "coverage": 0.7836,
+     "coverage_ci95": [
+      0.7338,
+      0.8284
+     ],
+     "mean_interval_score": 0.060736,
+     "median_width": 0.039063,
+     "christoffersen_lr": 38.504,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 356,
+     "coverage": 0.6742,
+     "coverage_ci95": [
+      0.5674,
+      0.7753
+     ],
+     "mean_interval_score": 0.157333,
+     "median_width": 0.103065,
+     "christoffersen_lr": 204.465,
+     "christoffersen_p": 0.0
+    }
+   },
+   "ewma97": {
+    "1w": {
+     "n": 368,
+     "coverage": 0.7908,
+     "coverage_ci95": [
+      0.75,
+      0.8315
+     ],
+     "mean_interval_score": 0.034224,
+     "median_width": 0.021419,
+     "christoffersen_lr": 0.785,
+     "christoffersen_p": 0.3757
+    },
+    "1m": {
+     "n": 402,
+     "coverage": 0.7985,
+     "coverage_ci95": [
+      0.7512,
+      0.8507
+     ],
+     "mean_interval_score": 0.06033,
+     "median_width": 0.038926,
+     "christoffersen_lr": 43.593,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 356,
+     "coverage": 0.6742,
+     "coverage_ci95": [
+      0.5673,
+      0.7753
+     ],
+     "mean_interval_score": 0.159001,
+     "median_width": 0.103145,
+     "christoffersen_lr": 196.655,
+     "christoffersen_p": 0.0
+    }
+   },
+   "garch": {
+    "1w": {
+     "n": 368,
+     "coverage": 0.7527,
+     "coverage_ci95": [
+      0.7147,
+      0.7881
+     ],
+     "mean_interval_score": 0.034144,
+     "median_width": 0.019975,
+     "christoffersen_lr": 1.52,
+     "christoffersen_p": 0.2177
+    },
+    "1m": {
+     "n": 402,
+     "coverage": 0.7612,
+     "coverage_ci95": [
+      0.7065,
+      0.8109
+     ],
+     "mean_interval_score": 0.06114,
+     "median_width": 0.036739,
+     "christoffersen_lr": 54.676,
+     "christoffersen_p": 0.0
+    },
+    "eoy": {
+     "n": 356,
+     "coverage": 0.6629,
+     "coverage_ci95": [
+      0.5478,
+      0.7697
+     ],
+     "mean_interval_score": 0.164872,
+     "median_width": 0.098277,
+     "christoffersen_lr": 234.25,
+     "christoffersen_p": 0.0
+    }
+   },
+   "trend_1m": {
+    "n": 402,
+    "median_ae_nochange": 0.011453,
+    "median_ae_trend": 0.012155,
+    "mean_ae_diff_ci95": [
+     -0.001825,
+     -5.1e-05
+    ],
+    "trend_better_pooledMAE": false,
+    "trend_sig_better": false,
+    "dir_accuracy": 0.51,
+    "best_constant_base_rate": 0.5249,
+    "dir_beats_base": false,
+    "brier_trend": 0.2693,
+    "brier_base": 0.2494
+   },
+   "stance_1w": {
+    "Buy": {
+     "n": 17,
+     "hit_rate": 0.5882
+    },
+    "Flat": {
+     "n": 138,
+     "hit_rate": 0.7391
+    },
+    "Hold": {
+     "n": 113,
+     "hit_rate": 0.5133
+    },
+    "Sell": {
+     "n": 5,
+     "hit_rate": 0.6
+    },
+    "Wait": {
+     "n": 95,
+     "hit_rate": 0.4947
+    }
+   }
+  }
+ },
+ "pooled": {
+  "ewma94": {
+   "1w": {
+    "n": 2597,
+    "coverage": 0.7951,
+    "mean_interval_score": 0.149432
+   },
+   "1m": {
+    "n": 2835,
+    "coverage": 0.7958,
+    "mean_interval_score": 0.308991
+   },
+   "eoy": {
+    "n": 2515,
+    "coverage": 0.765,
+    "mean_interval_score": 0.790236
+   }
+  },
+  "ewma97": {
+   "1w": {
+    "n": 2597,
+    "coverage": 0.7867,
+    "mean_interval_score": 0.148778
+   },
+   "1m": {
+    "n": 2835,
+    "coverage": 0.8,
+    "mean_interval_score": 0.302729
+   },
+   "eoy": {
+    "n": 2515,
+    "coverage": 0.7714,
+    "mean_interval_score": 0.771337
+   }
+  },
+  "garch": {
+   "1w": {
+    "n": 2597,
+    "coverage": 0.7886,
+    "mean_interval_score": 0.149493
+   },
+   "1m": {
+    "n": 2835,
+    "coverage": 0.7788,
+    "mean_interval_score": 0.305169
+   },
+   "eoy": {
+    "n": 2515,
+    "coverage": 0.7408,
+    "mean_interval_score": 0.773273
+   }
+  }
+ },
+ "gates": {
+  "G1_pooled_1w_coverage_76_84": {
+   "value": 0.7951,
+   "pass": true
+  },
+  "G2_per_instrument_70_90": {
+   "count_in_band": 7,
+   "pass": true
+  },
+  "G3_christoffersen_info_only": {
+   "instruments_independent_at_5pct": 6
+  },
+  "verdict": "PASS"
+ },
+ "trend": {
+  "instruments_sig_better": 0,
+  "instruments_dir_beats_base": 1,
+  "earned_weight": 0.0
+ },
+ "stance_pooled": {
+  "Buy": {
+   "n": 57,
+   "hit_rate": 0.4737
+  },
+  "Flat": {
+   "n": 797,
+   "hit_rate": 0.793
+  },
+  "Hold": {
+   "n": 1227,
+   "hit_rate": 0.5827
+  },
+  "Sell": {
+   "n": 123,
+   "hit_rate": 0.4472
+  },
+  "Wait": {
+   "n": 393,
+   "hit_rate": 0.4377
+  }
+ },
+ "selected_vol_model": "ewma94"
+}
