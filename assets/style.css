@@ -2,6 +2,7 @@
   --bg:#fbfbfa; --surface:#fff; --line:#e6e4e0; --line-soft:#f0eeeb;
   --ink:#1a1917; --ink-2:#605c56; --ink-3:#8e8880;
   --up:#0f7a4d; --down:#bb2d2d; --accent:#1a1917;
+  --hold:#1d4ed8; --wait:#b45309;
   --radius:10px;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
@@ -11,6 +12,7 @@
     --bg:#141413; --surface:#1c1c1a; --line:#2f2e2b; --line-soft:#252421;
     --ink:#eeece7; --ink-2:#a8a29a; --ink-3:#77726b;
     --up:#3fbb84; --down:#f0736b; --accent:#eeece7;
+    --hold:#7aa2ff; --wait:#e8a33d;
   }
 }
 *{box-sizing:border-box}
@@ -168,6 +170,89 @@ tbody tr:hover td:first-child{background:var(--line-soft)}
 .disclaimer b{color:var(--ink-2); font-weight:600}
 .foot-line{margin:0; font-size:12px; color:var(--ink-3)}
 
+/* ---------------------------------------------------------- weekly review */
+.vintage-note{color:var(--ink-3); font-size:12.5px; margin-top:5px}
+
+.statgrid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:9px; margin-bottom:22px;
+}
+.stat{
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); padding:11px 13px; min-width:0;
+}
+.stat-label{
+  font-size:10px; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--ink-3); font-weight:600; margin-bottom:3px;
+}
+.stat-value{font-size:17px; font-weight:600; letter-spacing:-.01em; line-height:1.25}
+.stat-sub{font-size:11px; color:var(--ink-3); margin-top:2px; line-height:1.4}
+
+.stchip{
+  display:inline-block; font-size:11px; font-weight:650; letter-spacing:.02em;
+  padding:2.5px 10px; border-radius:999px; border:1px solid transparent;
+  white-space:nowrap;
+}
+.st-buy   {color:var(--up);   border-color:var(--up);   background:color-mix(in srgb, var(--up) 10%, transparent)}
+.st-hold  {color:var(--hold); border-color:var(--hold); background:color-mix(in srgb, var(--hold) 10%, transparent)}
+.st-flat  {color:var(--ink-2);border-color:var(--ink-3);background:color-mix(in srgb, var(--ink-3) 10%, transparent)}
+.st-wait  {color:var(--wait); border-color:var(--wait); background:color-mix(in srgb, var(--wait) 12%, transparent)}
+.st-sell  {color:var(--down); border-color:var(--down); background:color-mix(in srgb, var(--down) 10%, transparent)}
+.st-noread{color:var(--ink-3);border-style:dashed; border-color:var(--ink-3); background:none}
+.st-nodata{color:var(--down); border-style:dashed; border-color:var(--down); background:none}
+
+.acard{
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); margin-bottom:10px; overflow:hidden;
+}
+.acard summary{
+  list-style:none; cursor:pointer; padding:13px 15px; user-select:none;
+}
+.acard summary::-webkit-details-marker{display:none}
+.acard summary:hover{background:var(--line-soft)}
+.acard[open] summary{border-bottom:1px solid var(--line-soft)}
+.acard-head{display:flex; align-items:center; justify-content:space-between; gap:10px; min-width:0}
+.acard-name{display:flex; align-items:baseline; gap:9px; min-width:0; flex-wrap:wrap}
+.aname{font-weight:600; font-size:15px}
+.aprice{font-family:var(--mono); font-size:13.5px; color:var(--ink-2)}
+.acard-side{display:flex; align-items:center; gap:9px; flex:0 0 auto}
+.acard-side .num{font-family:var(--mono); font-size:13px}
+.acard-body{padding:14px 15px 15px}
+.acard-body h4{
+  margin:15px 0 5px; font-size:11px; text-transform:uppercase;
+  letter-spacing:.08em; color:var(--ink-3); font-weight:600;
+}
+.acard-body p{margin:0 0 8px; color:var(--ink-2); font-size:14px; line-height:1.55}
+.acard-reason{color:var(--ink-2)}
+.scen b{color:var(--ink)}
+
+.hzwrap{display:flex; flex-direction:column; gap:9px; margin-bottom:4px}
+.hz{display:flex; gap:12px; align-items:baseline}
+.hz-label{
+  flex:0 0 86px; font-size:11px; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--ink-3); font-weight:600;
+}
+.hz-range{font-family:var(--mono); font-size:14.5px; font-weight:600}
+.hz-sub{font-size:11.5px; color:var(--ink-3); margin-top:1px; line-height:1.4}
+
+.stanceline{display:flex; align-items:center; gap:9px; flex-wrap:wrap; margin:12px 0 4px}
+.stancetext{font-size:13px; color:var(--ink-2)}
+
+.lastweek{
+  margin-top:13px; padding-top:10px; border-top:1px dashed var(--line);
+  font-size:12.5px; color:var(--ink-3);
+}
+.cohnote{color:var(--ink-2); font-size:13px; margin:4px 2px 18px}
+
+.legend{margin-top:26px}
+.legend h2{
+  font-size:11px; text-transform:uppercase; letter-spacing:.09em;
+  color:var(--ink-3); font-weight:600; margin:0 0 10px 2px;
+}
+.legrow{display:flex; align-items:baseline; gap:10px; margin-bottom:7px}
+.legrow .stchip{flex:0 0 auto; min-width:64px; text-align:center}
+.legtext{font-size:13px; color:var(--ink-2); line-height:1.5}
+.legfoot{font-size:12px; color:var(--ink-3); line-height:1.55; margin-top:12px}
+
 /* ------------------------------------------------- mobile-first polish */
 @media (max-width:680px){
   body{font-size:15.5px}
@@ -182,6 +267,15 @@ tbody tr:hover td:first-child{background:var(--line-soft)}
   .bitem h3{font-size:15px}
   .briefhead h1{font-size:21px}
   .disclaimer{font-size:10.5px}
+  /* weekly review on a phone */
+  .statgrid{grid-template-columns:repeat(2,1fr); gap:8px}
+  .stat-value{font-size:15.5px}
+  .hz{flex-direction:column; gap:2px}
+  .hz-label{flex:none}
+  .acard summary{padding:12px 13px}
+  .acard-body{padding:13px 13px 14px}
+  .aprice{font-size:12.5px}
+  .legrow .stchip{min-width:58px}
   /* respect the notch when added to the home screen */
   .wrap{
     padding-left:max(12px, env(safe-area-inset-left));

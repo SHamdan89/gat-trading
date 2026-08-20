@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="gat.trading">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
-<link rel="stylesheet" href="assets/style.css?v=2">
+<link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 <body>
 <header class="top">
@@ -78,6 +78,7 @@
   <div class="wrap">
     <button class="tab is-active" role="tab" aria-selected="true"  aria-controls="markets" data-panel="markets">Markets</button>
     <button class="tab"           role="tab" aria-selected="false" aria-controls="brief"   data-panel="brief">Daily Brief</button>
+    <button class="tab"           role="tab" aria-selected="false" aria-controls="weekly"  data-panel="weekly">Weekly Review</button>
   </div>
 </nav>
 
@@ -89,7 +90,7 @@
     <details class="notes">
       <summary>Sources &amp; method</summary>
       <ul>
-        <li><b>How it works.</b> Prices are pulled once a day by a scheduled job and stored. This page reads that stored file — it never calls a price API itself, so it costs nothing to visit and behaves the same at any level of traffic.</li>
+        <li><b>How it works.</b> Prices are pulled every hour by a scheduled job and stored. This page reads that stored file — it never calls a price API itself, so it costs nothing to visit and behaves the same at any level of traffic.</li>
         <li><b>Crypto</b> — CoinGecko. <b>Equities, indices, DXY, oil &amp; gas</b> — Yahoo Finance. <b>Gold, silver, copper</b> — live spot, with gold and silver history from the LBMA official benchmark fixes. <b>US M2</b> — the St.&nbsp;Louis Fed (FRED).</li>
         <li><b>Oil and natural gas</b> are front-month futures. There is no free spot feed for either, and the front-month contract is the price the market actually quotes.</li>
         <li><b>US M2</b> is published weekly and in arrears, so its date is older than the rest of the table and it has no 24h figure. Its changes are measured from the publication date, not from today.</li>
@@ -102,6 +103,11 @@
   <section id="brief" class="panel" role="tabpanel" tabindex="0">
     <div id="briefstatus" class="status">Loading brief…</div>
     <div id="briefbody"></div>
+  </section>
+
+  <section id="weekly" class="panel" role="tabpanel" tabindex="0">
+    <div id="weeklystatus" class="status">Loading weekly review…</div>
+    <div id="weeklybody"></div>
   </section>
 </main>
 
@@ -120,6 +126,6 @@
   <p class="foot-line"><span>gat.trading</span></p>
 </footer>
 
-<script src="assets/app.js?v=2"></script>
+<script src="assets/app.js?v=3"></script>
 </body>
 </html>

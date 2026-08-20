@@ -101,7 +101,7 @@
       var warn = document.createElement("div");
       warn.className = "stale";
       warn.textContent = "These figures are " + Math.floor(ageHours / 24) +
-        " day(s) old. The daily update has not run — treat them as historical, not current.";
+        " day(s) old. The update job has not run — treat them as historical, not current.";
       host.insertBefore(warn, host.firstChild);
     }
     // Compact on purpose - the long locale form truncates on a phone.
@@ -213,6 +213,279 @@
       renderBrief(doc);
     })
     .catch(function () { briefEmpty(); });
+
+  // ---------------------------------------------------------------- weekly
+
+  var STATE_CLASS = {
+    "Buy": "st-buy", "Hold": "st-hold", "Flat": "st-flat", "Wait": "st-wait",
+    "Sell": "st-sell", "No read": "st-noread", "No data": "st-nodata"
+  };
+  var LEGEND = [
+    ["Buy", "At or near a bottom, or expected to rise significantly."],
+    ["Hold", "In an uptrend, expected to continue. The easy entry has passed."],
+    ["Flat", "Sideways inside a stated range. No trend to join either way."],
+    ["Wait", "Falling, no base formed. Not a buy yet — the mirror of Hold."],
+    ["Sell", "At or near a top, or expected to drop significantly."],
+    ["No read", "Market not legible — a dated tier-one event falls in the window. No forecast."],
+    ["No data", "Feed broken or stale. Nothing analysed because there was nothing to analyse."]
+  ];
+
+  function fmtLevel(v) {
+    if (v === null || v === undefined || isNaN(v)) return "—";
+    var d = Math.abs(v) >= 1000 ? 0 : (Math.abs(v) >= 10 ? 2 : 4);
+    return v.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+  }
+  function chip(state) {
+    return el("span", "stchip " + (STATE_CLASS[state] || "st-flat"), state);
+  }
+  function pctSpan(v, digits) {
+    var s = el("span", "num " + (v > 0.005 ? "up" : (v < -0.005 ? "down" : "flat")));
+    s.textContent = (v > 0 ? "+" : "") + v.toFixed(digits === undefined ? 2 : digits) + "%";
+    return s;
+  }
+  function statBox(label, value, sub) {
+    var b = el("div", "stat");
+    b.appendChild(el("div", "stat-label", label));
+    var v = el("div", "stat-value");
+    if (value instanceof Node) v.appendChild(value); else v.textContent = value;
+    b.appendChild(v);
+    if (sub) b.appendChild(el("div", "stat-sub", sub));
+    return b;
+  }
+  function rangeLine(label, h) {
+    var row = el("div", "hz");
+    row.appendChild(el("div", "hz-label", label));
+    var body = el("div", "hz-body");
+    body.appendChild(el("div", "hz-range",
+      fmtLevel(h.lo) + " – " + fmtLevel(h.hi)));
+    body.appendChild(el("div", "hz-sub", "80% range · base " + fmtLevel(h.base) +
+      " (no-change) · to " + h.target_date));
+    row.appendChild(body);
+    return row;
+  }
+
+  function renderWeekly(doc) {
+    var host = document.getElementById("weeklybody");
+    host.innerHTML = "";
+
+    var head = el("div", "briefhead");
+    head.appendChild(el("h1", null, "Weekly Review"));
+    var fri = doc.review_friday || "";
+    head.appendChild(el("div", "briefdate",
+      (doc.week || "") + " · week ending " + fri +
+      (doc.published_utc ? " · published " + doc.published_utc.slice(0, 10) : "") +
+      " · next review Saturday morning (GMT+3)"));
+    if (doc.vintage && doc.vintage.note) {
+      head.appendChild(el("div", "vintage-note", "Note: " + doc.vintage.note +
+        " — data as of " + doc.vintage.asof + "."));
+    }
+    host.appendChild(head);
+
+    // honesty banner when a newer week has completed and no review covers it
+    if (doc.review_friday) {
+      var age = Math.floor((Date.now() - new Date(fri + "T23:59:59Z").getTime()) / 86400000);
+      if (age > 9) {
+        host.appendChild(el("div", "stale", "This review covers the week ending " +
+          fri + " — " + age + " days ago. A newer week has completed without a review."));
+      }
+    }
+
+    // scorecard
+    var sc = doc.scorecard || {};
+    var grid = el("div", "statgrid");
+    var thisWeek = doc.assets.filter(function (a) {
+      return a.forecast && a.stance;
+    }).length;
+    grid.appendChild(statBox("This week", thisWeek + " called",
+      (doc.declines ? (doc.declines.no_read + " declined · " +
+        doc.declines.no_data + " no data") : "")));
+    var r12 = (sc.rolling_12w || {}).directional || {};
+    grid.appendChild(statBox("Rolling 12w", r12.n ?
+      Math.round(r12.rate * 100) + "%" : "—",
+      r12.n ? r12.hit + "/" + r12.n + " directional calls" : "record starts this week"));
+    var all = (sc.weekly || {}).directional || {};
+    grid.appendChild(statBox("All time", all.n ?
+      Math.round(all.rate * 100) + "%" : "—",
+      all.n ? all.hit + "/" + all.n + " directional calls" : "record starts this week"));
+    var rng = (sc.weekly || {}).range_1w || {};
+    grid.appendChild(statBox("Range coverage", rng.n ?
+      Math.round(rng.coverage * 100) + "%" : "—",
+      rng.n ? rng.hit + "/" + rng.n + " weekly ranges (target 80%)" : "target 80%"));
+    grid.appendChild(statBox("Avg range width", (sc.weekly && sc.weekly.avg_width_pct != null) ?
+      sc.weekly.avg_width_pct.toFixed(1) + "%" : "—", "published weekly ranges"));
+    var br = (sc.weekly || {}).best_read;
+    var wr = (sc.weekly || {}).worst_read;
+    grid.appendChild(statBox("Best / worst read",
+      br ? (br.asset + " " + br.stance) : "—",
+      wr ? ("worst: " + wr.asset + " " + wr.stance) : "no scored calls yet"));
+    host.appendChild(grid);
+
+    // asset cards
+    (doc.assets || []).forEach(function (a, i) {
+      var card = document.createElement("details");
+      card.className = "acard";
+      if (i === 0) card.open = true;
+
+      var sum = document.createElement("summary");
+      var srow = el("div", "acard-head");
+      var left = el("div", "acard-name");
+      left.appendChild(el("span", "aname", a.name));
+      if (a.price !== undefined && a.price !== null) {
+        left.appendChild(el("span", "aprice", fmtLevel(a.price)));
+      }
+      srow.appendChild(left);
+      var right = el("div", "acard-side");
+      if (a.week_change_pct !== undefined && a.week_change_pct !== null) {
+        right.appendChild(pctSpan(a.week_change_pct));
+      }
+      right.appendChild(chip(a.state));
+      srow.appendChild(right);
+      sum.appendChild(srow);
+      card.appendChild(sum);
+
+      var body = el("div", "acard-body");
+
+      if (a.state === "No data") {
+        body.appendChild(el("p", "acard-reason",
+          "No data: " + (a.reason || "feed unavailable") + " Nothing is analysed, " +
+          "nothing is scored, and this does not spend the weekly decline allowance."));
+      } else if (a.state === "No read") {
+        var nr = a.no_read || {};
+        body.appendChild(el("p", "acard-reason",
+          "No read: " + (nr.name || "a tier-one event") + " falls inside the forecast " +
+          "window (" + (nr.date || "") + "). No forecast is made; this is counted on " +
+          "the record as a decline."));
+        if (a.words && a.words.note) body.appendChild(el("p", null, a.words.note));
+      } else if (a.forecast) {
+        var hzwrap = el("div", "hzwrap");
+        if (a.forecast.next_week) hzwrap.appendChild(rangeLine("Next week", a.forecast.next_week));
+        if (a.forecast.next_month) hzwrap.appendChild(rangeLine("Next month", a.forecast.next_month));
+        if (a.forecast.eoy) {
+          var e = a.forecast.eoy;
+          var row = el("div", "hz");
+          row.appendChild(el("div", "hz-label", "End of year"));
+          var eb = el("div", "hz-body");
+          eb.appendChild(el("div", "hz-range",
+            fmtLevel(e.central.lo) + " – " + fmtLevel(e.central.hi)));
+          eb.appendChild(el("div", "hz-sub", "central scenario (50%) · upside 25% above " +
+            fmtLevel(e.upside.above) + " · downside 25% below " + fmtLevel(e.downside.below)));
+          eb.appendChild(el("div", "hz-sub", "Scenarios, not a forecast — excluded from the accuracy record."));
+          row.appendChild(eb);
+          hzwrap.appendChild(row);
+        }
+        body.appendChild(hzwrap);
+
+        if (a.stance) {
+          var st = el("div", "stanceline");
+          st.appendChild(chip(a.stance.state));
+          var conf = (a.stance.confidence !== null && a.stance.confidence !== undefined)
+            ? Math.round(a.stance.confidence * 100) + "%" : "—";
+          st.appendChild(el("span", "stancetext",
+            "flips to " + (a.stance.flip_to || "?") + " near " +
+            fmtLevel(a.stance.flip_level) + " · confidence " + conf +
+            " that the one-week claim holds (historical)"));
+          body.appendChild(st);
+        }
+
+        var w = a.words || {};
+        if (w.technical) {
+          body.appendChild(el("h4", null, "Technical read"));
+          body.appendChild(el("p", null, w.technical));
+        }
+        if (w.macro) {
+          body.appendChild(el("h4", null, "Macro read"));
+          body.appendChild(el("p", null, w.macro));
+        }
+        if (w.eoy_scenarios) {
+          body.appendChild(el("h4", null, "End-of-year scenarios"));
+          ["central", "upside", "downside"].forEach(function (k) {
+            if (w.eoy_scenarios[k]) {
+              var p = el("p", "scen");
+              p.appendChild(el("b", null, k.charAt(0).toUpperCase() + k.slice(1) + ": "));
+              p.appendChild(document.createTextNode(w.eoy_scenarios[k]));
+              body.appendChild(p);
+            }
+          });
+        }
+        if (w.long_term) {
+          body.appendChild(el("h4", null, "Long-term note"));
+          body.appendChild(el("p", null, w.long_term));
+        }
+        if (w.citations && w.citations.length) {
+          var srcrow = el("div", "bsrc");
+          w.citations.forEach(function (c) {
+            var link = el("a", null, (c.title || "source") +
+              (c.date ? " (" + c.date + ")" : ""));
+            link.href = c.url;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer nofollow";
+            srcrow.appendChild(link);
+          });
+          body.appendChild(srcrow);
+        }
+      }
+
+      var lw = a.last_week;
+      body.appendChild(el("div", "lastweek", lw
+        ? ("Last week: " + (lw.stance || "—") +
+           (lw.stance_hit === true ? " · hit" : (lw.stance_hit === false ? " · miss" : "")) +
+           (lw.range_hit === true ? " · inside range" :
+            (lw.range_hit === false ? " · outside range" : "")) +
+           (lw.realized_pct !== null && lw.realized_pct !== undefined ?
+            " · moved " + (lw.realized_pct > 0 ? "+" : "") + lw.realized_pct.toFixed(2) + "%" : ""))
+        : "First review for this asset — no prior call to score."));
+
+      card.appendChild(body);
+      host.appendChild(card);
+    });
+
+    // coherence note, when the report carries one
+    if (doc.coherence && doc.coherence.note) {
+      var cnote = el("p", "cohnote", "Cross-asset note: " + doc.coherence.note);
+      host.appendChild(cnote);
+    }
+
+    // legend
+    var leg = el("section", "legend");
+    leg.appendChild(el("h2", null, "The seven states"));
+    LEGEND.forEach(function (pair) {
+      var rowl = el("div", "legrow");
+      rowl.appendChild(chip(pair[0]));
+      rowl.appendChild(el("span", "legtext", pair[1]));
+      leg.appendChild(rowl);
+    });
+    leg.appendChild(el("p", "legfoot",
+      "These describe the market's state, not a portfolio position. Every number on " +
+      "this tab is produced by a deterministic script from frozen, backtested " +
+      "parameters; the written commentary explains those numbers and may never " +
+      "change them. Forecasts are stored before the period they cover and scored " +
+      "after it by script — the record above includes every call, and a declined " +
+      "read is never free."));
+    host.appendChild(leg);
+
+    document.getElementById("weeklystatus").style.display = "none";
+  }
+
+  function weeklyEmpty(msg) {
+    var host = document.getElementById("weeklybody");
+    host.innerHTML = "";
+    var box = el("div", "empty");
+    box.appendChild(el("h2", null, "The weekly review isn't running yet"));
+    box.appendChild(el("p", null, "This tab will carry a weekly market review of seven " +
+      "instruments — a technical and macro read, calibrated forecast ranges, a stance " +
+      "with its flip level, and a running accuracy record scored by script."));
+    box.appendChild(el("p", "muted", msg || "Nothing is shown here rather than showing something unverified."));
+    host.appendChild(box);
+    document.getElementById("weeklystatus").style.display = "none";
+  }
+
+  fetch("data/weekly/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("no review yet"); return r.json(); })
+    .then(function (doc) {
+      if (!doc || !doc.assets || doc.assets.length !== 7) throw new Error("malformed review");
+      renderWeekly(doc);
+    })
+    .catch(function () { weeklyEmpty(); });
 
   // tabs
   var tabs = [].slice.call(document.querySelectorAll(".tab"));
