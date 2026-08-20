@@ -131,6 +131,87 @@
       fail("Market data could not be loaded (" + e.message + "). Nothing is shown rather than showing stale numbers.");
     });
 
+  // ---------------------------------------------------------------- brief
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  }
+
+  function renderBrief(doc) {
+    var host = document.getElementById("briefbody");
+    host.innerHTML = "";
+
+    var head = el("div", "briefhead");
+    head.appendChild(el("h1", null, "Daily Brief"));
+    var d = new Date(doc.date + "T12:00:00Z");
+    head.appendChild(el("div", "briefdate", d.toLocaleDateString(undefined, {
+      weekday: "long", year: "numeric", month: "long", day: "numeric"
+    }) + " · " + (doc.lookback_days || 7) + "-day lookback"));
+    host.appendChild(head);
+
+    // Same honesty rule as the price table: say when it is old.
+    var ageDays = Math.floor((Date.now() - d.getTime()) / 86400000);
+    if (ageDays >= 2) {
+      host.appendChild(el("div", "stale", "This brief is " + ageDays +
+        " days old. The daily update has not run — it describes that date, not today."));
+    }
+
+    (doc.sections || []).forEach(function (sec) {
+      var wrapEl = el("section", "bsec");
+      wrapEl.appendChild(el("h2", null, sec.name));
+      if (!sec.items || !sec.items.length) {
+        wrapEl.appendChild(el("p", "bnone", "Nothing notable this week."));
+        host.appendChild(wrapEl);
+        return;
+      }
+      sec.items.forEach(function (it) {
+        var card = el("article", "bitem");
+        card.appendChild(el("h3", null, it.headline));
+        card.appendChild(el("p", null, it.why));
+        var srcs = it.sources || [];
+        if (srcs.length) {
+          var row = el("div", "bsrc");
+          srcs.forEach(function (sr) {
+            var a = el("a", null, sr.title || "source");
+            a.href = sr.url;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer nofollow";
+            row.appendChild(a);
+          });
+          card.appendChild(row);
+        }
+        wrapEl.appendChild(card);
+      });
+      host.appendChild(wrapEl);
+    });
+
+    document.getElementById("briefstatus").style.display = "none";
+  }
+
+  function briefEmpty(msg) {
+    var host = document.getElementById("briefbody");
+    host.innerHTML = "";
+    var box = el("div", "empty");
+    box.appendChild(el("h2", null, "The daily brief isn't running yet"));
+    box.appendChild(el("p", null, "This tab will carry a written market brief — tech, crypto, " +
+      "macro and geopolitics, commodities, and technical levels — generated once a day and " +
+      "filtered down to what actually moved."));
+    box.appendChild(el("p", "muted", msg || "Nothing is shown here rather than showing something unverified."));
+    host.appendChild(box);
+    document.getElementById("briefstatus").style.display = "none";
+  }
+
+  fetch("data/brief/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("no brief yet"); return r.json(); })
+    .then(function (doc) {
+      if (!doc || !doc.sections || !doc.sections.length) throw new Error("empty brief");
+      renderBrief(doc);
+    })
+    .catch(function () { briefEmpty(); });
+
   // tabs
   var tabs = [].slice.call(document.querySelectorAll(".tab"));
   tabs.forEach(function (t) {

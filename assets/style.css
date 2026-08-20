@@ -128,3 +128,55 @@ tbody tr:hover td:first-child{background:var(--line-soft)}
   color:var(--down); font-size:13.5px; font-weight:550;
   padding:11px 14px; border-radius:var(--radius); margin-bottom:20px;
 }
+
+/* ---------------------------------------------------------- daily brief */
+.briefhead{margin-bottom:22px}
+.briefhead h1{margin:0; font-size:23px; letter-spacing:-.02em}
+.briefdate{color:var(--ink-3); font-size:13px; margin-top:3px}
+.bsec{margin-bottom:26px}
+.bsec h2{
+  font-size:11px; text-transform:uppercase; letter-spacing:.09em;
+  color:var(--ink-3); font-weight:600; margin:0 0 9px 2px;
+}
+.bitem{
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); padding:14px 16px; margin-bottom:9px;
+}
+.bitem h3{margin:0 0 5px; font-size:15.5px; line-height:1.35; letter-spacing:-.01em}
+.bitem p{margin:0; color:var(--ink-2); font-size:14px; line-height:1.55}
+.bsrc{margin-top:9px; display:flex; flex-wrap:wrap; gap:6px}
+.bsrc a{
+  font-size:11.5px; color:var(--ink-3); text-decoration:none;
+  border:1px solid var(--line); border-radius:999px; padding:2px 9px;
+}
+.bsrc a:hover{color:var(--ink); border-color:var(--ink-3)}
+.bnone{color:var(--ink-3); font-size:14px; margin:0 0 0 2px}
+
+/* ---------------------------------------------------------- disclaimer */
+.disclaimer{
+  font-size:11px; line-height:1.55; color:var(--ink-3);
+  margin:0 0 12px; max-width:none;
+}
+.disclaimer b{color:var(--ink-2); font-weight:600}
+.foot-line{margin:0; font-size:12px; color:var(--ink-3)}
+
+/* ------------------------------------------------- mobile-first polish */
+@media (max-width:680px){
+  body{font-size:15.5px}
+  .top .wrap{padding-top:13px; padding-bottom:13px}
+  .brand{font-size:18px}
+  .stamp{font-size:11px}
+  .tab{padding:13px 13px; font-size:14.5px}   /* comfortable tap target */
+  .panel{padding:18px 0 34px}
+  .group{margin-bottom:22px}
+  .bitem{padding:13px 14px}
+  .bitem h3{font-size:15px}
+  .briefhead h1{font-size:21px}
+  .disclaimer{font-size:10.5px}
+  /* respect the notch when added to the home screen */
+  .wrap{
+    padding-left:max(12px, env(safe-area-inset-left));
+    padding-right:max(12px, env(safe-area-inset-right));
+  }
+  .foot{padding-bottom:max(26px, env(safe-area-inset-bottom))}
+}

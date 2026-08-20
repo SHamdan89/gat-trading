@@ -2,32 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>gat.trading</title>
-<meta name="description" content="Daily asset prices and market brief.">
+<meta name="description" content="Daily asset prices and a filtered market brief.">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="gat.trading">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
-    <div class="brand">
-      <span class="mark">gat</span><span class="dot">.</span><span class="tld">trading</span>
-    </div>
+    <div class="brand"><span class="mark">gat</span><span class="dot">.</span><span class="tld">trading</span></div>
     <div class="stamp" id="stamp">loading…</div>
   </div>
 </header>
 
 <nav class="tabs" role="tablist">
   <div class="wrap">
-    <button class="tab is-active" role="tab" aria-selected="true"  data-panel="markets">Markets</button>
-    <button class="tab"           role="tab" aria-selected="false" data-panel="brief">Daily Brief</button>
+    <button class="tab is-active" role="tab" aria-selected="true"  aria-controls="markets" data-panel="markets">Markets</button>
+    <button class="tab"           role="tab" aria-selected="false" aria-controls="brief"   data-panel="brief">Daily Brief</button>
   </div>
 </nav>
 
 <main class="wrap">
-  <section id="markets" class="panel is-active" role="tabpanel">
+  <section id="markets" class="panel is-active" role="tabpanel" tabindex="0">
     <div id="status" class="status">Loading market data…</div>
     <div id="tables"></div>
 
@@ -38,26 +41,31 @@
         <li><b>Crypto</b> — CoinGecko. <b>Equities, indices, DXY, oil &amp; gas</b> — Yahoo Finance. <b>Gold, silver, copper</b> — live spot, with gold and silver history from the LBMA official benchmark fixes. <b>US M2</b> — the St.&nbsp;Louis Fed (FRED).</li>
         <li><b>Oil and natural gas</b> are front-month futures. There is no free spot feed for either, and the front-month contract is the price the market actually quotes.</li>
         <li><b>US M2</b> is published weekly and in arrears, so its date is older than the rest of the table and it has no 24h figure. Its changes are measured from the publication date, not from today.</li>
-        <li><b>N/A</b> means the figure genuinely cannot be computed yet — not zero. Copper has no free spot history, so its changes fill in as days accumulate. SpaceX listed in June 2026, so it has no year-start price to measure against.</li>
+        <li><b>N/A</b> means a figure genuinely cannot be computed yet — not zero. Copper has no free spot history, so its changes fill in as days accumulate. SpaceX listed in June 2026, so it has no year-start price to measure against.</li>
         <li>Percentages come from each source's own history where it exists, so a missed day never distorts a number.</li>
       </ul>
     </details>
   </section>
 
-  <section id="brief" class="panel" role="tabpanel">
-    <div class="empty">
-      <h2>The daily brief isn't running yet</h2>
-      <p>This tab will carry a written market brief — tech, crypto, macro and geopolitics,
-         commodities, and technical levels — generated once a day and filtered down to what
-         actually moved.</p>
-      <p class="muted">Nothing is shown here rather than showing something unverified.</p>
-    </div>
+  <section id="brief" class="panel" role="tabpanel" tabindex="0">
+    <div id="briefstatus" class="status">Loading brief…</div>
+    <div id="briefbody"></div>
   </section>
 </main>
 
 <footer class="wrap foot">
-  <span>gat.trading</span>
-  <span class="muted">Information only. Not advice, not a recommendation, and not a live quote.</span>
+  <p class="disclaimer">
+    <b>Information only — no warranty, not advice.</b>
+    Everything on this site is collected automatically from third-party public sources and is
+    published <i>as is</i>. It may be delayed, incomplete, wrong, or out of date, and it is not
+    verified against any official record. Nothing here is financial, investment, tax or legal
+    advice, a recommendation, or an offer or solicitation to buy or sell any asset. It must not
+    be relied on as evidence, as a record of fact, or as a basis for any decision. Any use you
+    make of it is entirely at your own risk and your own responsibility. Always confirm against
+    an official source before acting. No liability is accepted for any loss arising from use of
+    this site.
+  </p>
+  <p class="foot-line"><span>gat.trading</span></p>
 </footer>
 
 <script src="assets/app.js"></script>
