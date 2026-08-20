@@ -3,7 +3,8 @@
 Public asset pricing + a daily market brief. Static site, no build step.
 
 - `data/` — the historical database (append-only CSV plus generated JSON),
-  written daily by a cron on the isolated `gat.room` account.
+  written hourly by a launchd job on the isolated `gat.room` account
+  (a run that finds nothing moved commits nothing).
 - `data/brief/` — the daily brief, validated before publish.
 - The page reads `data/latest.json` and `data/brief/latest.json`.
   It never calls a price API per visitor.
