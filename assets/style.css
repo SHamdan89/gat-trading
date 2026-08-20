@@ -120,3 +120,11 @@ tbody tr:hover td:first-child{background:var(--line-soft)}
   tbody tr:hover td,tbody tr:hover td:first-child{background:none}
   .asof{margin-top:2px}
 }
+
+/* Shown only when the daily job has stopped updating the feed. */
+.stale{
+  background:color-mix(in srgb, var(--down) 12%, var(--surface));
+  border:1px solid color-mix(in srgb, var(--down) 40%, var(--line));
+  color:var(--down); font-size:13.5px; font-weight:550;
+  padding:11px 14px; border-radius:var(--radius); margin-bottom:20px;
+}

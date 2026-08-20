@@ -93,7 +93,17 @@
       host.appendChild(sec);
     });
 
+    // A dead cron must announce itself. Without this the page would keep
+    // showing yesterday's numbers as though they were today's.
     var when = new Date(doc.generated_utc);
+    var ageHours = (Date.now() - when.getTime()) / 3600000;
+    if (ageHours > 36) {
+      var warn = document.createElement("div");
+      warn.className = "stale";
+      warn.textContent = "These figures are " + Math.floor(ageHours / 24) +
+        " day(s) old. The daily update has not run — treat them as historical, not current.";
+      host.insertBefore(warn, host.firstChild);
+    }
     document.getElementById("stamp").textContent =
       "updated " + when.toLocaleString(undefined, {
         year: "numeric", month: "short", day: "2-digit",
