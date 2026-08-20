@@ -1,0 +1,755 @@
+{
+ "schema": 1,
+ "week": "2026-W34",
+ "forecast_week": "2026-W35",
+ "review_friday": "2026-08-20",
+ "generated_utc": "2026-08-20T22:53:36Z",
+ "vintage": {
+  "asof": "2026-08-21",
+  "note": null
+ },
+ "params_version": 1,
+ "nominal_coverage": 0.8,
+ "assets": [
+  {
+   "id": "gold",
+   "name": "Gold (spot)",
+   "price": 4460.7,
+   "price_date": "2026-08-19",
+   "week_change_pct": 2.005,
+   "signals": {
+    "trend_score": 0.4547,
+    "trend_components": {
+     "21": 1.4028,
+     "63": -0.0761,
+     "126": -0.5898,
+     "252": 1.0819
+    },
+    "z21": 1.4028,
+    "range_pos_252d": 0.544,
+    "sigma_daily": 0.014019,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "lbma:gold_pm",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-08-27",
+     "base": 4460.7,
+     "lo": 4288.627043,
+     "hi": 4680.611422,
+     "steps": 6,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-09-17",
+     "base": 4460.7,
+     "lo": 4177.717816,
+     "hi": 5005.3113,
+     "steps": 21,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 4460.7,
+     "steps": 96,
+     "central": {
+      "lo": 4194.135884,
+      "hi": 5047.255528,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 5047.255528,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 4194.135884,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 3877.435732,
+      "hi": 5706.470074
+     },
+     "lo": 3877.435732,
+     "hi": 5706.470074,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Hold",
+   "stance": {
+    "state": "Hold",
+    "flip_level": 4460.7,
+    "flip_to": "Flat",
+    "confidence": 0.5827,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": null,
+   "words": {
+    "technical": "The composite trend score sits at +0.45, just above the Hold threshold, carried mostly by strong one-month momentum; the price sits mid-range on the year. The stance is marginal by construction — because the score is computed over rolling windows, even an unchanged price would let it decay back to Flat, which is why the flip level sits at the current price rather than below it.",
+    "macro": "Gold's bid this week is a dollar-and-rates story: the dollar index fell toward the 100 level at a two-month low while September hike odds collapsed after soft jobs data, compressing real yields and cutting the opportunity cost of holding metal. The reversal risk is scheduled and named: Fed Chair Warsh delivers his first Jackson Hole keynote on 28 August, inside this forecast window, and the faded hike expectations underpinning the advance are exactly what that speech could restore.",
+    "long_term": "The structural bid — central-bank reserve diversification and sensitivity to real rates rather than headline inflation — has carried gold through a record-setting year; that regime argument is unchanged by one week's move.",
+    "eoy_scenarios": {
+     "central": "The dollar stays heavy and the hike debate stays unresolved into December; gold oscillates with real-yield expectations and holds the script's central band.",
+     "upside": "A dovish Jackson Hole followed by soft autumn CPI prints kills the hike cycle outright; real yields fall and gold breaks to fresh records above the band.",
+     "downside": "Warsh re-arms the September hike at Jackson Hole and the dollar reclaims 100; the two-month advance built on faded hike odds unwinds."
+    },
+    "citations": [
+     {
+      "title": "Gold tests $4,400 as September hike odds collapse",
+      "url": "https://tiomarkets.com/article/gold-price-forecast-xau-usd-analysis-2026-08-17",
+      "date": "2026-08-17"
+     },
+     {
+      "title": "Jackson Hole 2026: what Warsh's speech means for gold",
+      "url": "https://goldsilver.com/industry-news/goldsilver-news/gold-price-jackson-hole-warsh/",
+      "date": "2026-08-13"
+     }
+    ]
+   }
+  },
+  {
+   "id": "silver",
+   "name": "Silver (spot)",
+   "price": 63.355,
+   "price_date": "2026-08-19",
+   "week_change_pct": -2.463,
+   "signals": {
+    "trend_score": 0.1368,
+    "trend_components": {
+     "21": 0.8455,
+     "63": -0.7572,
+     "126": -0.4218,
+     "252": 0.8806
+    },
+    "z21": 0.8455,
+    "range_pos_252d": 0.3188,
+    "sigma_daily": 0.022273,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "lbma:silver",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-08-27",
+     "base": 63.355,
+     "lo": 58.869834,
+     "hi": 68.187833,
+     "steps": 6,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-09-17",
+     "base": 63.355,
+     "lo": 56.219329,
+     "hi": 73.475285,
+     "steps": 21,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 63.355,
+     "steps": 96,
+     "central": {
+      "lo": 56.102218,
+      "hi": 75.298836,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 75.298836,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 56.102218,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 49.07092,
+      "hi": 86.973947
+     },
+     "lo": 49.07092,
+     "hi": 86.973947,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Flat",
+   "stance": {
+    "state": "Flat",
+    "flip_level": 69.202297,
+    "flip_to": "Hold",
+    "confidence": 0.793,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": null,
+   "words": {
+    "technical": "The composite trend score is near zero (+0.14) with the price in the lower third of its one-year range — a Flat by the book, with daily volatility (2.2%) still among the highest of the seven. The flip level to Hold sits about nine percent above the last fix, so it would take a decisive move, not drift, to change the read.",
+    "macro": "Silver rides the same weak-dollar, fading-hike-odds current as gold but lagged it badly this week on the official fixes, widening the gold/silver ratio to about 70. One vintage caveat belongs here rather than in a footnote: this review prices silver off the 19 August LBMA PM fix, and the live spot market jumped sharply on the 20th — the Markets tab already shows it — so next week's scoring will judge this range from a fix that predates that move.",
+    "long_term": "Silver remains the hybrid metal — monetary in crisis, industrial the rest of the time — and the ratio near 70 is historically wide, which is an observation about relative value, not a timing signal.",
+    "eoy_scenarios": {
+     "central": "Silver tracks gold's rate story with higher beta and stays inside the script's central band, ratio drifting sideways.",
+     "upside": "The dollar downtrend extends and industrial demand holds; silver's beta cuts upward and it closes the ratio gap toward gold.",
+     "downside": "A hawkish autumn repricing hits the higher-beta metal hardest; silver underperforms gold on the way down, as it did this week on the fixes."
+    },
+    "citations": [
+     {
+      "title": "Gold tests $4,400 as September hike odds collapse",
+      "url": "https://tiomarkets.com/article/gold-price-forecast-xau-usd-analysis-2026-08-17",
+      "date": "2026-08-17"
+     }
+    ]
+   }
+  },
+  {
+   "id": "wti",
+   "name": "Oil (WTI)",
+   "price": 86.309998,
+   "price_date": "2026-08-20",
+   "week_change_pct": 6.228,
+   "signals": {
+    "trend_score": 0.1462,
+    "trend_components": {
+     "21": -0.035,
+     "63": -0.4951,
+     "126": 0.5176,
+     "252": 0.5975
+    },
+    "z21": -0.035,
+    "range_pos_252d": 0.5381,
+    "sigma_daily": 0.031524,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:CL=F",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-08-27",
+     "base": 86.309998,
+     "lo": 78.937554,
+     "hi": 93.786762,
+     "steps": 5,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-09-17",
+     "base": 86.309998,
+     "lo": 72.644069,
+     "hi": 103.165953,
+     "steps": 20,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 86.309998,
+     "steps": 95,
+     "central": {
+      "lo": 71.768042,
+      "hi": 106.600749,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 106.600749,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 71.768042,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 59.279627,
+      "hi": 127.325263
+     },
+     "lo": 59.279627,
+     "hi": 127.325263,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Flat",
+   "stance": {
+    "state": "Flat",
+    "flip_level": 95.460053,
+    "flip_to": "Hold",
+    "confidence": 0.793,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": null,
+   "words": {
+    "technical": "Despite the +6% week, the composite trend score is barely positive (+0.15) and one-month momentum is flat — the rally has so far only lifted price back to the middle of a wide, violent one-year range, and daily volatility (3.2%) is the highest of the seven instruments. The flip to Hold sits near $95.5, roughly ten percent up, which is how much trend this signal set demands before it calls oil an uptrend again.",
+    "macro": "The week's move is a supply-disruption story: vessel traffic through the Strait of Hormuz has fallen sharply as Iran targets tankers defying its demands, and Washington's escalating threats kept a war premium in the price. Front-month WTI settled above $86 on 20 August, its highest in over two weeks, with the pressure feeding straight into equity-market inflation worry.",
+    "long_term": "OPEC+ completed the rollback of its voluntary cuts with September's scheduled increase, so the structural question into 2027 is whether restored supply or Gulf disruption risk dominates; the strait remains the single largest scheduled-to-nothing risk in the complex.",
+    "eoy_scenarios": {
+     "central": "The Hormuz premium ebbs and flows without a supply break; restored OPEC+ barrels cap rallies and WTI churns inside the script's central band.",
+     "upside": "An actual interruption of strait volumes — not threats — repricing the barrel well above the band's top; this is the fat tail the 80% envelope deliberately leaves out.",
+     "downside": "De-escalation drains the war premium while the completed cut rollback leaves the market amply supplied into year-end."
+    },
+    "citations": [
+     {
+      "title": "Crude oil price - Trading Economics",
+      "url": "https://tradingeconomics.com/commodity/crude-oil",
+      "date": "2026-08-21"
+     },
+     {
+      "title": "Current price of oil, August 17",
+      "url": "https://fortune.com/article/price-of-oil-08-17-2026/",
+      "date": "2026-08-17"
+     },
+     {
+      "title": "OPEC+ agrees September hike, completing rollback of voluntary cuts",
+      "url": "https://www.cnbc.com/2026/08/02/opec-agrees-september-oil-hike-completing-rollback-of-voluntary-cuts.html",
+      "date": "2026-08-02"
+     }
+    ]
+   }
+  },
+  {
+   "id": "btc",
+   "name": "Bitcoin",
+   "price": 72738.976562,
+   "price_date": "2026-08-20",
+   "week_change_pct": 14.726,
+   "signals": {
+    "trend_score": 0.3647,
+    "trend_components": {
+     "21": 1.2173,
+     "63": 1.033,
+     "126": -0.156,
+     "252": -0.6356
+    },
+    "z21": 1.2173,
+    "range_pos_252d": 0.3696,
+    "sigma_daily": 0.023347,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:BTC-USD",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-08-27",
+     "base": 72738.976562,
+     "lo": 67862.174014,
+     "hi": 78947.114213,
+     "steps": 7,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-09-17",
+     "base": 72738.976562,
+     "lo": 61786.264278,
+     "hi": 90172.609677,
+     "steps": 28,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 72738.976562,
+     "steps": 133,
+     "central": {
+      "lo": 63091.068658,
+      "hi": 92030.524864,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 92030.524864,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 63091.068658,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 50968.06703,
+      "hi": 116178.580084
+     },
+     "lo": 50968.06703,
+     "hi": 116178.580084,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Flat",
+   "stance": {
+    "state": "Flat",
+    "flip_level": 72738.976562,
+    "flip_to": "Hold",
+    "confidence": 0.793,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": null,
+   "words": {
+    "technical": "A +15% week with one-month momentum strong (+1.22 standardised), yet the composite score (+0.36) still sits a fraction below the Hold threshold because the longer lookbacks remember months spent in the lower half of the range — the price is only 37% up its one-year span. The stance is Flat on the numbers with the flip to Hold at effectively the current price: one more firm weekly close tips the composite over.",
+    "macro": "The 19 August session did the week's work: an ~8% daily jump that liquidated over $1 billion of shorts in about an hour, triggered by the Treasury doubling its 10-to-30-year buyback operations to $4 billion, and reinforced by a White House meeting with industry executives and a proposed SEC token-regulation framework that traders read as rule clarity. The rally is therefore a liquidity-and-regulation story amplified by forced positioning, which is worth remembering when judging its durability.",
+    "long_term": "The maturation trend — clearer US rules, institutional rails, and sensitivity to Treasury-market liquidity conditions — continues to tighten bitcoin's link to macro plumbing rather than to its own halving folklore.",
+    "eoy_scenarios": {
+     "central": "Consolidation of the August repricing: liquidity stays supportive, regulation advances without shocks, and price holds the script's wide central band.",
+     "upside": "The regulatory framework lands cleanly and easing financial conditions pull sidelined capital in; the squeeze becomes a sustained trend above the band.",
+     "downside": "Jackson Hole or the September FOMC revives the hike path, Treasury-market support fades, and a leverage-built rally gives back its gains as fast as it made them."
+    },
+    "citations": [
+     {
+      "title": "Bitcoin tops $69,000 as Treasury buybacks, SEC rules and White House summit converge",
+      "url": "https://www.techtimes.com/articles/325065/20260820/bitcoin-tops-69000-treasury-buybacks-sec-rules-white-house-summit-converge.htm",
+      "date": "2026-08-20"
+     },
+     {
+      "title": "Crypto market advances as Treasury expands long-end buybacks",
+      "url": "https://www.cryptotimes.io/2026/08/20/crypto-market-advances-as-treasury-expands-long-end-buybacks-and-regulators-signal-clarity/",
+      "date": "2026-08-20"
+     },
+     {
+      "title": "Bitcoin and ethereum prices, Wednesday August 19, 2026",
+      "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-wednesday-august-19-2026-crypto-prices-rise-after-sec-announces-proposed-regulation-161733939.html",
+      "date": "2026-08-19"
+     }
+    ]
+   }
+  },
+  {
+   "id": "spx",
+   "name": "S&P 500",
+   "price": 7641.160156,
+   "price_date": "2026-08-20",
+   "week_change_pct": -2.024,
+   "signals": {
+    "trend_score": 0.8322,
+    "trend_components": {
+     "21": 0.4763,
+     "63": 0.4109,
+     "126": 1.0776,
+     "252": 1.364
+    },
+    "z21": 0.4763,
+    "range_pos_252d": 0.8915,
+    "sigma_daily": 0.00764,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:^GSPC",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-08-27",
+     "base": 7641.160156,
+     "lo": 7500.014597,
+     "hi": 7814.531443,
+     "steps": 5,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-09-17",
+     "base": 7641.160156,
+     "lo": 7353.129967,
+     "hi": 7991.454077,
+     "steps": 20,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 7641.160156,
+     "steps": 95,
+     "central": {
+      "lo": 7499.657924,
+      "hi": 8162.819781,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 8162.819781,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 7499.657924,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 7027.335657,
+      "hi": 8425.303766
+     },
+     "lo": 7027.335657,
+     "hi": 8425.303766,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Hold",
+   "stance": {
+    "state": "Hold",
+    "flip_level": 7393.401561,
+    "flip_to": "Flat",
+    "confidence": 0.5827,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": null,
+   "words": {
+    "technical": "The composite trend score of +0.83 is the strongest of the seven and the price sits at the 89th percentile of its one-year range — a textbook Hold, with this week's −2% reading as a pullback from last Thursday's record close rather than a break. The flip to Flat waits about three percent lower, near 7,393.",
+    "macro": "The index set an all-time high last Thursday and then fell for three straight sessions as oil's jump re-lit inflation worry, sovereign bond yields pushed toward multidecade highs, and the AI-chip complex sold off; a late-week bounce on the Treasury's expanded buybacks faded by Thursday. The uptrend's near-term test is scheduled: the new Fed chair's Jackson Hole keynote lands inside the coming week.",
+    "long_term": "An earnings-driven bull market trading at records with historically narrow leadership — the concentration itself, not the level, is the structural fragility worth watching into 2027.",
+    "eoy_scenarios": {
+     "central": "Records with chop: yields stay elevated but capped, earnings hold, and the index grinds inside the script's central band into December.",
+     "upside": "The hike cycle ends credibly at or after Jackson Hole; multiple expansion on falling real yields pushes the index above the band.",
+     "downside": "An energy-shock inflation impulse forces the hike path back on; the crowded leadership unwinds and the pullback extends well below the band."
+    },
+    "citations": [
+     {
+      "title": "S&P 500 falls a third day as global yields and oil weigh",
+      "url": "https://www.cnbc.com/2026/08/17/stock-market-today-live-updates.html",
+      "date": "2026-08-17"
+     },
+     {
+      "title": "Nasdaq, S&P 500 slip as Treasury rally fades",
+      "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-20-2026",
+      "date": "2026-08-20"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ndx",
+   "name": "Nasdaq 100",
+   "price": 29213.164062,
+   "price_date": "2026-08-20",
+   "week_change_pct": -2.896,
+   "signals": {
+    "trend_score": 0.5627,
+    "trend_components": {
+     "21": 0.1098,
+     "63": -0.0228,
+     "126": 1.0255,
+     "252": 1.1383
+    },
+    "z21": 0.1098,
+    "range_pos_252d": 0.8122,
+    "sigma_daily": 0.013523,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:^NDX",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-08-27",
+     "base": 29213.164062,
+     "lo": 28283.71186,
+     "hi": 30430.352413,
+     "steps": 5,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-09-17",
+     "base": 29213.164062,
+     "lo": 27438.867629,
+     "hi": 31762.155414,
+     "steps": 20,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 29213.164062,
+     "steps": 95,
+     "central": {
+      "lo": 27949.498662,
+      "hi": 32750.115609,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 32750.115609,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 27949.498662,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 25484.171451,
+      "hi": 35055.888597
+     },
+     "lo": 25484.171451,
+     "hi": 35055.888597,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Hold",
+   "stance": {
+    "state": "Hold",
+    "flip_level": 28472.523336,
+    "flip_to": "Flat",
+    "confidence": 0.5827,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": null,
+   "words": {
+    "technical": "The uptrend reads intact but cooler than the broad market's — a composite of +0.56 against the S&P's +0.83, with one-month momentum nearly flat after this week's chip-led −2.9%. Price holds the 81st percentile of its one-year range; the flip to Flat sits about 2.5% below, near 28,473.",
+    "macro": "The week's damage was concentrated exactly where this index is concentrated: AI and semiconductor names led Tuesday's selloff as multidecade-high bond yields squeezed long-duration growth valuations, and the fade of the Treasury-buyback bounce hit the same names again on Thursday. Note for readers of both tabs: this review tracks the Nasdaq-100, deliberately not the Composite shown historically on the Markets tab — they are different indices and are scored separately.",
+    "long_term": "The AI capital-expenditure cycle still writes this index's story; its rate-sensitivity is the tax paid for that leadership, and both facts are structural rather than weekly.",
+    "eoy_scenarios": {
+     "central": "AI earnings deliver enough to offset elevated yields; the index consolidates its leadership inside the script's central band.",
+     "upside": "Rate relief plus a strong Q3 earnings season re-rates growth duration; the index breaks above the band with leadership broadening.",
+     "downside": "Yields at multidecade highs finally compress growth multiples in earnest; the chip complex corrects and drags the index below the band."
+    },
+    "citations": [
+     {
+      "title": "Dow, S&P 500, Nasdaq fall as chip stocks sell off",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-august-18-dow-sp-500-nasdaq-080822735.html",
+      "date": "2026-08-18"
+     },
+     {
+      "title": "Nasdaq, S&P 500 slip as Treasury rally fades",
+      "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-20-2026",
+      "date": "2026-08-20"
+     }
+    ]
+   }
+  },
+  {
+   "id": "dxy",
+   "name": "US Dollar Index",
+   "price": 98.841003,
+   "price_date": "2026-08-20",
+   "week_change_pct": -1.119,
+   "signals": {
+    "trend_score": -0.3403,
+    "trend_components": {
+     "21": -1.5945,
+     "63": -0.1184,
+     "126": 0.2449,
+     "252": 0.1069
+    },
+    "z21": -1.5945,
+    "range_pos_252d": 0.4863,
+    "sigma_daily": 0.003149,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:DX-Y.NYB",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-08-27",
+     "base": 98.841003,
+     "lo": 97.95026,
+     "hi": 99.778336,
+     "steps": 5,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-09-17",
+     "base": 98.841003,
+     "lo": 97.135909,
+     "hi": 100.668834,
+     "steps": 20,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 98.841003,
+     "steps": 95,
+     "central": {
+      "lo": 96.895116,
+      "hi": 101.229336,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 101.229336,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 96.895116,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 95.162603,
+      "hi": 102.868159
+     },
+     "lo": 95.162603,
+     "hi": 102.868159,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Flat",
+   "stance": {
+    "state": "Flat",
+    "flip_level": 98.841003,
+    "flip_to": "Wait",
+    "confidence": 0.793,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": null,
+   "words": {
+    "technical": "The composite score of −0.34 sits a whisker above the Wait threshold with sharp one-week downside momentum (−1.59 standardised) — a Flat so marginal that, like gold's, its flip level is effectively the current price: continued drift alone would tip the signal to Wait. Mid-range on the year at the 49th percentile, just under the psychologically watched 100 line.",
+    "macro": "The index fell to a two-month low as soft jobs and inflation data collapsed September hike odds and the Treasury's expanded long-end buybacks pressed yields lower — the same two currents that lifted gold and crypto this week. The scheduled decider is Chair Warsh's first Jackson Hole keynote on 28 August, inside this forecast window: the entire two-month dollar slide rests on the hike expectations that speech could revive.",
+    "long_term": "The structural argument is a stand-off between the rate differential that supports the dollar and the twin-deficit, de-dollarisation drumbeat that erodes it; 100 has become the line both sides fight over.",
+    "eoy_scenarios": {
+     "central": "The hike debate stays live but unresolved; the index oscillates around 100 inside the script's central band into December.",
+     "upside": "Warsh restores the September hike and the rate differential reasserts; the index reclaims the low 100s above the band.",
+     "downside": "The hike cycle is declared done and long-end buybacks keep compressing yields; the slide extends decisively below the band."
+    },
+    "citations": [
+     {
+      "title": "Gold tests $4,400 as September hike odds collapse",
+      "url": "https://tiomarkets.com/article/gold-price-forecast-xau-usd-analysis-2026-08-17",
+      "date": "2026-08-17"
+     },
+     {
+      "title": "Bitcoin tops $69,000 as Treasury buybacks, SEC rules and White House summit converge",
+      "url": "https://www.techtimes.com/articles/325065/20260820/bitcoin-tops-69000-treasury-buybacks-sec-rules-white-house-summit-converge.htm",
+      "date": "2026-08-20"
+     },
+     {
+      "title": "Jackson Hole 2026: what Warsh's speech means for gold",
+      "url": "https://goldsilver.com/industry-news/goldsilver-news/gold-price-jackson-hole-warsh/",
+      "date": "2026-08-13"
+     }
+    ]
+   }
+  }
+ ],
+ "coherence": {
+  "violations": [],
+  "note": null
+ },
+ "declines": {
+  "no_read": 0,
+  "no_data": 0
+ },
+ "scorecard": {
+  "weekly": {
+   "weeks": 0,
+   "directional": {
+    "n": 0,
+    "hit": 0,
+    "rate": null
+   },
+   "flat": {
+    "n": 0,
+    "hit": 0,
+    "rate": null
+   },
+   "range_1w": {
+    "n": 0,
+    "hit": 0,
+    "coverage": null
+   },
+   "avg_width_pct": null,
+   "best_read": null,
+   "worst_read": null
+  },
+  "rolling_12w": {
+   "weeks": 0,
+   "directional": {
+    "n": 0,
+    "hit": 0,
+    "rate": null
+   },
+   "flat": {
+    "n": 0,
+    "hit": 0,
+    "rate": null
+   },
+   "range_1w": {
+    "n": 0,
+    "hit": 0,
+    "coverage": null
+   },
+   "avg_width_pct": null,
+   "best_read": null,
+   "worst_read": null
+  },
+  "declines_all_time": {
+   "no_read": 0,
+   "no_data": 0
+  }
+ },
+ "calibration": {
+  "pooled": {
+   "n": 0,
+   "coverage": null
+  },
+  "flag": "INSUFFICIENT-HISTORY"
+ },
+ "week_summary": "A week of sharp divergence: crypto surged after the US Treasury doubled its long-end bond buybacks and regulators signalled clearer rules, while equities slipped back from record highs under pressure from oil-driven inflation worry and a spike in sovereign yields. The dollar index fell to a two-month low as September rate-hike odds faded on soft jobs and inflation data, oil jumped on renewed Strait of Hormuz disruption, and the new Fed chair's first Jackson Hole keynote now sits squarely inside the coming forecast week.",
+ "published_utc": "2026-08-20T23:04:51Z"
+}
