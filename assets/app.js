@@ -104,10 +104,12 @@
         " day(s) old. The daily update has not run — treat them as historical, not current.";
       host.insertBefore(warn, host.firstChild);
     }
+    // Compact on purpose - the long locale form truncates on a phone.
     document.getElementById("stamp").textContent =
-      "updated " + when.toLocaleString(undefined, {
-        year: "numeric", month: "short", day: "2-digit",
-        hour: "2-digit", minute: "2-digit"
+      "updated " + when.toLocaleDateString("en-GB", {
+        day: "2-digit", month: "short", year: "numeric"
+      }) + ", " + when.toLocaleTimeString("en-GB", {
+        hour: "2-digit", minute: "2-digit", hour12: false
       });
     document.getElementById("status").style.display = "none";
   }

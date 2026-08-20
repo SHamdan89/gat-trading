@@ -24,17 +24,18 @@ body{
 
 /* header */
 .top{border-bottom:1px solid var(--line); background:var(--surface)}
-.top .wrap{display:flex; align-items:center; justify-content:space-between; gap:14px; padding-top:15px; padding-bottom:15px}
-.brandblock{min-width:0}
-.brand{font-size:19px; letter-spacing:-.02em; font-weight:600}
-.brand .dot{color:var(--ink-3)}
-.brand .tld{color:var(--ink-2); font-weight:500}
+.top .wrap{display:flex; align-items:center; justify-content:space-between; gap:14px; padding-top:14px; padding-bottom:14px}
+.lockup{min-width:0}
+.tagline{
+  margin-top:6px; font-size:9px; font-weight:600; text-transform:uppercase;
+  letter-spacing:.12em; color:var(--ink-3); white-space:nowrap;
+}
 .stamp{font-family:var(--mono); font-size:11.5px; color:var(--ink-3); white-space:nowrap;
   overflow:hidden; text-overflow:ellipsis; margin-top:2px}
 
 /* GAT mark. The tiles stay dark in both themes on purpose - a logo is a
    constant, not a themed element. */
-.logo{height:34px; width:auto; flex:0 0 auto; display:block}
+.logo{height:38px; width:auto; flex:0 0 auto; display:block}
 .logo .tile{fill:#1C1C1A; stroke:#2E6E47; stroke-width:1.5; stroke-opacity:.55}
 
 /* tabs */
@@ -171,9 +172,9 @@ tbody tr:hover td:first-child{background:var(--line-soft)}
 @media (max-width:680px){
   body{font-size:15.5px}
   .top .wrap{padding-top:13px; padding-bottom:13px}
-  .brand{font-size:17px}
-  .stamp{font-size:10.5px}
-  .logo{height:28px}
+  .stamp{font-size:10px; text-align:right; flex:0 0 auto}
+  .logo{height:34px}
+  .tagline{font-size:7.6px; letter-spacing:.105em; margin-top:5px}
   .tab{padding:13px 13px; font-size:14.5px}   /* comfortable tap target */
   .panel{padding:18px 0 34px}
   .group{margin-bottom:22px}
