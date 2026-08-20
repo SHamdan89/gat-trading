@@ -225,6 +225,7 @@ tbody tr:hover td:first-child{background:var(--line-soft)}
 .acard-reason{color:var(--ink-2)}
 .scen b{color:var(--ink)}
 
+.provline{font-size:11px; color:var(--ink-3); font-family:var(--mono); margin-bottom:10px}
 .hzwrap{display:flex; flex-direction:column; gap:9px; margin-bottom:4px}
 .hz{display:flex; gap:12px; align-items:baseline}
 .hz-label{

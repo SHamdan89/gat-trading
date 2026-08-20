@@ -357,6 +357,8 @@
           "the record as a decline."));
         if (a.words && a.words.note) body.appendChild(el("p", null, a.words.note));
       } else if (a.forecast) {
+        body.appendChild(el("div", "provline", "last close " + (a.price_date || "?") +
+          " · source " + (a.source || "?")));
         var hzwrap = el("div", "hzwrap");
         if (a.forecast.next_week) hzwrap.appendChild(rangeLine("Next week", a.forecast.next_week));
         if (a.forecast.next_month) hzwrap.appendChild(rangeLine("Next month", a.forecast.next_month));
