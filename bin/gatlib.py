@@ -399,8 +399,16 @@ def iso_week(d):
 
 
 def friday_of_week(d):
-    """The Friday of d's ISO week."""
-    return d + dt.timedelta(days=4 - d.isocalendar()[2])
+    """The Friday of d's ISO week.
+
+    ISO weekday numbers Monday 1 ... Sunday 7, so Friday is 5. This read
+    `4 - isoweekday` until 2026-08-21 and therefore returned the THURSDAY of
+    every week, silently, while saying Friday. It anchored every backtest
+    vintage and every published horizon one day early, and it voided the whole
+    argument for the Saturday review slot: that slot exists because the US
+    Friday close lands 02:00 Saturday Bahrain, and a Thursday anchor does not
+    include it. Fixed and the parameters re-frozen at version 2."""
+    return d + dt.timedelta(days=5 - d.isocalendar()[2])
 
 
 def last_index_on_or_before(series, target):

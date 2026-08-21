@@ -22,6 +22,13 @@ carries only what a reader of the results needs):
   5. Freezes the selected parameters into config/range_params.json and writes
      config/backtest_report.{json,md}.
 
+PARAMS VERSIONS
+  v1  2026-08-20. Thursday-anchored: friday_of_week read `4 - isoweekday` and
+      returned Thursday. Superseded, never scored against, kept as
+      config/range_params.v1-thursday-anchored.json.
+  v2  2026-08-21. Friday-anchored, after that defect was fixed. Nothing was
+      retroactively rescored because nothing had ever been scored.
+
 PRE-REGISTERED GATES - written before the first run; the build stops and
 reports if they fail. (Set 2026-08-21; ~470 weekly obs per instrument gives a
 ~+/-4pp two-sigma band on an 80% coverage estimate, which sizes the bands.)
@@ -356,6 +363,9 @@ def stance_eval(scored_1w):
             for st, (k, n) in sorted(table.items()) if n > 0}
 
 
+PARAMS_VERSION = 2
+
+
 def main():
     args = sys.argv[1:]
     years = int(args[args.index("--years") + 1]) if "--years" in args else 10
@@ -486,8 +496,23 @@ def main():
           "| trend weight:", trend_weight)
 
     if freeze and report["gates"]["verdict"] == "PASS":
+        # A freeze rewrites this file WHOLESALE. Anything decided outside the
+        # backtest - the metals price basis, which is a signed ruling - must be
+        # carried across explicitly, or re-running the backtest would quietly
+        # revert it and nobody would see the change.
+        carried = {}
+        prior_path = os.path.join(CONFIG_DIR, "range_params.json")
+        if os.path.exists(prior_path):
+            try:
+                prior = json.load(open(prior_path))
+                for k in ("metal_price_basis", "metal_price_basis_set_utc",
+                          "metal_price_basis_note"):
+                    if k in prior:
+                        carried[k] = prior[k]
+            except Exception:             # noqa: BLE001 - an unreadable prior file is not fatal
+                pass
         params = {
-            "version": 1,
+            "version": PARAMS_VERSION,
             "frozen_utc": report["generated_utc"],
             "signed_off": "PENDING - not yet signed off; the freeze "
                           "records what the backtest selected",
@@ -510,6 +535,7 @@ def main():
             "calibration_band": [0.70, 0.90],
             "min_residuals": MIN_N,
         }
+        params.update(carried)
         with open(os.path.join(CONFIG_DIR, "range_params.json"), "w") as fh:
             json.dump(params, fh, indent=1)
         print("frozen -> config/range_params.json")
