@@ -513,7 +513,12 @@
   fetch("data/weekly/latest.json?t=" + Date.now(), { cache: "no-store" })
     .then(function (r) { if (!r.ok) throw new Error("no review yet"); return r.json(); })
     .then(function (doc) {
-      if (!doc || !doc.assets || doc.assets.length !== 7) throw new Error("malformed review");
+      if (!doc || !doc.assets) throw new Error("no review yet");
+      // An empty review is a STATE, not a broken document. Saying so here keeps
+      // the honest-empty path away from the malformed-document path, so a real
+      // malformation still stands out instead of looking like a quiet Saturday.
+      if (doc.assets.length === 0) { weeklyEmpty(doc.note); return; }
+      if (doc.assets.length !== 7) throw new Error("malformed review");
       renderWeekly(doc);
     })
     .catch(function () { weeklyEmpty(); });
