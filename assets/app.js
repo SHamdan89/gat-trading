@@ -484,15 +484,28 @@
     document.getElementById("weeklystatus").style.display = "none";
   }
 
+  // The next Saturday, computed rather than written down, so this line cannot
+  // quietly go stale the way a hardcoded date would.
+  function nextSaturday() {
+    var d = new Date();
+    d.setDate(d.getDate() + ((6 - d.getDay()) + 7) % 7);
+    return d.toLocaleDateString(undefined,
+      { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  }
+
   function weeklyEmpty(msg) {
     var host = document.getElementById("weeklybody");
     host.innerHTML = "";
     var box = el("div", "empty");
-    box.appendChild(el("h2", null, "The weekly review isn't running yet"));
+    box.appendChild(el("h2", null, "The first weekly review publishes " + nextSaturday()));
     box.appendChild(el("p", null, "This tab will carry a weekly market review of seven " +
       "instruments — a technical and macro read, calibrated forecast ranges, a stance " +
       "with its flip level, and a running accuracy record scored by script."));
-    box.appendChild(el("p", "muted", msg || "Nothing is shown here rather than showing something unverified."));
+    box.appendChild(el("p", null, "Reviews are published on Saturdays, after the US Friday " +
+      "close has settled. Each one is written before the week it forecasts and scored " +
+      "afterwards by script, so the accuracy record can only be read forwards."));
+    box.appendChild(el("p", "muted", msg || "Nothing is shown here until then, rather than " +
+      "showing something unverified."));
     host.appendChild(box);
     document.getElementById("weeklystatus").style.display = "none";
   }

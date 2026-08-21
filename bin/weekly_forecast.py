@@ -274,6 +274,21 @@ def _agg(sc, last_n):
 
 # ---------------------------------------------------------------- stage 1+2
 
+def _source_label(iid, params):
+    """What the level actually came from - which is not always one feed.
+
+    Under the spot-anchored basis the newest observation IS the live spot
+    quote while the history behind it is the LBMA fix series, so a bare
+    "lbma:gold_pm" would sit on the card directly above a note saying the
+    level came from spot. Provenance that contradicts itself is worse than
+    provenance that is long."""
+    base = dict((i[0], "%s:%s" % (i[2], i[3])) for i in gatlib.INSTRUMENTS)[iid]
+    if (iid in gatlib.SPOT_SYMBOL
+            and params.get("metal_price_basis") == "spot_anchored"):
+        return "gold-api:%s spot + %s history" % (gatlib.SPOT_SYMBOL[iid], base)
+    return base
+
+
 def build_asset(iid, name, s, params, review_friday, calendar_pick, failures):
     asof_note = None
     if iid in failures:
@@ -311,8 +326,7 @@ def build_asset(iid, name, s, params, review_friday, calendar_pick, failures):
             "sigma_daily": round(sigma, 6),
             "trend_weight_in_numbers": params["trend_weight"],
         },
-        "source": dict((i[0], "%s:%s" % (i[2], i[3]))
-                       for i in gatlib.INSTRUMENTS)[iid],
+        "source": _source_label(iid, params),
     }
     # One line on the card, for the two instruments whose level and whose
     # volatility history are not the same quote. A reader holding both tabs
