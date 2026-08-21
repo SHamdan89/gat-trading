@@ -523,6 +523,293 @@
     })
     .catch(function () { weeklyEmpty(); });
 
+  // ---------------------------------------------------------------- alpha hunt
+  // Tab 4 is judgment where tab 3 is arithmetic, and it never borrows tab 3's
+  // calibrated vocabulary. The record is counts, never rates: no percentage
+  // appears anywhere on this tab, by design. Design record: the control room's
+  // tab-4 specification; the publisher enforces the same rules on the data.
+
+  var AL_CLASS = {
+    "Valid": "al-valid", "Stronger": "al-stronger", "Weaker": "al-weaker",
+    "Dead — killed": "al-killed", "Dead — arrived": "al-arrived"
+  };
+  var AL_LEGEND = [
+    ["Valid", "The disagreement stands. The kill condition has not fired; mainstream has not moved."],
+    ["Stronger", "New evidence supports it, or the consensus has started moving toward it. Cited."],
+    ["Weaker", "Contrary evidence has appeared — a missed checkpoint, a contradicting source — but the one kill condition has not fired. Cited."],
+    ["Dead — killed", "The kill condition written at birth fired. The idea was wrong, the record says so, and a post-mortem says what the hunt learned."],
+    ["Dead — arrived", "Mainstream caught up: the arrival marker was met. This is the win the tab exists for, counted with how many weeks early the idea was."]
+  ];
+
+  function alChip(status) {
+    return el("span", "alchip " + (AL_CLASS[status] || "al-valid"), status);
+  }
+
+  function killText(k) {
+    if (!k || typeof k !== "object") return "";
+    if (k.type === "price_level") {
+      return "Price " + k.direction + " " + fmtLevel(k.level) +
+        (k.note ? " — " + k.note : "");
+    }
+    if (k.type === "dated_event") return "By " + k.date + ": " + k.condition;
+    if (k.type === "published_figure") {
+      return k.body + " publishes " + k.metric + " " + k.comparator + " " +
+        fmtLevel(k.threshold);
+    }
+    return "";
+  }
+
+  function srcRow(list) {
+    var row = el("div", "bsrc");
+    (list || []).forEach(function (c) {
+      var a = el("a", null, (c.title || "source") +
+        (c.date ? " (" + c.date + ")" : ""));
+      a.href = c.url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer nofollow";
+      row.appendChild(a);
+    });
+    return row;
+  }
+
+  function alSection(host, title, calls, openFirst) {
+    if (!calls.length) return;
+    var sec = el("section", "group");
+    sec.appendChild(el("h2", null, title));
+    calls.forEach(function (c, i) {
+      var card = document.createElement("details");
+      card.className = "acard" +
+        (c.status === "Dead — killed" ? " al-card-killed" :
+         (c.status === "Dead — arrived" ? " al-card-arrived" : ""));
+      if (openFirst && i === 0) card.open = true;
+
+      var sum = document.createElement("summary");
+      var srow = el("div", "acard-head");
+      var left = el("div", "acard-name");
+      left.appendChild(el("span", "aname", c.subject));
+      left.appendChild(el("span", "aprice", c.ticker));
+      left.appendChild(el("span", "alopened", "opened " + c.opened));
+      srow.appendChild(left);
+      var right = el("div", "acard-side");
+      if (c.status === "Dead — arrived" && c.weeks_early !== null &&
+          c.weeks_early !== undefined) {
+        right.appendChild(el("span", "early", c.weeks_early + " weeks early"));
+      }
+      right.appendChild(alChip(c.status));
+      srow.appendChild(right);
+      sum.appendChild(srow);
+      card.appendChild(sum);
+
+      var body = el("div", "acard-body");
+
+      body.appendChild(el("h4", null, "The consensus it disagrees with"));
+      var cq = el("p", "alconsensus", c.consensus.text);
+      body.appendChild(cq);
+      if (c.consensus.source) body.appendChild(srcRow([c.consensus.source]));
+
+      body.appendChild(el("h4", null, "The disagreement"));
+      body.appendChild(el("p", null, c.variant));
+
+      body.appendChild(el("h4", null, "The one way to be wrong"));
+      body.appendChild(el("p", "alkill", killText(c.kill)));
+
+      if (c.checkpoints && c.checkpoints.length) {
+        body.appendChild(el("h4", null, "Checkpoints — expected, dated, sourced"));
+        c.checkpoints.forEach(function (cp) {
+          var row = el("div", "cprow");
+          row.appendChild(el("span", "cpdate", cp.date));
+          var a = el("a", "cplink", cp.expect);
+          a.href = cp.source;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer nofollow";
+          row.appendChild(a);
+          body.appendChild(row);
+        });
+      }
+
+      body.appendChild(el("h4", null, "What arrival would look like"));
+      body.appendChild(el("p", null, c.arrival));
+
+      if (c.trail && c.trail.length) {
+        body.appendChild(el("h4", null, "The trail — every review, append-only"));
+        c.trail.forEach(function (t) {
+          var row = el("div", "trailrow");
+          row.appendChild(el("span", "trailweek", t.week));
+          row.appendChild(alChip(t.status));
+          var why = el("span", "trailwhy");
+          why.appendChild(document.createTextNode(t.why + " "));
+          (t.sources || []).forEach(function (s) {
+            var a = el("a", "traillink", s.title || "source");
+            a.href = s.url;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer nofollow";
+            why.appendChild(a);
+            why.appendChild(document.createTextNode(" "));
+          });
+          row.appendChild(why);
+          body.appendChild(row);
+        });
+      }
+
+      if (c.post_mortem) {
+        var pm = el("div", "pm");
+        pm.appendChild(el("h4", null, "Post-mortem — about the hunt, not the market"));
+        [["Which assumption broke", c.post_mortem.assumption_broke],
+         ["What would have caught it earlier", c.post_mortem.earlier_catch],
+         ["The rule the hunt adopts", c.post_mortem.rule]
+        ].forEach(function (pair) {
+          var p = el("p", "pmrow");
+          p.appendChild(el("b", null, pair[0] + ": "));
+          p.appendChild(document.createTextNode(pair[1]));
+          pm.appendChild(p);
+        });
+        body.appendChild(pm);
+      }
+
+      if (c.sources && c.sources.length) {
+        body.appendChild(el("h4", null, "Sources"));
+        body.appendChild(srcRow(c.sources));
+      }
+
+      card.appendChild(body);
+      sec.appendChild(card);
+    });
+    host.appendChild(sec);
+  }
+
+  function renderAlpha(doc) {
+    var host = document.getElementById("alphabody");
+    host.innerHTML = "";
+
+    var head = el("div", "briefhead");
+    head.appendChild(el("h1", null, "Alpha Hunt"));
+    head.appendChild(el("div", "briefdate",
+      (doc.week || "") + " · week ending " + (doc.review_friday || "") +
+      (doc.published_utc ? " · published " + doc.published_utc.slice(0, 10) : "") +
+      " · next hunt Saturday morning (GMT+3)"));
+    host.appendChild(head);
+
+    // honesty banner when a newer week has completed and no hunt covers it
+    if (doc.review_friday) {
+      var age = Math.floor((Date.now() -
+        new Date(doc.review_friday + "T23:59:59Z").getTime()) / 86400000);
+      if (age > 9) {
+        host.appendChild(el("div", "stale", "This record was last reviewed for the " +
+          "week ending " + doc.review_friday + " — " + age + " days ago. A newer " +
+          "week has completed without a hunt."));
+      }
+    }
+
+    // the count block - counts, never rates
+    var ct = doc.counts || {};
+    var grid = el("div", "statgrid");
+    grid.appendChild(statBox("Weeks hunted", String(ct.weeks_hunted || 0),
+      "every Saturday counts, including the empty ones"));
+    grid.appendChild(statBox("Weeks with a new call",
+      String(ct.weeks_with_call || 0),
+      "a small number is discipline, not failure"));
+    grid.appendChild(statBox("Calls live", String(ct.live || 0),
+      "each carries one written way to be wrong"));
+    grid.appendChild(statBox("Dead — killed", String(ct.dead_killed || 0),
+      "the kill condition fired; post-mortem published"));
+    var arr = ct.arrivals || [];
+    grid.appendChild(statBox("Dead — arrived", String(ct.dead_arrived || 0),
+      arr.length
+        ? arr.map(function (a) {
+            return a.subject + ": " + a.weeks_early + " weeks early";
+          }).join(" · ")
+        : "the win this tab exists for: mainstream catches up"));
+    host.appendChild(grid);
+
+    // this week, in words
+    var week = el("div", "alweek");
+    if (doc.new_call_id) {
+      week.appendChild(el("p", "alweek-line",
+        "This week opened a new call: " + doc.new_call_id + "."));
+    } else {
+      week.appendChild(el("p", "alweek-line", "No new alpha this week."));
+      week.appendChild(el("p", "alweek-sub", doc.no_new_call_note ||
+        "A call is opened only when the market genuinely seems to believe " +
+        "a wrong thing, and that is rare. An empty week is the bar holding, " +
+        "and it is counted above."));
+    }
+    host.appendChild(week);
+
+    var calls = doc.calls || [];
+    var live = calls.filter(function (c) {
+      return ["Valid", "Stronger", "Weaker"].indexOf(c.status) !== -1;
+    });
+    var dead = calls.filter(function (c) {
+      return c.status === "Dead — killed" || c.status === "Dead — arrived";
+    });
+
+    if (!calls.length) {
+      var none = el("div", "empty");
+      none.appendChild(el("h2", null, "No calls yet"));
+      none.appendChild(el("p", null, "When the hunt finds a genuine " +
+        "disagreement with the market, it will publish here: the consensus, " +
+        "quoted and dated; the disagreement; one written way to be proved " +
+        "wrong; and what mainstream arrival would look like. Every later " +
+        "review appends to the record, and nothing published is ever edited."));
+      host.appendChild(none);
+    } else {
+      alSection(host, "Live calls", live, true);
+      alSection(host, "Dead calls — the record keeps its losses and its wins",
+        dead, false);
+    }
+
+    // legend + method
+    var leg = el("section", "legend");
+    leg.appendChild(el("h2", null, "The five statuses"));
+    AL_LEGEND.forEach(function (pair) {
+      var rowl = el("div", "legrow");
+      rowl.appendChild(alChip(pair[0]));
+      rowl.appendChild(el("span", "legtext", pair[1]));
+      leg.appendChild(rowl);
+    });
+    leg.appendChild(el("p", "legfoot",
+      "A call is a disagreement with a stated, cited consensus — and it is " +
+      "born with the one observable that would prove it wrong, written down " +
+      "before anyone knows the answer. Reviews append to the trail every " +
+      "week; a published call's consensus, disagreement, kill condition and " +
+      "arrival marker are never edited. Status judges the idea, not the " +
+      "price: a call can strengthen while its instrument falls. The record " +
+      "above is counts, never rates — with a handful of calls a year, a " +
+      "quoted accuracy figure would be noise wearing a uniform, so this tab " +
+      "refuses to print one. No percentage appears here, by design."));
+    host.appendChild(leg);
+
+    document.getElementById("alphastatus").style.display = "none";
+  }
+
+  function alphaEmpty(msg) {
+    var host = document.getElementById("alphabody");
+    host.innerHTML = "";
+    var box = el("div", "empty");
+    box.appendChild(el("h2", null, "The hunt hasn't published yet"));
+    box.appendChild(el("p", null, "This tab will carry the Alpha Hunt: a " +
+      "weekly search for places where the market seems to believe a wrong " +
+      "thing. Each call names the consensus it disagrees with, quoted and " +
+      "dated; states the disagreement; and is born with one written, " +
+      "checkable way to be proved wrong."));
+    box.appendChild(el("p", null, "The record is counted in public — weeks " +
+      "hunted, calls opened, killed, or arrived — and “no alpha this " +
+      "week” is an expected, counted answer. Dead calls keep their " +
+      "post-mortems on the page."));
+    box.appendChild(el("p", "muted", msg || "Nothing is shown here until " +
+      "the first hunt publishes, rather than showing something unverified."));
+    host.appendChild(box);
+    document.getElementById("alphastatus").style.display = "none";
+  }
+
+  fetch("data/alpha/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("no hunt yet"); return r.json(); })
+    .then(function (doc) {
+      if (!doc || !doc.week || !doc.counts) throw new Error("no hunt yet");
+      renderAlpha(doc);
+    })
+    .catch(function () { alphaEmpty(); });
+
   // tabs
   var tabs = [].slice.call(document.querySelectorAll(".tab"));
   tabs.forEach(function (t) {

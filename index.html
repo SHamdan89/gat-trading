@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>gat.trading</title>
-<meta name="description" content="Asset prices updated hourly, and a daily market brief.">
+<meta name="description" content="Asset prices updated hourly, a daily market brief, a weekly review, and a counted alpha hunt.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="gat.trading">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
-<link rel="stylesheet" href="assets/style.css?v=7">
+<link rel="stylesheet" href="assets/style.css?v=8">
 </head>
 <body>
 <header class="top">
@@ -79,6 +79,7 @@
     <button class="tab is-active" role="tab" aria-selected="true"  aria-controls="markets" data-panel="markets">Markets</button>
     <button class="tab"           role="tab" aria-selected="false" aria-controls="brief"   data-panel="brief">Daily Brief</button>
     <button class="tab"           role="tab" aria-selected="false" aria-controls="weekly"  data-panel="weekly">Weekly Review</button>
+    <button class="tab"           role="tab" aria-selected="false" aria-controls="alpha"   data-panel="alpha">Alpha Hunt</button>
   </div>
 </nav>
 
@@ -109,6 +110,11 @@
     <div id="weeklystatus" class="status">Loading weekly review…</div>
     <div id="weeklybody"></div>
   </section>
+
+  <section id="alpha" class="panel" role="tabpanel" tabindex="0">
+    <div id="alphastatus" class="status">Loading alpha hunt…</div>
+    <div id="alphabody"></div>
+  </section>
 </main>
 
 <footer class="wrap foot">
@@ -126,6 +132,6 @@
   <p class="foot-line"><span>gat.trading</span></p>
 </footer>
 
-<script src="assets/app.js?v=7"></script>
+<script src="assets/app.js?v=8"></script>
 </body>
 </html>

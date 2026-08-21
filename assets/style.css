@@ -254,6 +254,68 @@ tbody tr:hover td:first-child{background:var(--line-soft)}
 .legtext{font-size:13px; color:var(--ink-2); line-height:1.5}
 .legfoot{font-size:12px; color:var(--ink-3); line-height:1.55; margin-top:12px}
 
+/* ------------------------------------------------------------ alpha hunt */
+/* Tab 4's chips are its own vocabulary, deliberately distinct from tab 3's
+   st-* set. The two dead states must never look alike: arrived is the win
+   and fills solid; killed is the loss and stays outlined in red. */
+.alchip{
+  display:inline-block; font-size:11px; font-weight:650; letter-spacing:.02em;
+  padding:2.5px 10px; border-radius:999px; border:1px solid transparent;
+  white-space:nowrap;
+}
+.al-valid   {color:var(--ink-2); border-color:var(--ink-3); background:color-mix(in srgb, var(--ink-3) 8%, transparent)}
+.al-stronger{color:var(--up);   border-color:var(--up);   background:color-mix(in srgb, var(--up) 10%, transparent)}
+.al-weaker  {color:var(--wait); border-color:var(--wait); background:color-mix(in srgb, var(--wait) 12%, transparent)}
+.al-killed  {color:var(--down); border-color:var(--down); background:color-mix(in srgb, var(--down) 10%, transparent)}
+.al-arrived {color:var(--surface); border-color:var(--up); background:var(--up); font-weight:700}
+
+.al-card-killed{border-left:3px solid color-mix(in srgb, var(--down) 55%, var(--line))}
+.al-card-arrived{border-left:3px solid var(--up)}
+
+.alopened{font-size:11px; color:var(--ink-3)}
+.early{
+  display:inline-block; font-size:11px; font-weight:650; color:var(--up);
+  border:1px dashed var(--up); border-radius:999px; padding:2px 9px; white-space:nowrap;
+}
+.alconsensus{
+  border-left:3px solid var(--line); padding-left:11px; font-style:italic;
+}
+.alkill{font-family:var(--mono); font-size:13.5px; color:var(--ink)}
+
+.alweek{
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); padding:14px 16px; margin-bottom:22px;
+}
+.alweek-line{margin:0; font-size:15px; font-weight:600}
+.alweek-sub{margin:6px 0 0; font-size:13.5px; color:var(--ink-2); line-height:1.55}
+
+.cprow{display:flex; gap:10px; align-items:baseline; margin-bottom:5px; min-width:0}
+.cpdate{font-family:var(--mono); font-size:12px; color:var(--ink-3); flex:0 0 auto}
+.cplink{font-size:13.5px; color:var(--ink-2); text-decoration:underline;
+  text-decoration-color:var(--line); text-underline-offset:2px; min-width:0}
+.cplink:hover{color:var(--ink)}
+
+.trailrow{display:flex; gap:9px; align-items:baseline; margin-bottom:7px; min-width:0}
+.trailweek{font-family:var(--mono); font-size:12px; color:var(--ink-3); flex:0 0 auto}
+.trailrow .alchip{flex:0 0 auto}
+.trailwhy{font-size:13px; color:var(--ink-2); line-height:1.5; min-width:0}
+.traillink{font-size:12px; color:var(--ink-3)}
+.traillink:hover{color:var(--ink)}
+
+.pm{
+  margin-top:14px; padding:12px 14px; border:1px dashed var(--line);
+  border-radius:var(--radius); background:color-mix(in srgb, var(--ink-3) 4%, transparent);
+}
+.pm h4{margin-top:0}
+.pmrow{margin:0 0 7px; font-size:13.5px; color:var(--ink-2); line-height:1.55}
+.pmrow b{color:var(--ink); font-weight:600}
+
+@media (max-width:680px){
+  .trailrow,.cprow{flex-wrap:wrap; gap:6px 9px}
+  .alweek{padding:13px 14px}
+  .legrow .alchip{flex:0 0 auto; min-width:58px; text-align:center}
+}
+
 /* ------------------------------------------------- mobile-first polish */
 @media (max-width:680px){
   body{font-size:15.5px}
