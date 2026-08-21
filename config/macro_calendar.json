@@ -1,0 +1,45 @@
+{
+  "_readme": [
+    "Dated tier-one macro events. The weekly review's 'No read' state fires",
+    "MECHANICALLY when an event here falls inside an asset's forecast window -",
+    "the calendar naming and dating the event is what satisfies the gating",
+    "conditions by construction. Each event maps to ONE primary asset.",
+    "Dates come from official published schedules, entered with their source.",
+    "Events with no confirmed date are NOT entered - a guessed date would",
+    "gate real forecasts on a fabrication. OPEC+ eight-country production",
+    "meetings are announced only days ahead: add each one when its date is",
+    "public, with the source. Maintained by hand; verified 2026-08-21."
+  ],
+  "updated": "2026-08-21",
+  "events": [
+    {"date": "2026-09-11", "name": "US CPI release (August data)", "kind": "CPI",
+     "asset": "gold", "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
+    {"date": "2026-09-15", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
+     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+    {"date": "2026-09-16", "name": "FOMC meeting (day 2 of 2)", "kind": "FOMC",
+     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+    {"date": "2026-10-14", "name": "US CPI release (September data)", "kind": "CPI",
+     "asset": "gold", "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
+    {"date": "2026-10-27", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
+     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+    {"date": "2026-10-28", "name": "FOMC meeting (day 2 of 2)", "kind": "FOMC",
+     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+    {"date": "2026-11-10", "name": "US CPI release (October data)", "kind": "CPI",
+     "asset": "gold", "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
+    {"date": "2026-12-08", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
+     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+    {"date": "2026-12-09", "name": "FOMC meeting (day 2 of 2)", "kind": "FOMC",
+     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+    {"date": "2026-12-10", "name": "US CPI release (November data)", "kind": "CPI",
+     "asset": "gold", "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
+    {"date": "2027-01-26", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
+     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+    {"date": "2027-01-27", "name": "FOMC meeting (day 2 of 2)", "kind": "FOMC",
+     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"}
+  ],
+  "unscheduled_watch": [
+    {"kind": "OPEC+", "asset": "wti",
+     "note": "Eight-country production meetings run roughly monthly and are announced only days in advance; the 2026 second ministerial is expected late Nov / early Dec. No confirmed forward date as of 2026-08-21 - enter each date when published.",
+     "source": "https://www.opec.org/meetings.html"}
+  ]
+}

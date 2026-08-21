@@ -11,7 +11,7 @@ Pure standard library, Python 3.9. No numpy, no third-party anything - the
 build account has no toolchain and adding one was ruled out deliberately.
 
 Method (decided 2026-08-21 from two independent research reviews; the project
-record in the substrate carries the reasoning - do not re-litigate here):
+project record carries the reasoning - do not re-litigate here):
   - Base case: no change, at every horizon (Welch & Goyal 2008; Goyal, Welch
     & Zafirov 2024 - published return predictors fail out of sample).
   - Ranges: 80% prediction intervals from EWMA conditional volatility times
@@ -53,6 +53,25 @@ INSTRUMENTS = [
 ]
 
 TRADING_DAYS = {"1w": 5, "1m": 21}     # nominal, for display; maths uses actual steps
+
+# Markets that trade seven days a week - their horizon step-counts use
+# calendar days, everyone else's use weekdays.
+SEVEN_DAY = {"btc"}
+
+
+def expected_steps(iid, start, target):
+    """Expected number of return observations between two dates (exclusive
+    start, inclusive target). Weekday count for 5-day markets - a market
+    holiday inside the window costs ~one step of width, accepted and
+    documented; calendar days for 7-day markets."""
+    if iid in SEVEN_DAY:
+        return max((target - start).days, 1)
+    n, d = 0, start
+    while d < target:
+        d += dt.timedelta(days=1)
+        if d.isoweekday() <= 5:
+            n += 1
+    return max(n, 1)
 
 
 # ---------------------------------------------------------------- fetch
@@ -114,6 +133,59 @@ def lbma_daily(name, since=None):
         out.append((d, float(v[0])))
     out.sort(key=lambda x: x[0])
     return out
+
+
+# Live spot quotes for the two metals. Used ONLY when range_params.json sets
+# metal_price_basis to "spot_anchored".
+#
+# WHY THIS EXISTS. The metals' history is the LBMA benchmark fix - one official
+# print a day, free, back to 1968, and the only daily metals history available
+# without a paid key. The Markets tab quotes live spot, because that is the
+# number a reader sees quoted everywhere else. They are two legitimate quotes
+# of the same metal and they sit apart by ordinary noise: measured 2026-08-21,
+# gold +0.94% and silver +2.41%, which is 0.6 of a daily standard deviation for
+# both. Small, but visible to anyone holding the two tabs side by side.
+#
+# "spot_anchored" closes that gap by making the newest observation of the
+# series the live spot quote instead of the day's fix, so the level, the flip
+# level, the week change and the forecast base all sit on the number the
+# Markets tab shows. Volatility history stays on the fix series - measured
+# effect on EWMA sigma of appending the spot point: gold 0.01365 -> 0.01343,
+# silver 0.02509 -> 0.02501. Negligible.
+#
+# WHAT IT COSTS, so nobody turns it on without knowing. The frozen quantiles
+# were fitted on fix-to-fix returns. Under this basis a forecast is made from
+# spot and scored against the fix at its target date, which adds roughly a
+# quarter of a weekly standard deviation of basis noise to the realised
+# outcome and should pull measured coverage slightly below the 0.80 nominal.
+# The weekly calibration measurement already watches for exactly that and
+# raises COVERAGE-DRIFT. It also changes published calls: on 2026-08-21 silver
+# read Flat on the fix basis and Hold on the spot basis.
+SPOT_SYMBOL = {"gold": "XAU", "silver": "XAG"}
+
+
+def spot_quote(symbol):
+    """Live spot metal price. Free, no key, current price only - no history."""
+    doc = json.loads(_get("https://api.gold-api.com/price/%s"
+                          % urllib.parse.quote(symbol), timeout=30))
+    if doc.get("price") is None:
+        raise RuntimeError("gold-api returned no price for %s" % symbol)
+    return float(doc["price"])
+
+
+def anchor_on_spot(iid, series, asof):
+    """Return series with its newest observation replaced by the live spot
+    quote, so the published level equals what the Markets tab shows.
+
+    A fix already printed for asof is superseded rather than duplicated - the
+    series must stay one observation per date, strictly increasing."""
+    if iid not in SPOT_SYMBOL or not series:
+        return series
+    px = spot_quote(SPOT_SYMBOL[iid])
+    last_d = series[-1][0]
+    if last_d == asof:
+        return series[:-1] + [(asof, px)]
+    return series + [(asof, px)]
 
 
 def fetch_series(source, symbol, years=10):
@@ -210,8 +282,8 @@ def range_position(series, idx, window=252):
 
 # ---------------------------------------------------------------- stance
 
-# Frozen v1 thresholds - global across instruments, changed only with
-# Solomon's sign-off in config/range_params.json.
+# Frozen v1 thresholds - global across instruments, changed only by a
+# signed-off change to config/range_params.json.
 STANCE_PARAMS = {
     "trend_hold": 0.40,       # S >= +0.40 -> Hold (uptrend expected to continue)
     "trend_wait": -0.40,      # S <= -0.40 -> Wait (falling, no base)
@@ -246,29 +318,36 @@ def stance_direction(stance):
 
 
 def flip_level(series, idx, params=STANCE_PARAMS, max_move=0.5):
-    """The nearest future close that would move the stance into a different
-    bucket, found by bisection on a hypothetical next close appended to the
-    series. Returns (price, new_stance) or (None, None) if no move within
-    +/-max_move (fraction) flips it."""
+    """The nearest NEXT close that would put the stance in a different bucket
+    from TODAY'S stance, found by bisection on a hypothetical appended close.
+
+    Appending any close - even an unchanged price - shifts every lookback
+    window, so a marginal stance can flip with no price move at all
+    (momentum decay). That is real and is reported honestly: the flip level
+    is then the current price itself. Returns (price, new_stance) or
+    (None, None) if nothing within +/-max_move flips it."""
     date0, p0 = series[idx]
-    base = _stance_with_next(series, idx, p0)
+    s_now, comps_now = trend_score(series, idx)
+    pos_now = range_position(series, idx)
+    base = derive_stance(s_now, comps_now.get(21) if comps_now else None,
+                         pos_now, params)
     if base is None:
         return None, None
 
-    def flipped(p):
-        s = _stance_with_next(series, idx, p)
-        return s is not None and s != base, s
+    st0 = _stance_with_next(series, idx, p0)
+    if st0 is not None and st0 != base:
+        return p0, st0
 
     best = None
     for direction in (1, -1):
         lo_f, hi_f = 0.0, max_move
-        hit, s_hi = flipped(p0 * (1 + direction * hi_f))
-        if not hit:
+        s_hi = _stance_with_next(series, idx, p0 * (1 + direction * hi_f))
+        if s_hi is None or s_hi == base:
             continue
         for _ in range(40):
             mid = (lo_f + hi_f) / 2
-            h, s_mid = flipped(p0 * (1 + direction * mid))
-            if h:
+            s_mid = _stance_with_next(series, idx, p0 * (1 + direction * mid))
+            if s_mid is not None and s_mid != base:
                 hi_f, s_hi = mid, s_mid
             else:
                 lo_f = mid

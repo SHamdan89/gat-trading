@@ -1,4 +1,4 @@
-# Range backtest report - 2026-08-20T22:36:15Z
+# Range backtest report - 2026-08-20T22:42:11Z
 
 Selected vol model: **ewma94** | Gate verdict: **PASS** | Trend weight: **0.0**
 

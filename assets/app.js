@@ -72,6 +72,12 @@
           s.textContent = "as of " + a.as_of;
           name.appendChild(s);
         }
+        if (a.basis_note) {
+          var bn = document.createElement("span");
+          bn.className = "asof";
+          bn.textContent = a.basis_note;
+          name.appendChild(bn);
+        }
         tr.appendChild(name);
 
         var price = document.createElement("td");
@@ -357,8 +363,18 @@
           "the record as a decline."));
         if (a.words && a.words.note) body.appendChild(el("p", null, a.words.note));
       } else if (a.forecast) {
-        body.appendChild(el("div", "provline", "last close " + (a.price_date || "?") +
-          " · source " + (a.source || "?")));
+        var prov = "last close " + (a.price_date || "?") + " · source " + (a.source || "?");
+        // Stored reviews are never edited, so a review published before this
+        // note existed carries no note field. Derive it from the record's own
+        // source rather than leaving the reader to wonder why the Markets tab
+        // quotes a different number for the same metal.
+        var basis = a.price_basis_note;
+        if (!basis && (a.source || "").indexOf("lbma:") === 0) {
+          basis = "level is the LBMA benchmark fix, one official print a day; " +
+                  "the Markets tab quotes live spot, which sits a little either side of it";
+        }
+        if (basis) prov += " · " + basis;
+        body.appendChild(el("div", "provline", prov));
         var hzwrap = el("div", "hzwrap");
         if (a.forecast.next_week) hzwrap.appendChild(rangeLine("Next week", a.forecast.next_week));
         if (a.forecast.next_month) hzwrap.appendChild(rangeLine("Next month", a.forecast.next_month));

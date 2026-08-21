@@ -1,10 +1,12 @@
 {
  "version": 1,
- "frozen_utc": "2026-08-20T22:36:15Z",
- "signed_off": "PENDING - Solomon has not yet signed; the freeze records what the backtest selected",
+ "frozen_utc": "2026-08-20T22:42:11Z",
+ "signed_off": "PENDING - not yet signed off; the freeze records what the backtest selected",
  "vol_model": "ewma94",
  "ewma_lambda": 0.94,
  "vol_init_days": 252,
+ "metal_price_basis": "lbma_fix",
+ "metal_price_basis_note": "Which quote is the newest observation of the gold and silver series. 'lbma_fix' = the official LBMA benchmark fix, the basis these quantiles were fitted on and the basis 2026-W34 was published on. 'spot_anchored' = the live spot quote, which makes the Weekly Review's level identical to the Markets tab's. Changing this changes what the public accuracy record is scored against, so it is a signed-off decision and not a build decision - see gatlib.anchor_on_spot for the measured cost.",
  "interval": {
   "nominal_coverage": 0.8,
   "method": "empirical q10/q90 of standardised residuals, per instrument per horizon, full sample at freeze"
@@ -13,11 +15,15 @@
   "gold": {
    "1w": {
     "q10": -1.1456,
+    "q25": -0.5027,
+    "q75": 0.811,
     "q90": 1.4014,
     "n": 469
    },
    "1m": {
     "q10": -1.0202,
+    "q25": -0.4486,
+    "q75": 0.8994,
     "q90": 1.7931,
     "n": 466
    }
@@ -25,11 +31,15 @@
   "silver": {
    "1w": {
     "q10": -1.3458,
+    "q25": -0.5556,
+    "q75": 0.7888,
     "q90": 1.3474,
     "n": 469
    },
    "1m": {
     "q10": -1.1707,
+    "q25": -0.5571,
+    "q75": 0.7914,
     "q90": 1.4519,
     "n": 466
    }
@@ -37,11 +47,15 @@
   "wti": {
    "1w": {
     "q10": -1.2667,
+    "q25": -0.544,
+    "q75": 0.6511,
     "q90": 1.1786,
     "n": 468
    },
    "1m": {
     "q10": -1.2227,
+    "q25": -0.6005,
+    "q75": 0.6872,
     "q90": 1.2654,
     "n": 465
    }
@@ -49,11 +63,15 @@
   "btc": {
    "1w": {
     "q10": -1.1235,
+    "q25": -0.4365,
+    "q75": 0.5897,
     "q90": 1.3259,
     "n": 485
    },
    "1m": {
     "q10": -1.321,
+    "q25": -0.5285,
+    "q75": 0.8737,
     "q90": 1.7391,
     "n": 482
    }
@@ -61,11 +79,15 @@
   "spx": {
    "1w": {
     "q10": -1.0913,
+    "q25": -0.4392,
+    "q75": 0.7988,
     "q90": 1.3132,
     "n": 469
    },
    "1m": {
     "q10": -1.1245,
+    "q25": -0.251,
+    "q75": 0.8868,
     "q90": 1.3118,
     "n": 466
    }
@@ -73,11 +95,15 @@
   "ndx": {
    "1w": {
     "q10": -1.0693,
+    "q25": -0.4116,
+    "q75": 0.7887,
     "q90": 1.35,
     "n": 469
    },
    "1m": {
     "q10": -1.0361,
+    "q25": -0.3355,
+    "q75": 0.8671,
     "q90": 1.3833,
     "n": 466
    }
@@ -85,11 +111,15 @@
   "dxy": {
    "1w": {
     "q10": -1.2858,
+    "q25": -0.6121,
+    "q75": 0.7004,
     "q90": 1.3406,
     "n": 468
    },
    "1m": {
     "q10": -1.2358,
+    "q25": -0.6479,
+    "q75": 0.778,
     "q90": 1.3013,
     "n": 465
    }

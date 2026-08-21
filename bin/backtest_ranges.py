@@ -3,7 +3,7 @@
 backtest_ranges.py - walk-forward validation of the Weekly Review's range
 formula, run BEFORE anything publishes. Pure standard library.
 
-What it does (method and reasoning live in the substrate record; this header
+What it does (method and reasoning live in the project record; this header
 carries only what a reader of the results needs):
 
   1. Pulls ~10 years of daily closes per instrument from the same providers
@@ -408,6 +408,8 @@ def main():
                             for r in rows if r["hz"] == h and r["sigma"][m] > 0)
                 if len(zs) >= 50:
                     fz[m][h] = {"q10": round(gatlib.percentile(zs, 0.10), 4),
+                                "q25": round(gatlib.percentile(zs, 0.25), 4),
+                                "q75": round(gatlib.percentile(zs, 0.75), 4),
                                 "q90": round(gatlib.percentile(zs, 0.90), 4),
                                 "n": len(zs)}
         full_sample_z[iid] = fz
@@ -487,7 +489,7 @@ def main():
         params = {
             "version": 1,
             "frozen_utc": report["generated_utc"],
-            "signed_off": "PENDING - Solomon has not yet signed; the freeze "
+            "signed_off": "PENDING - not yet signed off; the freeze "
                           "records what the backtest selected",
             "vol_model": winner,
             "ewma_lambda": 0.94 if winner == "ewma94" else (0.97 if winner == "ewma97" else None),
