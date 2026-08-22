@@ -1,0 +1,38 @@
+{
+ "schema": 1,
+ "run_utc": "2026-08-22T23:15:34Z",
+ "fetch_utc": "2026-08-22T23:15:34Z",
+ "payload_sha256": "6e7f3383023aa31f8040cc6dccc897dda4879a013da87b43fbf599ad8cf02d7d",
+ "upstream": {
+  "coingecko": {
+   "stamp": "2026-08-22T23:12:20Z",
+   "observations": 8,
+   "unparsed": 0,
+   "expected_live": true
+  },
+  "fred": {
+   "stamp": "2026-07-06T00:00:00Z",
+   "observations": 1,
+   "unparsed": 0,
+   "expected_live": false
+  },
+  "gold-api": {
+   "stamp": "2026-08-22T23:14:14Z",
+   "observations": 3,
+   "unparsed": 0,
+   "expected_live": true
+  },
+  "yahoo": {
+   "stamp": "2026-08-22T23:15:13Z",
+   "observations": 28,
+   "unparsed": 0,
+   "expected_live": true
+  }
+ },
+ "assets": 40,
+ "feed_errors": 0,
+ "pull_rc": 0,
+ "status": "ok",
+ "alarms": [],
+ "note": "Emitted by every run, including failed ones. status ok means this run saw the feed advance; ALARM means it did not, and the prices on the page may be older than they look."
+}
