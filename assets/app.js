@@ -115,6 +115,23 @@
     Object.keys(btns).forEach(k => btns[k].addEventListener("click", () => apply(k)));
   })();
 
+  /* ---------- masthead: the tagline runs exactly as wide as the mark -------- */
+  function fitTagline() {
+    const logo = document.querySelector(".lockup .logo"), tag = document.querySelector(".lockup .tagline");
+    if (!logo || !tag) return;
+    tag.style.fontSize = "";                       /* measure at the stylesheet size */
+    const cs = getComputedStyle(tag);
+    const fs = parseFloat(cs.fontSize);
+    const lsEm = (parseFloat(cs.letterSpacing) || 0) / fs;
+    const wl = logo.getBoundingClientRect().width, wt = tag.getBoundingClientRect().width;
+    if (!(fs > 0) || !(wl > 0) || !(wt > 0)) return;
+    /* the text box carries one trailing letter-space; the visible ink ends before it */
+    const k = wt / fs, target = wl / (k - lsEm);
+    if (target > 0 && isFinite(target)) tag.style.fontSize = target.toFixed(3) + "px";
+  }
+  fitTagline();
+  window.addEventListener("resize", fitTagline);
+
   /* ---------- tabs ---------------------------------------------------------- */
   const tabBtns = [].slice.call(document.querySelectorAll(".tab"));
   const inkBar = document.querySelector(".ink");

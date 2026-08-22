@@ -675,3 +675,11 @@ footer { margin-top: clamp(44px, 8vw, 80px); border-top: 1px solid var(--line); 
 .logo .tile { fill: #1C1C1A; stroke: #2E6E47; stroke-width: 1.5; stroke-opacity: .55; }
 .lockup .tagline { margin-top: 6px; }
 @media (max-width: 560px) { .logo { height: 34px; } .lockup .tagline { font-size: 8.5px; letter-spacing: .14em; margin-top: 5px; } }
+/* the tagline runs exactly as wide as the mark: inline-block so it measures
+   as text; the renderer scales the type to the mark's width after layout */
+.lockup .tagline { display: inline-block; white-space: nowrap; font-size: 9px; letter-spacing: .19em; margin-top: 6px; line-height: 1.2; }
+@media (max-width: 560px) { .lockup .tagline { font-size: 8.1px; letter-spacing: .16em; margin-top: 5px; } }
+/* a touch larger mark, easier tracking: the fitted tagline lands near 9px */
+.logo { height: 44px; }
+.lockup .tagline { font-size: 9.3px; letter-spacing: .15em; }
+@media (max-width: 560px) { .logo { height: 38px; } .lockup .tagline { font-size: 8.2px; letter-spacing: .13em; } }
