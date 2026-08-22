@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-08-22T23:15:34Z",
+ "generated_utc": "2026-08-22T23:17:33Z",
  "date": "2026-08-23",
  "assets": [
   {
@@ -295,27 +295,27 @@
    "group": "Crypto",
    "id": "btc",
    "name": "Bitcoin",
-   "price_usd": 76967.32,
-   "price_native": 76967.32,
+   "price_usd": 76985.03,
+   "price_native": 76985.03,
    "currency": "USD",
    "source": "yahoo:BTC-USD",
-   "chg_24h": -1.7461724975126829,
-   "chg_7d": 22.523035958853544,
-   "chg_30d": 20.076639376106666,
-   "chg_ytd": -12.04622247933913
+   "chg_24h": -1.723564522009986,
+   "chg_7d": 22.55122822236006,
+   "chg_30d": 20.104268729491324,
+   "chg_ytd": -12.025984521204558
   },
   {
    "group": "Crypto",
    "id": "eth",
    "name": "Ethereum",
-   "price_usd": 2415.09,
-   "price_native": 2415.09,
+   "price_usd": 2414.11,
+   "price_native": 2414.11,
    "currency": "USD",
    "source": "coingecko:ethereum",
    "chg_24h": -4.4,
    "chg_7d": 28.1,
    "chg_30d": 28.3,
-   "chg_ytd": -18.684623675624383
+   "chg_ytd": -18.71761998996376
   },
   {
    "group": "Crypto",
@@ -334,79 +334,79 @@
    "group": "Crypto",
    "id": "sol",
    "name": "Solana",
-   "price_usd": 93.67,
-   "price_native": 93.67,
+   "price_usd": 93.56,
+   "price_native": 93.56,
    "currency": "USD",
    "source": "coingecko:solana",
    "chg_24h": -0.4,
    "chg_7d": 23.9,
    "chg_30d": 23.3,
-   "chg_ytd": -24.775783930035598
+   "chg_ytd": -24.86412239237889
   },
   {
    "group": "Crypto",
    "id": "sui",
    "name": "Sui",
-   "price_usd": 0.813623,
-   "price_native": 0.813623,
+   "price_usd": 0.812009,
+   "price_native": 0.812009,
    "currency": "USD",
    "source": "coingecko:sui",
    "chg_24h": -4.7,
    "chg_7d": 19.6,
    "chg_30d": 9.1,
-   "chg_ytd": -42.04716363983126
+   "chg_ytd": -42.16212582487927
   },
   {
    "group": "Crypto",
    "id": "wld",
    "name": "Worldcoin",
-   "price_usd": 0.387309,
-   "price_native": 0.387309,
+   "price_usd": 0.386361,
+   "price_native": 0.386361,
    "currency": "USD",
    "source": "coingecko:worldcoin-wld",
    "chg_24h": -3.9,
    "chg_7d": 10.7,
    "chg_30d": 0.8,
-   "chg_ytd": -19.57999105119999
+   "chg_ytd": -19.776831735210592
   },
   {
    "group": "Crypto",
    "id": "hype",
    "name": "Hyperliquid",
-   "price_usd": 78.94,
-   "price_native": 78.94,
+   "price_usd": 78.77,
+   "price_native": 78.77,
    "currency": "USD",
    "source": "coingecko:hyperliquid",
    "chg_24h": 2.4,
    "chg_7d": 38.1,
    "chg_30d": 37.1,
-   "chg_ytd": 210.274245230764
+   "chg_ytd": 209.60605899198475
   },
   {
    "group": "Crypto",
    "id": "doge",
    "name": "Dogecoin",
-   "price_usd": 0.091819,
-   "price_native": 0.091819,
+   "price_usd": 0.091702,
+   "price_native": 0.091702,
    "currency": "USD",
    "source": "coingecko:dogecoin",
    "chg_24h": -0.3,
    "chg_7d": 31.4,
    "chg_30d": 32.3,
-   "chg_ytd": -21.836255670918124
+   "chg_ytd": -21.93585551502993
   },
   {
    "group": "Crypto",
    "id": "wlfi",
    "name": "World Liberty Financial",
-   "price_usd": 0.058822,
-   "price_native": 0.058822,
+   "price_usd": 0.05873,
+   "price_native": 0.05873,
    "currency": "USD",
    "source": "coingecko:world-liberty-financial",
    "chg_24h": -6.2,
    "chg_7d": 3.5,
    "chg_30d": 0.2,
-   "chg_ytd": -59.00999926995718
+   "chg_ytd": -59.07410929795969
   },
   {
    "group": "Oil & gas majors",
@@ -529,7 +529,7 @@
  "errors": [],
  "upstream": {
   "coingecko": {
-   "stamp": "2026-08-22T23:12:20Z",
+   "stamp": "2026-08-22T23:14:20Z",
    "observations": 8,
    "unparsed": 0,
    "expected_live": true
@@ -541,13 +541,19 @@
    "expected_live": false
   },
   "gold-api": {
-   "stamp": "2026-08-22T23:14:14Z",
+   "stamp": "2026-08-22T23:16:42Z",
    "observations": 3,
    "unparsed": 0,
    "expected_live": true
   },
+  "lbma": {
+   "stamp": "2026-08-21T00:00:00Z",
+   "observations": 2,
+   "unparsed": 0,
+   "expected_live": false
+  },
   "yahoo": {
-   "stamp": "2026-08-22T23:15:13Z",
+   "stamp": "2026-08-22T23:17:13Z",
    "observations": 28,
    "unparsed": 0,
    "expected_live": true
