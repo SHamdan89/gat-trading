@@ -683,3 +683,13 @@ footer { margin-top: clamp(44px, 8vw, 80px); border-top: 1px solid var(--line); 
 .logo { height: 44px; }
 .lockup .tagline { font-size: 9.3px; letter-spacing: .15em; }
 @media (max-width: 560px) { .logo { height: 38px; } .lockup .tagline { font-size: 8.2px; letter-spacing: .13em; } }
+/* one column grid for the whole board: every group's table shares the same
+   fixed widths, so Price / 24h / 7d / 30d / YTD line up from group to group */
+@media (min-width: 781px) {
+  table.mk { table-layout: fixed; }
+  table.mk th:nth-child(2) { width: 132px; }
+  table.mk th:nth-child(n+3) { width: 104px; }
+  table.mk td.nm2 { overflow: hidden; }
+  .aname .nm { min-width: 0; }
+  .aname .nm b, .aname .nm i { overflow-wrap: anywhere; }
+}
