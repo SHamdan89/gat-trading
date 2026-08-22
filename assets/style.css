@@ -667,7 +667,7 @@ footer { margin-top: clamp(44px, 8vw, 80px); border-top: 1px solid var(--line); 
 .trailrow > .al { justify-self: start; }
 .tp-x { font-size: 9.5px; gap: 2px 7px; }
 
-/* ---- the GAT mark, restored 2026-08-22 on Solomon's instruction ----
+/* ---- the GAT mark, restored 2026-08-22 ----
    Four tiles: ascending bars, G, A, T. Inline SVG; the tiles stay dark in both
    themes on purpose - a logo is a constant, not a themed element. */
 .lockup { display: block; min-width: 0; }
