@@ -27,6 +27,7 @@ Exit codes: 0 ok, 1 error, 3 the week's review is already published
 """
 
 import datetime as dt
+import hashlib
 import json
 import math
 import os
@@ -410,10 +411,19 @@ def pick_no_read(assets_order, calendar, review_friday, failures):
     cands = []
     for ev in calendar.get("events", []):
         d = dt.date.fromisoformat(ev["date"])
-        if window_lo < d <= window_hi and ev.get("asset") in assets_order:
-            cands.append({"asset": ev["asset"], "name": ev["name"],
+        # schema 2 renamed the gated instrument; schema 1 files still read.
+        primary = ev.get("primary", ev.get("asset"))
+        # A date the issuer's own calendar could not be read from is carried on
+        # the record but NEVER gates a forecast. Declining a real forecast on a
+        # date nobody could verify would be gating on a guess.
+        if ev.get("confirmed", "official") != "official":
+            continue
+        if window_lo < d <= window_hi and primary in assets_order:
+            cands.append({"asset": primary, "name": ev["name"],
                           "date": ev["date"], "kind": ev["kind"],
-                          "source": ev["source"]})
+                          "source": ev["source"],
+                          "scope": ev.get("scope"),
+                          "instruments": ev.get("instruments")})
     cands.sort(key=lambda c: (c["date"], assets_order.index(c["asset"])))
     for c in cands:
         if c["asset"] in prev_no_read or c["asset"] in failures:
@@ -422,12 +432,49 @@ def pick_no_read(assets_order, calendar, review_friday, failures):
     return None
 
 
+def freeze_calendar(path, calendar, review_friday, horizon_days=28):
+    """Copy the calendar AS IT STANDS into this forecast, hash and all.
+
+    Without this the calendar is a live file: an event could be added after a
+    market moved and the record would show a forecast correctly declined, with
+    nothing to prove the event had not simply been backfilled. Hindsight
+    contamination dressed as a record.
+
+    The frozen copy is what publish_weekly.py validates a No read against, and
+    what a reader can check the review's declines against years later. The
+    sha256 is of the WHOLE file, so a change anywhere in it - including to the
+    admission rule itself - is detectable from any published review."""
+    try:
+        with open(path, "rb") as fh:
+            digest = hashlib.sha256(fh.read()).hexdigest()
+    except OSError as exc:
+        raise SystemExit("cannot read the macro calendar to freeze it: %s" % exc)
+    lo, hi = review_friday, review_friday + dt.timedelta(days=horizon_days)
+    events = [e for e in calendar.get("events", [])
+              if lo < dt.date.fromisoformat(e["date"]) <= hi]
+    return {
+        "source_file": "config/macro_calendar.json",
+        "calendar_schema": calendar.get("schema"),
+        "calendar_updated": calendar.get("updated"),
+        "sha256": digest,
+        "frozen_utc": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "gate_window_days": 7,
+        "horizon_days": horizon_days,
+        "events": events,
+        "note": ("The macro calendar as it stood when this review was generated. "
+                 "Declines in this review were gated on THIS copy and nothing "
+                 "else. An event absent here could not have gated this review, "
+                 "whatever the live calendar says now."),
+    }
+
+
 def main():
     args = sys.argv[1:]
     asof = (dt.date.fromisoformat(args[args.index("--asof") + 1])
             if "--asof" in args else dt.date.today())
     params = load_params()
-    calendar = json.load(open(os.path.join(CONFIG, "macro_calendar.json")))
+    calendar_path = os.path.join(CONFIG, "macro_calendar.json")
+    calendar = json.load(open(calendar_path))
 
     review_friday = review_friday_for(asof)
     week = gatlib.iso_week(review_friday)
@@ -482,6 +529,7 @@ def main():
                     "note": ("inaugural mid-week run" if asof < review_friday or
                              asof == review_friday else None)},
         "params_version": params["version"],
+        "calendar_frozen": freeze_calendar(calendar_path, calendar, review_friday),
         "nominal_coverage": 0.80,
         "assets": assets,
         "coherence": {"violations": violations, "note": None},
@@ -505,10 +553,10 @@ def main():
         "note": "Aggregate feedback only. Prior per-asset calls are withheld "
                 "from the model by design - anchoring corrupts the record.",
     }
-    model_input["calendar_events_in_window"] = [
-        e for e in calendar.get("events", [])
-        if review_friday < dt.date.fromisoformat(e["date"])
-        <= review_friday + dt.timedelta(days=28)]
+    # From the FROZEN copy, so the model sees exactly the calendar the record
+    # was gated on - not a file that could have been edited in between.
+    model_input["calendar_events_in_window"] = list(
+        skeleton["calendar_frozen"]["events"])
     mi_path = os.path.join(TMP, "model-input-%s.json" % week)
     json.dump(model_input, open(mi_path, "w"), indent=1)
 

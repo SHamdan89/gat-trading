@@ -1,7 +1,7 @@
 {
  "version": 2,
  "frozen_utc": "2026-08-21T01:24:25Z",
- "signed_off": "PENDING - not yet signed off; the freeze records what the backtest selected",
+ "signed_off": "SIGNED 2026-08-23 by the owner — trend_weight 0.0 and coverage 0.80 / band [0.70,0.90] signed; per-asset confidence and the metals price basis DEFERRED to the 2026-10-04 review against live scored data (general.md §15.4).",
  "vol_model": "ewma94",
  "ewma_lambda": 0.94,
  "vol_init_days": 252,

@@ -720,6 +720,26 @@
     return c;
   }
 
+  /* PRICE SENSITIVITY AND TIME EXPIRY ARE TWO DIFFERENT CLAIMS.
+     The stance maths returns the CURRENT price as the flip level whenever
+     appending an unchanged close already moves the stance into another bucket
+     - momentum decay, with no price move involved at all. The page used to
+     print that as "flips at $X" beside "price $X", which reads as a
+     hair-trigger when what it means is that the read expires at the next
+     close. So the two are reported separately, always, and this predicate
+     picks out the case where there is no price level to report.
+     Exact equality, deliberately - not a tolerance and not a percentage
+     threshold. The flip level and the price come out of the same rounding in
+     the same generator, so when the maths means "no move required" the two
+     numbers are identical, and when it means a real level they are not. */
+  function flipIsTimeOnly(a) {
+    const st = a && a.stance;
+    if (!st || !isNum(st.flip_level)) return false;
+    const f = a.forecast || {};
+    const base = (f.next_week && isNum(f.next_week.base)) ? f.next_week.base : a.price;
+    return isNum(base) && st.flip_level === base;
+  }
+
   function fanChart(a) {
     const f = a.forecast || {};
     const e = f.eoy || null;
@@ -741,7 +761,11 @@
 
     const base = (f.next_week && isNum(f.next_week.base)) ? f.next_week.base :
       ((f.next_month && isNum(f.next_month.base)) ? f.next_month.base : a.price);
-    const flip = (a.stance && isNum(a.stance.flip_level)) ? a.stance.flip_level : null;
+    /* Suppressed when the level IS the price: a marker sitting exactly on
+       "now" is the same conflation drawn instead of written. */
+    const flip = (a.stance && isNum(a.stance.flip_level) && !flipIsTimeOnly(a))
+      ? a.stance.flip_level : null;
+    const timeOnly = flipIsTimeOnly(a);
     const marks = [];
     bands.forEach(b => { marks.push(b[2], b[3]); });
     if (isNum(base)) marks.push(base);
@@ -794,8 +818,12 @@
     if (flip !== null) {
       const l2 = el("span");
       l2.appendChild(el("i", "lf"));
-      l2.appendChild(document.createTextNode(" flips to " + (a.stance.flip_to || "?") + " at " + fmtLevel(flip)));
+      l2.appendChild(document.createTextNode(" turns to " + (a.stance.flip_to || "?") + " at " + fmtLevel(flip)));
       lg.appendChild(l2);
+    } else if (timeOnly) {
+      lg.appendChild(el("span", null,
+        "the read turns to " + ((a.stance && a.stance.flip_to) || "?") +
+        " at the next close - no price level"));
     }
     const dates = [];
     if (f.next_week && f.next_week.target_date) dates.push("week to " + f.next_week.target_date);
@@ -956,16 +984,45 @@
       const fan = fanChart(a);
       if (fan) c.appendChild(fan);
       if (a.stance && isNum(a.stance.flip_level)) {
-        /* the flip can sit either side of the price: say which way it fires */
-        const above = isNum(a.price) ? a.stance.flip_level > a.price : false;
+        /* Two statements, never one. What a price move would do, and what the
+           passage of time will do, are separate facts about this read. */
+        const to = a.stance.flip_to || "?";
+        const timeOnly = flipIsTimeOnly(a);
         const fl = el("div", "flip");
-        fl.appendChild(document.createTextNode("Stance holds while price stays " + (above ? "below " : "above ")));
-        fl.appendChild(el("b", null, fmtLevel(a.stance.flip_level)));
-        fl.appendChild(document.createTextNode("; a " + (above ? "rise" : "fall") +
-          " through that turns the read to " + (a.stance.flip_to || "?") + "." +
-          (isNum(a.stance.confidence)
-            ? " Confidence " + Math.round(a.stance.confidence * 100) + "% is the historical probability that this one-week claim holds."
-            : "")));
+
+        const r1 = el("div", "flr");
+        r1.appendChild(el("i", null, "Price"));
+        if (timeOnly) {
+          r1.appendChild(document.createTextNode(
+            "no move is required, and there is no level to watch. This read " +
+            "changes to " + to + " whether the price rises, falls or stands still."));
+        } else {
+          /* the level can sit either side of the price: say which way it fires */
+          const above = isNum(a.price) ? a.stance.flip_level > a.price : false;
+          r1.appendChild(document.createTextNode("the read holds while the price stays " +
+            (above ? "below " : "above ")));
+          r1.appendChild(el("b", null, fmtLevel(a.stance.flip_level)));
+          r1.appendChild(document.createTextNode("; a " + (above ? "rise" : "fall") +
+            " through that level turns it to " + to + "."));
+        }
+        fl.appendChild(r1);
+
+        const r2 = el("div", "flr");
+        r2.appendChild(el("i", null, "Time"));
+        r2.appendChild(document.createTextNode(timeOnly
+          ? "this read expires at the next close. The stance is cut from rolling " +
+            "lookback windows, and adding one more observation shifts them even " +
+            "when the price has not moved."
+          : "this read is re-derived at every close. An unchanged price carries it " +
+            "through the next one, but the lookback windows it is cut from move on " +
+            "regardless, so the level above is not a standing trigger."));
+        fl.appendChild(r2);
+
+        if (isNum(a.stance.confidence)) {
+          fl.appendChild(el("div", "flc", "Confidence " +
+            Math.round(a.stance.confidence * 100) +
+            "% is the historical probability that this one-week claim holds."));
+        }
         c.appendChild(fl);
       }
     }

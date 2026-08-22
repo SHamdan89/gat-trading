@@ -1,45 +1,260 @@
 {
-  "_readme": [
-    "Dated tier-one macro events. The weekly review's 'No read' state fires",
-    "MECHANICALLY when an event here falls inside an asset's forecast window -",
-    "the calendar naming and dating the event is what satisfies the gating",
-    "conditions by construction. Each event maps to ONE primary asset.",
-    "Dates come from official published schedules, entered with their source.",
-    "Events with no confirmed date are NOT entered - a guessed date would",
-    "gate real forecasts on a fabrication. OPEC+ eight-country production",
-    "meetings are announced only days ahead: add each one when its date is",
-    "public, with the source. Maintained by hand; verified 2026-08-21."
+ "schema": 2,
+ "updated": "2026-08-23",
+ "_readme": [
+  "TIER-ONE MACRO EVENTS. The weekly review's 'No read' state fires MECHANICALLY",
+  "when a qualifying event falls inside an asset's forecast window.",
+  "",
+  "This file used to be a LIST: whatever had been typed into it was what counted,",
+  "and nothing said why one event was in and another was out. It is now a RULE",
+  "with a list of the events that currently satisfy it. Admission is decided by",
+  "the four tests in 'rule.tests' - not by editorial taste, and not after the",
+  "fact. See control-room general.md 15.3.4."
+ ],
+
+ "rule": {
+  "statement": "An event is admitted only if it is SCHEDULED in advance, PUBLICLY TIMESTAMPED by the body that produces it, reaches the market through a DEFENSIBLE TRANSMISSION CHANNEL, and has HISTORICALLY MATERIAL volatility for at least one covered instrument. All four must hold. Every admitted event is tagged market_wide or instrument_specific.",
+
+  "tests": [
+   {"test": 1, "name": "scheduled",
+    "asks": "Is the date fixed and published in advance by the issuing body, rather than announced when it happens?",
+    "excludes": "Unscheduled interventions, emergency meetings, headline risk, anything datable only in hindsight."},
+   {"test": 2, "name": "publicly timestamped",
+    "asks": "Does the issuer publish a release time, so 'before' and 'after' are decidable by a third party?",
+    "excludes": "Events with a date but no time, and anything whose moment of release is a matter of opinion."},
+   {"test": 3, "name": "defensible transmission channel",
+    "asks": "Is there a stated mechanism by which this event reaches THIS instrument's price - a policy rate into the dollar, an inventory decision into crude - that can be written down in one sentence and argued with?",
+    "excludes": "Events whose only link to the price is that both are financial. If the sentence cannot be written, the event does not qualify."},
+   {"test": 4, "name": "historically material volatility",
+    "asks": "Has this class of event moved at least one covered instrument by more than an ordinary day, repeatedly, in the past?",
+    "excludes": "Events that are important to read but do not show up in realised volatility."}
   ],
-  "updated": "2026-08-21",
-  "events": [
-    {"date": "2026-09-11", "name": "US CPI release (August data)", "kind": "CPI",
-     "asset": "gold", "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
-    {"date": "2026-09-15", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
-     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
-    {"date": "2026-09-16", "name": "FOMC meeting (day 2 of 2)", "kind": "FOMC",
-     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
-    {"date": "2026-10-14", "name": "US CPI release (September data)", "kind": "CPI",
-     "asset": "gold", "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
-    {"date": "2026-10-27", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
-     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
-    {"date": "2026-10-28", "name": "FOMC meeting (day 2 of 2)", "kind": "FOMC",
-     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
-    {"date": "2026-11-10", "name": "US CPI release (October data)", "kind": "CPI",
-     "asset": "gold", "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
-    {"date": "2026-12-08", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
-     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
-    {"date": "2026-12-09", "name": "FOMC meeting (day 2 of 2)", "kind": "FOMC",
-     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
-    {"date": "2026-12-10", "name": "US CPI release (November data)", "kind": "CPI",
-     "asset": "gold", "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
-    {"date": "2027-01-26", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
-     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
-    {"date": "2027-01-27", "name": "FOMC meeting (day 2 of 2)", "kind": "FOMC",
-     "asset": "dxy", "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"}
+
+  "scope_tags": {
+   "market_wide": "Repricing is expected across most covered instruments; the named primary is where the No-read gate applies.",
+   "instrument_specific": "Repricing is expected in one instrument or one complex."
+  },
+
+  "qualifying_kinds": {
+   "FOMC": {"scope": "market_wide", "primary": "dxy",
+            "channel": "Sets the US policy rate and the expected path; the dollar and duration reprice first, and every dollar-priced instrument follows."},
+   "CPI": {"scope": "market_wide", "primary": "gold",
+           "channel": "Resets the expected policy path through realised inflation; real rates move, and gold prices off real rates."},
+   "PCE": {"scope": "market_wide", "primary": "gold",
+           "channel": "The inflation measure the FOMC targets by name, so it moves the expected path more directly than CPI does."},
+   "Payrolls": {"scope": "market_wide", "primary": "spx",
+                "channel": "The labour half of the dual mandate; the single largest scheduled revision to growth and rate expectations in a month."},
+   "OPEC+": {"scope": "instrument_specific", "primary": "wti",
+             "channel": "Sets production quotas for roughly a third of world supply; the quota IS the supply curve crude trades against."},
+   "Treasury refunding": {"scope": "market_wide", "primary": "dxy",
+                          "channel": "Sets coupon issuance sizes and the buyback schedule for the quarter - the supply side of the Treasury market, which sets the term premium the dollar trades on."},
+   "ECB": {"scope": "market_wide", "primary": "dxy",
+           "channel": "Sets euro-area policy rates; EURUSD is the largest weight in the dollar index, so an ECB decision moves DXY without the Fed doing anything."},
+   "BoJ": {"scope": "market_wide", "primary": "dxy",
+           "channel": "Sets Japanese policy rates and yield-curve policy; yen carry unwinds transmit into the dollar and into risk assets."}
+  },
+
+  "excluded_kinds": [
+   {"kind": "Central-bank symposia",
+    "reason": "EXCLUDED AS A BLANKET CATEGORY. Jackson Hole, Sintra and their like are conferences, not decisions: they are scheduled, but they issue no instrument and nothing is decided at a published time, so tests 2 and 3 both fail. Individual remarks made at one can move a market - but that is unscheduled headline risk, which is the thing test 1 exists to keep out. A symposium qualifies only if a specific scheduled, timestamped, policy-relevant release happens at it, and then it is admitted as that release, under its own kind."},
+   {"kind": "Earnings",
+    "reason": "Scheduled and timestamped, but the transmission channel reaches single equities, and no single equity is a covered instrument. Fails test 3 for this instrument set."},
+   {"kind": "Elections, geopolitics, unscheduled interventions",
+    "reason": "Material and sometimes datable, but not scheduled releases from an issuing body. Fails test 1."}
   ],
-  "unscheduled_watch": [
-    {"kind": "OPEC+", "asset": "wti",
-     "note": "Eight-country production meetings run roughly monthly and are announced only days in advance; the 2026 second ministerial is expected late Nov / early Dec. No confirmed forward date as of 2026-08-21 - enter each date when published.",
-     "source": "https://www.opec.org/meetings.html"}
-  ]
+
+  "source_of_record": "The issuing body's own published calendar, and only that: BLS for CPI and payrolls, BEA for PCE, the Federal Reserve for FOMC, the ECB and the Bank of Japan for their own decisions, the US Treasury for refunding, OPEC for its ministerial meetings. Aggregator calendars are NEVER a source here - they are the single easiest way for a wrong date to enter a record that gates real forecasts.",
+
+  "cutoff": "An event counts for a review only if it was already in this file when that review was generated. The generator FREEZES this calendar into every weekly document (see 'freeze' below); the frozen copy is what scores the record. Entries added later apply from the next review onwards and can never reach back.",
+
+  "cancellation": "If a scheduled event is cancelled, postponed or moved, the entry is EDITED IN PLACE with a 'revision' note naming what changed and when - it is never silently deleted. Reviews already published keep the frozen copy they were generated with, which is what they were actually gated on. A postponed event that lands in a later window is a new entry for that window.",
+
+  "revision_policy": "Every change to this file bumps 'updated' and appends to 'revisions' with the date, what changed and why. Because each review carries its own frozen copy, a correction here NEVER rewrites what a published review was gated on. The four tests themselves may only be changed by a signed ruling recorded in control-room general.md - not in this file.",
+
+  "confirmation_levels": {
+   "official": "The date was read from the issuing body's own published calendar. ONLY these may gate a forecast.",
+   "secondary": "The date is reported and consistent with the issuer's stated convention, but the issuer's own page could not be read at entry time. Carried on the record for context; the loader will NOT let it decline a forecast until it is upgraded to official. A guessed date must never gate a real forecast."
+  }
+ },
+
+ "freeze": {
+  "how": "weekly_forecast.py copies this file's 'updated' stamp, a sha256 of its bytes, and every event inside the review horizon into the weekly document as 'calendar_frozen', stamped with the moment it was cut. publish_weekly.py validates the No-read against THAT frozen copy, not against this file.",
+  "why": "Without the freeze, an event could be added after a market moved and the record would show a forecast correctly declined - hindsight contamination dressed as a record. The frozen copy makes backfilling visible: the published review carries the calendar as it stood, hash and all."
+ },
+
+ "events": [
+  {"date": "2026-08-26", "name": "US PCE price index (July data)", "kind": "PCE",
+   "scope": "market_wide", "primary": "gold", "instruments": ["gold", "silver", "dxy", "spx", "ndx"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bea.gov/news/schedule"},
+
+  {"date": "2026-09-04", "name": "US Employment Situation (August data)", "kind": "Payrolls",
+   "scope": "market_wide", "primary": "spx", "instruments": ["spx", "ndx", "dxy", "gold"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bls.gov/schedule/news_release/empsit.htm"},
+
+  {"date": "2026-09-10", "name": "ECB Governing Council monetary policy decision", "kind": "ECB",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx"],
+   "time_local": "14:15 Europe/Berlin", "confirmed": "official",
+   "note": "Day 2 of the 9-10 September meeting; the decision and press conference fall on day 2.",
+   "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"},
+
+  {"date": "2026-09-11", "name": "US CPI release (August data)", "kind": "CPI",
+   "scope": "market_wide", "primary": "gold", "instruments": ["gold", "silver", "dxy", "spx", "ndx"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
+
+  {"date": "2026-09-15", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx", "ndx", "btc"],
+   "time_local": "no release on day 1", "confirmed": "official",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+
+  {"date": "2026-09-16", "name": "FOMC decision and press conference (day 2 of 2)", "kind": "FOMC",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx", "ndx", "btc"],
+   "time_local": "14:00 America/New_York", "confirmed": "official",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+
+  {"date": "2026-09-18", "name": "Bank of Japan monetary policy decision", "kind": "BoJ",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "spx", "ndx"],
+   "time_local": "around midday Asia/Tokyo", "confirmed": "official",
+   "note": "Day 2 of the 17-18 September meeting; the decision is announced on day 2.",
+   "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"},
+
+  {"date": "2026-09-30", "name": "US PCE price index (August data)", "kind": "PCE",
+   "scope": "market_wide", "primary": "gold", "instruments": ["gold", "silver", "dxy", "spx", "ndx"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bea.gov/news/schedule"},
+
+  {"date": "2026-10-02", "name": "US Employment Situation (September data)", "kind": "Payrolls",
+   "scope": "market_wide", "primary": "spx", "instruments": ["spx", "ndx", "dxy", "gold"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bls.gov/schedule/news_release/empsit.htm"},
+
+  {"date": "2026-10-14", "name": "US CPI release (September data)", "kind": "CPI",
+   "scope": "market_wide", "primary": "gold", "instruments": ["gold", "silver", "dxy", "spx", "ndx"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
+
+  {"date": "2026-10-27", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx", "ndx", "btc"],
+   "time_local": "no release on day 1", "confirmed": "official",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+
+  {"date": "2026-10-28", "name": "FOMC decision and press conference (day 2 of 2)", "kind": "FOMC",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx", "ndx", "btc"],
+   "time_local": "14:00 America/New_York", "confirmed": "official",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+
+  {"date": "2026-10-29", "name": "ECB Governing Council monetary policy decision", "kind": "ECB",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx"],
+   "time_local": "14:15 Europe/Berlin", "confirmed": "official",
+   "note": "Day 2 of the 28-29 October meeting.",
+   "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"},
+
+  {"date": "2026-10-29", "name": "US PCE price index (September data)", "kind": "PCE",
+   "scope": "market_wide", "primary": "gold", "instruments": ["gold", "silver", "dxy", "spx", "ndx"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bea.gov/news/schedule"},
+
+  {"date": "2026-10-30", "name": "Bank of Japan monetary policy decision", "kind": "BoJ",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "spx", "ndx"],
+   "time_local": "around midday Asia/Tokyo", "confirmed": "official",
+   "note": "Day 2 of the 29-30 October meeting.",
+   "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"},
+
+  {"date": "2026-11-04", "name": "US Treasury quarterly refunding announcement", "kind": "Treasury refunding",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx"],
+   "time_local": "08:30 America/New_York", "confirmed": "secondary",
+   "note": "Carries the coupon issuance sizes and the buyback schedule for the quarter. Consistent with Treasury's published convention of the first Wednesday of February, May, August and November, but Treasury's own page could not be read on 2026-08-23 (the site timed out). MARKED SECONDARY: it will not gate a forecast until the date is read from the source below and upgraded to official.",
+   "source": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/most-recent-quarterly-refunding-documents"},
+
+  {"date": "2026-11-06", "name": "US Employment Situation (October data)", "kind": "Payrolls",
+   "scope": "market_wide", "primary": "spx", "instruments": ["spx", "ndx", "dxy", "gold"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bls.gov/schedule/news_release/empsit.htm"},
+
+  {"date": "2026-11-10", "name": "US CPI release (October data)", "kind": "CPI",
+   "scope": "market_wide", "primary": "gold", "instruments": ["gold", "silver", "dxy", "spx", "ndx"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
+
+  {"date": "2026-11-25", "name": "US PCE price index (October data)", "kind": "PCE",
+   "scope": "market_wide", "primary": "gold", "instruments": ["gold", "silver", "dxy", "spx", "ndx"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bea.gov/news/schedule"},
+
+  {"date": "2026-12-04", "name": "US Employment Situation (November data)", "kind": "Payrolls",
+   "scope": "market_wide", "primary": "spx", "instruments": ["spx", "ndx", "dxy", "gold"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bls.gov/schedule/news_release/empsit.htm"},
+
+  {"date": "2026-12-08", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx", "ndx", "btc"],
+   "time_local": "no release on day 1", "confirmed": "official",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+
+  {"date": "2026-12-09", "name": "FOMC decision and press conference (day 2 of 2)", "kind": "FOMC",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx", "ndx", "btc"],
+   "time_local": "14:00 America/New_York", "confirmed": "official",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+
+  {"date": "2026-12-10", "name": "US CPI release (November data)", "kind": "CPI",
+   "scope": "market_wide", "primary": "gold", "instruments": ["gold", "silver", "dxy", "spx", "ndx"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bls.gov/schedule/news_release/cpi.htm"},
+
+  {"date": "2026-12-17", "name": "ECB Governing Council monetary policy decision", "kind": "ECB",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx"],
+   "time_local": "14:15 Europe/Berlin", "confirmed": "official",
+   "note": "Day 2 of the 16-17 December meeting.",
+   "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"},
+
+  {"date": "2026-12-18", "name": "Bank of Japan monetary policy decision", "kind": "BoJ",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "spx", "ndx"],
+   "time_local": "around midday Asia/Tokyo", "confirmed": "official",
+   "note": "Day 2 of the 17-18 December meeting.",
+   "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"},
+
+  {"date": "2026-12-23", "name": "US PCE price index (November data)", "kind": "PCE",
+   "scope": "market_wide", "primary": "gold", "instruments": ["gold", "silver", "dxy", "spx", "ndx"],
+   "time_local": "08:30 America/New_York", "confirmed": "official",
+   "source": "https://www.bea.gov/news/schedule"},
+
+  {"date": "2027-01-22", "name": "Bank of Japan monetary policy decision", "kind": "BoJ",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "spx", "ndx"],
+   "time_local": "around midday Asia/Tokyo", "confirmed": "official",
+   "note": "Day 2 of the 21-22 January meeting.",
+   "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"},
+
+  {"date": "2027-01-26", "name": "FOMC meeting (day 1 of 2)", "kind": "FOMC",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx", "ndx", "btc"],
+   "time_local": "no release on day 1", "confirmed": "official",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+
+  {"date": "2027-01-27", "name": "FOMC decision and press conference (day 2 of 2)", "kind": "FOMC",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx", "ndx", "btc"],
+   "time_local": "14:00 America/New_York", "confirmed": "official",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"},
+
+  {"date": "2027-02-04", "name": "ECB Governing Council monetary policy decision", "kind": "ECB",
+   "scope": "market_wide", "primary": "dxy", "instruments": ["dxy", "gold", "spx"],
+   "time_local": "14:15 Europe/Frankfurt", "confirmed": "official",
+   "note": "Day 2 of the 3-4 February meeting.",
+   "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"}
+ ],
+
+ "pending_dates": [
+  {"kind": "OPEC+", "primary": "wti", "scope": "instrument_specific",
+   "note": "Eight-country production meetings run roughly monthly and are announced only days in advance. QUALIFIES under the rule; no confirmed forward date as of 2026-08-23. Enter each date as it is published, with the source.",
+   "source": "https://www.opec.org/meetings.html"},
+  {"kind": "Treasury refunding", "primary": "dxy", "scope": "market_wide",
+   "note": "The February 2027 announcement is expected on Treasury's first-Wednesday convention but has not been read from Treasury's own page. Not entered - a date on a convention is not a published date.",
+   "source": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/most-recent-quarterly-refunding-documents"}
+ ],
+
+ "revisions": [
+  {"date": "2026-08-23",
+   "change": "Schema 1 -> 2. The file became a RULE with four admission tests, named sources, a cutoff, cancellation handling and a revision policy. Added kinds: PCE, Payrolls, Treasury refunding, ECB, BoJ. Excluded central-bank symposia as a blanket category. Every event gained scope, primary, instruments, release time and a confirmation level; 'asset' became 'primary'. Dates for the new kinds read from BEA, BLS, ECB and BoJ published calendars on 2026-08-23; the November Treasury refunding is marked secondary because Treasury's own page timed out.",
+   "why": "control-room general.md 15.3.4 - a list says nothing about why an event is in or out, and an unfrozen calendar can be backfilled after a market moves."}
+ ]
 }
