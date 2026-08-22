@@ -666,3 +666,12 @@ footer { margin-top: clamp(44px, 8vw, 80px); border-top: 1px solid var(--line); 
 /* trail chips keep their own width inside the grid row */
 .trailrow > .al { justify-self: start; }
 .tp-x { font-size: 9.5px; gap: 2px 7px; }
+
+/* ---- the GAT mark, restored 2026-08-22 on Solomon's instruction ----
+   Four tiles: ascending bars, G, A, T. Inline SVG; the tiles stay dark in both
+   themes on purpose - a logo is a constant, not a themed element. */
+.lockup { display: block; min-width: 0; }
+.logo { height: 40px; width: auto; max-width: 100%; flex: 0 0 auto; display: block; }
+.logo .tile { fill: #1C1C1A; stroke: #2E6E47; stroke-width: 1.5; stroke-opacity: .55; }
+.lockup .tagline { margin-top: 6px; }
+@media (max-width: 560px) { .logo { height: 34px; } .lockup .tagline { font-size: 8.5px; letter-spacing: .14em; margin-top: 5px; } }
