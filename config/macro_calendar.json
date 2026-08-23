@@ -9,7 +9,7 @@
   "and nothing said why one event was in and another was out. It is now a RULE",
   "with a list of the events that currently satisfy it. Admission is decided by",
   "the four tests in 'rule.tests' - not by editorial taste, and not after the",
-  "fact. See control-room general.md 15.3.4."
+  "fact. See the project record §15.3.4."
  ],
 
  "rule": {
@@ -69,7 +69,7 @@
 
   "cancellation": "If a scheduled event is cancelled, postponed or moved, the entry is EDITED IN PLACE with a 'revision' note naming what changed and when - it is never silently deleted. Reviews already published keep the frozen copy they were generated with, which is what they were actually gated on. A postponed event that lands in a later window is a new entry for that window.",
 
-  "revision_policy": "Every change to this file bumps 'updated' and appends to 'revisions' with the date, what changed and why. Because each review carries its own frozen copy, a correction here NEVER rewrites what a published review was gated on. The four tests themselves may only be changed by a signed ruling recorded in control-room general.md - not in this file.",
+  "revision_policy": "Every change to this file bumps 'updated' and appends to 'revisions' with the date, what changed and why. Because each review carries its own frozen copy, a correction here NEVER rewrites what a published review was gated on. The four tests themselves may only be changed by a signed ruling recorded in the project record - not in this file.",
 
   "confirmation_levels": {
    "official": "The date was read from the issuing body's own published calendar. ONLY these may gate a forecast.",
@@ -255,6 +255,9 @@
  "revisions": [
   {"date": "2026-08-23",
    "change": "Schema 1 -> 2. The file became a RULE with four admission tests, named sources, a cutoff, cancellation handling and a revision policy. Added kinds: PCE, Payrolls, Treasury refunding, ECB, BoJ. Excluded central-bank symposia as a blanket category. Every event gained scope, primary, instruments, release time and a confirmation level; 'asset' became 'primary'. Dates for the new kinds read from BEA, BLS, ECB and BoJ published calendars on 2026-08-23; the November Treasury refunding is marked secondary because Treasury's own page timed out.",
-   "why": "control-room general.md 15.3.4 - a list says nothing about why an event is in or out, and an unfrozen calendar can be backfilled after a market moves."}
+   "why": "The project record §15.3.4 - a list says nothing about why an event is in or out, and an unfrozen calendar can be backfilled after a market moves."},
+  {"date": "2026-08-23",
+   "change": "Wording only - no event, no date, no source and no rule changed. Three references that named the private project record's own file and folder were replaced with \"the project record\". Section numbers are unchanged, including the one in the entry above, which was reworded for the same reason and still describes the same change.",
+   "why": "This file is served publicly. Internal repository structure has no business on a public page, and the source-screening rule exists to catch exactly this."}
  ]
 }
