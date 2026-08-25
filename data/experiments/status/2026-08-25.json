@@ -1,0 +1,36 @@
+{
+ "kind": "experiments-status",
+ "date": "2026-08-25",
+ "generated_utc": "2026-08-25T17:43:22Z",
+ "projects": [
+  {
+   "id": "mgat",
+   "name": "MGAT Alpha v3.1",
+   "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
+   "state": "live",
+   "state_reason": "doctor read HEALTHY",
+   "last_checked": "2026-08-25 01:30 UTC",
+   "closed_today": 0,
+   "wins_today": 0,
+   "win_rate_pct": null,
+   "pnl_today_usd": null,
+   "trades_label": "0 / 200",
+   "note": "no trades closed today"
+  },
+  {
+   "id": "hades",
+   "name": "Hades Trading",
+   "sub": "Sealed agent, own wallet, no human decisions in the loop",
+   "state": "live",
+   "state_reason": "day's report landed clean",
+   "last_checked": "2026-08-25 00:04 UTC",
+   "closed_today": 0,
+   "wins_today": 0,
+   "win_rate_pct": null,
+   "pnl_today_usd": null,
+   "trades_label": "0",
+   "note": "no trade today — balance unchanged"
+  }
+ ],
+ "published_utc": "2026-08-25T17:43:22Z"
+}
