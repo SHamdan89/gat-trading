@@ -700,3 +700,91 @@ footer { margin-top: clamp(44px, 8vw, 80px); border-top: 1px solid var(--line); 
   .aname .nm { min-width: 0; }
   .aname .nm b, .aname .nm i { overflow-wrap: anywhere; }
 }
+
+/* ---- experiments (tab 5, 2026-08-25) ----
+   Same fabric as the other four tabs: every colour below is an existing token,
+   no new palette. Design record: the tab carries three sub-tabs and the weekly
+   histories are never truncated - the publisher enforces that; this layer only
+   draws what the stored files say. */
+.xtabs { display: flex; gap: 2px; border-bottom: 1px solid var(--hair); margin-bottom: clamp(18px, 3vw, 26px); overflow-x: auto; scrollbar-width: none; }
+.xtabs::-webkit-scrollbar { display: none; }
+.xtab { flex: none; padding: 8px 13px 11px; font-size: 13px; font-weight: 540; color: var(--mut); white-space: nowrap; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color .16s; }
+.xtab:hover { color: var(--ink2); }
+.xtab[aria-selected="true"] { color: var(--ink); font-weight: 650; border-bottom-color: var(--brand); }
+.xpane { display: none; }
+.xpane.on { display: block; animation: fadein .24s cubic-bezier(.2,.8,.25,1); }
+.xintro { font-size: 13.5px; color: var(--mut); line-height: 1.6; margin-bottom: 20px; max-width: 68ch; }
+
+/* status cards */
+.exgrid { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0,1fr)); margin-bottom: 20px; }
+@media (max-width: 720px) { .exgrid { grid-template-columns: minmax(0,1fr); } }
+.exc { background: var(--card); border: 1px solid var(--line); border-radius: var(--rl); box-shadow: var(--sh1); padding: 16px 17px; }
+.exc .nm { font-family: var(--serif); font-size: 19px; font-weight: 580; letter-spacing: -.014em; }
+.exc .sd { font-size: 11.5px; color: var(--faint); margin-top: 3px; line-height: 1.45; }
+.exc .strip { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 11px; border-radius: 999px; font-size: 11.5px; font-weight: 630; white-space: nowrap; }
+.pill::before { content:""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.pill.live { color: var(--up); background: var(--upw); }
+.pill.check { color: var(--amber); background: var(--amberw); }
+.exupd { font-family: var(--mono); font-size: 10.5px; color: var(--faint); }
+.exstats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-top: 14px; padding-top: 13px; border-top: 1px solid var(--hair); }
+.exst .l { font-size: 9.5px; font-weight: 670; letter-spacing: .11em; text-transform: uppercase; color: var(--mut); }
+.exst .v { font-family: var(--mono); font-size: 17px; font-weight: 600; letter-spacing: -.02em; margin-top: 4px; }
+.exst .v.na { color: var(--faint); }
+.exst .s { font-size: 10px; color: var(--faint); margin-top: 3px; }
+.exnote { font-size: 12.5px; color: var(--mut); line-height: 1.6; max-width: 76ch; }
+.exnote b { color: var(--ink2); font-weight: 620; }
+
+/* weekly head card - same accent bar as the brief's feature card */
+.xhead { position: relative; overflow: hidden; background: var(--card); border: 1px solid var(--line); border-radius: var(--rl); box-shadow: var(--sh1); padding: clamp(17px, 3vw, 24px) clamp(17px, 3vw, 26px); margin-bottom: 22px; }
+.xhead::before { content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background: linear-gradient(var(--brand), color-mix(in srgb, var(--brand) 18%, transparent)); }
+.xhead .wk { font-family: var(--mono); font-size: 11px; color: var(--brand); letter-spacing: .1em; }
+.xhead h2 { font-family: var(--serif); font-size: clamp(19px, 2.8vw, 24px); font-weight: 580; letter-spacing: -.015em; margin-top: 5px; }
+.xhead p { font-family: var(--serif); font-size: 14.5px; line-height: 1.62; color: var(--ink2); margin-top: 9px; max-width: 70ch; }
+.xcave { display: flex; gap: 12px; margin-top: 12px; font-size: 11.5px; color: var(--mut); line-height: 1.6; max-width: 72ch; }
+.xcave::before { content:""; width: 2px; border-radius: 2px; flex: none; background: var(--line); }
+
+/* four-cell comparison strip - the weekly record grid, four columns */
+.record.r4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1000px) { .record.r4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .record.r4 { grid-template-columns: repeat(2, 1fr); } }
+.rc .d { font-family: var(--mono); font-size: 11px; margin-top: 5px; }
+
+/* the three-line verdict with provenance tags */
+.vlines { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--rl); overflow: hidden; margin-bottom: 20px; }
+.vline { background: var(--card); padding: 12px 14px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.vline .l { font-size: 13px; color: var(--ink2); display: flex; align-items: baseline; gap: 9px; flex-wrap: wrap; }
+.vline .v { font-family: var(--mono); font-size: 14px; font-weight: 600; }
+.ptag { display: inline-flex; padding: 1px 7px; border-radius: 999px; font-size: 9.5px; font-weight: 670; letter-spacing: .07em; text-transform: uppercase; }
+.ptag.measured { color: var(--brand2); background: var(--wash); }
+.ptag.claimed { color: var(--amber); background: var(--amberw); }
+.ptag.market { color: var(--blue); background: var(--bluew); }
+
+/* judgment box */
+.xvbox { background: var(--card2); border: 1px solid var(--line); border-radius: var(--rl); padding: 14px 16px; font-size: 13.5px; line-height: 1.62; color: var(--ink2); margin-bottom: 22px; max-width: 86ch; }
+.xvbox b { color: var(--ink); font-weight: 620; }
+.xvbox .row + .row { margin-top: 8px; }
+
+/* the full-history table: wide content scrolls inside its own container,
+   the page never scrolls sideways */
+.xhwrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: var(--rl); box-shadow: var(--sh1); margin-bottom: 10px; }
+table.xh { width: 100%; border-collapse: collapse; }
+table.xh.wide { min-width: 560px; }
+table.xh thead th { font-size: 10px; font-weight: 670; letter-spacing: .1em; text-transform: uppercase; color: var(--mut); text-align: right; padding: 10px 13px; white-space: nowrap; border-bottom: 1px solid var(--line); }
+table.xh thead th:first-child, table.xh thead th.lft { text-align: left; }
+table.xh td { padding: 9px 13px; font-size: 12.5px; vertical-align: middle; border-top: 1px solid var(--hair); text-align: right; white-space: nowrap; }
+table.xh tbody tr:first-child td { border-top: 0; }
+table.xh td:first-child, table.xh td.lft { text-align: left; }
+table.xh td .num { font-size: 12.5px; }
+
+/* one collapsible row per day, his words verbatim */
+.drow { background: var(--card); border: 1px solid var(--line); border-radius: var(--rm); margin-bottom: 8px; box-shadow: var(--sh1); }
+.drow summary { list-style: none; cursor: pointer; padding: 12px 14px; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 13px; }
+.drow summary::-webkit-details-marker { display: none; }
+.drow summary .dd { font-family: var(--mono); font-size: 11px; color: var(--faint); flex: none; }
+.drow summary .dl { flex: 1; min-width: 0; color: var(--ink); font-weight: 560; }
+.drow summary .dr { font-family: var(--mono); font-size: 10.5px; color: var(--faint); flex: none; }
+.drow .body { padding: 0 14px 13px; }
+.drow .quote { padding-left: 13px; border-left: 2px solid var(--brand); font-family: var(--serif); font-style: italic; font-size: 13.5px; line-height: 1.6; color: var(--ink2); max-width: 68ch; }
+.drow .anote { margin-top: 8px; font-size: 11.5px; color: var(--faint); line-height: 1.5; }
+.xfoot { font-size: 12.5px; color: var(--mut); line-height: 1.6; margin: 4px 0 22px; max-width: 76ch; }

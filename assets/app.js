@@ -171,7 +171,7 @@
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     const t = e.target;
     if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
-    const i = ["1", "2", "3", "4"].indexOf(e.key);
+    const i = ["1", "2", "3", "4", "5"].indexOf(e.key);
     if (i >= 0) goTab(tabBtns[i]);
   });
   requestAnimationFrame(() => {
@@ -1435,4 +1435,436 @@
       renderAlpha(doc);
     })
     .catch(() => { alphaEmpty(); });
+
+  /* ==========================================================================
+     EXPERIMENTS
+     Tab 5 watches two paper-money experiments. Three stored files and nothing
+     else: a daily status glance and one weekly document per experiment. The
+     weekly histories arrive complete - the publisher refuses a truncated one -
+     so this layer renders every row it is given and prints the count beside
+     the table so the completeness can be checked from the page itself.
+     ========================================================================== */
+
+  /* sub-tabs: same mechanism as the top-level tabs, one level down */
+  const xtabBtns = [].slice.call(document.querySelectorAll(".xtab"));
+  xtabBtns.forEach(b => {
+    b.addEventListener("click", () => {
+      xtabBtns.forEach(o => {
+        const on = o === b;
+        o.setAttribute("aria-selected", on ? "true" : "false");
+        $("x-" + o.dataset.x).classList.toggle("on", on);
+      });
+    });
+  });
+
+  const exState = { statusDate: null, mgatWeek: null, hadesWeek: null };
+  function exSub() {
+    sub($("ex-sub"), [
+      ["2 experiments, paper money only"],
+      exState.statusDate ? ["status " + exState.statusDate, true] : ["status pending"],
+      exState.mgatWeek || exState.hadesWeek
+        ? ["weeklies " + [exState.mgatWeek, exState.hadesWeek].filter(Boolean).join(" · "), true]
+        : ["first weeklies publish Sunday morning (GMT+3)"]
+    ]);
+  }
+  exSub();
+
+  function usd(v, signed) {
+    if (!isNum(v)) return "—";
+    const t = "$" + Math.abs(v).toLocaleString("en-US",
+      { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    return (v < 0 ? "−" : (signed && v > 0 ? "+" : "")) + t;
+  }
+  function exStat(label, value, subtext, na) {
+    const s = el("div", "exst");
+    s.appendChild(el("div", "l", label));
+    s.appendChild(el("div", "v num" + (na ? " na" : ""), value));
+    if (subtext) s.appendChild(el("div", "s", subtext));
+    return s;
+  }
+  function xheadBlock(doc, title) {
+    const h = el("div", "xhead");
+    const win = doc.week_window || {};
+    h.appendChild(el("div", "wk", (doc.week || "") +
+      (win.start ? " · " + win.start + " → " + win.end : "")));
+    h.appendChild(el("h2", null, title));
+    h.appendChild(el("p", null, doc.headline || ""));
+    return h;
+  }
+  function deltaCell(label, value, prevText, dir) {
+    const c = el("div", "rc");
+    c.appendChild(el("div", "l", label));
+    c.appendChild(el("div", "v", value));
+    if (prevText) c.appendChild(el("div", "d " + (dir || "flat"), prevText));
+    return c;
+  }
+
+  /* ---------- status ---------- */
+  function renderExStatus(doc) {
+    exState.statusDate = doc.date;
+    exSub();
+    const d = new Date(doc.date + "T12:00:00Z");
+    const age = Math.floor((Date.now() - d.getTime()) / 86400000);
+    const sh = $("ex-status-stale");
+    sh.innerHTML = "";
+    if (age >= 2) {
+      sh.appendChild(stale("This status is " + age + " days old. The daily check " +
+        "has not run — it describes " + doc.date + ", not today."));
+    }
+    const host = $("ex-status-cards");
+    host.innerHTML = "";
+    (doc.projects || []).forEach(p => {
+      const c = el("article", "exc");
+      c.appendChild(el("div", "nm", p.name));
+      c.appendChild(el("div", "sd", p.sub));
+      const strip = el("div", "strip");
+      strip.appendChild(el("span", "pill " + (p.state === "live" ? "live" : "check"),
+        p.state === "live" ? "Live" : "Needs check"));
+      strip.appendChild(el("span", "exupd", "last daily check · " + p.last_checked));
+      c.appendChild(strip);
+      if (p.state !== "live") c.appendChild(el("p", "acnote", p.state_reason || ""));
+      const st = el("div", "exstats");
+      st.appendChild(exStat("Win rate",
+        isNum(p.win_rate_pct) ? Math.round(p.win_rate_pct) + "%" : "—",
+        isNum(p.win_rate_pct) ? p.wins_today + " of " + p.closed_today + " today" : null,
+        !isNum(p.win_rate_pct)));
+      st.appendChild(exStat("PnL (today)", usd(p.pnl_today_usd, true),
+        null, !isNum(p.pnl_today_usd)));
+      st.appendChild(exStat("Trades", p.trades_label || "—", null,
+        !p.trades_label || p.trades_label === "—"));
+      c.appendChild(st);
+      if (p.note) c.appendChild(el("div", "s exupd", p.note)).style.marginTop = "10px";
+      host.appendChild(c);
+    });
+    const nh = $("ex-status-note");
+    nh.innerHTML = "";
+    const n = el("p", "exnote");
+    n.appendChild(el("b", null, "Needs check"));
+    n.appendChild(document.createTextNode(" means the day's health read didn't come " +
+      "back clean — MGAT Alpha off its own daily health read, Hades Trading off " +
+      "whether the day's report landed intact. A dash is a number no data computed " +
+      "today. Everything else waits for Sunday's weeklies."));
+    nh.appendChild(n);
+    hide("exstatus");
+  }
+
+  function exStatusEmpty() {
+    const host = $("ex-status-empty");
+    host.innerHTML = "";
+    host.appendChild(emptyBox("The status glance hasn't published yet", [
+      "This sub-tab will carry one card per experiment — MGAT Alpha v3.1 (an autonomous " +
+      "paper-trading experiment) and Hades Trading (a sealed agent with its own wallet) — " +
+      "each with a live / needs-check read, its last daily check, and three numbers.",
+      "Both are paper-money experiments: no client money, no advice, published as a public record."
+    ], "Nothing is shown here until the first daily status lands, rather than showing something unverified."));
+    hide("exstatus");
+  }
+
+  fetch("data/experiments/status/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error("no status yet"); return r.json(); })
+    .then(doc => {
+      if (!doc || !doc.projects || doc.projects.length !== 2) throw new Error("malformed status");
+      renderExStatus(doc);
+    })
+    .catch(() => { exStatusEmpty(); });
+
+  /* ---------- shared weekly bits ---------- */
+  function nextSunday() {
+    const d = new Date();
+    d.setDate(d.getDate() + ((7 - d.getDay()) % 7 || 7));
+    return d.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+  }
+  function weeklyStaleBanner(hostId, doc) {
+    const sh = $(hostId);
+    sh.innerHTML = "";
+    const end = doc.week_window && doc.week_window.end;
+    if (!end) return;
+    const age = Math.floor((Date.now() - new Date(end + "T23:59:59Z").getTime()) / 86400000);
+    if (age > 9) {
+      sh.appendChild(stale("This weekly covers the week ending " + end + " — " + age +
+        " days ago. A newer week has completed without a report."));
+    }
+  }
+
+  /* ---------- MGAT Alpha weekly ---------- */
+  function renderExMgat(doc) {
+    exState.mgatWeek = doc.week;
+    exSub();
+    weeklyStaleBanner("ex-mgat-stale", doc);
+    const main = $("ex-mgat-main");
+    main.innerHTML = "";
+    const t = doc.totals || {}, vp = doc.vs_previous;
+
+    const head = xheadBlock(doc, "MGAT Alpha v3.1 — paper-money experiment");
+    const cave = el("div", "xcave");
+    const cd = el("div");
+    cd.appendChild(el("div", null, doc.paper_caveat || ""));
+    cd.appendChild(el("div", null, doc.sample_caveat || ""));
+    if (doc.integrity) cd.appendChild(el("div", null, doc.integrity));
+    cave.appendChild(cd);
+    head.appendChild(cave);
+    main.appendChild(head);
+
+    const st1 = el("div", "stitle");
+    st1.appendChild(el("h2", null, "vs previous week"));
+    st1.appendChild(el("span", "rule"));
+    st1.appendChild(el("span", "tag", vp ? "against " + vp.week + ", read from its published file"
+      : "first report — no baseline"));
+    main.appendChild(st1);
+    const rec = el("div", "record r4");
+    function dtext(cur, prev, fmt) {
+      if (!vp || !isNum(prev)) return null;
+      return "from " + fmt(prev);
+    }
+    function ddir(cur, prev) {
+      if (!vp || !isNum(prev) || !isNum(cur) || cur === prev) return "flat";
+      return cur > prev ? "up" : "dn";
+    }
+    rec.appendChild(deltaCell("Trades closed", String(t.closed),
+      dtext(t.closed, vp && vp.closed, String), ddir(t.closed, vp && vp.closed)));
+    rec.appendChild(deltaCell("Win rate",
+      isNum(t.win_rate_pct) ? Math.round(t.win_rate_pct) + "%" : "—",
+      vp ? (isNum(vp.win_rate_pct) ? "from " + Math.round(vp.win_rate_pct) + "%" : "prev week: no closes") : null,
+      ddir(t.win_rate_pct, vp && vp.win_rate_pct)));
+    rec.appendChild(deltaCell("PnL", usd(t.pnl_usd, true),
+      vp ? "from " + usd(vp.pnl_usd, true) : null, ddir(t.pnl_usd, vp && vp.pnl_usd)));
+    const cf = doc.counterfactual || {};
+    let cfv = "—", cfs = cf.closed === 0 ? "counterfactual closed nothing" : null, cfd = "flat";
+    if (isNum(t.pnl_usd) && isNum(cf.pnl_usd)) {
+      const diff = t.pnl_usd - cf.pnl_usd;
+      cfv = usd(diff, true);
+      cfs = diff >= 0 ? "ahead of the counterfactual book" : "behind the counterfactual book";
+      cfd = diff > 0 ? "up" : (diff < 0 ? "dn" : "flat");
+    }
+    rec.appendChild(deltaCell("vs counterfactual", cfv, cfs, cfd));
+    main.appendChild(rec);
+
+    if ((doc.families || []).length) {
+      const st2 = el("div", "stitle");
+      st2.appendChild(el("h2", null, "Per family"));
+      st2.appendChild(el("span", "rule"));
+      main.appendChild(st2);
+      const wrap = el("div", "xhwrap");
+      const tb = document.createElement("table");
+      tb.className = "xh";
+      tb.innerHTML = "<thead><tr><th>Family</th><th>Trades</th><th>Win rate</th><th>PnL</th></tr></thead>";
+      const body = document.createElement("tbody");
+      doc.families.forEach(f => {
+        const r = document.createElement("tr");
+        r.appendChild(el("td", "lft", f.family));
+        r.appendChild(el("td", "num", String(f.closed)));
+        r.appendChild(el("td", "num", isNum(f.win_rate_pct) ? Math.round(f.win_rate_pct) + "%" : "—"));
+        const pc = el("td", "num " + dirOf(f.pnl_usd || 0), usd(f.pnl_usd, true));
+        r.appendChild(pc);
+        body.appendChild(r);
+      });
+      tb.appendChild(body);
+      wrap.appendChild(tb);
+      main.appendChild(wrap);
+    }
+
+    const vb = el("div", "xvbox");
+    vb.style.marginTop = "20px";
+    const r1 = el("div", "row");
+    r1.appendChild(el("b", null, "Reviewer read — " + ((doc.verdict || {}).call || "") + ". "));
+    r1.appendChild(document.createTextNode((doc.verdict || {}).text || ""));
+    vb.appendChild(r1);
+    const bits = [];
+    const bs = doc.beta_share || {};
+    bits.push(isNum(bs.measured_pct)
+      ? "measured-beta share " + Math.round(bs.measured_pct) + "% of " + bs.opens + " opens"
+      : "no opens this week");
+    const rg = doc.regime || {};
+    if (isNum(rg.cycles)) bits.push("regime: " + rg.risk_on + " risk-on / " + rg.risk_off +
+      " risk-off / " + rg.unknown + " unknown across " + rg.cycles + " cycles");
+    bits.push((doc.faults || []).length
+      ? "faults: " + doc.faults.map(f => f.kind + "×" + f.count + " (" + f.severity + ")").join(", ")
+      : "no faults this week");
+    bits.push("LLM adviser: " + (doc.llm_adviser || "N/A"));
+    const r2 = el("div", "row");
+    r2.appendChild(document.createTextNode(bits.join(" · ")));
+    vb.appendChild(r2);
+    main.appendChild(vb);
+
+    const st3 = el("div", "stitle");
+    st3.appendChild(el("h2", null, "Full trade history — this week"));
+    st3.appendChild(el("span", "rule"));
+    st3.appendChild(el("span", "tag", doc.history.length + " of " + t.closed + " closes"));
+    main.appendChild(st3);
+    if (!doc.history.length) {
+      main.appendChild(emptyBox("No trades closed this week", [
+        "The book closed nothing in this window; there are no rows to show. " +
+        "An empty table with a stated reason beats a hidden one."]));
+    } else {
+      const wrap = el("div", "xhwrap");
+      const tb = document.createElement("table");
+      tb.className = "xh wide";
+      tb.innerHTML = "<thead><tr><th>Date</th><th>Family</th><th class='lft'>Symbol</th>" +
+        "<th>Entry</th><th>Exit</th><th>PnL</th><th>Beta</th><th class='lft'>Beta source</th></tr></thead>";
+      const body = document.createElement("tbody");
+      doc.history.forEach(h => {
+        const r = document.createElement("tr");
+        r.appendChild(el("td", "lft num", h.date.slice(5)));
+        r.appendChild(el("td", "lft", h.family));
+        r.appendChild(el("td", "lft", h.symbol));
+        r.appendChild(el("td", "num", fmtLevel(h.entry_price)));
+        r.appendChild(el("td", "num", isNum(h.exit_price) ? fmtLevel(h.exit_price) : "—"));
+        r.appendChild(el("td", "num " + dirOf(h.pnl_usd), usd(h.pnl_usd, true)));
+        r.appendChild(el("td", "num", isNum(h.beta) ? h.beta.toFixed(2) : "—"));
+        r.appendChild(el("td", "lft", h.beta_source || "—"));
+        body.appendChild(r);
+      });
+      tb.appendChild(body);
+      wrap.appendChild(tb);
+      main.appendChild(wrap);
+      main.appendChild(el("p", "xfoot", "All " + doc.history.length + " closes this week — " +
+        "nothing cut. Same rule as the rest of the site: a table that hides rows is a table " +
+        "that can't be checked, and the publisher refuses one."));
+    }
+    show("ex-mgat-main");
+    hide("exmgatstatus");
+  }
+
+  function exMgatEmpty() {
+    const host = $("ex-mgat-empty");
+    host.innerHTML = "";
+    host.appendChild(emptyBox("The first MGAT Alpha weekly publishes " + nextSunday(), [
+      "Every Sunday this sub-tab will carry the week's paper-trading record: trades closed, " +
+      "win rate, PnL against the counterfactual book, the per-family split, and the reviewer's " +
+      "plain-language read — ending with every close of the week, never truncated.",
+      "MGAT Alpha v3.1 is a paper experiment: simulated fills, zero capital, published as a public record."
+    ], "Nothing is shown here until then, rather than showing something unverified."));
+    hide("exmgatstatus");
+  }
+
+  fetch("data/experiments/mgat/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error("no weekly yet"); return r.json(); })
+    .then(doc => {
+      if (!doc || !doc.week || !doc.totals || !doc.history) throw new Error("malformed weekly");
+      renderExMgat(doc);
+    })
+    .catch(() => { exMgatEmpty(); });
+
+  /* ---------- Hades weekly ---------- */
+  function renderExHades(doc) {
+    exState.hadesWeek = doc.week;
+    exSub();
+    weeklyStaleBanner("ex-hades-stale", doc);
+    const main = $("ex-hades-main");
+    main.innerHTML = "";
+    main.appendChild(xheadBlock(doc, "Hades Trading — paper-money experiment"));
+
+    const st1 = el("div", "stitle");
+    st1.appendChild(el("h2", null, "The verdict — three lines, in order"));
+    st1.appendChild(el("span", "rule"));
+    st1.appendChild(el("span", "tag", "every figure carries its provenance"));
+    main.appendChild(st1);
+    const vl = el("div", "vlines");
+    (doc.verdict_lines || []).forEach(ln => {
+      const row = el("div", "vline");
+      const l = el("span", "l");
+      l.appendChild(el("span", "ptag " + ln.tag, ln.tag));
+      l.appendChild(document.createTextNode(ln.label));
+      row.appendChild(l);
+      row.appendChild(el("span", "v", ln.value));
+      vl.appendChild(row);
+    });
+    main.appendChild(vl);
+    if (doc.verdict_note) {
+      const cv = el("div", "xcave");
+      cv.style.margin = "0 0 20px";
+      cv.appendChild(el("div", null, doc.verdict_note));
+      main.appendChild(cv);
+    }
+
+    const n = doc.numbers || {}, vp = doc.vs_previous;
+    const st2 = el("div", "stitle");
+    st2.appendChild(el("h2", null, "vs previous week"));
+    st2.appendChild(el("span", "rule"));
+    st2.appendChild(el("span", "tag", vp ? "against " + vp.week + ", read from its published file"
+      : "first report — no baseline"));
+    main.appendChild(st2);
+    const rec = el("div", "record r4");
+    rec.appendChild(deltaCell("Trades", String(doc.trades_count),
+      vp ? "from " + vp.trades : null,
+      vp && isNum(vp.trades) && doc.trades_count !== vp.trades
+        ? (doc.trades_count > vp.trades ? "up" : "dn") : "flat"));
+    rec.appendChild(deltaCell("Wallet value", usd(n.wallet_usd),
+      vp && isNum(vp.wallet_usd) ? "from " + usd(vp.wallet_usd) : null,
+      vp && isNum(vp.wallet_usd) && isNum(n.wallet_usd)
+        ? (n.wallet_usd > vp.wallet_usd ? "up" : (n.wallet_usd < vp.wallet_usd ? "dn" : "flat")) : "flat"));
+    rec.appendChild(deltaCell("SOL held", isNum(n.sol_balance) ? String(n.sol_balance) : "—",
+      vp && isNum(vp.sol_balance) ? "from " + vp.sol_balance : null,
+      vp && isNum(vp.sol_balance) && isNum(n.sol_balance)
+        ? (n.sol_balance > vp.sol_balance ? "up" : (n.sol_balance < vp.sol_balance ? "dn" : "flat")) : "flat"));
+    rec.appendChild(deltaCell("Spot SOL", usd(n.sol_spot_usd), "market price, not his doing", "flat"));
+    main.appendChild(rec);
+
+    const vb = el("div", "xvbox");
+    [["What he did", doc.what_he_did], ["Good", doc.good], ["Bad", doc.bad],
+     ["vs last week", doc.vs_last_week]].forEach(pair => {
+      if (!pair[1]) return;
+      const r = el("div", "row");
+      r.appendChild(el("b", null, pair[0] + ": "));
+      r.appendChild(document.createTextNode(pair[1]));
+      vb.appendChild(r);
+    });
+    if ((doc.watching || []).length) {
+      const r = el("div", "row");
+      r.appendChild(el("b", null, "Keep watching: "));
+      r.appendChild(document.createTextNode(doc.watching.join(" · ")));
+      vb.appendChild(r);
+    }
+    main.appendChild(vb);
+
+    const st3 = el("div", "stitle");
+    st3.appendChild(el("h2", null, "The week, day by day — his own words"));
+    st3.appendChild(el("span", "rule"));
+    st3.appendChild(el("span", "tag", doc.days.length + " of 7 days"));
+    main.appendChild(st3);
+    doc.days.forEach(d => {
+      const dr = document.createElement("details");
+      dr.className = "drow";
+      const s = document.createElement("summary");
+      s.appendChild(el("span", "dd", d.date.slice(5)));
+      s.appendChild(el("span", "dl", d.label));
+      s.appendChild(el("span", "dr", d.result));
+      dr.appendChild(s);
+      const b = el("div", "body");
+      if (d.quote) b.appendChild(el("p", "quote", "“" + d.quote + "”"));
+      else b.appendChild(el("p", "anote", "No words to quote — " + d.label + "."));
+      if (d.atlas_note && d.atlas_note !== "—" && d.atlas_note !== "-") {
+        b.appendChild(el("p", "anote", "Note (ours, not his): " + d.atlas_note));
+      }
+      dr.appendChild(b);
+      main.appendChild(dr);
+    });
+    main.appendChild(el("p", "xfoot", "Every day of the week has its row, deliberate " +
+      "non-trade days included, quoted verbatim from his own journal — nothing cut. " +
+      "His words are his account of himself; the measured figures above are the check on them."));
+    show("ex-hades-main");
+    hide("exhadesstatus");
+  }
+
+  function exHadesEmpty() {
+    const host = $("ex-hades-empty");
+    host.innerHTML = "";
+    host.appendChild(emptyBox("The first Hades Trading weekly publishes " + nextSunday(), [
+      "Every Sunday this sub-tab will carry the week against the signed baselines — the wallet's " +
+      "dollar value vs $130.00, the SOL balance vs 1.36228651, and the do-nothing counterfactual — " +
+      "with every figure tagged measured, claimed or market, and one row per day in his own words, " +
+      "deliberate non-trade days included, nothing cut.",
+      "Hades Trading is a sealed experiment: an agent holding its own wallet, no human decisions in " +
+      "the loop, published as a public record."
+    ], "Nothing is shown here until then, rather than showing something unverified."));
+    hide("exhadesstatus");
+  }
+
+  fetch("data/experiments/hades/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error("no weekly yet"); return r.json(); })
+    .then(doc => {
+      if (!doc || !doc.week || !doc.verdict_lines || !doc.days) throw new Error("malformed weekly");
+      renderExHades(doc);
+    })
+    .catch(() => { exHadesEmpty(); });
 })();

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>gat.trading — Growth Autonomous Trading</title>
-<meta name="description" content="Asset prices updated hourly, a daily market brief, a weekly review, and a counted alpha hunt.">
+<meta name="description" content="Asset prices updated hourly, a daily market brief, a weekly review, a counted alpha hunt, and two paper-money experiments watched weekly.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0d0c" media="(prefers-color-scheme: dark)">
@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="gat.trading">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d7a4a'/><rect x='20' y='58' width='14' height='26' rx='4' fill='white' opacity='.45'/><rect x='43' y='42' width='14' height='42' rx='4' fill='white' opacity='.7'/><rect x='66' y='24' width='14' height='60' rx='4' fill='white'/></svg>">
-<link rel="stylesheet" href="assets/style.css?v=14">
+<link rel="stylesheet" href="assets/style.css?v=15">
 </head>
 <body>
 
@@ -91,6 +91,7 @@
     <button class="tab" role="tab" aria-selected="false" aria-controls="p-brief"   data-p="brief"   id="tab-brief">Daily Brief <span class="k" id="k-brief"></span></button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="p-weekly"  data-p="weekly"  id="tab-weekly">Weekly Review <span class="k" id="k-weekly"></span></button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="p-alpha"   data-p="alpha"   id="tab-alpha">Alpha Hunt <span class="k" id="k-alpha"></span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="p-experiments" data-p="experiments" id="tab-experiments">Experiments <span class="k" id="k-experiments"></span></button>
   </nav>
 </div>
 
@@ -208,6 +209,45 @@
     </div>
   </section>
 
+  <!-- ============ EXPERIMENTS ============ -->
+  <section class="panel" id="p-experiments" role="tabpanel" aria-labelledby="tab-experiments" tabindex="0">
+    <div class="phead">
+      <div class="no">05 · TWO EXPERIMENTS, WATCHED WEEKLY</div>
+      <h1>Experiments</h1>
+      <div class="psub" id="ex-sub"></div>
+    </div>
+
+    <div class="xtabs" role="tablist" aria-label="Experiments sections">
+      <button class="xtab" role="tab" aria-selected="true"  data-x="status">Status</button>
+      <button class="xtab" role="tab" aria-selected="false" data-x="mgat">MGAT Alpha — Weekly</button>
+      <button class="xtab" role="tab" aria-selected="false" data-x="hades">Hades Trading — Weekly</button>
+    </div>
+
+    <div class="xpane on" id="x-status" role="tabpanel">
+      <p class="xintro">Two paper-money experiments, run unattended. This sub-tab is a glance, not a
+      report — the weekly sub-tabs carry the detail.</p>
+      <div id="exstatus" class="status">Loading status…</div>
+      <div id="ex-status-stale"></div>
+      <div id="ex-status-empty"></div>
+      <div id="ex-status-cards" class="exgrid"></div>
+      <div id="ex-status-note"></div>
+    </div>
+
+    <div class="xpane" id="x-mgat" role="tabpanel">
+      <div id="exmgatstatus" class="status">Loading weekly…</div>
+      <div id="ex-mgat-stale"></div>
+      <div id="ex-mgat-empty"></div>
+      <div id="ex-mgat-main" hidden></div>
+    </div>
+
+    <div class="xpane" id="x-hades" role="tabpanel">
+      <div id="exhadesstatus" class="status">Loading weekly…</div>
+      <div id="ex-hades-stale"></div>
+      <div id="ex-hades-empty"></div>
+      <div id="ex-hades-main" hidden></div>
+    </div>
+  </section>
+
 </main>
 
 <footer>
@@ -236,6 +276,6 @@
   </div>
 </footer>
 
-<script src="assets/app.js?v=14"></script>
+<script src="assets/app.js?v=15"></script>
 </body>
 </html>
