@@ -1475,6 +1475,10 @@
       { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     return (v < 0 ? "−" : (signed && v > 0 ? "+" : "")) + t;
   }
+  function pct(v) {
+    if (!isNum(v)) return "—";
+    return (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(2) + "%";
+  }
   function exStat(label, value, subtext, na) {
     const s = el("div", "exst");
     s.appendChild(el("div", "l", label));
@@ -1533,14 +1537,17 @@
         isNum(p.win_rate_pct) ? Math.round(p.win_rate_pct) + "%" : "—",
         isNum(p.win_rate_pct) ? p.wins_total + " of " + p.closed_total + " closed" : null,
         !isNum(p.win_rate_pct)));
-      const pnlSub = [];
-      if (isNum(p.pnl_total_pct)) {
-        pnlSub.push((p.pnl_total_pct > 0 ? "+" : p.pnl_total_pct < 0 ? "−" : "") +
-          Math.abs(p.pnl_total_pct).toFixed(2) + "% since start");
-      }
-      if (isNum(p.pnl_realized_usd)) pnlSub.push("realized " + usd(p.pnl_realized_usd, true));
-      st.appendChild(exStat("P&L (total)", usd(p.pnl_total_usd, true),
-        pnlSub.length ? pnlSub.join(" · ") : null, !isNum(p.pnl_total_usd)));
+      // PERCENTAGES, not dollar amounts (2026-08-27 ruling). The dollar figures
+      // stay in the published JSON as the record; the glance shows the rates.
+      st.appendChild(exStat("P&L %", pct(p.pnl_total_pct),
+        isNum(p.pnl_total_pct) ? "since start" : null, !isNum(p.pnl_total_pct)));
+      // Per-trade average - the question the equity line cannot answer. Two
+      // closes at −10.58% and −12.13% average −11.35% while the book is only
+      // −0.61% down, because each position is a small slice of it.
+      st.appendChild(exStat("Avg per trade", pct(p.avg_trade_pct),
+        isNum(p.avg_trade_pct) && isNum(p.closed_total)
+          ? "over " + p.closed_total + " closed" : null,
+        !isNum(p.avg_trade_pct)));
       st.appendChild(exStat("Trades", p.trades_label || "—",
         isNum(p.open_positions) && p.open_positions > 0 ? p.open_positions + " open" : null,
         !p.trades_label || p.trades_label === "—"));
