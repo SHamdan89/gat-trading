@@ -1,18 +1,18 @@
 {
- "generated_utc": "2026-08-27T20:01:04Z",
- "date": "2026-08-27",
+ "generated_utc": "2026-08-27T21:01:03Z",
+ "date": "2026-08-28",
  "assets": [
   {
    "group": "Commodities",
    "id": "gold",
    "name": "Gold (spot)",
-   "price_usd": 4610.700195,
-   "price_native": 4610.700195,
+   "price_usd": 4602.700195,
+   "price_native": 4602.700195,
    "currency": "USD",
    "source": "gold-api:XAU spot; 24h vs own prior spot; 7d/30d/YTD lbma:gold_pm",
-   "chg_24h": 0.3547861167440935,
-   "chg_7d": 3.313666224249661,
-   "chg_30d": 15.14842623439909,
+   "chg_24h": -0.173509438082213,
+   "chg_7d": 1.0781082909582862,
+   "chg_30d": 15.762900383668473,
    "chg_ytd": 6.037364348184436,
    "basis_note": "spot \u00b7 24h vs our previous-day spot \u00b7 7d/30d/YTD from the LBMA fix"
   },
@@ -20,13 +20,13 @@
    "group": "Commodities",
    "id": "silver",
    "name": "Silver (spot)",
-   "price_usd": 69.599998,
-   "price_native": 69.599998,
+   "price_usd": 69.394997,
+   "price_native": 69.394997,
    "currency": "USD",
    "source": "gold-api:XAG spot; 24h vs own prior spot; 7d/30d/YTD lbma:silver",
-   "chg_24h": 1.9361990685140065,
-   "chg_7d": 2.6219192448872572,
-   "chg_30d": 19.809340563232468,
+   "chg_24h": -0.29454167513050183,
+   "chg_7d": -1.4602215508559926,
+   "chg_30d": 19.33966373377472,
    "chg_ytd": -4.854840950131949,
    "basis_note": "spot \u00b7 24h vs our previous-day spot \u00b7 7d/30d/YTD from the LBMA fix"
   },
@@ -34,13 +34,13 @@
    "group": "Commodities",
    "id": "gs_ratio",
    "name": "Gold / Silver ratio",
-   "price_usd": 66.24569436050847,
-   "price_native": 66.24569436050847,
+   "price_usd": 66.32610986351077,
+   "price_native": 66.32610986351077,
    "currency": "RATIO",
    "source": "computed:gold/silver",
-   "chg_24h": -1.5513752388462199,
-   "chg_7d": 0.6740733212284633,
-   "chg_30d": -3.890276256360381,
+   "chg_24h": 0.12138978054132554,
+   "chg_7d": 2.5759443361487833,
+   "chg_30d": -2.99712873172272,
    "chg_ytd": 11.447986851971613
   },
   {
@@ -51,8 +51,8 @@
    "price_native": 6.538179,
    "currency": "USD",
    "source": "gold-api:HG+own",
-   "chg_24h": 0.24021423651107193,
-   "chg_7d": 1.1606857448413141,
+   "chg_24h": 0.006806639731748472,
+   "chg_7d": 1.0968194339320727,
    "chg_30d": null,
    "chg_ytd": null
   },
@@ -60,27 +60,27 @@
    "group": "Commodities",
    "id": "wti",
    "name": "Oil (WTI, front-month)",
-   "price_usd": 83.71,
-   "price_native": 83.71,
+   "price_usd": 83.49,
+   "price_native": 83.49,
    "currency": "USD",
    "source": "yahoo:CL=F",
-   "chg_24h": 1.7998255899883864,
-   "chg_7d": -4.690882096279263,
-   "chg_30d": 5.614430663427134,
-   "chg_ytd": 45.785445261949185
+   "chg_24h": 1.532283341394463,
+   "chg_7d": -4.100617572601067,
+   "chg_30d": -1.1484715782467827,
+   "chg_ytd": 45.40230348727915
   },
   {
    "group": "Commodities",
    "id": "natgas",
    "name": "Natural gas (front-month)",
-   "price_usd": 2.903,
-   "price_native": 2.903,
+   "price_usd": 2.905,
+   "price_native": 2.905,
    "currency": "USD",
    "source": "yahoo:NG=F",
-   "chg_24h": 2.146375517482408,
-   "chg_7d": 6.220269207983612,
-   "chg_30d": 9.053345773134955,
-   "chg_ytd": -21.2425416609935
+   "chg_24h": 2.2167484940704005,
+   "chg_7d": 4.760187450481709,
+   "chg_30d": 6.605508318052664,
+   "chg_ytd": -21.188282302854333
   },
   {
    "group": "Indices & macro",
@@ -91,8 +91,8 @@
    "currency": "USD",
    "source": "yahoo:^IXIC",
    "chg_24h": 1.5734774075314817,
-   "chg_7d": 1.8190777117199657,
-   "chg_30d": 6.690709711518695,
+   "chg_7d": 1.3784748227372532,
+   "chg_30d": 8.58494352080359,
    "chg_ytd": 14.19569379538431
   },
   {
@@ -104,35 +104,35 @@
    "currency": "USD",
    "source": "yahoo:^NDX",
    "chg_24h": 1.4270224983649664,
-   "chg_7d": 1.4664618324708956,
-   "chg_30d": 6.765912497907983,
+   "chg_7d": 1.1351537797604971,
+   "chg_30d": 9.007139900461583,
    "chg_ytd": 17.393016032041654
   },
   {
    "group": "Indices & macro",
    "id": "sp500",
    "name": "S&P 500",
-   "price_usd": 7730.78,
-   "price_native": 7730.78,
+   "price_usd": 7730.99,
+   "price_native": 7730.99,
    "currency": "USD",
    "source": "yahoo:^GSPC",
-   "chg_24h": 0.7175867124296572,
-   "chg_7d": 1.1728565023819872,
-   "chg_30d": 4.0652734847139875,
-   "chg_ytd": 12.932291286246436
+   "chg_24h": 0.7203226191828714,
+   "chg_7d": 0.7377788919209674,
+   "chg_30d": 5.670196800141486,
+   "chg_ytd": 12.93535899496019
   },
   {
    "group": "Indices & macro",
    "id": "dxy",
    "name": "US Dollar Index (DXY)",
-   "price_usd": 99.158,
-   "price_native": 99.158,
+   "price_usd": 99.136,
+   "price_native": 99.136,
    "currency": "USD",
    "source": "yahoo:DX-Y.NYB",
-   "chg_24h": -0.012098587442616722,
-   "chg_7d": 0.26086801834233053,
-   "chg_30d": -2.1917511477768894,
-   "chg_ytd": 0.8933671465287819
+   "chg_24h": -0.034282716116821724,
+   "chg_7d": 0.34007787233181186,
+   "chg_30d": -1.6507966283526803,
+   "chg_ytd": 0.8709821238657169
   },
   {
    "group": "Indices & macro",
@@ -157,8 +157,8 @@
    "currency": "USD",
    "source": "yahoo:AMD",
    "chg_24h": -0.8857822844609126,
-   "chg_7d": 1.535808945630206,
-   "chg_30d": 4.8502056925869885,
+   "chg_7d": 0.7226624405705264,
+   "chg_30d": 10.967036667556613,
    "chg_ytd": 122.57657445321368
   },
   {
@@ -170,8 +170,8 @@
    "currency": "USD",
    "source": "yahoo:AAPL",
    "chg_24h": 0.360500159184038,
-   "chg_7d": 1.0536499632671423,
-   "chg_30d": -7.498232056900825,
+   "chg_7d": 1.690639661644061,
+   "chg_30d": -6.981283382407752,
    "chg_ytd": 15.713976660887784
   },
   {
@@ -183,8 +183,8 @@
    "currency": "USD",
    "source": "yahoo:GOOGL",
    "chg_24h": -0.3947368421052698,
-   "chg_7d": -0.005874725378094701,
-   "chg_30d": 2.0796526093394094,
+   "chg_7d": -1.2093287035684974,
+   "chg_30d": 1.1701489842624717,
    "chg_ytd": 8.833865814696479
   },
   {
@@ -196,8 +196,8 @@
    "currency": "USD",
    "source": "yahoo:MSFT",
    "chg_24h": 1.750711156656616,
-   "chg_7d": 4.969345610894817,
-   "chg_30d": 28.39964209053204,
+   "chg_7d": 4.5153568012949705,
+   "chg_30d": 29.32349796420549,
    "chg_ytd": 4.433233757760017
   },
   {
@@ -209,8 +209,8 @@
    "currency": "USD",
    "source": "yahoo:TSLA",
    "chg_24h": 2.599616125550772,
-   "chg_7d": 2.804738788351452,
-   "chg_30d": 15.407883548798049,
+   "chg_7d": -2.2184825212300954,
+   "chg_30d": 18.936038914207675,
    "chg_ytd": -21.10424285401649
   },
   {
@@ -222,8 +222,8 @@
    "currency": "USD",
    "source": "yahoo:NVDA",
    "chg_24h": 8.73795479247217,
-   "chg_7d": 5.132577165421589,
-   "chg_30d": 15.720017439059134,
+   "chg_7d": 6.175483748096378,
+   "chg_30d": 19.98316224981419,
    "chg_ytd": 22.241286863270773
   },
   {
@@ -235,22 +235,22 @@
    "currency": "USD",
    "source": "yahoo:QCOM",
    "chg_24h": 0.6474461100619846,
-   "chg_7d": 2.5133721343612567,
-   "chg_30d": 1.166499914188051,
+   "chg_7d": 2.5069984447900473,
+   "chg_30d": 5.845328720672799,
    "chg_ytd": -3.665596574038399
   },
   {
    "group": "Stocks",
    "id": "lly",
    "name": "Eli Lilly",
-   "price_usd": 1175.12,
-   "price_native": 1175.12,
+   "price_usd": 1176.1,
+   "price_native": 1176.1,
    "currency": "USD",
    "source": "yahoo:LLY",
-   "chg_24h": -1.2014388452291107,
-   "chg_7d": -5.567343543462543,
-   "chg_30d": -3.7307712962267656,
-   "chg_ytd": 9.346032425393675
+   "chg_24h": -1.119045055716825,
+   "chg_7d": -6.3167136268835575,
+   "chg_30d": -2.80326101913507,
+   "chg_ytd": 9.437222356444877
   },
   {
    "group": "Stocks",
@@ -261,8 +261,8 @@
    "currency": "USD",
    "source": "yahoo:AMZN",
    "chg_24h": -1.5444900868873992,
-   "chg_7d": -1.480137468140218,
-   "chg_30d": 11.002338786492022,
+   "chg_7d": -0.9163688814398696,
+   "chg_30d": 13.064198941491744,
    "chg_ytd": 11.021571730585398
   },
   {
@@ -274,8 +274,8 @@
    "currency": "USD",
    "source": "yahoo:META",
    "chg_24h": -0.8747898983397135,
-   "chg_7d": 4.629643317325443,
-   "chg_30d": -3.759622209635057,
+   "chg_7d": 3.855241797547987,
+   "chg_30d": -2.4777557955832354,
    "chg_ytd": -13.481498467625494
   },
   {
@@ -287,35 +287,35 @@
    "currency": "USD",
    "source": "yahoo:SPCX",
    "chg_24h": 0.8880577768569136,
-   "chg_7d": 5.126865671641794,
-   "chg_30d": 21.01193674805474,
+   "chg_7d": 2.847337916725806,
+   "chg_30d": 25.162146761754258,
    "chg_ytd": null
   },
   {
    "group": "Crypto",
    "id": "btc",
    "name": "Bitcoin",
-   "price_usd": 79902.87,
-   "price_native": 79902.87,
+   "price_usd": 80089.78,
+   "price_native": 80089.78,
    "currency": "USD",
    "source": "yahoo:BTC-USD",
-   "chg_24h": 1.1077776602464868,
-   "chg_7d": 9.40689136392455,
-   "chg_30d": 25.09967831461049,
-   "chg_ytd": -8.691646646365148
+   "chg_24h": 1.344290500429537,
+   "chg_7d": 2.239852301368397,
+   "chg_30d": 25.320099989664126,
+   "chg_ytd": -8.478056767486853
   },
   {
    "group": "Crypto",
    "id": "eth",
    "name": "Ethereum",
-   "price_usd": 2504.77,
-   "price_native": 2504.77,
+   "price_usd": 2505.36,
+   "price_native": 2505.36,
    "currency": "USD",
    "source": "coingecko:ethereum",
-   "chg_24h": 1.364,
-   "chg_7d": 6.8,
-   "chg_30d": 31.8,
-   "chg_ytd": -15.66512421648622
+   "chg_24h": 1.40761,
+   "chg_7d": 8.0,
+   "chg_30d": 31.0,
+   "chg_ytd": -15.645259088465568
   },
   {
    "group": "Crypto",
@@ -325,88 +325,88 @@
    "price_native": 1.45,
    "currency": "USD",
    "source": "coingecko:ripple",
-   "chg_24h": 5.02618,
-   "chg_7d": 10.6,
-   "chg_30d": 37.2,
+   "chg_24h": 5.48055,
+   "chg_7d": 17.8,
+   "chg_30d": 37.1,
    "chg_ytd": -21.218341774501507
   },
   {
    "group": "Crypto",
    "id": "sol",
    "name": "Solana",
-   "price_usd": 109.09,
-   "price_native": 109.09,
+   "price_usd": 108.76,
+   "price_native": 108.76,
    "currency": "USD",
    "source": "coingecko:solana",
-   "chg_24h": 12.7363,
-   "chg_7d": 23.5,
-   "chg_30d": 46.6,
-   "chg_ytd": -12.39233766336696
+   "chg_24h": 12.38324,
+   "chg_7d": 25.5,
+   "chg_30d": 47.7,
+   "chg_ytd": -12.657353050396832
   },
   {
    "group": "Crypto",
    "id": "sui",
    "name": "Sui",
-   "price_usd": 0.777245,
-   "price_native": 0.777245,
+   "price_usd": 0.776722,
+   "price_native": 0.776722,
    "currency": "USD",
    "source": "coingecko:sui",
-   "chg_24h": 5.19545,
-   "chg_7d": 4.7,
-   "chg_30d": 13.0,
-   "chg_ytd": -44.638300174946686
+   "chg_24h": 4.93374,
+   "chg_7d": 7.2,
+   "chg_30d": 12.9,
+   "chg_ytd": -44.67555248150189
   },
   {
    "group": "Crypto",
    "id": "wld",
    "name": "Worldcoin",
-   "price_usd": 0.412642,
-   "price_native": 0.412642,
+   "price_usd": 0.412794,
+   "price_native": 0.412794,
    "currency": "USD",
    "source": "coingecko:worldcoin-wld",
-   "chg_24h": 5.90452,
-   "chg_7d": 10.6,
-   "chg_30d": 29.7,
-   "chg_ytd": -14.319901338077006
+   "chg_24h": 6.01244,
+   "chg_7d": 12.7,
+   "chg_30d": 29.1,
+   "chg_ytd": -14.288340384522566
   },
   {
    "group": "Crypto",
    "id": "hype",
    "name": "Hyperliquid",
-   "price_usd": 85.13,
-   "price_native": 85.13,
+   "price_usd": 85.31,
+   "price_native": 85.31,
    "currency": "USD",
    "source": "coingecko:hyperliquid",
-   "chg_24h": 4.9331,
-   "chg_7d": 16.8,
-   "chg_30d": 57.2,
-   "chg_ytd": 234.60408533690065
+   "chg_24h": 6.1167,
+   "chg_7d": 17.8,
+   "chg_30d": 54.7,
+   "chg_ytd": 235.31157664854922
   },
   {
    "group": "Crypto",
    "id": "doge",
    "name": "Dogecoin",
-   "price_usd": 0.088587,
-   "price_native": 0.088587,
+   "price_usd": 0.088557,
+   "price_native": 0.088557,
    "currency": "USD",
    "source": "coingecko:dogecoin",
-   "chg_24h": 4.35091,
-   "chg_7d": 7.0,
-   "chg_30d": 25.7,
-   "chg_ytd": -24.5875949544171
+   "chg_24h": 3.95889,
+   "chg_7d": 11.1,
+   "chg_30d": 25.3,
+   "chg_ytd": -24.613133375984233
   },
   {
    "group": "Crypto",
    "id": "wlfi",
    "name": "World Liberty Financial",
-   "price_usd": 0.059252,
-   "price_native": 0.059252,
+   "price_usd": 0.059734,
+   "price_native": 0.059734,
    "currency": "USD",
    "source": "coingecko:world-liberty-financial",
-   "chg_24h": 2.74931,
-   "chg_7d": -2.3,
-   "chg_30d": 8.6,
-   "chg_ytd": -58.71035457385847
+   "chg_24h": 3.23251,
+   "chg_7d": -2.7,
+   "chg_30d": 8.0,
+   "chg_ytd": -58.37447377497572
   },
   {
    "group": "Oil & gas majors",
@@ -416,23 +416,23 @@
    "price_native": 26.1,
    "currency": "SAR",
    "source": "yahoo:2222.SR",
-   "chg_24h": -1.4615698067661617e-06,
+   "chg_24h": -0.6849341017596543,
    "chg_7d": -1.1363622078225373,
-   "chg_30d": -0.7604533949138572,
+   "chg_30d": -0.6849341017596543,
    "chg_ytd": 9.525808155944446
   },
   {
    "group": "Oil & gas majors",
    "id": "bp",
    "name": "BP",
-   "price_usd": 42.335,
-   "price_native": 42.335,
+   "price_usd": 42.34,
+   "price_native": 42.34,
    "currency": "USD",
    "source": "yahoo:BP",
-   "chg_24h": -0.38823529411764507,
-   "chg_7d": -6.213999618023217,
-   "chg_30d": 1.595876794518995,
-   "chg_ytd": 21.897496567815885
+   "chg_24h": -0.3764705882352861,
+   "chg_7d": -5.406609500181736,
+   "chg_30d": -2.2622338451708335,
+   "chg_ytd": 21.911893343128025
   },
   {
    "group": "Oil & gas majors",
@@ -443,48 +443,48 @@
    "currency": "USD",
    "source": "yahoo:SHEL",
    "chg_24h": -0.450006154763407,
-   "chg_7d": -3.1500282731588753,
-   "chg_30d": 5.220421358552706,
+   "chg_7d": -2.817959690834996,
+   "chg_30d": 2.671500747048514,
    "chg_ytd": 23.434942646122682
   },
   {
    "group": "Oil & gas majors",
    "id": "tte",
    "name": "TotalEnergies",
-   "price_usd": 86.335,
-   "price_native": 86.335,
+   "price_usd": 86.33,
+   "price_native": 86.33,
    "currency": "USD",
    "source": "yahoo:TTE",
-   "chg_24h": -0.9124265792247441,
-   "chg_7d": -5.022003794553593,
-   "chg_30d": 2.559990124746665,
-   "chg_ytd": 31.970349153850897
+   "chg_24h": -0.9181651309952129,
+   "chg_7d": -3.9603953874966895,
+   "chg_30d": -0.484149855907783,
+   "chg_ytd": 31.96270623098336
   },
   {
    "group": "Oil & gas majors",
    "id": "xom",
    "name": "ExxonMobil",
-   "price_usd": 156.415,
-   "price_native": 156.415,
+   "price_usd": 156.44,
+   "price_native": 156.44,
    "currency": "USD",
    "source": "yahoo:XOM",
-   "chg_24h": -1.1220699247815744,
-   "chg_7d": -5.859159948299203,
-   "chg_30d": 2.2053102861531517,
-   "chg_ytd": 29.977567525278943
+   "chg_24h": -1.1062661447612374,
+   "chg_7d": -5.251045108292489,
+   "chg_30d": -0.19776714513556762,
+   "chg_ytd": 29.998341998239543
   },
   {
    "group": "Oil & gas majors",
    "id": "cvx",
    "name": "Chevron",
-   "price_usd": 199.68,
-   "price_native": 199.68,
+   "price_usd": 199.77,
+   "price_native": 199.77,
    "currency": "USD",
    "source": "yahoo:CVX",
-   "chg_24h": -0.2647253863912241,
-   "chg_7d": -2.9596171191196214,
-   "chg_30d": 6.450580046290474,
-   "chg_ytd": 31.015022112779082
+   "chg_24h": -0.21977258833821367,
+   "chg_7d": -2.6793998918422632,
+   "chg_30d": 4.122797542210408,
+   "chg_ytd": 31.074073354716937
   },
   {
    "group": "Oil & gas majors",
@@ -495,8 +495,8 @@
    "currency": "USD",
    "source": "yahoo:SLB",
    "chg_24h": 2.630599936602003,
-   "chg_7d": 2.7264253664620464,
-   "chg_30d": 10.06402661831358,
+   "chg_7d": 2.116207705065471,
+   "chg_30d": 12.35702824481069,
    "chg_ytd": 43.329855312850384
   },
   {
@@ -508,8 +508,8 @@
    "currency": "USD",
    "source": "yahoo:HAL",
    "chg_24h": 3.048784596863248,
-   "chg_7d": -0.560377232851198,
-   "chg_30d": 13.640731732968261,
+   "chg_7d": 0.42444778371379577,
+   "chg_30d": 13.786468074109337,
    "chg_ytd": 25.583863101774064
   },
   {
@@ -521,15 +521,15 @@
    "currency": "USD",
    "source": "yahoo:WFRD",
    "chg_24h": 4.511363636363635,
-   "chg_7d": 0.8000900409055621,
-   "chg_30d": 10.038284260754772,
+   "chg_7d": 1.6130790291795871,
+   "chg_30d": 11.736122862267873,
    "chg_ytd": 17.51852477579027
   }
  ],
  "errors": [],
  "upstream": {
   "coingecko": {
-   "stamp": "2026-08-27T19:57:20Z",
+   "stamp": "2026-08-27T20:57:30Z",
    "observations": 8,
    "unparsed": 0,
    "expected_live": true
@@ -541,7 +541,7 @@
    "expected_live": false
   },
   "gold-api": {
-   "stamp": "2026-08-27T20:00:23Z",
+   "stamp": "2026-08-27T20:59:53Z",
    "observations": 3,
    "unparsed": 0,
    "expected_live": true
@@ -553,7 +553,7 @@
    "expected_live": false
   },
   "yahoo": {
-   "stamp": "2026-08-27T20:00:47Z",
+   "stamp": "2026-08-27T21:00:39Z",
    "observations": 28,
    "unparsed": 0,
    "expected_live": true
