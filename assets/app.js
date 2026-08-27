@@ -1524,13 +1524,25 @@
       c.appendChild(strip);
       if (p.state !== "live") c.appendChild(el("p", "acnote", p.state_reason || ""));
       const st = el("div", "exstats");
+      // CUMULATIVE, not same-day (2026-08-27). The tile used to read today's
+      // closes, so on an experiment that closes ~one trade every day and a half
+      // it showed a dash on most days it was ever looked at. P&L is equity vs
+      // start - realized AND unrealized - because a strategy holding its losers
+      // can keep a realized line flat; realized rides along as the sub-line.
       st.appendChild(exStat("Win rate",
         isNum(p.win_rate_pct) ? Math.round(p.win_rate_pct) + "%" : "—",
-        isNum(p.win_rate_pct) ? p.wins_today + " of " + p.closed_today + " today" : null,
+        isNum(p.win_rate_pct) ? p.wins_total + " of " + p.closed_total + " closed" : null,
         !isNum(p.win_rate_pct)));
-      st.appendChild(exStat("PnL (today)", usd(p.pnl_today_usd, true),
-        null, !isNum(p.pnl_today_usd)));
-      st.appendChild(exStat("Trades", p.trades_label || "—", null,
+      const pnlSub = [];
+      if (isNum(p.pnl_total_pct)) {
+        pnlSub.push((p.pnl_total_pct > 0 ? "+" : p.pnl_total_pct < 0 ? "−" : "") +
+          Math.abs(p.pnl_total_pct).toFixed(2) + "% since start");
+      }
+      if (isNum(p.pnl_realized_usd)) pnlSub.push("realized " + usd(p.pnl_realized_usd, true));
+      st.appendChild(exStat("P&L (total)", usd(p.pnl_total_usd, true),
+        pnlSub.length ? pnlSub.join(" · ") : null, !isNum(p.pnl_total_usd)));
+      st.appendChild(exStat("Trades", p.trades_label || "—",
+        isNum(p.open_positions) && p.open_positions > 0 ? p.open_positions + " open" : null,
         !p.trades_label || p.trades_label === "—"));
       c.appendChild(st);
       if (p.note) c.appendChild(el("div", "s exupd", p.note)).style.marginTop = "10px";
