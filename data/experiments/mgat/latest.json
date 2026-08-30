@@ -1,0 +1,161 @@
+{
+ "kind": "experiments-mgat-weekly",
+ "week": "2026-W35",
+ "week_window": {
+  "start": "2026-08-23",
+  "end": "2026-08-29"
+ },
+ "generated_utc": "2026-08-30T04:17:41Z",
+ "headline": "First public week for MGAT Alpha v3.1: the system launched mid-week and closed 6 trades, all losses, for -$86.98 (0% win rate) against an $8,000 paper book. Measured-beta share on new positions was 68.75% (11 of 16 opens). Because the system's first cycle falls inside this week, no equity reading exists from before the week started, so return-on-book (%) isn't computable this week. The sample (6 of a 200-trade target) is far too small to call the logic healthy or broken. Note: the regime feed reports a fourth state, NEUTRAL, alongside RISK_ON/RISK_OFF/UNKNOWN -- carried below as its own count rather than folded into another bucket.",
+ "totals": {
+  "closed": 6,
+  "wins": 0,
+  "win_rate_pct": 0,
+  "pnl_usd": -86.98,
+  "pnl_pct_of_book": null,
+  "all_time_closed": 6,
+  "target": 200
+ },
+ "families": [
+  {
+   "family": "BC",
+   "closed": 5,
+   "wins": 0,
+   "win_rate_pct": 0,
+   "pnl_usd": -68.39
+  },
+  {
+   "family": "MED",
+   "closed": 1,
+   "wins": 0,
+   "win_rate_pct": 0,
+   "pnl_usd": -18.59
+  }
+ ],
+ "counterfactual": {
+  "closed": 0,
+  "wins": 0,
+  "win_rate_pct": null,
+  "pnl_usd": 0,
+  "refused": {
+   "BETA_DEFAULTED": 921,
+   "ALREADY_HELD": 2435,
+   "INSUFFICIENT_CASH": 1405,
+   "BETA_CONTAMINATED": 1
+  }
+ },
+ "beta_share": {
+  "opens": 16,
+  "measured": 11,
+  "family_default": 4,
+  "benchmark": 1,
+  "measured_pct": 68.75
+ },
+ "regime": {
+  "cycles": 119,
+  "risk_on": 10,
+  "risk_off": 10,
+  "unknown": 1,
+  "neutral": 98
+ },
+ "faults": [
+  {
+   "kind": "REGIME_UNKNOWN",
+   "severity": "critical",
+   "count": 1
+  },
+  {
+   "kind": "BETA_BENCHMARK_BLIND",
+   "severity": "critical",
+   "count": 1
+  },
+  {
+   "kind": "WITNESS_FETCH_FAILED",
+   "severity": "warn",
+   "count": 1
+  },
+  {
+   "kind": "LEDGER_EXIT_UNWITNESSED",
+   "severity": "warn",
+   "count": 1
+  }
+ ],
+ "llm_adviser": "The run log shows llm_mode: 'active' for this week's run-starts -- UNCONFIRMED whether this reflects the intended adviser switch (agreed state: OFF) or an unrelated runtime flag; verify against source before trusting either reading. In practice the adviser acted as a pure observer this week: 16 observations logged, zero effect on trades.",
+ "sample_caveat": "6 trades closed this week, 6 all-time against the 200-trade target -- far too small a sample for win rate or PnL% to be a meaningful read; directional at best.",
+ "paper_caveat": "Alpha is paper -- simulated fills, no slippage, no thin-liquidity exits, no can't-sell-into-dust. A clean logic result here is never a claim that the execution floor works; that claim belongs to the Beta rung alone.",
+ "integrity": "No CLASS-A changes landed this week -- clean comparison. Two operational repairs and one install-layer guard were logged at launch, none of which touched trading logic, exposure, beta derivation, the ledger, or the paper engine.",
+ "verdict": {
+  "call": "insufficient sample",
+  "text": "Six closed trades, all losses, is too small a sample to call the logic healthy or broken -- the 200-trade target puts this week at 3% of the way there. Measured-beta share for the week's opens was 68.75%, reasonably high, so sizing mostly reflects real correlations rather than stand-in weights. The counterfactual book hasn't closed a single trade yet, so a primary-vs-counterfactual comparison isn't possible yet. Two critical alarms fired at launch (a cold price feed left the regime signal and the beta benchmark blind) and have not recurred since."
+ },
+ "vs_previous": null,
+ "history": [
+  {
+   "date": "2026-08-25",
+   "ts": "2026-08-25T15:27:30.186Z",
+   "family": "BC",
+   "symbol": "ANSEM",
+   "entry_price": 0.272051,
+   "exit_price": 0.244245,
+   "pnl_usd": -11.48,
+   "beta": 2.5,
+   "beta_source": "family_default"
+  },
+  {
+   "date": "2026-08-26",
+   "ts": "2026-08-26T19:32:15.992Z",
+   "family": "BC",
+   "symbol": "AKE",
+   "entry_price": 0.00897875,
+   "exit_price": 0.00792146,
+   "pnl_usd": -12.95,
+   "beta": 0.1,
+   "beta_source": "measured"
+  },
+  {
+   "date": "2026-08-28",
+   "ts": "2026-08-28T16:39:33.184Z",
+   "family": "BC",
+   "symbol": "AKT",
+   "entry_price": 0.575532,
+   "exit_price": 0.513022,
+   "pnl_usd": -14.33,
+   "beta": 2.5,
+   "beta_source": "family_default"
+  },
+  {
+   "date": "2026-08-28",
+   "ts": "2026-08-28T16:39:33.195Z",
+   "family": "MED",
+   "symbol": "M",
+   "entry_price": 1.14,
+   "exit_price": 0.977948,
+   "pnl_usd": -18.59,
+   "beta": 1.2889,
+   "beta_source": "measured"
+  },
+  {
+   "date": "2026-08-28",
+   "ts": "2026-08-28T21:40:28.935Z",
+   "family": "BC",
+   "symbol": "AERO",
+   "entry_price": 0.54359,
+   "exit_price": 0.488119,
+   "pnl_usd": -15.88,
+   "beta": 2.5,
+   "beta_source": "family_default"
+  },
+  {
+   "date": "2026-08-29",
+   "ts": "2026-08-29T13:43:21.793Z",
+   "family": "BC",
+   "symbol": "AKE",
+   "entry_price": 0.00978878,
+   "exit_price": 0.00860384,
+   "pnl_usd": -13.75,
+   "beta": 0.1,
+   "beta_source": "measured"
+  }
+ ],
+ "published_utc": "2026-08-30T22:09:01Z"
+}
