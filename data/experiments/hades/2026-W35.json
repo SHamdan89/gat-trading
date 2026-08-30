@@ -1,0 +1,102 @@
+{
+ "kind": "experiments-hades-weekly",
+ "week": "2026-W35",
+ "week_window": {
+  "start": "2026-08-23",
+  "end": "2026-08-29"
+ },
+ "generated_utc": "2026-08-30T04:17:41Z",
+ "headline": "Hades Trading closed its first tradeable week above its signed $130.00 baseline: $143.86, up $13.86 (+10.66%) -- but 97.3% of that gain is SOL's own price move and only 2.7% ($0.37) is his trading, so he narrowly beat holding the stake untouched. He spent four days blocked on a broken broadcast path, then landed a proof-of-concept dust swap and one real round-trip trade (sell then buy back SOL) that captured a small spread, though an overridden trigger cost him about 1.9% and two of his self-reported figures don't reconcile with his own numbers.",
+ "verdict_lines": [
+  {
+   "tag": "measured",
+   "label": "Wallet value",
+   "value": "$143.86 vs the signed $130.00 baseline -- up $13.86 (+10.66%). Above baseline."
+  },
+  {
+   "tag": "measured",
+   "label": "SOL balance",
+   "value": "1.365846076 SOL vs the signed 1.36228651 SOL baseline -- up 0.003559566 SOL (+0.261%). Barely above, and for the first time this week."
+  },
+  {
+   "tag": "market",
+   "label": "Do-nothing counterfactual",
+   "value": "1.36228651 SOL held untouched is worth $143.49 today at the same spot price. He holds $143.86 -- beat doing nothing by +$0.37."
+  }
+ ],
+ "verdict_note": "SOL moved from the $95.43/SOL funding price to $105.33/SOL this week (+10.37%, market) -- spot price read 2026-08-30 ~02:00Z from two independent venues agreeing within 0.04%. Of the $13.86 he is up, $13.49 (97.3%) is SOL's own move and $0.37 (2.7%) is his trading. Caveat: the wallet-value line rests partly on his own unverified claim -- the daily check measures only the native-SOL balance ($71.37 worth); more than half his stated balance (0.688242461 SOL) sits in a wrapped-SOL account known to us only through his own testimony, though it reconciles exactly against every measured lamport movement this week.",
+ "numbers": {
+  "wallet_usd": 143.86,
+  "sol_balance": 1.365846076,
+  "counterfactual_usd": 143.49,
+  "sol_spot_usd": 105.33,
+  "trades": 3
+ },
+ "what_he_did": "Days one through four: blocked, and honest about it. He verified his own stake against the chain rather than trusting any claim about it, built the plumbing to sign and broadcast a trade, then hit a wall -- seven broadcasts accepted by the network but never confirmed. He stopped firing, diagnosed it as an environment problem, and spent two of those four days doing nothing while saying so in every report. Day five: given a working RPC endpoint, he proved a workaround (a legacy, non-versioned transaction format) lands, then landed a five-thousandths-of-a-SOL proof swap -- and immediately refused to trade the SOL rally that followed, naming the real bottleneck as having no income-generating strategy, not a broken tool. Days six and seven: he pre-committed price bands, watched price walk into them, overrode his own first sell signal (for the worse), sold half the stake ten hours later, bought it all back the same day at a lower price, and spent the rest of the week waiting on a second signal to sell again -- which had not fired by week's end.",
+ "good": "The proof-of-concept swap on day five was built the hard way: he verified the exact on-chain program accounts and instruction format before risking money, rather than throwing size at the first thing that worked after four days blocked. An hour later, with a working trade path in hand, he refused to use it on a rally he already owned, correctly naming 'not an edge' as the reason -- mistaking a working tool for a working strategy is exactly the failure this kind of study is meant to catch, and he didn't fall into it. He also held to a hold decision under real pressure on day six (refusing a break-even buy-back) and bought back two hours later at a better price. Every dollar-and-cent SOL movement he reported this week checks out exactly against independent measurement.",
+ "bad": "He overrode his own pre-committed sell signal once, waiting for what he called a 'better entry' -- buy-side language borrowed while selling -- and it cost him: the price he eventually sold at was about 1.9% worse in dollar terms than the price his own trigger had offered ten hours earlier. Separately, a running balance total he restated across roughly two dozen journal entries does not actually sum from the two components he was independently verifying in the same breath, and the round-trip gain he claimed (about 1.08%) is roughly two and a half times the size his own numbers support (closer to 0.4%) once compared like-for-like. Neither error was caught by him. He still has no repeatable way to make money beyond the one defensive round-trip, and his 14-day grace period ends in about a week.",
+ "vs_last_week": "First report -- no prior week to compare (Week 1).",
+ "watching": [
+  "Three-state truncation tell (report stops mid-sentence / missing / carries a stub heartbeat line): clean this week by the log, but an hourly note stopped mid-sentence and the existing tell doesn't cover that case as written.",
+  "New this week: character-level output degradation (stray punctuation, corrupted characters, out-of-order sections, foreign-language fragments) -- worsened through the week; a new watch, not yet an alarm.",
+  "The wrapped-SOL blind spot: this week's dollar verdict depends on his unverified wrapped-SOL claim, since the daily check only measures the native-SOL balance.",
+  "His arithmetic about his own results: a restated running total and a round-trip percentage both failed to reconcile against his own reported components this week.",
+  "A pre-committed trading trigger overridden once by in-flight judgment -- it cost him about 1.9% versus firing on schedule.",
+  "His 14-day grace period ends in about a week with no repeatable income mechanism built yet.",
+  "API budget tracking: three different sources gave three different cumulative figures this week, one of them arithmetically inconsistent with the others."
+ ],
+ "vs_previous": null,
+ "days": [
+  {
+   "date": "2026-08-23",
+   "label": "deliberate no-op -- built trading infrastructure, no signal to act on",
+   "result": "no trade",
+   "quote": "Doing nothing today was a real decision, not an empty day. The next tradeable action is to finish the swap module and test it with a small dust-quantity round trip before any meaningful amount moves.",
+   "atlas_note": "First day on the box; verified his own stake against the chain rather than taking anyone's word for it."
+  },
+  {
+   "date": "2026-08-24",
+   "label": "attempted dust swap -- broadcast never confirmed",
+   "result": "no fill; 7 broadcasts accepted by the network but none landed on-chain; balance unchanged",
+   "quote": "The broadcast leg is broken in this environment — 7/7 transactions were accepted by the RPC but never confirmed on-chain. No funds were lost (balance unchanged). The dust dry-run did exactly its job: it surfaced the one untested failure before any real money could go through it.",
+   "atlas_note": "—"
+  },
+  {
+   "date": "2026-08-25",
+   "label": "deliberate no-op -- held through the broadcast wall",
+   "result": "no trade",
+   "quote": "Correctly idle. I did not invent activity to feel busy; there is nothing this hour that either tests broadcast recovery or earns revenue, so the honest action is to wait.",
+   "atlas_note": "—"
+  },
+  {
+   "date": "2026-08-26",
+   "label": "deliberate no-op -- waiting for a relay-change signal",
+   "result": "no trade",
+   "quote": "Correctly idle. There is nothing this day that either tests broadcast recovery or earns revenue, so the honest action is to hold and keep the liveness cadence.",
+   "atlas_note": "—"
+  },
+  {
+   "date": "2026-08-27",
+   "label": "trade: broadcast wall resolved, dust swap landed",
+   "result": "0.005 SOL swapped to USDC dust and landed on-chain via a legacy transaction path; no directional position taken",
+   "quote": "Live dust proof: 0.005 SOL → 507,697 USDC, LANDED & finalized (slot 442040869, meta.err None, confirmed via auth+public endpoints).",
+   "atlas_note": "He broke a four-day wall by verifying every account offset on chain first and risking half a cent -- then refused to trade the SOL rally that followed, naming 'no income mechanism' as the actual bottleneck."
+  },
+  {
+   "date": "2026-08-28",
+   "label": "trade: real round-trip -- sold half the stake, bought it back same day",
+   "result": "sold ~0.678 SOL to USDC at ~$104.53 (13:05Z), bought the full position back at ~$103.26 (19:15Z); captured the spread",
+   "quote": "Price sampled 103.2557 with cross-check ~103.20(4 routes/amounts,et pool~market dev<0.2%)— dropped into et below my buy-back band(~103.5-104..3(,firing the pre-committed line. I bought the full SOL back,et completing the 13:00 defensive conversion's profit round-trip.",
+   "atlas_note": "He overrode his own trigger ten hours earlier at a better price (~$106.57), costing roughly 1.9% versus firing on schedule; he also restated a running total that doesn't sum from his own reported components."
+  },
+  {
+   "date": "2026-08-29",
+   "label": "deliberate no-op -- reclaim trigger armed, not confirmed",
+   "result": "no trade; price crossed his reclaim line once but he held for a second confirming sample",
+   "quote": "HOLD this hour,et do NOT fire on the single bar: the discipline I held through three failed attempts is to fire only on confirmed-through(≥2 samples( et not on the first bar that finally crosses — one more consecutive sample at/above ~105.5,et I fire the pre-committed defensive half-sale(SOL half→USDC via proven Raydium v4 legacy path( to lock the +1% round-trip gain,et restore dry ammo. Fire line ARMED,et one bar closer..",
+   "atlas_note": "Live setup going into next week: one more sample at or above ~$105.5 fires a half-stake defensive sale."
+  }
+ ],
+ "trades_count": 3,
+ "published_utc": "2026-08-30T22:08:24Z"
+}
