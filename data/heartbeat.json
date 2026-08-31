@@ -1,11 +1,11 @@
 {
  "schema": 1,
- "run_utc": "2026-08-31T17:01:23Z",
- "fetch_utc": "2026-08-31T17:01:23Z",
- "payload_sha256": "174c2387b730614ee3df86717c0fc299f6d0315006d03fea00d662bd316b83de",
+ "run_utc": "2026-08-31T18:00:55Z",
+ "fetch_utc": "2026-08-31T18:00:54Z",
+ "payload_sha256": "84ff03b81f2d97c57a73510347d59048fd35c4cbc21023b9baaa8b6a48c9a2d0",
  "upstream": {
   "coingecko": {
-   "stamp": "2026-08-31T16:58:30Z",
+   "stamp": "2026-08-31T17:57:20Z",
    "observations": 8,
    "unparsed": 0,
    "expected_live": true
@@ -17,33 +17,28 @@
    "expected_live": false
   },
   "gold-api": {
-   "stamp": "2026-08-31T17:00:11Z",
+   "stamp": "2026-08-31T18:00:11Z",
    "observations": 3,
    "unparsed": 0,
    "expected_live": true
   },
   "lbma": {
    "stamp": "2026-08-28T00:00:00Z",
-   "observations": 1,
+   "observations": 2,
    "unparsed": 0,
    "expected_live": false
   },
   "yahoo": {
-   "stamp": "2026-08-31T17:01:19Z",
+   "stamp": "2026-08-31T18:00:49Z",
    "observations": 28,
    "unparsed": 0,
    "expected_live": true
   }
  },
- "assets": 38,
- "feed_errors": 1,
- "pull_rc": 1,
- "status": "ALARM",
- "alarms": [
-  {
-   "alarm": "pull_failed",
-   "detail": "pull_prices.py exited 1 - prices were NOT published this run"
-  }
- ],
+ "assets": 40,
+ "feed_errors": 0,
+ "pull_rc": 0,
+ "status": "ok",
+ "alarms": [],
  "note": "Emitted by every run, including failed ones. status ok means this run saw the feed advance; ALARM means it did not, and the prices on the page may be older than they look."
 }
