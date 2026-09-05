@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-05T17:01:06Z",
+ "generated_utc": "2026-09-05T18:01:05Z",
  "date": "2026-09-05",
  "assets": [
   {
@@ -295,118 +295,118 @@
    "group": "Crypto",
    "id": "btc",
    "name": "Bitcoin",
-   "price_usd": 80031.68,
-   "price_native": 80031.68,
+   "price_usd": 80045.82,
+   "price_native": 80045.82,
    "currency": "USD",
    "source": "yahoo:BTC-USD",
-   "chg_24h": 0.4514903492955206,
-   "chg_7d": 2.2823809261358146,
-   "chg_30d": 24.539446204846705,
-   "chg_ytd": -8.544450068876987
+   "chg_24h": 0.4692381220967468,
+   "chg_7d": 2.3004521807477007,
+   "chg_30d": 24.561449838524496,
+   "chg_ytd": -8.528291699141061
   },
   {
    "group": "Crypto",
    "id": "eth",
    "name": "Ethereum",
-   "price_usd": 2473.25,
-   "price_native": 2473.25,
+   "price_usd": 2480.6,
+   "price_native": 2480.6,
    "currency": "USD",
    "source": "coingecko:ethereum",
-   "chg_24h": 0.47403,
-   "chg_7d": 0.4,
-   "chg_30d": 28.5,
-   "chg_ytd": -16.72639342870784
+   "chg_24h": 1.40497,
+   "chg_7d": 1.1,
+   "chg_30d": 29.4,
+   "chg_ytd": -16.47892107116251
   },
   {
    "group": "Crypto",
    "id": "xrp",
    "name": "XRP",
-   "price_usd": 1.42,
-   "price_native": 1.42,
+   "price_usd": 1.43,
+   "price_native": 1.43,
    "currency": "USD",
    "source": "coingecko:ripple",
-   "chg_24h": 1.04032,
-   "chg_7d": 0.8,
-   "chg_30d": 34.9,
-   "chg_ytd": -22.84830711709803
+   "chg_24h": 2.21619,
+   "chg_7d": 1.8,
+   "chg_30d": 35.1,
+   "chg_ytd": -22.304985336232523
   },
   {
    "group": "Crypto",
    "id": "sol",
    "name": "Solana",
-   "price_usd": 103.46,
-   "price_native": 103.46,
+   "price_usd": 104.2,
+   "price_native": 104.2,
    "currency": "USD",
    "source": "coingecko:solana",
-   "chg_24h": 1.57211,
-   "chg_7d": -2.3,
-   "chg_30d": 40.2,
-   "chg_ytd": -16.91366078148269
+   "chg_24h": 2.87788,
+   "chg_7d": -1.5,
+   "chg_30d": 41.1,
+   "chg_ytd": -16.31938385299145
   },
   {
    "group": "Crypto",
    "id": "sui",
    "name": "Sui",
-   "price_usd": 0.800377,
-   "price_native": 0.800377,
+   "price_usd": 0.80356,
+   "price_native": 0.80356,
    "currency": "USD",
    "source": "coingecko:sui",
-   "chg_24h": 6.2142,
-   "chg_7d": 6.5,
-   "chg_30d": 17.9,
-   "chg_ytd": -42.99065131216451
+   "chg_24h": 6.99936,
+   "chg_7d": 7.5,
+   "chg_30d": 18.7,
+   "chg_ytd": -42.76393220745087
   },
   {
    "group": "Crypto",
    "id": "wld",
    "name": "Worldcoin",
-   "price_usd": 0.399181,
-   "price_native": 0.399181,
+   "price_usd": 0.398709,
+   "price_native": 0.398709,
    "currency": "USD",
    "source": "coingecko:worldcoin-wld",
-   "chg_24h": 5.91768,
-   "chg_7d": 4.7,
-   "chg_30d": 30.8,
-   "chg_ytd": -17.11491446831616
+   "chg_24h": 6.15457,
+   "chg_7d": 6.1,
+   "chg_30d": 31.6,
+   "chg_ytd": -17.212919534616805
   },
   {
    "group": "Crypto",
    "id": "hype",
    "name": "Hyperliquid",
-   "price_usd": 86.08,
-   "price_native": 86.08,
+   "price_usd": 85.63,
+   "price_native": 85.63,
    "currency": "USD",
    "source": "coingecko:hyperliquid",
-   "chg_24h": 1.1532,
-   "chg_7d": 3.2,
-   "chg_30d": 53.0,
-   "chg_ytd": 238.33806725949026
+   "chg_24h": 0.75786,
+   "chg_7d": 3.7,
+   "chg_30d": 54.8,
+   "chg_ytd": 236.56933898036888
   },
   {
    "group": "Crypto",
    "id": "doge",
    "name": "Dogecoin",
-   "price_usd": 0.088339,
-   "price_native": 0.088339,
+   "price_usd": 0.094382,
+   "price_native": 0.094382,
    "currency": "USD",
    "source": "coingecko:dogecoin",
-   "chg_24h": 4.37408,
-   "chg_7d": 2.3,
-   "chg_30d": 26.9,
-   "chg_ytd": -24.798712572705387
+   "chg_24h": 11.50091,
+   "chg_7d": 3.8,
+   "chg_30d": 28.1,
+   "chg_ytd": -19.654423188366184
   },
   {
    "group": "Crypto",
    "id": "wlfi",
    "name": "World Liberty Financial",
-   "price_usd": 0.057103,
-   "price_native": 0.057103,
+   "price_usd": 0.057531,
+   "price_native": 0.057531,
    "currency": "USD",
    "source": "coingecko:world-liberty-financial",
-   "chg_24h": -0.49003,
-   "chg_7d": -2.1,
-   "chg_30d": 7.7,
-   "chg_ytd": -60.20788120622156
+   "chg_24h": 0.77989,
+   "chg_7d": -1.5,
+   "chg_30d": 8.1,
+   "chg_ytd": -59.90963020638378
   },
   {
    "group": "Oil & gas majors",
@@ -529,7 +529,7 @@
  "errors": [],
  "upstream": {
   "coingecko": {
-   "stamp": "2026-09-05T16:57:20Z",
+   "stamp": "2026-09-05T17:58:20Z",
    "observations": 8,
    "unparsed": 0,
    "expected_live": true
@@ -541,7 +541,7 @@
    "expected_live": false
   },
   "gold-api": {
-   "stamp": "2026-09-05T17:00:06Z",
+   "stamp": "2026-09-05T18:00:07Z",
    "observations": 3,
    "unparsed": 0,
    "expected_live": true
@@ -553,7 +553,7 @@
    "expected_live": false
   },
   "yahoo": {
-   "stamp": "2026-09-05T17:00:44Z",
+   "stamp": "2026-09-05T18:00:42Z",
    "observations": 28,
    "unparsed": 0,
    "expected_live": true
