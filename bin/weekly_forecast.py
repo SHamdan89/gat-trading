@@ -20,7 +20,7 @@ Outputs (server-side, never published directly):
       are anchoring, both corrupt the record)
 
 The language model writes words around these numbers and may never alter
-one; publish_weekly.py re-derives and refuses mismatches.
+one; the publisher re-derives and refuses mismatches.
 
 Exit codes: 0 ok, 1 error, 3 the week's review is already published
 (the scheduled run treats 3 as "verify-only").
@@ -440,7 +440,7 @@ def freeze_calendar(path, calendar, review_friday, horizon_days=28):
     nothing to prove the event had not simply been backfilled. Hindsight
     contamination dressed as a record.
 
-    The frozen copy is what publish_weekly.py validates a No read against, and
+    The frozen copy is what the publisher validates a No read against, and
     what a reader can check the review's declines against years later. The
     sha256 is of the WHOLE file, so a change anywhere in it - including to the
     admission rule itself - is detectable from any published review."""

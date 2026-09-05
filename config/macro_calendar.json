@@ -78,7 +78,7 @@
  },
 
  "freeze": {
-  "how": "weekly_forecast.py copies this file's 'updated' stamp, a sha256 of its bytes, and every event inside the review horizon into the weekly document as 'calendar_frozen', stamped with the moment it was cut. publish_weekly.py validates the No-read against THAT frozen copy, not against this file.",
+  "how": "weekly_forecast.py copies this file's 'updated' stamp, a sha256 of its bytes, and every event inside the review horizon into the weekly document as 'calendar_frozen', stamped with the moment it was cut. The publisher validates the No-read against THAT frozen copy, not against this file.",
   "why": "Without the freeze, an event could be added after a market moved and the record would show a forecast correctly declined - hindsight contamination dressed as a record. The frozen copy makes backfilling visible: the published review carries the calendar as it stood, hash and all."
  },
 
