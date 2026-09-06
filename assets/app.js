@@ -1,6 +1,7 @@
 /* gat.trading — page renderer. Reads four stored files and nothing else:
    data/latest.json, data/brief/latest.json, data/weekly/latest.json,
-   data/alpha/latest.json. No API is called per visitor. The look is the
+   data/alpha/latest.json, data/screening/latest.json. No API is called
+   per visitor. The look is the
    Fable redesign; every figure still comes from the publishers' files. */
 (function () {
   "use strict";
@@ -187,7 +188,7 @@
   });
 
   /* ---------- shared state -------------------------------------------------- */
-  const S = { mk: null, wk: null, br: null, al: null, wstate: {} };
+  const S = { mk: null, wk: null, br: null, al: null, scr: null, wstate: {} };
   const STCLS = { "Buy": "st-buy", "Hold": "st-hold", "Flat": "st-flat", "Wait": "st-wait", "Sell": "st-sell", "No read": "st-noread", "No data": "st-nodata" };
 
   /* ==========================================================================
@@ -232,6 +233,67 @@
     if (/copper/i.test(nm) && !isNum(a.chg_7d) && !isNum(a.chg_30d)) m.push("no free spot history — figures fill in as days accumulate");
     if (/spacex/i.test(nm) && !isNum(a.chg_ytd)) m.push("listed June 2026 — no year-start price to measure against");
     return m;
+  }
+
+  /* ---------- SCREENING column (2026-09-07) ----------------------------------
+     Reads data/screening/latest.json, joined to the price feed by id. The word
+     is the verdict: exactly Halal, Haram, Purify x.x%, or — for no verdict. No
+     colour implies a verdict, no score, no sentence. Fail-closed on this side
+     as well as the publisher's: a row or a document older than SCR_STALE_DAYS
+     renders — whatever the file says, and a missing or malformed file renders
+     — in every cell and changes nothing else. The price feed never waits for
+     this file. */
+  const SCR_STALE_DAYS = 100;
+  const SCR_DASH = "—";
+  function scrAgeOk(stamp) {
+    const t = Date.parse(String(stamp || ""));
+    return isNum(t) && (Date.now() - t) <= SCR_STALE_DAYS * 86400000;
+  }
+  function scrText(a) {
+    const d = S.scr;
+    if (!d || !d.rows || typeof d.rows !== "object" || !scrAgeOk(d.screened_utc)) return SCR_DASH;
+    const r = d.rows[a.id];
+    if (!r || typeof r !== "object") return SCR_DASH;
+    const v = r.verdict;
+    if (v !== "Halal" && v !== "Haram" && v !== "Purify") return SCR_DASH;
+    if (r.static !== true && !scrAgeOk(r.screened_utc)) return SCR_DASH;
+    if (v === "Purify") {
+      const p = Number(r.purification_pct);
+      if (!isNum(p) || p < 0.05 || p > 5) return SCR_DASH;
+      return "Purify " + p.toFixed(1) + "%";
+    }
+    return v;
+  }
+  function scrTd(a) {
+    const td = el("td", "scr");
+    td.setAttribute("data-l", "Screening");
+    const t = scrText(a);
+    td.appendChild(el("span", t === SCR_DASH ? "v na" : "v", t));
+    return td;
+  }
+  /* Two bullets under the table, both read from the served file and neither
+     written here: the provider's own screening disclaimer, verbatim with its
+     version date, then the site's one fixed line (the publisher holds its text). */
+  function renderScreeningNotes(doc) {
+    const ul = document.querySelector("#p-markets .notes .nbody ul");
+    if (!ul || ul.querySelector("li[data-scr]")) return;
+    const d = (Array.isArray(doc.disclaimers) ? doc.disclaimers : [])
+      .find(x => x && x.id === "screening" && typeof x.text === "string" && x.text);
+    if (!d) return;
+    const li = el("li");
+    li.setAttribute("data-scr", "provider");
+    li.appendChild(el("b", null, "Screening."));
+    li.appendChild(document.createTextNode(" " + d.text + " ("));
+    const label = "provider disclaimer" + (d.version ? ", version " + d.version : "");
+    if (typeof d.url === "string" && /^https?:\/\//.test(d.url)) li.appendChild(extLink(label, d.url));
+    else li.appendChild(document.createTextNode(label));
+    li.appendChild(document.createTextNode(")"));
+    ul.appendChild(li);
+    if (typeof doc.site_note === "string" && doc.site_note.trim()) {
+      const li2 = el("li", null, doc.site_note);
+      li2.setAttribute("data-scr", "site");
+      ul.appendChild(li2);
+    }
   }
 
   function renderTape() {
@@ -375,7 +437,7 @@
     return S.mk.assets.filter(a => {
       if (mkState.group !== "all" && a.group !== mkState.group) return false;
       if (!q) return true;
-      return (a.name + " " + a.id + " " + symOf(a) + " " + a.group).toLowerCase().indexOf(q) !== -1;
+      return (a.name + " " + a.id + " " + symOf(a) + " " + a.group + " " + scrText(a)).toLowerCase().indexOf(q) !== -1;
     });
   }
 
@@ -421,7 +483,8 @@
     const cols = [
       { l: "Asset", k: "name" }, { l: "Price", k: "price_usd" },
       { l: "24h", k: "chg_24h" }, { l: "7d", k: "chg_7d" },
-      { l: "30d", k: "chg_30d" }, { l: "YTD", k: "chg_ytd" }
+      { l: "30d", k: "chg_30d" }, { l: "YTD", k: "chg_ytd" },
+      { l: "Screening", k: "screening" }
     ];
     cols.forEach(c => {
       const th = document.createElement("th");
@@ -431,8 +494,9 @@
       if (mkState.sort === c.k) th.setAttribute("aria-sort", mkState.dir === 1 ? "ascending" : "descending");
       /* three states so the reader can always get back to the grouped view */
       const fire = () => {
-        if (mkState.sort !== c.k) { mkState.sort = c.k; mkState.dir = c.k === "name" ? 1 : -1; }
-        else if (mkState.dir === (c.k === "name" ? 1 : -1)) { mkState.dir = -mkState.dir; }
+        const asc = c.k === "name" || c.k === "screening";
+        if (mkState.sort !== c.k) { mkState.sort = c.k; mkState.dir = asc ? 1 : -1; }
+        else if (mkState.dir === (asc ? 1 : -1)) { mkState.dir = -mkState.dir; }
         else { mkState.sort = null; }
         renderTables();
       };
@@ -477,6 +541,7 @@
       r.appendChild(pctTd(a.chg_7d, "7d", CAPS.chg_7d));
       r.appendChild(pctTd(a.chg_30d, "30d", CAPS.chg_30d));
       r.appendChild(pctTd(a.chg_ytd, "YTD", CAPS.chg_ytd));
+      r.appendChild(scrTd(a));
       tb.appendChild(r);
     });
     t.appendChild(tb);
@@ -500,6 +565,7 @@
       rows = rows.slice().sort((x, y) => {
         const a = x[k], b = y[k];
         if (k === "name") return dir * String(a).localeCompare(String(b));
+        if (k === "screening") return dir * scrText(x).localeCompare(scrText(y));
         const an = !isNum(a), bn = !isNum(b);
         if (an && bn) return 0;
         if (an) return 1;
@@ -576,6 +642,17 @@
     .catch(e => {
       marketsFail("Market data could not be loaded (" + e.message + "). Nothing is shown rather than showing stale numbers.");
     });
+
+  /* the screening file, on its own clock: the board above never waits for it */
+  fetch("data/screening/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(doc => {
+      if (!doc || typeof doc !== "object" || !doc.rows || typeof doc.rows !== "object") throw new Error("no rows");
+      S.scr = doc;
+      if (S.mk) renderTables();
+      renderScreeningNotes(doc);
+    })
+    .catch(() => { S.scr = null; });
 
   /* ==========================================================================
      DAILY BRIEF
