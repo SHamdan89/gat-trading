@@ -1,0 +1,383 @@
+{
+ "schema": 1,
+ "kind": "moneyflow-daily",
+ "date": "2026-09-04",
+ "fired_utc": "2026-09-07T02:49:09Z",
+ "window_days": 0,
+ "window_target": 90,
+ "window_floor": 30,
+ "warming_up": true,
+ "signals_absent": [
+  "etf_flow",
+  "futures_positioning",
+  "options_hedging"
+ ],
+ "headline": "calibrating · 0 of 30 days",
+ "rotation": null,
+ "buckets": [
+  {
+   "id": "gold",
+   "label": "Gold",
+   "direction": "distributing",
+   "agreement": 2,
+   "n_signals": 2,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "absent": true,
+     "reason": "no_prior_reading",
+     "inputs": {
+      "shares": {
+       "GLD": 368698335.47
+      },
+      "nav": {
+       "GLD": 404.92
+      },
+      "as_of": {
+       "GLD": "2026-09-04"
+      },
+      "issuer": {
+       "GLD": "ssga"
+      },
+      "members_used": [
+       "GLD"
+      ],
+      "members_unreachable": []
+     },
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "futures_positioning",
+     "value": -7976.0,
+     "unit": "contracts",
+     "backfilled": true,
+     "inputs": {
+      "report_date": "2026-09-01",
+      "net_position": 136771.0,
+      "previous_net_position": 144747.0
+     },
+     "z": -2.103,
+     "window_days": 90,
+     "direction": -1
+    },
+    {
+     "name": "options_hedging",
+     "absent": true,
+     "reason": "no_drop",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "cross_asset",
+     "value": -6.544194701115934,
+     "unit": "pct_points",
+     "backfilled": true,
+     "inputs": {
+      "window_days": 5,
+      "readings": 246,
+      "first_reading": "2025-09-12"
+     },
+     "z": -1.8038,
+     "window_days": 90,
+     "direction": -1
+    }
+   ]
+  },
+  {
+   "id": "btc",
+   "label": "BTC",
+   "direction": "accumulating",
+   "agreement": 1,
+   "n_signals": 2,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "absent": true,
+     "reason": "no_prior_reading",
+     "inputs": {
+      "shares": {
+       "IBIT": 1384960013.35
+      },
+      "nav": {
+       "IBIT": 45.145313
+      },
+      "as_of": {
+       "IBIT": "2026-09-04"
+      },
+      "issuer": {
+       "IBIT": "ishares"
+      },
+      "members_used": [
+       "IBIT"
+      ],
+      "members_unreachable": []
+     },
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "futures_positioning",
+     "value": 469.0,
+     "unit": "contracts",
+     "backfilled": true,
+     "inputs": {
+      "report_date": "2026-09-01",
+      "net_position": -7620.0,
+      "previous_net_position": -8089.0
+     },
+     "z": 0.8387,
+     "window_days": 90,
+     "direction": 1
+    },
+    {
+     "name": "options_hedging",
+     "absent": true,
+     "reason": "no_drop",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "cross_asset",
+     "value": 0.8826414096229205,
+     "unit": "pct_points",
+     "backfilled": true,
+     "inputs": {
+      "window_days": 5,
+      "readings": 358,
+      "first_reading": "2025-09-12"
+     },
+     "z": -0.1001,
+     "window_days": 90,
+     "direction": 0
+    }
+   ]
+  },
+  {
+   "id": "ai",
+   "label": "AI/Semis",
+   "direction": "flat",
+   "agreement": 0,
+   "n_signals": 1,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "absent": true,
+     "reason": "no_prior_reading",
+     "inputs": {
+      "shares": {
+       "XLK": 650966989.25
+      },
+      "nav": {
+       "XLK": 186.0
+      },
+      "as_of": {
+       "XLK": "2026-09-03"
+      },
+      "issuer": {
+       "XLK": "ssga"
+      },
+      "members_used": [
+       "XLK"
+      ],
+      "members_unreachable": [
+       "SMH"
+      ]
+     },
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "futures_positioning",
+     "absent": true,
+     "reason": "no_futures_contract",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "options_hedging",
+     "absent": true,
+     "reason": "no_drop",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "cross_asset",
+     "value": -1.8730675851486722,
+     "unit": "pct_points",
+     "backfilled": true,
+     "inputs": {
+      "window_days": 5,
+      "readings": 247,
+      "first_reading": "2025-09-12"
+     },
+     "z": -0.3314,
+     "window_days": 90,
+     "direction": 0
+    }
+   ]
+  },
+  {
+   "id": "energy",
+   "label": "Energy",
+   "direction": "accumulating",
+   "agreement": 2,
+   "n_signals": 2,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "absent": true,
+     "reason": "no_prior_reading",
+     "inputs": {
+      "shares": {
+       "XLE": 658255763.58
+      },
+      "nav": {
+       "XLE": 64.63
+      },
+      "as_of": {
+       "XLE": "2026-09-03"
+      },
+      "issuer": {
+       "XLE": "ssga"
+      },
+      "members_used": [
+       "XLE"
+      ],
+      "members_unreachable": []
+     },
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "futures_positioning",
+     "value": 10261.0,
+     "unit": "contracts",
+     "backfilled": true,
+     "inputs": {
+      "report_date": "2026-09-01",
+      "net_position": 94281.0,
+      "previous_net_position": 84020.0
+     },
+     "z": 0.97,
+     "window_days": 90,
+     "direction": 1
+    },
+    {
+     "name": "options_hedging",
+     "absent": true,
+     "reason": "no_drop",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "cross_asset",
+     "value": 9.767030065959172,
+     "unit": "pct_points",
+     "backfilled": true,
+     "inputs": {
+      "window_days": 5,
+      "readings": 246,
+      "first_reading": "2025-09-15"
+     },
+     "z": 1.216,
+     "window_days": 90,
+     "direction": 1
+    }
+   ]
+  },
+  {
+   "id": "cash",
+   "label": "Cash",
+   "direction": "distributing",
+   "agreement": 1,
+   "n_signals": 1,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "absent": true,
+     "reason": "no_prior_reading",
+     "inputs": {
+      "shares": {
+       "SPY": 1057182830.61,
+       "BIL": 508964008.31,
+       "SGOV": 1070250005.01
+      },
+      "nav": {
+       "SPY": 773.12,
+       "BIL": 91.41,
+       "SGOV": 100.46165
+      },
+      "as_of": {
+       "SPY": "2026-09-03",
+       "BIL": "2026-09-03",
+       "SGOV": "2026-09-04"
+      },
+      "issuer": {
+       "SPY": "ssga",
+       "BIL": "ssga",
+       "SGOV": "ishares"
+      },
+      "members_used": [
+       "SPY",
+       "BIL",
+       "SGOV"
+      ],
+      "members_unreachable": []
+     },
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "futures_positioning",
+     "absent": true,
+     "reason": "no_futures_contract",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "options_hedging",
+     "absent": true,
+     "reason": "no_drop",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "cross_asset",
+     "value": -2.2324091893174853,
+     "unit": "pct_points",
+     "backfilled": true,
+     "inputs": {
+      "window_days": 5,
+      "readings": 247,
+      "first_reading": "2025-09-12"
+     },
+     "z": -0.7107,
+     "window_days": 90,
+     "direction": -1
+    }
+   ]
+  }
+ ],
+ "hard_asset_flag": null,
+ "bucket_line": null,
+ "footer": "ETF flows, futures positioning, options hedging, cross-asset correlation · vs own trailing history · window 0 days · not a forecast",
+ "sources": [
+  "ETF flows · issuer-published fund assets and net asset value, shares outstanding derived; these funds are not in the site's price feed",
+  "futures positioning · CFTC Commitments of Traders, weekly, futures only",
+  "options hedging · exchange-reported options volume, delayed feed",
+  "cross-asset · daily closes from the same sources as the site's price feed"
+ ]
+}
