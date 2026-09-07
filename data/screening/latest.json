@@ -5,6 +5,7 @@
  "screened_utc": "2026-09-07T01:02:45Z",
  "stale_after_days": 100,
  "site_note": "Screening is an automated indication from public filings against AAOIFI Shariah Standard 21 — not a religious ruling. — means no verdict: the row is not a company, or no current screen exists. Verify before acting.",
+ "crypto_note": "Crypto rows: qualitative screen by أكاديمية البيتكوين العربية (BtcAcademy) — their own team ijtihad, judged on each project's services; not AAOIFI, not a fatwa. Verdicts are quoted as published (videos 2022–2026) and are not re-checked by us. Verify before acting.",
  "disclaimers": [
   {
    "id": "screening",
@@ -60,7 +61,8 @@
   "rows_screened": 20,
   "requests": 0,
   "tokens": 0,
-  "from_cache": true
+  "from_cache": true,
+  "keep_stamp": true
  },
  "rows": {
   "gold": {
@@ -339,67 +341,103 @@
    "provider_purification_rate": 3.72
   },
   "btc": {
-   "verdict": null,
-   "reason": "not_a_company",
+   "verdict": "Halal",
+   "reason": null,
    "purification_pct": null,
    "screened_utc": null,
-   "static": true
+   "static": true,
+   "methodology": "btcacademy-qualitative",
+   "source": "أكاديمية البيتكوين العربية",
+   "source_video": "حكم تجارة العملات - حكم المضاربة بالعملات الرقمية ومفهوم التداول - الجزء الثاني",
+   "source_date": "2023-02-18"
   },
   "eth": {
-   "verdict": null,
-   "reason": "not_a_company",
+   "verdict": "Halal",
+   "reason": null,
    "purification_pct": null,
    "screened_utc": null,
-   "static": true
+   "static": true,
+   "methodology": "btcacademy-qualitative",
+   "source": "أكاديمية البيتكوين العربية",
+   "source_video": "هل عملة ETH حلال أم حرام؟",
+   "source_date": "2022-09-04"
   },
   "xrp": {
-   "verdict": null,
-   "reason": "not_a_company",
+   "verdict": "Halal",
+   "reason": null,
    "purification_pct": null,
    "screened_utc": null,
-   "static": true
+   "static": true,
+   "methodology": "btcacademy-qualitative",
+   "source": "أكاديمية البيتكوين العربية",
+   "source_video": "هل عملة XRP حلال أم حرام؟",
+   "source_date": "2022-09-22"
   },
   "sol": {
-   "verdict": null,
-   "reason": "not_a_company",
+   "verdict": "Halal",
+   "reason": null,
    "purification_pct": null,
    "screened_utc": null,
-   "static": true
+   "static": true,
+   "methodology": "btcacademy-qualitative",
+   "source": "أكاديمية البيتكوين العربية",
+   "source_video": "هل عملة سولانا حلال أم حرام",
+   "source_date": "2026-02-12"
   },
   "sui": {
-   "verdict": null,
-   "reason": "not_a_company",
+   "verdict": "Halal",
+   "reason": null,
    "purification_pct": null,
    "screened_utc": null,
-   "static": true
+   "static": true,
+   "methodology": "btcacademy-qualitative",
+   "source": "أكاديمية البيتكوين العربية",
+   "source_video": "هل عملة SUI حلال أم حرام؟",
+   "source_date": "2023-09-02"
   },
   "wld": {
-   "verdict": null,
-   "reason": "not_a_company",
+   "verdict": "Halal",
+   "reason": null,
    "purification_pct": null,
    "screened_utc": null,
-   "static": true
+   "static": true,
+   "methodology": "btcacademy-qualitative",
+   "source": "أكاديمية البيتكوين العربية",
+   "source_video": "هل عملة WLD حلال أم حرام؟",
+   "source_date": "2023-09-12"
   },
   "hype": {
-   "verdict": null,
-   "reason": "not_a_company",
+   "verdict": "Halal",
+   "reason": null,
    "purification_pct": null,
    "screened_utc": null,
-   "static": true
+   "static": true,
+   "methodology": "btcacademy-qualitative",
+   "source": "أكاديمية البيتكوين العربية",
+   "source_video": "اعتماداً على خدمات مشروعها.. ما هو حكم التعامل عملة HYPE؟",
+   "source_date": "2025-02-02"
   },
   "doge": {
-   "verdict": null,
-   "reason": "not_a_company",
+   "verdict": "Halal",
+   "reason": null,
    "purification_pct": null,
    "screened_utc": null,
-   "static": true
+   "static": true,
+   "methodology": "btcacademy-qualitative",
+   "source": "أكاديمية البيتكوين العربية",
+   "source_video": "هل عملة DOGE حلال أم حرام؟",
+   "source_date": "2022-04-25"
   },
   "wlfi": {
-   "verdict": null,
-   "reason": "not_a_company",
+   "verdict": "Halal",
+   "reason": null,
    "purification_pct": null,
    "screened_utc": null,
-   "static": true
+   "static": true,
+   "methodology": "btcacademy-qualitative",
+   "source": "أكاديمية البيتكوين العربية",
+   "source_video": "عملةWLFI حلال أم حرام",
+   "source_date": "2025-09-03"
   },
   "aramco": {
    "verdict": "Purify",
