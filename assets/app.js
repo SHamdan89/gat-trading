@@ -271,9 +271,10 @@
     td.appendChild(el("span", t === SCR_DASH ? "v na" : "v", t));
     return td;
   }
-  /* Two bullets under the table, both read from the served file and neither
+  /* Three bullets under the table, all read from the served file and none
      written here: the provider's own screening disclaimer, verbatim with its
-     version date, then the site's one fixed line (the publisher holds its text). */
+     version date, then the site's one fixed line, then the crypto rows' one
+     fixed line (the publisher holds both texts, character for character). */
   function renderScreeningNotes(doc) {
     const ul = document.querySelector("#p-markets .notes .nbody ul");
     if (!ul || ul.querySelector("li[data-scr]")) return;
@@ -293,6 +294,11 @@
       const li2 = el("li", null, doc.site_note);
       li2.setAttribute("data-scr", "site");
       ul.appendChild(li2);
+    }
+    if (typeof doc.crypto_note === "string" && doc.crypto_note.trim()) {
+      const li3 = el("li", null, doc.crypto_note);
+      li3.setAttribute("data-scr", "crypto");
+      ul.appendChild(li3);
     }
   }
 
