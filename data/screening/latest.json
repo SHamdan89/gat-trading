@@ -1,0 +1,564 @@
+{
+ "schema": 1,
+ "provider": "halalterminal",
+ "methodology": "AAOIFI SS21",
+ "screened_utc": "2026-09-07T01:02:45Z",
+ "stale_after_days": 100,
+ "site_note": "Screening is an automated indication from public filings against AAOIFI Shariah Standard 21 — not a religious ruling. — means no verdict: the row is not a company, or no current screen exists. Verify before acting.",
+ "disclaimers": [
+  {
+   "id": "screening",
+   "version": "2026-05-12",
+   "lang": "en",
+   "severity": "religious",
+   "text": "Compliance verdict derived from automated screening of public financial filings — not a fatwa or scholarly attestation. Cached verdicts may go stale as issuers refile; consult a qualified scholar for personal religious decisions.",
+   "url": "https://halalterminal.com/legal/disclaimer#no-shariah-certification"
+  },
+  {
+   "id": "market_data",
+   "version": "2026-05-12",
+   "lang": "en",
+   "severity": "data",
+   "text": "Market data is delayed and sourced from third-party providers. Provided for informational purposes only — not investment, tax, or legal advice, and not a recommendation to buy or sell.",
+   "url": "https://halalterminal.com/legal/disclaimer#no-investment-advice"
+  },
+  {
+   "id": "purification",
+   "version": "2026-05-12",
+   "lang": "en",
+   "severity": "religious",
+   "text": "Purification figures estimate the non-permissible portion of dividend income under the chosen methodology. Donate as sadaqah without claiming reward; consult a qualified scholar on eligible recipients and on whether capital gains also require purification.",
+   "url": "https://halalterminal.com/legal/disclaimer#purification"
+  },
+  {
+   "id": "zakat",
+   "version": "2026-05-12",
+   "lang": "en",
+   "severity": "religious",
+   "text": "Simplified zakat estimate at 2.5% on stock market value using current gold nisab. Excludes silver-nisab alternative (preferred in some madhabs), the hawl (lunar-year) requirement, business-inventory rules, and liability deductions — consult a qualified scholar for your full situation.",
+   "url": "https://halalterminal.com/legal/disclaimer#zakat"
+  },
+  {
+   "id": "etf_lookthrough",
+   "version": "2026-05-12",
+   "lang": "en",
+   "severity": "data",
+   "text": "ETF compliance is reported as a disposition (scholar_certified / contested / data_quality_flag / unrated), not a binary verdict. Holdings reflect the last issuer or regulatory filing; intra-period rebalances and cash-sleeve treatment may differ across methodologies.",
+   "url": "https://halalterminal.com/legal/disclaimer#etf-look-through"
+  },
+  {
+   "id": "educational",
+   "version": "2026-05-12",
+   "lang": "en",
+   "severity": "religious",
+   "text": "General Islamic finance education curated across multiple Sunni schools — not a fatwa, scholarly attestation, or personal religious ruling.",
+   "url": "https://halalterminal.com/legal/disclaimer#no-shariah-certification"
+  }
+ ],
+ "pass": {
+  "kind": "full",
+  "rows_screened": 20,
+  "requests": 0,
+  "tokens": 0,
+  "from_cache": true
+ },
+ "rows": {
+  "gold": {
+   "verdict": "Halal",
+   "reason": null,
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "silver": {
+   "verdict": "Halal",
+   "reason": null,
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "gs_ratio": {
+   "verdict": null,
+   "reason": "not_an_instrument",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "copper": {
+   "verdict": "Halal",
+   "reason": null,
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "wti": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "natgas": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "nasdaq": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "ndx": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "sp500": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "dxy": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "us_m2": {
+   "verdict": null,
+   "reason": "not_an_instrument",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "amd": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.5,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "AMD",
+   "provider_checked_at": "2026-08-31T12:49:37.867732+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.5
+  },
+  "aapl": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.8,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "AAPL",
+   "provider_checked_at": "2026-09-04T22:15:15.603504+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.8
+  },
+  "googl": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 1.1,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "GOOGL",
+   "provider_checked_at": "2026-08-31T15:27:12.486762+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 1.08
+  },
+  "msft": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 1.0,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "MSFT",
+   "provider_checked_at": "2026-09-04T22:15:15.543767+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.99
+  },
+  "tsla": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 1.8,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "TSLA",
+   "provider_checked_at": "2026-09-04T19:28:08.460193+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 1.77
+  },
+  "nvda": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 1.1,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "NVDA",
+   "provider_checked_at": "2026-09-04T22:15:15.604607+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 1.07
+  },
+  "qcom": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 1.1,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "QCOM",
+   "provider_checked_at": "2026-08-31T14:12:34.835521+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 1.11
+  },
+  "lly": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.2,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "LLY",
+   "provider_checked_at": "2026-08-31T13:27:34.195382+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": false,
+    "msci": false,
+    "sp": true
+   },
+   "provider_purification_rate": 0.24
+  },
+  "amzn": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.6,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "AMZN",
+   "provider_checked_at": "2026-08-31T14:55:25.597889+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.61
+  },
+  "meta": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 1.1,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "META",
+   "provider_checked_at": "2026-08-31T17:14:14.723812+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 1.06
+  },
+  "spcx": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 3.7,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "SPCX",
+   "provider_checked_at": "2026-09-01T05:22:25.580581+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": false,
+    "msci": false,
+    "sp": true
+   },
+   "provider_purification_rate": 3.72
+  },
+  "btc": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "eth": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "xrp": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "sol": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "sui": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "wld": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "hype": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "doge": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "wlfi": {
+   "verdict": null,
+   "reason": "not_a_company",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "aramco": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.5,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "2222.SR",
+   "provider_checked_at": "2026-08-31T18:24:25.729370+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.48
+  },
+  "bp": {
+   "verdict": "Haram",
+   "reason": null,
+   "purification_pct": null,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "BP",
+   "provider_checked_at": "2026-09-07T01:01:23.699619+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": false,
+    "djim": false,
+    "ftse": true,
+    "msci": true,
+    "sp": false
+   }
+  },
+  "shel": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.6,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "SHEL",
+   "provider_checked_at": "2026-09-04T16:35:37.449080+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": false,
+    "ftse": true,
+    "msci": true,
+    "sp": false
+   },
+   "provider_purification_rate": 0.6
+  },
+  "tte": {
+   "verdict": "Haram",
+   "reason": null,
+   "purification_pct": null,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "TTE",
+   "provider_checked_at": "2026-09-01T13:19:46.673767+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": false,
+    "djim": false,
+    "ftse": true,
+    "msci": true,
+    "sp": false
+   }
+  },
+  "xom": {
+   "verdict": null,
+   "reason": "insufficient_data",
+   "purification_pct": null,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "XOM",
+   "provider_checked_at": "2026-09-06T19:59:55.914281+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": null,
+    "djim": null,
+    "ftse": null,
+    "msci": null,
+    "sp": null
+   }
+  },
+  "cvx": {
+   "verdict": "Halal",
+   "reason": null,
+   "purification_pct": null,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "CVX",
+   "provider_checked_at": "2026-09-05T02:16:32.177618+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.0
+  },
+  "slb": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.4,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "SLB",
+   "provider_checked_at": "2026-09-02T06:50:15.313860+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.38
+  },
+  "hal": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.4,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "HAL",
+   "provider_checked_at": "2026-09-02T04:55:21.687485+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.4
+  },
+  "wfrd": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.4,
+   "screened_utc": "2026-09-07T01:01:31Z",
+   "static": false,
+   "provider_symbol": "WFRD",
+   "provider_checked_at": "2026-09-07T01:01:27.017667+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.43
+  }
+ }
+}
