@@ -1240,6 +1240,8 @@
 
     show("wk-main");
     hide("weeklystatus");
+    S.wkEmpty = false;
+    placeMoneyflow();
 
     /* echo the current read onto the Markets board (weekly ids -> markets ids) */
     const map = { gold: "gold", silver: "silver", wti: "wti", btc: "btc", spx: "sp500", ndx: "ndx", dxy: "dxy" };
@@ -1267,6 +1269,8 @@
     ], msg || "Nothing is shown here until then, rather than showing something unverified."));
     hide("wk-main");
     hide("weeklystatus");
+    S.wkEmpty = true;
+    placeMoneyflow();
   }
 
   fetch("data/weekly/latest.json?t=" + Date.now(), { cache: "no-store" })
@@ -1281,6 +1285,85 @@
       renderWeekly(doc);
     })
     .catch(() => { weeklyEmpty(); });
+
+
+  /* ==========================================================================
+     SMART MONEY FLOW - a CARD inside the Weekly Review, not a tab of its own.
+     Design: control-room record 2026-09-07, section A. It renders exactly what
+     data/moneyflow/latest.json carries: a headline, the five buckets with their
+     agreement counts, the hard-asset line when it is set, and the footer. No
+     sentence is composed here - every phrase in the document came out of the
+     publisher's own template whitelist.
+
+     FAIL CLOSED. A missing document, a malformed one, or one computed more than
+     eight days ago renders one line and no read at all. The same honesty rule as
+     the rest of the site: never a stale positioning read dressed as this week's.
+     ========================================================================== */
+  const MF_MAX_AGE_DAYS = 8;
+  const MF_ARROW = { accumulating: "▲", distributing: "▼", flat: "—" };
+
+  function mfUsable(doc) {
+    if (!doc || typeof doc !== "object") return false;
+    if (!doc.headline || !Array.isArray(doc.buckets) || doc.buckets.length !== 5) return false;
+    if (!doc.footer || !doc.computed_from) return false;
+    const t = new Date(doc.computed_from + "T23:59:59Z").getTime();
+    if (!isFinite(t)) return false;
+    return (Date.now() - t) / 86400000 <= MF_MAX_AGE_DAYS;
+  }
+
+  function moneyflowCard(doc) {
+    const c = el("div", "mflow");
+    c.appendChild(el("span", "eyebrow", "Positioning"));
+    c.appendChild(el("div", "mfhl", doc.headline));
+    /* A calibrating read carries no arrows and no agreement counts (MF4), and
+       the document simply has no bucket line - so there is nothing to draw. */
+    if (doc.bucket_line) {
+      const row = el("div", "mfbk");
+      doc.buckets.forEach(b => {
+        /* Real spaces between the parts, not only flex gaps: the text a screen
+           reader and a copy-paste get must read the same as the line the
+           publisher wrote, not run together into one word. */
+        const w = el("div", "mfb");
+        w.appendChild(el("span", "n", b.label));
+        w.appendChild(document.createTextNode(" "));
+        w.appendChild(el("span", "a", MF_ARROW[b.direction] || MF_ARROW.flat));
+        w.appendChild(document.createTextNode(" " + b.direction + " "));
+        w.appendChild(el("span", "g", "(" + b.agreement + "/" + b.n_signals + ")"));
+        row.appendChild(w);
+      });
+      c.appendChild(row);
+    }
+    if (doc.hard_asset_flag) c.appendChild(el("div", "mfhard", doc.hard_asset_flag));
+    c.appendChild(el("div", "mffoot", doc.footer));
+    return c;
+  }
+
+  function moneyflowOff() {
+    const c = el("div", "mflow");
+    c.appendChild(el("span", "eyebrow", "Positioning"));
+    c.appendChild(el("div", "mfoff", "positioning read unavailable"));
+    return c;
+  }
+
+  /* The card has two possible homes - under the lede when a review is present,
+     under the empty-state notice when one is not - and which is visible is
+     settled by a different fetch. So both callers land here and this decides,
+     rather than either one guessing about the other's timing. */
+  function placeMoneyflow() {
+    const inMain = $("wk-mflow"), inAlt = $("wk-mflow-alt");
+    if (!inMain || !inAlt) return;
+    if (S.mfState === undefined) return;          /* the document has not answered yet */
+    const host = S.wkEmpty ? inAlt : inMain, other = S.wkEmpty ? inMain : inAlt;
+    other.innerHTML = "";
+    host.innerHTML = "";
+    host.appendChild(S.mfState ? moneyflowCard(S.mfState) : moneyflowOff());
+  }
+
+  fetch("data/moneyflow/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error("no read yet"); return r.json(); })
+    .then(doc => { S.mfState = mfUsable(doc) ? doc : null; })
+    .catch(() => { S.mfState = null; })
+    .then(placeMoneyflow);
 
   /* ==========================================================================
      ALPHA HUNT

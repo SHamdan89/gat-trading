@@ -386,6 +386,37 @@ td.pc .tint { position: absolute; inset: 4px 5px; border-radius: 6px; z-index: 0
 .lede p { font-family: var(--serif); font-size: clamp(16px, 2.2vw, 19.5px); line-height: 1.52; letter-spacing: -.006em; margin-top: 8px; }
 @media (max-width: 620px) { .lede { grid-template-columns: 1fr; gap: 5px; } .ledemark { font-size: 32px; } }
 
+/* ---- weekly: the Smart Money Flow card (2026-09-07) ----------------------
+   Ruled shape: a headline, the five buckets, a footer. NO COLOUR IMPLYING
+   URGENCY (design A.6) - the arrows and the agreement counts carry the whole
+   read, and every one of them is inked the same. The hard-asset line is plain
+   and never softened (A.7). */
+.mflow {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--rl);
+  padding: clamp(15px, 2.6vw, 20px) clamp(16px, 3vw, 24px); box-shadow: var(--sh1);
+  margin-bottom: 24px;
+}
+.mflow .eyebrow { display: block; margin-bottom: 9px; }
+.mfhl {
+  font-size: clamp(14.5px, 1.9vw, 16.5px); font-weight: 640; color: var(--ink);
+  line-height: 1.45; letter-spacing: -.006em;
+}
+.mfbk { display: flex; flex-wrap: wrap; gap: 7px 18px; margin-top: 12px; }
+.mfb { display: inline-flex; align-items: baseline; gap: 6px; font-size: 12.5px; color: var(--ink2); }
+.mfb .n { font-weight: 620; color: var(--ink); }
+.mfb .a { font-size: 12px; color: var(--ink2); width: 1em; text-align: center; }
+.mfb .g { font-family: var(--mono); font-size: 11px; color: var(--mut); }
+.mfhard {
+  margin-top: 14px; padding: 8px 0 8px 11px; border-left: 2px solid var(--ink2);
+  font-size: 12.5px; line-height: 1.5; color: var(--ink); font-weight: 600;
+}
+.mffoot {
+  margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--hair);
+  font-size: 10.5px; line-height: 1.55; color: var(--faint);
+}
+.mfoff { font-size: 12.5px; color: var(--faint); }
+@media (max-width: 460px) { .mfbk { gap: 6px 14px; } }
+
 .record { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--rl); overflow: hidden; grid-template-columns: repeat(6, 1fr); margin-bottom: 24px; }
 @media (max-width: 1000px) { .record { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 560px) { .record { grid-template-columns: repeat(2, 1fr); } }
