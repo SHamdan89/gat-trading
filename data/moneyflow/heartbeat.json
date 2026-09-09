@@ -1,13 +1,13 @@
 {
  "lane": "moneyflow",
- "run_utc": "2026-09-09T00:01:37Z",
- "date": "2026-09-04",
+ "run_utc": "2026-09-09T01:01:05Z",
+ "date": "2026-09-08",
  "status": "ok",
- "note": "not_a_trading_day",
+ "note": null,
  "signals": {
-  "etf_flow": "missing",
+  "etf_flow": "ok",
   "futures_positioning": "ok",
-  "options_hedging": "missing",
+  "options_hedging": "ok",
   "cross_asset": "ok"
  },
  "window_days": 0,
