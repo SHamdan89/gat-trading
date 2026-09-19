@@ -12,6 +12,14 @@
       "scored_utc": "2026-08-29T02:08:36Z",
       "stance": "Hold",
       "stance_hit": false
+     },
+     "next_month": {
+      "target_date": "2026-09-18",
+      "close": 4348.15,
+      "realized_pct": -5.565,
+      "range_hit": true,
+      "width_pct": 18.13,
+      "scored_utc": "2026-09-19T02:05:16Z"
      }
     },
     "silver": {
@@ -24,6 +32,14 @@
       "scored_utc": "2026-08-29T02:08:36Z",
       "stance": "Hold",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-09-18",
+      "close": 67.035,
+      "realized_pct": -3.0,
+      "range_hit": true,
+      "width_pct": 30.1,
+      "scored_utc": "2026-09-19T02:05:16Z"
      }
     },
     "wti": {
@@ -36,6 +52,14 @@
       "scored_utc": "2026-08-29T02:08:36Z",
       "stance": "Flat",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-09-18",
+      "close": 95.470001,
+      "realized_pct": 10.192,
+      "range_hit": true,
+      "width_pct": 36.0,
+      "scored_utc": "2026-09-19T02:05:16Z"
      }
     },
     "btc": {
@@ -48,6 +72,14 @@
       "scored_utc": "2026-08-29T02:08:36Z",
       "stance": "Hold",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-09-18",
+      "close": 76403.773438,
+      "realized_pct": -2.624,
+      "range_hit": true,
+      "width_pct": 50.12,
+      "scored_utc": "2026-09-19T02:05:16Z"
      }
     },
     "spx": {
@@ -60,6 +92,14 @@
       "scored_utc": "2026-08-29T02:08:36Z",
       "stance": "Hold",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-09-18",
+      "close": 7650.5,
+      "realized_pct": -0.311,
+      "range_hit": true,
+      "width_pct": 8.28,
+      "scored_utc": "2026-09-19T02:05:16Z"
      }
     },
     "ndx": {
@@ -72,6 +112,14 @@
       "scored_utc": "2026-08-29T02:08:36Z",
       "stance": "Hold",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-09-18",
+      "close": 29644.167969,
+      "realized_pct": 1.144,
+      "range_hit": true,
+      "width_pct": 14.86,
+      "scored_utc": "2026-09-19T02:05:16Z"
      }
     },
     "dxy": {
@@ -84,6 +132,14 @@
       "scored_utc": "2026-08-29T02:08:36Z",
       "stance": "Wait",
       "stance_hit": false
+     },
+     "next_month": {
+      "target_date": "2026-09-18",
+      "close": 100.214996,
+      "realized_pct": 1.392,
+      "range_hit": true,
+      "width_pct": 3.35,
+      "scored_utc": "2026-09-19T02:05:16Z"
      }
     }
    }
@@ -239,27 +295,115 @@
      }
     }
    }
+  },
+  "2026-W37": {
+   "assets": {
+    "gold": {
+     "next_week": {
+      "target_date": "2026-09-18",
+      "close": 4348.15,
+      "realized_pct": -0.036,
+      "range_hit": true,
+      "width_pct": 8.15,
+      "scored_utc": "2026-09-19T02:05:16Z",
+      "stance": "Flat",
+      "stance_hit": true
+     }
+    },
+    "silver": {
+     "next_week": {
+      "target_date": "2026-09-18",
+      "close": 67.035,
+      "realized_pct": 3.734,
+      "range_hit": true,
+      "width_pct": 15.52,
+      "scored_utc": "2026-09-19T02:05:16Z",
+      "stance": "Flat",
+      "stance_hit": true
+     }
+    },
+    "wti": {
+     "next_week": {
+      "target_date": "2026-09-18",
+      "close": 95.470001,
+      "realized_pct": -4.52,
+      "range_hit": true,
+      "width_pct": 17.19,
+      "scored_utc": "2026-09-19T02:05:16Z",
+      "stance": "Hold",
+      "stance_hit": false
+     }
+    },
+    "btc": {
+     "next_week": {
+      "target_date": "2026-09-18",
+      "close": 76403.773438,
+      "realized_pct": -1.158,
+      "range_hit": true,
+      "width_pct": 13.22,
+      "scored_utc": "2026-09-19T02:05:16Z",
+      "stance": "Flat",
+      "stance_hit": true
+     }
+    },
+    "spx": {
+     "next_week": {
+      "target_date": "2026-09-18",
+      "close": 7650.5,
+      "realized_pct": -0.085,
+      "range_hit": true,
+      "width_pct": 3.69,
+      "scored_utc": "2026-09-19T02:05:16Z",
+      "stance": "Sell",
+      "stance_hit": true
+     }
+    },
+    "ndx": {
+     "next_week": {
+      "target_date": "2026-09-18",
+      "close": 29644.167969,
+      "realized_pct": 0.939,
+      "range_hit": true,
+      "width_pct": 5.89,
+      "scored_utc": "2026-09-19T02:05:16Z",
+      "stance": "Hold",
+      "stance_hit": true
+     }
+    },
+    "dxy": {
+     "next_week": {
+      "target_date": "2026-09-18",
+      "close": 100.214996,
+      "realized_pct": 1.13,
+      "range_hit": false,
+      "width_pct": 1.59,
+      "scored_utc": "2026-09-19T02:05:16Z",
+      "stance": "Flat",
+      "stance_hit": false
+     }
+    }
+   }
   }
  },
  "aggregate": {
   "weekly": {
-   "weeks": 3,
+   "weeks": 4,
    "directional": {
-    "n": 13,
-    "hit": 7,
-    "rate": 0.5385
+    "n": 16,
+    "hit": 9,
+    "rate": 0.5625
    },
    "flat": {
-    "n": 6,
-    "hit": 5,
-    "rate": 0.8333
+    "n": 10,
+    "hit": 8,
+    "rate": 0.8
    },
    "range_1w": {
-    "n": 19,
-    "hit": 17,
-    "coverage": 0.8947
+    "n": 26,
+    "hit": 23,
+    "coverage": 0.8846
    },
-   "avg_width_pct": 10.82,
+   "avg_width_pct": 10.42,
    "best_read": {
     "week": "2026-W36",
     "asset": "wti",
@@ -267,30 +411,30 @@
     "realized_pct": 9.614
    },
    "worst_read": {
-    "week": "2026-W36",
-    "asset": "btc",
+    "week": "2026-W37",
+    "asset": "wti",
     "stance": "Hold",
-    "realized_pct": -3.711
+    "realized_pct": -4.52
    }
   },
   "rolling_12w": {
-   "weeks": 3,
+   "weeks": 4,
    "directional": {
-    "n": 13,
-    "hit": 7,
-    "rate": 0.5385
+    "n": 16,
+    "hit": 9,
+    "rate": 0.5625
    },
    "flat": {
-    "n": 6,
-    "hit": 5,
-    "rate": 0.8333
+    "n": 10,
+    "hit": 8,
+    "rate": 0.8
    },
    "range_1w": {
-    "n": 19,
-    "hit": 17,
-    "coverage": 0.8947
+    "n": 26,
+    "hit": 23,
+    "coverage": 0.8846
    },
-   "avg_width_pct": 10.82,
+   "avg_width_pct": 10.42,
    "best_read": {
     "week": "2026-W36",
     "asset": "wti",
@@ -298,10 +442,10 @@
     "realized_pct": 9.614
    },
    "worst_read": {
-    "week": "2026-W36",
-    "asset": "btc",
+    "week": "2026-W37",
+    "asset": "wti",
     "stance": "Hold",
-    "realized_pct": -3.711
+    "realized_pct": -4.52
    }
   },
   "declines_all_time": {
@@ -309,5 +453,5 @@
    "no_data": 0
   }
  },
- "updated_utc": "2026-09-12T02:09:57Z"
+ "updated_utc": "2026-09-19T02:05:16Z"
 }
