@@ -1705,8 +1705,13 @@
         !isNum(p.win_rate_pct)));
       // PERCENTAGES, not dollar amounts (2026-08-27 ruling). The dollar figures
       // stay in the published JSON as the record; the glance shows the rates.
+      // The hold benchmark rides on the P&L sub-line (MGAT only, ruling 2026-09-22):
+      // what the start money would be worth had it bought the first seven coins
+      // and never traded. The number that says whether trading added anything.
       st.appendChild(exStat("P&L %", pct(p.pnl_total_pct),
-        isNum(p.pnl_total_pct) ? "since start" : null, !isNum(p.pnl_total_pct)));
+        isNum(p.pnl_total_pct) ? "since start" +
+          (isNum(p.hold_pct) ? " · holding " + pct(p.hold_pct) : "") : null,
+        !isNum(p.pnl_total_pct)));
       // Per-trade average - the question the equity line cannot answer. Two
       // closes at −10.58% and −12.13% average −11.35% while the book is only
       // −0.61% down, because each position is a small slice of it.
@@ -1813,16 +1818,36 @@
       ddir(t.win_rate_pct, vp && vp.win_rate_pct)));
     rec.appendChild(deltaCell("PnL", usd(t.pnl_usd, true),
       vp ? "from " + usd(vp.pnl_usd, true) : null, ddir(t.pnl_usd, vp && vp.pnl_usd)));
+    // THE SHADOW BOOK IS VOID (ruling 2026-09-22). From 2026-W39 the document carries
+    // counterfactual {void, reason} and none of its figures - the fourth cell becomes
+    // the book against simply holding the first seven coins it bought. Weeks published
+    // before the ruling still render the way they were published.
     const cf = doc.counterfactual || {};
-    let cfv = "—", cfs = cf.closed === 0 ? "counterfactual closed nothing" : null, cfd = "flat";
-    if (isNum(t.pnl_usd) && isNum(cf.pnl_usd)) {
-      const diff = t.pnl_usd - cf.pnl_usd;
-      cfv = usd(diff, true);
-      cfs = diff >= 0 ? "ahead of the counterfactual book" : "behind the counterfactual book";
-      cfd = diff > 0 ? "up" : (diff < 0 ? "dn" : "flat");
+    if (cf.void) {
+      const hb = doc.hold_benchmark;
+      if (hb && isNum(hb.pct) && isNum(hb.book_pct)) {
+        const gap = hb.book_pct - hb.pct;
+        rec.appendChild(deltaCell("vs holding",
+          (gap > 0 ? "+" : gap < 0 ? "−" : "") + Math.abs(gap).toFixed(2) + " pts",
+          "book " + pct(hb.book_pct) + " · holding " + pct(hb.pct),
+          gap > 0 ? "up" : (gap < 0 ? "dn" : "flat")));
+      } else {
+        rec.appendChild(deltaCell("vs holding", "—", "no prices this week", "flat"));
+      }
+    } else {
+      let cfv = "—", cfs = cf.closed === 0 ? "counterfactual closed nothing" : null, cfd = "flat";
+      if (isNum(t.pnl_usd) && isNum(cf.pnl_usd)) {
+        const diff = t.pnl_usd - cf.pnl_usd;
+        cfv = usd(diff, true);
+        cfs = diff >= 0 ? "ahead of the counterfactual book" : "behind the counterfactual book";
+        cfd = diff > 0 ? "up" : (diff < 0 ? "dn" : "flat");
+      }
+      rec.appendChild(deltaCell("vs counterfactual", cfv, cfs, cfd));
     }
-    rec.appendChild(deltaCell("vs counterfactual", cfv, cfs, cfd));
     main.appendChild(rec);
+    if (cf.void) {
+      main.appendChild(el("p", "xfoot", "Shadow comparison book: void. " + (cf.reason || "")));
+    }
 
     if ((doc.families || []).length) {
       const st2 = el("div", "stitle");
@@ -1915,7 +1940,7 @@
     host.innerHTML = "";
     host.appendChild(emptyBox("The first MGAT Alpha weekly publishes " + nextSunday(), [
       "Every Sunday this sub-tab will carry the week's paper-trading record: trades closed, " +
-      "win rate, PnL against the counterfactual book, the per-family split, and the reviewer's " +
+      "win rate, PnL against simply holding the first coins it bought, the per-family split, and the reviewer's " +
       "plain-language read — ending with every close of the week, never truncated.",
       "MGAT Alpha v3.1 is a paper experiment: simulated fills, zero capital, published as a public record."
     ], "Nothing is shown here until then, rather than showing something unverified."));
