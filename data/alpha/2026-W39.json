@@ -1,0 +1,80 @@
+{
+ "schema": 1,
+ "week": "2026-W39",
+ "review_friday": "2026-09-25",
+ "generated_utc": "2026-09-26T07:15:54Z",
+ "reviews": [],
+ "post_mortems": [],
+ "new_call": {
+  "id": "alpha-2026-001",
+  "opened": "2026-W39",
+  "subject": "Copper's supply-driven premium following BHP's Escondida mine shutdown, tradable via the United States Copper Index Fund",
+  "ticker": "CPER",
+  "consensus": {
+   "text": "Copper fell 1.13% to $14,615.50/tonne on the LME the same day BHP halted its Escondida mine (September 23), and eased further off its September 22 record of $6.83/lb on COMEX to $6.76/lb by September 25. The market's working view is that existing exchange stockpiles give the world '39 days of cover' against the lost output, so this reads as a short, absorbable event -- the same read the market applied when Escondida's first fatality, in October 2025, was followed by operations that continued normally.",
+   "source": {
+    "title": "Copper Fell the Day Chile's Biggest Mine Stopped, With 39 Days' Cover",
+    "url": "https://www.cruxinvestor.com/posts/copper-fell-the-day-chiles-biggest-mine-stopped-with-39-days-cover",
+    "date": "2026-09-24"
+   }
+  },
+  "variant": "This is Escondida's second fatality in the same Patio 900 zone within twelve months, and unlike 2025, BHP fully suspended the whole mine this time rather than continuing operations, saying only that restart depends on workforce wellbeing, operational readiness, risk controls and 'applicable authority requirements' -- not a company timeline. Restart is not solely BHP's call: Chile's Sernageomin has statutory power to require corrective action before clearance, and it fined Codelco and its contractors this year after a fatal collapse at El Teniente, showing it will use that power at a major Chilean copper operation. The comfort of '39 days of cover' also overstates the buffer: 69% of exchange-monitored stock sits in COMEX warehouses rather than near this outage, Chilean domestic mine output was already down 6.6% in the first half of 2026, and a supervisors' strike vote lands September 28-30 right as BHP tries to ramp back up. We think a full return to output takes longer than the market's 2025-style read is pricing, keeping the supply gap -- and the odds of a fresh record above $6.83/lb -- open well past the point this week's price dip suggests it should have closed.",
+  "kill": {
+   "type": "price_level",
+   "level": 6.15,
+   "direction": "at or below",
+   "source": "https://tradingeconomics.com/commodity/copper"
+  },
+  "checkpoints": [
+   {
+    "date": "2026-09-30",
+    "expect": "The outcome of Escondida's supervisors' strike authorization vote (scheduled September 28-30) is public. A vote to authorize a strike adds a labor-driven delay on top of the regulatory clearance BHP already needs; a rejection removes that layer.",
+    "source": "https://www.cruxinvestor.com/posts/copper-fell-the-day-chiles-biggest-mine-stopped-with-39-days-cover"
+   },
+   {
+    "date": "2026-10-21",
+    "expect": "BHP's operational review for the quarter ended 30 September 2026 -- following the pattern of its prior quarterly releases -- discloses how much Escondida output was actually lost and whether Sernageomin attached any corrective-action condition to the restart.",
+    "source": "https://www.bhp.com/news/media-centre/releases"
+   },
+   {
+    "date": "2026-11-10",
+    "expect": "The International Copper Study Group's monthly statistics for October show whether global refined copper supply tightened further on the Escondida outage or whether output already normalized without a material dent.",
+    "source": "https://icsg.org/statistical/"
+   }
+  ],
+  "arrival": "Wire services recast Escondida from a 'gradual resumption' story into a longer, regulator-driven supply event -- the framing that followed Chile's El Teniente collapse -- with copper setting a fresh COMEX or LME record explicitly tied to Escondida's continued restriction rather than to the broader mine disruptions already reported this year.",
+  "sources": [
+   {
+    "title": "Escondida Fatal Accident Halts World's Largest Copper Mine",
+    "url": "https://discoveryalert.com/news/escondida-fatal-accident-bhp-september-2026/",
+    "date": "2026-09-24"
+   },
+   {
+    "title": "Chile's Escondida Mine Gradually Resumes Operations After Fatal Accident",
+    "url": "https://www.933thedrive.com/2026/09/24/chiles-escondida-mine-gradually-resumes-operations-after-fatal-accident/",
+    "date": "2026-09-24"
+   },
+   {
+    "title": "Copper Fell the Day Chile's Biggest Mine Stopped, With 39 Days' Cover",
+    "url": "https://www.cruxinvestor.com/posts/copper-fell-the-day-chiles-biggest-mine-stopped-with-39-days-cover",
+    "date": "2026-09-24"
+   },
+   {
+    "title": "BHP's Escondida Restart Eases Tight Copper Market",
+    "url": "https://www.mining.com/bhps-escondida-restart-eases-tight-copper-market",
+    "date": "2026-09-25"
+   },
+   {
+    "title": "Why Copper Prices Are Falling Despite a Record-High Quarter",
+    "url": "https://discoveryalert.com/news/copper-prices-escondida-supply-risk-september-2026/",
+    "date": "2026-09-25"
+   },
+   {
+    "title": "Copper Hits a Record $6.83 a Pound as Mine Disasters Choke Supply",
+    "url": "https://startupfortune.com/copper-hits-a-record-683-a-pound-as-mine-disasters-choke-supply/",
+    "date": "2026-09-25"
+   }
+  ]
+ },
+ "published_utc": "2026-09-26T07:43:42Z"
+}
