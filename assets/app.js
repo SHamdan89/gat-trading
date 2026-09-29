@@ -198,7 +198,7 @@
     { k: "chg_24h", l: "24h" }, { k: "chg_7d", l: "7d" },
     { k: "chg_30d", l: "30d" }, { k: "chg_ytd", l: "YTD" }
   ];
-  const GROUPS = ["Commodities", "Indices & macro", "Stocks", "Crypto", "Oil & gas majors"];
+  const GROUPS = ["Commodities", "Indices & macro", "Stocks", "Halal ETFs", "Crypto", "Oil & gas majors"];
   const mkState = { group: "all", q: "", sort: null, dir: -1, win: "chg_24h" };
   let CAPS = {};
 
@@ -242,12 +242,19 @@
      as well as the publisher's: a row or a document older than SCR_STALE_DAYS
      renders — whatever the file says, and a missing or malformed file renders
      — in every cell and changes nothing else. The price feed never waits for
-     this file. */
+     this file. A ruled static row that carries a ruling_expires date (the fund
+     rows, 2026-09-29) renders — once that date has passed, whatever the file
+     says: the publisher drops the row the same hour, this is the belt to its
+     braces. */
   const SCR_STALE_DAYS = 100;
   const SCR_DASH = "—";
   function scrAgeOk(stamp) {
     const t = Date.parse(String(stamp || ""));
     return isNum(t) && (Date.now() - t) <= SCR_STALE_DAYS * 86400000;
+  }
+  function scrRulingOk(expires) {
+    const t = Date.parse(String(expires) + "T23:59:59Z");
+    return isNum(t) && Date.now() <= t;
   }
   function scrText(a) {
     const d = S.scr;
@@ -257,6 +264,7 @@
     const v = r.verdict;
     if (v !== "Halal" && v !== "Haram" && v !== "Purify") return SCR_DASH;
     if (r.static !== true && !scrAgeOk(r.screened_utc)) return SCR_DASH;
+    if (r.static === true && typeof r.ruling_expires === "string" && !scrRulingOk(r.ruling_expires)) return SCR_DASH;
     if (v === "Purify") {
       const p = Number(r.purification_pct);
       if (!isNum(p) || p < 0.05 || p > 5) return SCR_DASH;
