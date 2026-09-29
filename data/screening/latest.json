@@ -2,7 +2,7 @@
  "schema": 1,
  "provider": "halalterminal",
  "methodology": "AAOIFI SS21",
- "screened_utc": "2026-09-07T01:02:45Z",
+ "screened_utc": "2026-09-29T16:35:45Z",
  "stale_after_days": 100,
  "site_note": "Screening is an automated indication from public filings against AAOIFI Shariah Standard 21 — not a religious ruling. — means no verdict: the row is not a company, or no current screen exists. Verify before acting.",
  "crypto_note": "Crypto rows: qualitative screen by أكاديمية البيتكوين العربية (BtcAcademy) — their own team ijtihad, judged on each project's services; not AAOIFI, not a fatwa. Verdicts are quoted as published (videos 2022–2026) and are not re-checked by us. Verify before acting.",
@@ -57,12 +57,11 @@
   }
  ],
  "pass": {
-  "kind": "full",
-  "rows_screened": 20,
+  "kind": "rows",
+  "rows_screened": 4,
   "requests": 0,
   "tokens": 0,
-  "from_cache": true,
-  "keep_stamp": true
+  "from_cache": true
  },
  "rows": {
   "gold": {
@@ -340,6 +339,97 @@
    },
    "provider_purification_rate": 3.72
   },
+  "asml": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.5,
+   "screened_utc": "2026-09-29T16:34:34Z",
+   "static": false,
+   "provider_symbol": "ASML",
+   "provider_checked_at": "2026-09-28T20:57:00.645339+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.52
+  },
+  "scco": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 1.5,
+   "screened_utc": "2026-09-29T16:34:34Z",
+   "static": false,
+   "provider_symbol": "SCCO",
+   "provider_checked_at": "2026-09-29T13:15:10.537293+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 1.49
+  },
+  "ccj": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.8,
+   "screened_utc": "2026-09-29T16:34:34Z",
+   "static": false,
+   "provider_symbol": "CCJ",
+   "provider_checked_at": "2026-09-28T15:57:16.465937+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": true,
+    "ftse": true,
+    "msci": true,
+    "sp": true
+   },
+   "provider_purification_rate": 0.83
+  },
+  "iswd": {
+   "verdict": "Halal",
+   "reason": null,
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true,
+   "methodology": "ruled-fund",
+   "ruled_on": "2026-09-29",
+   "ruling_expires": "2026-12-31"
+  },
+  "hiws": {
+   "verdict": null,
+   "reason": "not_covered",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true
+  },
+  "spus": {
+   "verdict": "Halal",
+   "reason": null,
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true,
+   "methodology": "ruled-fund",
+   "ruled_on": "2026-09-27",
+   "ruling_expires": "2026-12-31"
+  },
+  "spwo": {
+   "verdict": "Halal",
+   "reason": null,
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": true,
+   "methodology": "ruled-fund",
+   "ruled_on": "2026-09-27",
+   "ruling_expires": "2027-01-31"
+  },
   "btc": {
    "verdict": "Halal",
    "reason": null,
@@ -407,8 +497,8 @@
    "source_date": "2023-09-12"
   },
   "hype": {
-   "verdict": "Halal",
-   "reason": null,
+   "verdict": null,
+   "reason": "source_conflict",
    "purification_pct": null,
    "screened_utc": null,
    "static": true,
@@ -438,6 +528,13 @@
    "source": "أكاديمية البيتكوين العربية",
    "source_video": "عملةWLFI حلال أم حرام",
    "source_date": "2025-09-03"
+  },
+  "qnt": {
+   "verdict": null,
+   "reason": "not_covered",
+   "purification_pct": null,
+   "screened_utc": null,
+   "static": false
   },
   "aramco": {
    "verdict": "Purify",
@@ -597,6 +694,24 @@
     "sp": true
    },
    "provider_purification_rate": 0.43
+  },
+  "bkr": {
+   "verdict": "Purify",
+   "reason": null,
+   "purification_pct": 0.2,
+   "screened_utc": "2026-09-29T16:34:34Z",
+   "static": false,
+   "provider_symbol": "BKR",
+   "provider_checked_at": "2026-09-27T14:22:55.689012+00:00",
+   "provider_status": null,
+   "methodologies": {
+    "aaoifi": true,
+    "djim": false,
+    "ftse": true,
+    "msci": true,
+    "sp": false
+   },
+   "provider_purification_rate": 0.24
   }
  }
 }
