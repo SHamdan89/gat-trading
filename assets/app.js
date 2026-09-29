@@ -279,10 +279,11 @@
     td.appendChild(el("span", t === SCR_DASH ? "v na" : "v", t));
     return td;
   }
-  /* Three bullets under the table, all read from the served file and none
+  /* Four bullets under the table, all read from the served file and none
      written here: the provider's own screening disclaimer, verbatim with its
      version date, then the site's one fixed line, then the crypto rows' one
-     fixed line (the publisher holds both texts, character for character). */
+     fixed line, then the fund rows' one fixed line (the publisher holds every
+     text, character for character). */
   function renderScreeningNotes(doc) {
     const ul = document.querySelector("#p-markets .notes .nbody ul");
     if (!ul || ul.querySelector("li[data-scr]")) return;
@@ -307,6 +308,11 @@
       const li3 = el("li", null, doc.crypto_note);
       li3.setAttribute("data-scr", "crypto");
       ul.appendChild(li3);
+    }
+    if (typeof doc.fund_note === "string" && doc.fund_note.trim()) {
+      const li4 = el("li", null, doc.fund_note);
+      li4.setAttribute("data-scr", "fund");
+      ul.appendChild(li4);
     }
   }
 
