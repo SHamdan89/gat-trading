@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "run_utc": "2026-09-29T14:01:18Z",
- "fetch_utc": "2026-09-29T14:01:18Z",
- "payload_sha256": "4146fc0d451eb97cb0a7a714070a6af95fb9edc3f66a6aabce9caa791285f357",
+ "run_utc": "2026-09-29T15:01:14Z",
+ "fetch_utc": "2026-09-29T15:01:13Z",
+ "payload_sha256": "a987d502dfaf985efbb23147061d09744c95fc1ca946525a34a42a30a830c6de",
  "upstream": {
   "fred": {
    "stamp": "2026-08-31T00:00:00Z",
@@ -11,7 +11,7 @@
    "expected_live": false
   },
   "gold-api": {
-   "stamp": "2026-09-29T14:00:11Z",
+   "stamp": "2026-09-29T15:00:11Z",
    "observations": 3,
    "unparsed": 0,
    "expected_live": true
@@ -23,7 +23,7 @@
    "expected_live": false
   },
   "yahoo": {
-   "stamp": "2026-09-29T14:01:15Z",
+   "stamp": "2026-09-29T15:01:10Z",
    "observations": 28,
    "unparsed": 0,
    "expected_live": true
