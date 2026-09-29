@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "run_utc": "2026-09-29T12:01:17Z",
- "fetch_utc": "2026-09-29T12:01:17Z",
- "payload_sha256": "60fecb322c8c13eb8e95fbc28b0e6d7beae2b32832fc67e8c27b7de78bc9ac8b",
+ "run_utc": "2026-09-29T13:00:46Z",
+ "fetch_utc": "2026-09-29T13:00:46Z",
+ "payload_sha256": "5b8be5df7b0fbc06fe7ceac5e654956bd9206e9c824dd0033703e651c88509a7",
  "upstream": {
   "fred": {
    "stamp": "2026-08-31T00:00:00Z",
@@ -11,7 +11,7 @@
    "expected_live": false
   },
   "gold-api": {
-   "stamp": "2026-09-29T12:00:17Z",
+   "stamp": "2026-09-29T12:59:42Z",
    "observations": 3,
    "unparsed": 0,
    "expected_live": true
@@ -23,7 +23,7 @@
    "expected_live": false
   },
   "yahoo": {
-   "stamp": "2026-09-29T12:00:51Z",
+   "stamp": "2026-09-29T12:58:53Z",
    "observations": 28,
    "unparsed": 0,
    "expected_live": true
@@ -37,11 +37,6 @@
   {
    "alarm": "pull_failed",
    "detail": "pull_prices.py exited 1 - prices were NOT published this run"
-  },
-  {
-   "alarm": "upstream_missing",
-   "provider": "coingecko",
-   "detail": "coingecko reported a stamp last run (2026-09-29T10:57:30Z) and none this run"
   }
  ],
  "note": "Emitted by every run, including failed ones. status ok means this run saw the feed advance; ALARM means it did not, and the prices on the page may be older than they look."
