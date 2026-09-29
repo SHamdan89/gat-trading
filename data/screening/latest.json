@@ -6,6 +6,7 @@
  "stale_after_days": 100,
  "site_note": "Screening is an automated indication from public filings against AAOIFI Shariah Standard 21 — not a religious ruling. — means no verdict: the row is not a company, or no current screen exists. Verify before acting.",
  "crypto_note": "Crypto rows: qualitative screen by أكاديمية البيتكوين العربية (BtcAcademy) — their own team ijtihad, judged on each project's services; not AAOIFI, not a fatwa. Verdicts are quoted as published (videos 2022–2026) and are not re-checked by us. Verify before acting.",
+ "fund_note": "Fund rows: Halal reflects each fund's own Shariah board certification, reviewed and ruled by the site owner; not an automated screen. Verify before acting.",
  "disclaimers": [
   {
    "id": "screening",
@@ -57,11 +58,12 @@
   }
  ],
  "pass": {
-  "kind": "rows",
-  "rows_screened": 4,
+  "kind": "full",
+  "rows_screened": 24,
   "requests": 0,
   "tokens": 0,
-  "from_cache": true
+  "from_cache": true,
+  "keep_stamp": true
  },
  "rows": {
   "gold": {
@@ -421,8 +423,8 @@
    "ruling_expires": "2026-12-31"
   },
   "spwo": {
-   "verdict": "Halal",
-   "reason": null,
+   "verdict": null,
+   "reason": "not_ruled_compliant",
    "purification_pct": null,
    "screened_utc": null,
    "static": true,
