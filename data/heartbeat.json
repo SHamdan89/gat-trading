@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "run_utc": "2026-09-29T15:01:14Z",
- "fetch_utc": "2026-09-29T15:01:13Z",
- "payload_sha256": "a987d502dfaf985efbb23147061d09744c95fc1ca946525a34a42a30a830c6de",
+ "run_utc": "2026-09-29T16:02:30Z",
+ "fetch_utc": "2026-09-29T16:02:30Z",
+ "payload_sha256": "ef94dfeca0704a99b2710a6739dea983118f9ae30f6f9c042b90477a79507ec8",
  "upstream": {
   "fred": {
    "stamp": "2026-08-31T00:00:00Z",
@@ -10,33 +10,31 @@
    "unparsed": 0,
    "expected_live": false
   },
-  "gold-api": {
-   "stamp": "2026-09-29T15:00:11Z",
-   "observations": 3,
-   "unparsed": 0,
-   "expected_live": true
-  },
-  "lbma": {
-   "stamp": "2026-09-28T00:00:00Z",
-   "observations": 2,
-   "unparsed": 0,
-   "expected_live": false
-  },
   "yahoo": {
-   "stamp": "2026-09-29T15:01:10Z",
-   "observations": 28,
+   "stamp": "2026-09-29T16:02:26Z",
+   "observations": 20,
    "unparsed": 0,
    "expected_live": true
   }
  },
- "assets": 32,
- "feed_errors": 9,
+ "assets": 20,
+ "feed_errors": 20,
  "pull_rc": 1,
  "status": "ALARM",
  "alarms": [
   {
    "alarm": "pull_failed",
    "detail": "pull_prices.py exited 1 - prices were NOT published this run"
+  },
+  {
+   "alarm": "upstream_missing",
+   "provider": "gold-api",
+   "detail": "gold-api reported a stamp last run (2026-09-29T15:00:11Z) and none this run"
+  },
+  {
+   "alarm": "upstream_missing",
+   "provider": "lbma",
+   "detail": "lbma reported a stamp last run (2026-09-28T00:00:00Z) and none this run"
   }
  ],
  "note": "Emitted by every run, including failed ones. status ok means this run saw the feed advance; ALARM means it did not, and the prices on the page may be older than they look."
