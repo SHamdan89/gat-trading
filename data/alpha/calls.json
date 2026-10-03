@@ -6,7 +6,8 @@
   "2026-W36",
   "2026-W37",
   "2026-W38",
-  "2026-W39"
+  "2026-W39",
+  "2026-W40"
  ],
  "weeks_with_call": [
   "2026-W39"
@@ -82,7 +83,7 @@
      "date": "2026-09-25"
     }
    ],
-   "status": "Valid",
+   "status": "Stronger",
    "closed_week": null,
    "post_mortem": null,
    "trail": [
@@ -122,9 +123,26 @@
        "date": "2026-09-25"
       }
      ]
+    },
+    {
+     "week": "2026-W40",
+     "status": "Stronger",
+     "why": "The September 30 checkpoint on Escondida's supervisors fired as anticipated: the union voted 95% to authorize a strike, adding a labor-driven delay on top of the regulatory clearance BHP still needs, and mandatory mediation (five to ten days) means the dispute stays open rather than resolved. Copper slid to a two-week low this week, but market write-ups attribute the move to a broad risk-off base-metals selloff and a fading tariff premium, not to any easing of the Escondida situation -- consistent with the view that the length of this disruption is not yet reflected in price.",
+     "sources": [
+      {
+       "title": "Supervisors at BHP's Escondida mine in Chile reject offer, paving the way for a strike",
+       "url": "https://www.miningweekly.com/article/supervisors-at-bhp-escondida-mine-in-chile-reject-offer-paving-way-for-strike-2026-10-01",
+       "date": "2026-10-01"
+      },
+      {
+       "title": "Copper Hits Two-Week Low as Escondida Workers Vote to Strike",
+       "url": "https://discoveryalert.com/news/copper-price-escondida-strike-october-2026/",
+       "date": "2026-10-01"
+      }
+     ]
     }
    ]
   }
  ],
- "updated_utc": "2026-09-26T07:43:42Z"
+ "updated_utc": "2026-10-03T07:25:51Z"
 }
