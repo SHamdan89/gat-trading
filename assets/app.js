@@ -224,6 +224,13 @@
   /* provenance notes for a row: what the feed says, plus what its own gaps mean */
   function rowNotes(a) {
     const m = [];
+    /* a row whose source refused this run is published as a dash, never with an old price
+       (2026-10-04): the note says so and when it was last good */
+    if (a.withheld) {
+      const g = a.last_good_utc ? new Date(a.last_good_utc) : null;
+      m.push(g && !isNaN(g) ? "no fresh price — last good " + dateGB(g) + ", " + timeUTC(g) + " UTC"
+                            : "no fresh price — none on record yet");
+    }
     if (a.as_of) m.push("as of " + a.as_of);
     if (a.basis_note) m.push(a.basis_note);
     if (a.currency && ["USD", "RATIO", "USD_BN"].indexOf(a.currency) === -1 && isNum(a.price_native)) {
@@ -328,7 +335,7 @@
       if (isNum(a.chg_24h)) r.appendChild(el("div", "tp-d " + dirOf(a.chg_24h), fmtPct(a.chg_24h)));
       else r.appendChild(el("div", "tp-d na", "24h N/A"));
       c.appendChild(r);
-      c.appendChild(el("div", "tp-p", fmtPrice(a.price_usd, a.currency) || "N/A"));
+      c.appendChild(el("div", "tp-p", fmtPrice(a.price_usd, a.currency) || (a.withheld ? "—" : "N/A")));
       const x = el("div", "tp-x");
       [["7d", a.chg_7d], ["30d", a.chg_30d], ["YTD", a.chg_ytd]].forEach(p => {
         const s = el("span");
@@ -554,13 +561,17 @@
 
       const p = el("td", "price");
       const pv = fmtPrice(a.price_usd, a.currency);
-      p.appendChild(pv === null ? el("span", "v na", "N/A") : el("span", "v", pv));
+      p.appendChild(a.withheld ? el("span", "v na", "—")
+                               : (pv === null ? el("span", "v na", "N/A") : el("span", "v", pv)));
       r.appendChild(p);
 
-      r.appendChild(pctTd(a.chg_24h, "24h", CAPS.chg_24h));
-      r.appendChild(pctTd(a.chg_7d, "7d", CAPS.chg_7d));
-      r.appendChild(pctTd(a.chg_30d, "30d", CAPS.chg_30d));
-      r.appendChild(pctTd(a.chg_ytd, "YTD", CAPS.chg_ytd));
+      WINDOWS.forEach(w => {
+        if (!a.withheld) { r.appendChild(pctTd(a[w.k], w.l, CAPS[w.k])); return; }
+        const td = el("td", "pc");
+        td.setAttribute("data-l", w.l);
+        td.appendChild(el("span", "v na", "—"));
+        r.appendChild(td);
+      });
       r.appendChild(scrTd(a));
       tb.appendChild(r);
     });
