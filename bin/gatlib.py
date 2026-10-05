@@ -43,8 +43,12 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) gat.trading/1.0"
 # Markets tab carried first - different indices, and forecasts scored against
 # the wrong series would be meaningless.
 INSTRUMENTS = [
-    ("gold",   "Gold (spot)",        "lbma",  "gold_pm"),
-    ("silver", "Silver (spot)",      "lbma",  "silver"),
+    # Metals moved off the LBMA fix on 2026-10-05 (params v3, signed): LBMA refuses
+    # every scripted request since 2026-09-30. COMEX front-month futures - the same
+    # quote the Markets tab carries since 2026-10-04 - for price AND history, one
+    # series, as WTI always had. The lbma: path in fetch_series is kept intact.
+    ("gold",   "Gold (front-month)",   "yahoo", "GC=F"),
+    ("silver", "Silver (front-month)", "yahoo", "SI=F"),
     ("wti",    "Oil (WTI)",          "yahoo", "CL=F"),
     ("btc",    "Bitcoin",            "yahoo", "BTC-USD"),
     ("spx",    "S&P 500",            "yahoo", "^GSPC"),

@@ -1,7 +1,7 @@
 {
- "version": 2,
+ "version": 3,
  "frozen_utc": "2026-08-21T01:24:25Z",
- "signed_off": "SIGNED 2026-08-23 by the owner — trend_weight 0.0 and coverage 0.80 / band [0.70,0.90] signed; per-asset confidence and the metals price basis DEFERRED to the 2026-10-04 review against live scored data (project record §15.4).",
+ "signed_off": "SIGNED 2026-08-23 by the owner \u2014 trend_weight 0.0 and coverage 0.80 / band [0.70,0.90] signed; per-asset confidence and the metals price basis DEFERRED to the 2026-10-04 review against live scored data (project record \u00a715.4). | v3 SIGNED 2026-10-05 by the owner: metals price basis -> COMEX front-month futures for both gold and silver, decided at the 6-week review against live data (project record, 2026-10-05).",
  "vol_model": "ewma94",
  "ewma_lambda": 0.94,
  "vol_init_days": 252,
@@ -164,7 +164,7 @@
   "1m": 60,
   "eoy": 60
  },
- "metal_price_basis": "spot_anchored",
- "metal_price_basis_set_utc": "2026-08-21T01:05:00Z",
- "metal_price_basis_note": "Which quote is the newest observation of the gold and silver series. SET TO 'spot_anchored' 2026-08-21 by the owner's signed ruling: the level, the flip level, the week change and the forecast base all sit on the live spot quote the Markets tab shows, while volatility history stays on the LBMA fix series. 'lbma_fix' is the alternative and is what the quantiles below were fitted on. The ruling was given on day one of design, before any forecast had matured - the scorecard read weeks:0 - so no accumulated record was re-based. Changing this again changes what the public accuracy record is scored against and is a signed decision, not a build decision; see gatlib.anchor_on_spot for the measured cost."
+ "metal_price_basis": "futures",
+ "metal_price_basis_set_utc": "2026-10-05T12:30:00Z",
+ "metal_price_basis_note": "SET TO 'futures' 2026-10-05 by the owner's signed ruling (params v3): gold and silver price AND history are COMEX front-month futures (GC=F / SI=F), one series, as WTI (CL=F) always was. Why: the LBMA fix series refuses every scripted request since 2026-09-30, so the v2 basis could not be computed. Futures sit ~0.5-0.7% above spot (cost of carry) and can step at a contract roll; the forecast is a percentage move, which futures and spot share. Quantiles UNCHANGED from v2 (not re-fitted). Metal forecasts issued under v1/v2 that mature after this change are recorded void, never scored against a futures close. 'spot_anchored' and 'lbma_fix' remain supported for a return to LBMA."
 }

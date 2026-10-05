@@ -53,7 +53,7 @@ def load_params():
         raise SystemExit("range_params vol_model %r not supported by this build"
                          % p.get("vol_model"))
     basis = p.get("metal_price_basis", "lbma_fix")
-    if basis not in ("lbma_fix", "spot_anchored"):
+    if basis not in ("lbma_fix", "spot_anchored", "futures"):
         raise SystemExit("range_params metal_price_basis %r not supported by "
                          "this build" % basis)
     p["metal_price_basis"] = basis
@@ -143,9 +143,25 @@ def score_matured(series, asof):
                 continue
             arec = rec["assets"].setdefault(iid, {})
             s = series.get(iid)
+            # A metal forecast issued before params v3 was based on the spot/LBMA
+            # quote. The LBMA series is gone, and a futures close sits ~0.5-0.7%
+            # away from spot, so scoring it now would book a basis gap as a hit or
+            # a miss. It is recorded as void - never scored, never counted.
+            void_basis = (iid in gatlib.SPOT_SYMBOL
+                          and (doc.get("params_version") or 0) < 3)
             for hz in ("next_week", "next_month", "eoy"):
                 h = fc.get(hz)
                 if not h or hz in arec:
+                    continue
+                if void_basis:
+                    if s is None or s[-1][0] < dt.date.fromisoformat(h["target_date"]):
+                        continue          # void it on the run that would have scored it
+                    arec[hz] = {"target_date": h["target_date"],
+                                "void": "issued on the retired spot/LBMA basis (params v%s); "
+                                        "not scored against a futures close"
+                                        % doc.get("params_version"),
+                                "range_hit": None,
+                                "scored_utc": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"}
                     continue
                 tgt = dt.date.fromisoformat(h["target_date"])
                 if s is None or s[-1][0] < tgt:
@@ -285,7 +301,8 @@ def _source_label(iid, params):
     provenance that is long."""
     base = dict((i[0], "%s:%s" % (i[2], i[3])) for i in gatlib.INSTRUMENTS)[iid]
     if (iid in gatlib.SPOT_SYMBOL
-            and params.get("metal_price_basis") == "spot_anchored"):
+            and params.get("metal_price_basis") == "spot_anchored"
+            and base.startswith("lbma:")):
         return "gold-api:%s spot + %s history" % (gatlib.SPOT_SYMBOL[iid], base)
     return base
 
@@ -333,9 +350,13 @@ def build_asset(iid, name, s, params, review_friday, calendar_pick, failures):
     # volatility history are not the same quote. A reader holding both tabs
     # open must never have to guess why two numbers for one metal differ.
     if iid in gatlib.SPOT_SYMBOL:
+        basis = params.get("metal_price_basis")
         base["price_basis_note"] = (
+            "COMEX front-month futures price, not spot - the same quote as the "
+            "Markets tab; level and volatility from one series"
+            if basis == "futures" else
             "level from live spot; volatility estimated from the LBMA fix series"
-            if params.get("metal_price_basis") == "spot_anchored" else
+            if basis == "spot_anchored" else
             "level is the LBMA benchmark fix, one official print a day; the "
             "Markets tab quotes live spot, which sits a little either side of it")
     if asof_note:

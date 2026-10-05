@@ -116,7 +116,7 @@
       <div class="nbody">
       <ul>
         <li><b>How it works.</b> Prices are pulled every hour by a scheduled job and stored. This page reads that stored file — it never calls a price API itself, so it costs nothing to visit and behaves the same at any level of traffic.</li>
-        <li><b>Crypto</b> — CoinGecko. <b>Equities, ETFs, indices, DXY, oil &amp; gas</b> — Yahoo Finance; London-listed funds are quoted from their USD lines. <b>Gold, silver, copper</b> — live spot, with gold and silver history from the LBMA official benchmark fixes. <b>US M2</b> — the St.&nbsp;Louis Fed (FRED).</li>
+        <li><b>Crypto</b> — CoinGecko. <b>Equities, ETFs, indices, DXY, oil &amp; gas</b> — Yahoo Finance; London-listed funds are quoted from their USD lines. <b>Gold, silver</b> — COMEX front-month futures (not spot), price and history. <b>Copper</b> — live spot. <b>US M2</b> — the St.&nbsp;Louis Fed (FRED).</li>
         <li><b>Oil and natural gas</b> are front-month futures. There is no free spot feed for either, and the front-month contract is the price the market actually quotes.</li>
         <li><b>US M2</b> is published weekly and in arrears, so its date is older than the rest of the table and it has no 24h figure. Its changes are measured from the publication date, not from today.</li>
         <li><b>N/A</b> means a figure genuinely cannot be computed yet — not zero. Copper has no free spot history, so its changes fill in as days accumulate. SpaceX listed in June 2026, so it has no year-start price to measure against.</li>
