@@ -1,6 +1,7 @@
 /* gat.trading — page renderer. Reads four stored files and nothing else:
    data/latest.json, data/brief/latest.json, data/weekly/latest.json,
-   data/alpha/latest.json, data/screening/latest.json. No API is called
+   data/alpha/latest.json, data/screening/latest.json, the experiments files
+   and data/allocation/latest.json. No API is called
    per visitor. The look is the
    Fable redesign; every figure still comes from the publishers' files. */
 (function () {
@@ -172,7 +173,7 @@
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     const t = e.target;
     if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
-    const i = ["1", "2", "3", "4", "5"].indexOf(e.key);
+    const i = ["1", "2", "3", "4", "5", "6"].indexOf(e.key);
     if (i >= 0) goTab(tabBtns[i]);
   });
   requestAnimationFrame(() => {
@@ -2102,4 +2103,455 @@
       renderExHades(doc);
     })
     .catch(() => { exHadesEmpty(); });
+
+  /* ==========================================================================
+     ALLOCATION
+     Tab 6 (ruled 2026-10-06): the real allocation, shown ONLY in percent, in
+     three sections - FULL (everything, headline only), RUNNING (the monthly
+     plan on its own) and LONG-TERM (one card per asset outside the plan;
+     daily-priced assets carry a series, periodically valued ones a
+     re-valuation date). One stored file, data/allocation/latest.json, which
+     reaches the site only through bin/publish_allocation.py; that gate refuses
+     any dollar sign, any amount-shaped field and any number that is not a percentage.
+     Every figure here is read from the file; nothing is computed but the
+     position of a mark on a chart.
+     ========================================================================== */
+  const AC_GROUP = {
+    "Stocks": "var(--brand)", "Crypto": "var(--violet)", "Gold": "var(--faint)", "Cash": "var(--blue)"
+  };
+  const AC_RUN = "var(--brand)", AC_LT = "var(--amber)";
+  const acState = { doc: null };
+  function acPct(v, dp) {
+    if (!isNum(v)) return "—";
+    const d = dp === undefined ? 2 : dp;
+    return (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(d) + "%";
+  }
+  function acShare(v) { return isNum(v) ? (v >= 10 ? v.toFixed(1) : v.toFixed(2)) + "%" : "—"; }
+  function acEsc(t) {
+    return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function acDay(s) { return Date.parse(s + "T00:00:00Z") / 86400000; }
+  function acShort(s) {
+    return new Date(s + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+  }
+  function acTicks(lo, hi, n) {
+    const span = Math.max(hi - lo, 0.5);
+    const raw = span / n, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    const step = [1, 2, 2.5, 5, 10].map(k => k * mag).find(s => s >= raw) || raw;
+    const out = [];
+    for (let v = Math.floor(lo / step) * step; v <= hi + step * 0.001; v += step) out.push(Math.round(v * 1000) / 1000);
+    return out;
+  }
+  function acStats(items) {
+    const st = el("div", "exstats acstats");
+    items.forEach(s => {
+      const x = el("div", "exst");
+      x.appendChild(el("div", "l", s[0]));
+      x.appendChild(el("div", "v num " + (isNum(s[1]) ? dirOf(s[1]) : "na"), s[3] ? acShare(s[1]) : acPct(s[1])));
+      if (s[2]) x.appendChild(el("div", "s", s[2]));
+      st.appendChild(x);
+    });
+    return st;
+  }
+  function acSub(doc) {
+    sub($("ac-sub"), [
+      ["real weights, percentages only"],
+      doc ? ["since " + doc.start_date, true] : null,
+      doc ? ["as of " + doc.date, true] : ["pending"]
+    ]);
+  }
+  acSub(null);
+
+  /* ---------- 1. full allocation: headline only, no breakdown ---------- */
+  function renderAcFull(doc) {
+    const f = doc.full, host = $("ac-full");
+    host.innerHTML = "";
+    const card = el("article", "exc acfull");
+    card.appendChild(el("div", "sd acsd", "Everything together: the running plan and the long-term assets."));
+    const bar = el("div", "acthin");
+    bar.setAttribute("role", "img");
+    bar.setAttribute("aria-label", "Running " + acShare(f.running_pct) + ", long-term " + acShare(f.long_term_pct));
+    [[f.running_pct, AC_RUN], [f.long_term_pct, AC_LT]].forEach(s => {
+      const seg = el("div"); seg.style.flexGrow = s[0]; seg.style.background = s[1]; bar.appendChild(seg);
+    });
+    card.appendChild(bar);
+    const key = el("div", "brkey");
+    [["Running", f.running_pct, AC_RUN], ["Long-term", f.long_term_pct, AC_LT]].forEach(k => {
+      const s = el("span"); const i = el("i"); i.style.background = k[2];
+      s.appendChild(i); s.appendChild(document.createTextNode(k[0] + " ")); s.appendChild(el("b", null, acShare(k[1])));
+      key.appendChild(s);
+    });
+    card.appendChild(key);
+    card.appendChild(acStats([["Since start", f.since_start_pct, "since " + doc.start_date],
+                              ["Today", f.today_pct, "vs the day before"],
+                              ["On money put in", f.gain_on_money_in_pct, "over what went in"]]));
+    host.appendChild(card);
+  }
+
+  /* ---------- 2. running allocation ---------- */
+  function renderAcRunHead(doc) {
+    const r = doc.running, host = $("ac-run-head");
+    host.innerHTML = "";
+    const card = el("article", "exc acrun");
+    card.appendChild(el("div", "sd acsd", "The monthly plan's pots on their own. " + acShare(doc.full.running_pct) +
+      " of the full allocation; the long-term assets are not in it."));
+    card.appendChild(acStats([["Since start", r.since_start_pct, "since " + doc.start_date],
+                              ["Today", r.today_pct, "vs the day before"],
+                              ["On money put in", r.gain_on_money_in_pct, "over what went in"]]));
+    host.appendChild(card);
+  }
+
+  function renderAcWeights(doc) {
+    const host = $("ac-weights");
+    host.innerHTML = "";
+    const rows = doc.running.weights.slice().sort((a, b) => b.pct - a.pct);
+    const groups = [];
+    rows.forEach(w => {
+      let g = groups.find(x => x.g === w.group);
+      if (!g) { g = { g: w.group, pct: 0 }; groups.push(g); }
+      g.pct += w.pct;
+    });
+    const bar = el("div", "acbar");
+    bar.setAttribute("role", "img");
+    bar.setAttribute("aria-label", groups.map(g => g.g + " " + acShare(g.pct)).join(", "));
+    groups.forEach(g => {
+      const seg = el("div", "acseg");
+      seg.style.flexGrow = g.pct;
+      seg.style.background = AC_GROUP[g.g] || "var(--faint)";
+      if (g.pct >= 9) seg.appendChild(el("span", null, g.g + " " + acShare(g.pct)));
+      seg.title = g.g + " " + acShare(g.pct);
+      bar.appendChild(seg);
+    });
+    host.appendChild(bar);
+    const key = el("div", "brkey");
+    groups.forEach(g => {
+      const s = el("span"); const i = el("i"); i.style.background = AC_GROUP[g.g] || "var(--faint)";
+      s.appendChild(i); s.appendChild(document.createTextNode(g.g + " ")); s.appendChild(el("b", null, acShare(g.pct)));
+      key.appendChild(s);
+    });
+    host.appendChild(key);
+    const max = Math.max.apply(null, rows.map(w => w.pct).concat([1]));
+    const list = el("div", "acwl");
+    rows.forEach(w => {
+      const r = el("div", "acwr");
+      const n = el("span", "acwn");
+      const i = el("i", "acsw"); i.style.background = AC_GROUP[w.group] || "var(--faint)";
+      n.appendChild(i); n.appendChild(document.createTextNode(w.name));
+      r.appendChild(n);
+      r.appendChild(el("span", "acwg", w.group));
+      const t = el("span", "acpt"); const f = el("span", "acpf");
+      f.style.width = Math.max(0.6, w.pct / max * 100) + "%";
+      f.style.background = AC_GROUP[w.group] || "var(--faint)";
+      t.appendChild(f); r.appendChild(t);
+      r.appendChild(el("span", "acpv num", acShare(w.pct)));
+      list.appendChild(r);
+    });
+    host.appendChild(list);
+  }
+
+  function renderAcQuarter(doc) {
+    const host = $("ac-quarter"), r = doc.running;
+    host.innerHTML = "";
+    const legs = [];
+    r.plan_split.forEach(x => legs.push(x.leg));
+    r.put_in_split.forEach(x => { if (legs.indexOf(x.leg) < 0) legs.push(x.leg); });
+    const find = (lst, leg) => { const x = lst.find(y => y.leg === leg); return x ? x.pct : null; };
+    const key = el("div", "brkey acqkey");
+    [["Plan", "var(--faint)"], ["Put in", "var(--brand)"]].forEach(k => {
+      const s = el("span"); const i = el("i"); i.style.background = k[1];
+      s.appendChild(i); s.appendChild(document.createTextNode(k[0])); key.appendChild(s);
+    });
+    host.appendChild(key);
+    legs.forEach(leg => {
+      const p = find(r.plan_split, leg), q = find(r.put_in_split, leg);
+      const row = el("div", "acqr");
+      row.appendChild(el("div", "acqn", leg));
+      const bars = el("div", "acqb");
+      [[p, "pl"], [q, "pi"]].forEach(b => {
+        const line = el("div", "acql " + b[1]);
+        const t = el("span", "acpt"); const f = el("span", "acpf");
+        f.style.width = (isNum(b[0]) ? Math.min(100, b[0]) : 0) + "%";
+        t.appendChild(f); line.appendChild(t);
+        line.appendChild(el("span", "acpv num" + (isNum(b[0]) ? "" : " na"), isNum(b[0]) ? acShare(b[0]) : "—"));
+        bars.appendChild(line);
+      });
+      row.appendChild(bars);
+      if (isNum(p) && isNum(q)) {
+        const d = q - p;
+        row.appendChild(el("div", "acqd num " + dirOf(d), (d > 0 ? "+" : d < 0 ? "−" : "±") + Math.abs(d).toFixed(1) + " pts"));
+      } else row.appendChild(el("div", "acqd na", isNum(p) ? "not shown" : "—"));
+      host.appendChild(row);
+    });
+    host.appendChild(el("p", "acnote", "Plan is the split the monthly plan aims for; put in is how the money " +
+      "that actually went in divides. A leg with a dash is not in the file."));
+  }
+
+  /* ---------- charts, shared by the running section and the long-term cards ---------- */
+  function acLineSvg(pts, color, W, H, opts) {
+    const m = opts.spark ? { l: 2, r: 2, t: 4, b: 4 } : { l: 44, r: 12, t: 14, b: 26 };
+    let lo = 0, hi = 0;
+    pts.forEach(p => { lo = Math.min(lo, p.pct); hi = Math.max(hi, p.pct); });
+    const ticks = acTicks(lo, hi, 4);
+    if (!opts.spark) { lo = Math.min(lo, ticks[0]); hi = Math.max(hi, ticks[ticks.length - 1]); }
+    else { const pad = Math.max((hi - lo) * 0.08, 0.05); lo -= pad; hi += pad; }
+    const d0 = acDay(pts[0].date), d1 = Math.max(acDay(pts[pts.length - 1].date), d0 + 1);
+    const X = s => m.l + (acDay(s) - d0) / (d1 - d0) * (W - m.l - m.r);
+    const Y = v => m.t + (hi - v) / (hi - lo || 1) * (H - m.t - m.b);
+    let g = "";
+    if (!opts.spark) {
+      ticks.forEach(v => {
+        g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + Y(v).toFixed(1) + '" y2="' + Y(v).toFixed(1) +
+          '" class="' + (v === 0 ? "zl" : "gl") + '"/>';
+        g += '<text x="' + (m.l - 7) + '" y="' + (Y(v) + 3.5).toFixed(1) + '" class="yl">' + acEsc(acPct(v, v % 1 ? 1 : 0)) + '</text>';
+      });
+      const every = Math.max(1, Math.ceil(pts.length / Math.max(2, Math.floor((W - m.l) / 70))));
+      pts.forEach((p, i) => {
+        if (i % every && i !== pts.length - 1) return;
+        if (i === pts.length - 1 && i % every && X(p.date) - X(pts[i - (i % every)].date) < 50) return;
+        g += '<text x="' + X(p.date).toFixed(1) + '" y="' + (H - 7) + '" class="xl">' + acEsc(acShort(p.date)) + '</text>';
+      });
+    } else {
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + Y(0).toFixed(1) + '" y2="' + Y(0).toFixed(1) + '" class="zl"/>';
+    }
+    let solid = "", dash = "";
+    pts.forEach((p, i) => {
+      const xy = X(p.date).toFixed(1) + "," + Y(p.pct).toFixed(1);
+      if (i === 0) { solid += "M" + xy; return; }
+      const prev = X(pts[i - 1].date).toFixed(1) + "," + Y(pts[i - 1].pct).toFixed(1);
+      /* a jump in the dates is a missing day: drawn dashed, never filled in */
+      if (acDay(p.date) - acDay(pts[i - 1].date) > 1) { dash += "M" + prev + "L" + xy; solid += "M" + xy; }
+      else solid += "L" + xy;
+    });
+    const wd = opts.spark ? 1.8 : 2.4;
+    g += '<path d="' + solid + '" fill="none" stroke="' + color + '" stroke-width="' + wd + '" stroke-linejoin="round" stroke-linecap="round"/>';
+    if (dash) g += '<path d="' + dash + '" fill="none" stroke="' + color + '" stroke-width="' + wd + '" stroke-dasharray="3 4" opacity=".7"/>';
+    if (!opts.spark) pts.forEach(p => {
+      g += '<circle cx="' + X(p.date).toFixed(1) + '" cy="' + Y(p.pct).toFixed(1) + '" r="2.8" fill="' + color + '"/>';
+    });
+    else {
+      const lp = pts[pts.length - 1];
+      g += '<circle cx="' + X(lp.date).toFixed(1) + '" cy="' + Y(lp.pct).toFixed(1) + '" r="2.6" fill="' + color + '"/>';
+    }
+    return { g: g, X: X, m: m, gaps: !!dash };
+  }
+
+  function renderAcLine() {
+    const doc = acState.doc, host = $("ac-line");
+    if (!doc || !host) return;
+    const pts = doc.running.series;
+    const W = Math.max(280, Math.round(host.clientWidth - 34) || 640);
+    const H = W < 520 ? 200 : 240;
+    const c = acLineSvg(pts, AC_RUN, W, H, {});
+    host.innerHTML = "";
+    const svg = svgel('<svg class="acsvg" viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H +
+      '" role="img" aria-label="Running allocation, cumulative % since ' + acEsc(doc.start_date) + '">' + c.g +
+      '<line class="hov" x1="0" x2="0" y1="' + c.m.t + '" y2="' + (H - c.m.b) + '" visibility="hidden"/></svg>');
+    host.appendChild(svg);
+    const read = el("div", "acread");
+    host.appendChild(read);
+    function readout(p) {
+      read.innerHTML = "";
+      read.appendChild(el("b", null, dateGB(new Date(p.date + "T12:00:00Z"))));
+      const s = el("span");
+      s.appendChild(document.createTextNode("Running "));
+      s.appendChild(el("span", "num " + dirOf(p.pct), acPct(p.pct)));
+      read.appendChild(s);
+    }
+    readout(pts[pts.length - 1]);
+    const hov = svg.querySelector(".hov");
+    svg.addEventListener("pointermove", e => {
+      const r = svg.getBoundingClientRect();
+      const x = (e.clientX - r.left) * W / r.width;
+      let best = pts[0];
+      pts.forEach(p => { if (Math.abs(c.X(p.date) - x) < Math.abs(c.X(best.date) - x)) best = p; });
+      hov.setAttribute("x1", c.X(best.date)); hov.setAttribute("x2", c.X(best.date));
+      hov.setAttribute("visibility", "visible");
+      readout(best);
+    });
+    svg.addEventListener("pointerleave", () => { hov.setAttribute("visibility", "hidden"); readout(pts[pts.length - 1]); });
+    $("ac-linetag").textContent = "daily · cumulative %" + (c.gaps ? " · dashed = no record" : "");
+  }
+
+  function renderAcWeekly() {
+    const doc = acState.doc, host = $("ac-weekly");
+    if (!doc || !host) return;
+    const wk = doc.running.weekly;
+    const W = Math.max(280, Math.round(host.clientWidth - 34) || 640);
+    const H = W < 520 ? 180 : 200;
+    const m = { l: 44, r: 12, t: 22, b: 34 };
+    let lo = 0, hi = 0;
+    wk.forEach(w => { lo = Math.min(lo, w.pct); hi = Math.max(hi, w.pct); });
+    const ticks = acTicks(lo, hi, 3);
+    lo = Math.min(lo, ticks[0]); hi = Math.max(hi, ticks[ticks.length - 1]);
+    const Y = v => m.t + (hi - v) / (hi - lo || 1) * (H - m.t - m.b);
+    const slot = (W - m.l - m.r) / Math.max(wk.length, 4);
+    const bw = Math.min(56, slot * 0.6);
+    const lastDay = doc.running.series[doc.running.series.length - 1].date;
+    let g = "";
+    ticks.forEach(v => {
+      g += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + Y(v).toFixed(1) + '" y2="' + Y(v).toFixed(1) +
+        '" class="' + (v === 0 ? "zl" : "gl") + '"/>';
+      g += '<text x="' + (m.l - 7) + '" y="' + (Y(v) + 3.5).toFixed(1) + '" class="yl">' + acEsc(acPct(v, v % 1 ? 1 : 0)) + '</text>';
+    });
+    wk.forEach((w, i) => {
+      const cx = m.l + slot * (i + 0.5);
+      const open = new Date(w.to + "T12:00:00Z").getUTCDay() !== 0 && w.to === lastDay;   /* open until its Sunday lands */
+      const y0 = Y(0), y1 = Y(w.pct);
+      const top = Math.min(y0, y1), h = Math.max(1.5, Math.abs(y1 - y0));
+      const col = w.pct >= 0 ? "var(--up)" : "var(--dn)";
+      g += '<rect x="' + (cx - bw / 2).toFixed(1) + '" y="' + top.toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + h.toFixed(1) +
+        '" rx="3" fill="' + col + '"' + (open ? ' fill-opacity=".45" stroke="' + col + '" stroke-dasharray="3 3"' : "") + '/>';
+      const ly = w.pct >= 0 ? top - 6 : top + h + 13;
+      g += '<text x="' + cx.toFixed(1) + '" y="' + ly.toFixed(1) + '" class="bv">' + acEsc(acPct(w.pct)) + '</text>';
+      g += '<text x="' + cx.toFixed(1) + '" y="' + (H - 17) + '" class="xl">' + acEsc(w.iso_week.slice(5)) + '</text>';
+      g += '<text x="' + cx.toFixed(1) + '" y="' + (H - 4) + '" class="xs">' + acEsc((open ? "open · " : "to ") + acShort(w.to)) + '</text>';
+    });
+    host.innerHTML = "";
+    host.appendChild(svgel('<svg class="acsvg" viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H +
+      '" role="img" aria-label="Running allocation, weekly % move by ISO week">' + g + '</svg>'));
+  }
+
+  /* ---------- 3. long-term: one card per asset, N of them ---------- */
+  function renderAcLongTerm() {
+    const doc = acState.doc, host = $("ac-lt");
+    if (!doc || !host) return;
+    host.innerHTML = "";
+    if (!doc.long_term.length) {
+      host.appendChild(el("p", "acnote", "No long-term assets in this file."));
+      return;
+    }
+    doc.long_term.forEach(it => {
+      const card = el("article", "exc aclt");
+      const top = el("div", "aclttop");
+      const left = el("div");
+      left.appendChild(el("div", "nm", it.name));
+      left.appendChild(el("div", "sd", "since " + it.held_since + " · " +
+        (it.valuation === "daily" ? "priced daily" : "re-valued " + it.valuation_date)));
+      top.appendChild(left);
+      const sh = el("div", "acltsh");
+      sh.appendChild(el("div", "v num", acShare(it.share_of_total_pct)));
+      sh.appendChild(el("div", "s", "of the full allocation"));
+      top.appendChild(sh);
+      card.appendChild(top);
+      if (it.valuation === "daily") {
+        card.appendChild(acStats([["Since start", it.since_start_pct, "since " + doc.start_date],
+                                  ["Today", it.today_pct, "vs the day before"],
+                                  ["On money put in", it.gain_on_money_in_pct, "over what went in"]]));
+        const sp = el("div", "acspark");
+        card.appendChild(sp);
+        const wk = el("div", "acltwk");
+        it.weekly.slice(-4).forEach(w => {
+          const s = el("span");
+          s.appendChild(el("b", null, w.iso_week.slice(5)));
+          s.appendChild(el("span", "num " + dirOf(w.pct), acPct(w.pct)));
+          wk.appendChild(s);
+        });
+        card.appendChild(wk);
+        card._spark = [sp, it];
+      } else {
+        card.appendChild(acStats([["Since last valuation", it.change_since_last_valuation_pct, "re-valued " + it.valuation_date],
+                                  ["Since start", it.since_start_pct, "since " + doc.start_date],
+                                  ["On money put in", it.gain_on_money_in_pct, "over what went in"]]));
+        card.appendChild(el("p", "acnote", "Valued periodically, not daily: no daily line until the next valuation."));
+      }
+      host.appendChild(card);
+    });
+    drawAcSparks();
+  }
+  function drawAcSparks() {
+    [].slice.call(document.querySelectorAll("#ac-lt .aclt")).forEach(card => {
+      if (!card._spark) return;
+      const sp = card._spark[0], it = card._spark[1];
+      const W = Math.max(160, Math.round(sp.clientWidth) || 300), H = 54;
+      const c = acLineSvg(it.series, AC_LT, W, H, { spark: true });
+      sp.innerHTML = "";
+      sp.appendChild(svgel('<svg class="acsvg" viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H +
+        '" role="img" aria-label="' + acEsc(it.name) + ', % change since ' + acEsc(it.series[0].date) + '">' + c.g + '</svg>'));
+      const cap = el("div", "acsparkcap");
+      cap.appendChild(el("span", null, acShort(it.series[0].date)));
+      cap.appendChild(el("span", null, "cumulative %" + (c.gaps ? " · dashed = no record" : "")));
+      cap.appendChild(el("span", null, acShort(it.series[it.series.length - 1].date)));
+      sp.appendChild(cap);
+    });
+  }
+
+  function renderAcNotes(doc) {
+    const foot = $("ac-foot");
+    foot.innerHTML = "";
+    (doc.notes || []).forEach(n => foot.appendChild(el("p", null, n)));
+    const ul = $("ac-notes");
+    ul.innerHTML = "";
+    [["What this is.", "The real allocation, published only as percentages: shares of the whole and % " +
+      "changes over time. No amount, quantity or cost appears anywhere on this tab, and the publisher " +
+      "refuses a file that carries one."],
+     ["Three sections.", "Full allocation is everything together, headline only. Running allocation is the " +
+      "monthly plan on its own - its weights are shares of the running part, not of the whole. Long-term is " +
+      "one card per asset outside the plan."],
+     ["Since start", "is measured from " + doc.start_date + "; today compares the latest day with the one " +
+      "before; on money put in compares today with what went in."],
+     ["Long-term valuation.", "An asset with a daily price carries a daily line. One valued only now and " +
+      "then (property, for example) shows the date of its last valuation and the change since the one before."],
+     ["Days.", "One point per day in the file; if a day is missing, the line is drawn dashed across the gap " +
+      "rather than filled in."],
+     ["Updated", "once a day."]].forEach(t => {
+      const li = el("li");
+      li.appendChild(el("b", null, t[0]));
+      li.appendChild(document.createTextNode(" " + t[1]));
+      ul.appendChild(li);
+    });
+  }
+
+  function renderAllocation(doc) {
+    acState.doc = doc;
+    acSub(doc);
+    $("k-allocation").textContent = acPct(doc.full.since_start_pct, 1);
+    const sh = $("ac-stale");
+    sh.innerHTML = "";
+    const age = Math.floor((Date.now() - new Date(doc.date + "T23:59:59Z").getTime()) / 86400000);
+    if (age >= 2) sh.appendChild(stale("This allocation is " + age + " days old. The daily update has " +
+      "not landed — it describes " + doc.date + ", not today."));
+    renderAcFull(doc);
+    renderAcRunHead(doc);
+    renderAcWeights(doc);
+    renderAcQuarter(doc);
+    renderAcNotes(doc);
+    show("ac-main");
+    hide("allocstatus");
+    renderAcLine();
+    renderAcWeekly();
+    renderAcLongTerm();
+    /* charts are drawn to their box: redraw when it first gets a size (the tab
+       was hidden at load) and whenever the width changes */
+    if (window.ResizeObserver) {
+      let lastW = 0;
+      new ResizeObserver(() => {
+        const w = $("ac-line").clientWidth;
+        if (w && Math.abs(w - lastW) > 2) { lastW = w; renderAcLine(); renderAcWeekly(); drawAcSparks(); }
+      }).observe($("ac-line"));
+    } else {
+      window.addEventListener("resize", () => { renderAcLine(); renderAcWeekly(); drawAcSparks(); });
+    }
+  }
+
+  function allocationEmpty() {
+    const host = $("ac-empty");
+    host.innerHTML = "";
+    host.appendChild(emptyBox("The allocation hasn't published yet", [
+      "This tab will show the real allocation in percent only: the full allocation's headline, the running " +
+      "monthly plan with its weights, quarter and daily and weekly moves, and one card per long-term asset."
+    ], "Nothing is shown here until the first daily file lands, rather than showing something unverified."));
+    hide("allocstatus");
+  }
+
+  fetch("data/allocation/latest.json?t=" + Date.now(), { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error("no allocation yet"); return r.json(); })
+    .then(doc => {
+      const run = doc && doc.running;
+      if (!doc || doc.kind !== "allocation" || !doc.full || !run || !Array.isArray(run.weights) ||
+          !Array.isArray(run.series) || !run.series.length || !Array.isArray(run.weekly) ||
+          !Array.isArray(run.plan_split) || !Array.isArray(run.put_in_split) ||
+          !Array.isArray(doc.long_term)) throw new Error("malformed allocation");
+      renderAllocation(doc);
+    })
+    .catch(() => { allocationEmpty(); });
 })();

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>gat.trading — Growth Autonomous Trading</title>
-<meta name="description" content="Asset prices updated hourly, a daily market brief, a weekly review, a counted alpha hunt, and two paper-money experiments watched weekly.">
+<meta name="description" content="Asset prices updated hourly, a daily market brief, a weekly review, a counted alpha hunt, two paper-money experiments watched weekly, and an allocation shown only in percent.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0d0c" media="(prefers-color-scheme: dark)">
@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-title" content="gat.trading">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d7a4a'/><rect x='20' y='58' width='14' height='26' rx='4' fill='white' opacity='.45'/><rect x='43' y='42' width='14' height='42' rx='4' fill='white' opacity='.7'/><rect x='66' y='24' width='14' height='60' rx='4' fill='white'/></svg>">
-<link rel="stylesheet" href="assets/style.css?v=21">
+<link rel="stylesheet" href="assets/style.css?v=22">
 </head>
 <body>
 
@@ -92,6 +92,7 @@
     <button class="tab" role="tab" aria-selected="false" aria-controls="p-weekly"  data-p="weekly"  id="tab-weekly">Weekly Review <span class="k" id="k-weekly"></span></button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="p-alpha"   data-p="alpha"   id="tab-alpha">Alpha Hunt <span class="k" id="k-alpha"></span></button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="p-experiments" data-p="experiments" id="tab-experiments">Experiments <span class="k" id="k-experiments"></span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="p-allocation" data-p="allocation" id="tab-allocation">Allocation <span class="k" id="k-allocation"></span></button>
   </nav>
 </div>
 
@@ -250,6 +251,43 @@
     </div>
   </section>
 
+  <!-- ============ ALLOCATION ============ -->
+  <section class="panel" id="p-allocation" role="tabpanel" aria-labelledby="tab-allocation" tabindex="0">
+    <div class="phead">
+      <div class="no">06 · REAL WEIGHTS, ONLY IN PERCENT</div>
+      <h1>Allocation</h1>
+      <div class="psub" id="ac-sub"></div>
+    </div>
+    <div id="allocstatus" class="status">Loading allocation…</div>
+    <div id="ac-stale"></div>
+    <div id="ac-empty"></div>
+    <div id="ac-main" hidden>
+      <div class="stitle"><h2>Full allocation</h2><span class="rule"></span><span class="tag">everything, headline only</span></div>
+      <div id="ac-full"></div>
+
+      <div class="stitle"><h2>Running allocation</h2><span class="rule"></span><span class="tag">the monthly plan on its own</span></div>
+      <div id="ac-run-head"></div>
+      <div class="acsub2">Weights <span>share of the running part</span></div>
+      <div class="card" id="ac-weights"></div>
+      <div class="acsub2">The quarter <span>plan vs put in, % of the quarter</span></div>
+      <div class="card" id="ac-quarter"></div>
+      <div class="acsub2">Since the start <span id="ac-linetag"></span></div>
+      <div class="card acchart" id="ac-line"></div>
+      <div class="acsub2">Week by week <span>ISO weeks</span></div>
+      <div class="card acchart" id="ac-weekly"></div>
+
+      <div class="stitle"><h2>Long-term</h2><span class="rule"></span><span class="tag">outside the plan, one card per asset</span></div>
+      <div class="acltgrid" id="ac-lt"></div>
+
+      <div class="acfoot" id="ac-foot"></div>
+
+      <details class="notes">
+        <summary><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>Sources &amp; method</summary>
+        <div class="nbody"><ul id="ac-notes"></ul></div>
+      </details>
+    </div>
+  </section>
+
 </main>
 
 <footer>
@@ -278,7 +316,7 @@
   </div>
 </footer>
 
-<script src="assets/app.js?v=25"></script>
+<script src="assets/app.js?v=26"></script>
 <script data-goatcounter="https://gattrading.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
