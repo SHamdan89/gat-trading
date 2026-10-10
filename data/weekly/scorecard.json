@@ -280,6 +280,12 @@
       "scored_utc": "2026-09-12T02:09:57Z",
       "stance": "Flat",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-02",
+      "void": "issued on the retired spot/LBMA basis (params v2); not scored against a futures close",
+      "range_hit": null,
+      "scored_utc": "2026-10-10T02:02:12Z"
      }
     },
     "silver": {
@@ -292,6 +298,12 @@
       "scored_utc": "2026-09-12T02:09:57Z",
       "stance": "Flat",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-02",
+      "void": "issued on the retired spot/LBMA basis (params v2); not scored against a futures close",
+      "range_hit": null,
+      "scored_utc": "2026-10-10T02:02:12Z"
      }
     },
     "wti": {
@@ -388,6 +400,12 @@
       "scored_utc": "2026-09-19T02:05:16Z",
       "stance": "Flat",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-09",
+      "void": "issued on the retired spot/LBMA basis (params v2); not scored against a futures close",
+      "range_hit": null,
+      "scored_utc": "2026-10-10T02:02:12Z"
      }
     },
     "silver": {
@@ -400,6 +418,12 @@
       "scored_utc": "2026-09-19T02:05:16Z",
       "stance": "Flat",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-09",
+      "void": "issued on the retired spot/LBMA basis (params v2); not scored against a futures close",
+      "range_hit": null,
+      "scored_utc": "2026-10-10T02:02:12Z"
      }
     },
     "wti": {
@@ -412,6 +436,14 @@
       "scored_utc": "2026-09-19T02:05:16Z",
       "stance": "Hold",
       "stance_hit": false
+     },
+     "next_month": {
+      "target_date": "2026-10-09",
+      "close": 91.660004,
+      "realized_pct": -8.331,
+      "range_hit": true,
+      "width_pct": 35.22,
+      "scored_utc": "2026-10-10T02:02:12Z"
      }
     },
     "btc": {
@@ -424,6 +456,14 @@
       "scored_utc": "2026-09-19T02:05:16Z",
       "stance": "Flat",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-09",
+      "close": 81676.335938,
+      "realized_pct": 5.663,
+      "range_hit": true,
+      "width_pct": 34.93,
+      "scored_utc": "2026-10-10T02:02:12Z"
      }
     },
     "spx": {
@@ -436,6 +476,14 @@
       "scored_utc": "2026-09-19T02:05:16Z",
       "stance": "Sell",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-09",
+      "close": 7811.540039,
+      "realized_pct": 2.019,
+      "range_hit": true,
+      "width_pct": 7.34,
+      "scored_utc": "2026-10-10T02:02:12Z"
      }
     },
     "ndx": {
@@ -448,6 +496,14 @@
       "scored_utc": "2026-09-19T02:05:16Z",
       "stance": "Hold",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-09",
+      "close": 30883.148438,
+      "realized_pct": 5.158,
+      "range_hit": true,
+      "width_pct": 11.82,
+      "scored_utc": "2026-10-10T02:02:12Z"
      }
     },
     "dxy": {
@@ -460,6 +516,14 @@
       "scored_utc": "2026-09-19T02:05:16Z",
       "stance": "Flat",
       "stance_hit": false
+     },
+     "next_month": {
+      "target_date": "2026-10-09",
+      "close": 102.231003,
+      "realized_pct": 3.165,
+      "range_hit": false,
+      "width_pct": 3.19,
+      "scored_utc": "2026-10-10T02:02:12Z"
      }
     }
    }
@@ -554,7 +618,14 @@
   },
   "2026-W39": {
    "assets": {
-    "silver": {},
+    "silver": {
+     "next_week": {
+      "target_date": "2026-10-02",
+      "void": "issued on the retired spot/LBMA basis (params v2); not scored against a futures close",
+      "range_hit": null,
+      "scored_utc": "2026-10-10T02:02:12Z"
+     }
+    },
     "wti": {
      "next_week": {
       "target_date": "2026-10-02",
@@ -616,27 +687,91 @@
      }
     }
    }
+  },
+  "2026-W40": {
+   "assets": {
+    "wti": {
+     "next_week": {
+      "target_date": "2026-10-09",
+      "close": 91.660004,
+      "realized_pct": 0.438,
+      "range_hit": true,
+      "width_pct": 15.39,
+      "scored_utc": "2026-10-10T02:02:12Z",
+      "stance": "Flat",
+      "stance_hit": true
+     }
+    },
+    "btc": {
+     "next_week": {
+      "target_date": "2026-10-09",
+      "close": 81676.335938,
+      "realized_pct": -3.494,
+      "range_hit": true,
+      "width_pct": 12.61,
+      "scored_utc": "2026-10-10T02:02:12Z",
+      "stance": "Hold",
+      "stance_hit": false
+     }
+    },
+    "spx": {
+     "next_week": {
+      "target_date": "2026-10-09",
+      "close": 7811.540039,
+      "realized_pct": 1.15,
+      "range_hit": true,
+      "width_pct": 3.54,
+      "scored_utc": "2026-10-10T02:02:12Z",
+      "stance": "Hold",
+      "stance_hit": true
+     }
+    },
+    "ndx": {
+     "next_week": {
+      "target_date": "2026-10-09",
+      "close": 30883.148438,
+      "realized_pct": 0.244,
+      "range_hit": true,
+      "width_pct": 5.68,
+      "scored_utc": "2026-10-10T02:02:12Z",
+      "stance": "Hold",
+      "stance_hit": true
+     }
+    },
+    "dxy": {
+     "next_week": {
+      "target_date": "2026-10-09",
+      "close": 102.231003,
+      "realized_pct": 0.301,
+      "range_hit": true,
+      "width_pct": 1.7,
+      "scored_utc": "2026-10-10T02:02:12Z",
+      "stance": "Hold",
+      "stance_hit": true
+     }
+    }
+   }
   }
  },
  "aggregate": {
   "weekly": {
-   "weeks": 6,
+   "weeks": 7,
    "directional": {
-    "n": 26,
-    "hit": 15,
-    "rate": 0.5769
+    "n": 30,
+    "hit": 18,
+    "rate": 0.6
    },
    "flat": {
-    "n": 12,
-    "hit": 10,
-    "rate": 0.8333
+    "n": 13,
+    "hit": 11,
+    "rate": 0.8462
    },
    "range_1w": {
-    "n": 38,
-    "hit": 33,
-    "coverage": 0.8684
+    "n": 43,
+    "hit": 38,
+    "coverage": 0.8837
    },
-   "avg_width_pct": 10.06,
+   "avg_width_pct": 9.79,
    "best_read": {
     "week": "2026-W36",
     "asset": "wti",
@@ -651,23 +786,23 @@
    }
   },
   "rolling_12w": {
-   "weeks": 6,
+   "weeks": 7,
    "directional": {
-    "n": 26,
-    "hit": 15,
-    "rate": 0.5769
+    "n": 30,
+    "hit": 18,
+    "rate": 0.6
    },
    "flat": {
-    "n": 12,
-    "hit": 10,
-    "rate": 0.8333
+    "n": 13,
+    "hit": 11,
+    "rate": 0.8462
    },
    "range_1w": {
-    "n": 38,
-    "hit": 33,
-    "coverage": 0.8684
+    "n": 43,
+    "hit": 38,
+    "coverage": 0.8837
    },
-   "avg_width_pct": 10.06,
+   "avg_width_pct": 9.79,
    "best_read": {
     "week": "2026-W36",
     "asset": "wti",
@@ -683,8 +818,8 @@
   },
   "declines_all_time": {
    "no_read": 3,
-   "no_data": 0
+   "no_data": 2
   }
  },
- "updated_utc": "2026-10-03T02:04:09Z"
+ "updated_utc": "2026-10-10T02:02:12Z"
 }
