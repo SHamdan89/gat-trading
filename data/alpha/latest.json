@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "week": "2026-W40",
- "review_friday": "2026-10-02",
- "generated_utc": "2026-10-03T07:17:05Z",
- "published_utc": "2026-10-03T07:25:51Z",
+ "week": "2026-W41",
+ "review_friday": "2026-10-09",
+ "generated_utc": "2026-10-10T07:08:08Z",
+ "published_utc": "2026-10-10T07:14:42Z",
  "new_call_id": null,
- "no_new_call_note": "We looked hard at China's halt on diesel and gasoline exports, which pushed Brent above $100 this week, but the resumption point is already public -- shipments could resume once the holiday ends on October 7, depending on Beijing rebuilding stock to a stated level -- so the same information the market used to move Friday's price is the information a new call would rest on, leaving no view meaningfully apart from what is already known. No new call this week.",
+ "no_new_call_note": "No new call this week. Rare-earth export-control expiry, the CLARITY Act vote, LNG seasonal pricing and the AI power and datacenter trade all surfaced again, but none was new, newly confirmed by more than one independent source, or still ahead of wide reporting — each is already a familiar storyline. Nothing found this week was both genuinely new and something an ordinary person can buy today through a normal brokerage or major exchange.",
  "counts": {
-  "weeks_hunted": 7,
+  "weeks_hunted": 8,
   "weeks_with_call": 1,
   "live": 1,
   "dead_killed": 0,
@@ -85,7 +85,7 @@
      "date": "2026-09-25"
     }
    ],
-   "status": "Stronger",
+   "status": "Weaker",
    "closed_week": null,
    "post_mortem": null,
    "trail": [
@@ -140,6 +140,28 @@
        "title": "Copper Hits Two-Week Low as Escondida Workers Vote to Strike",
        "url": "https://discoveryalert.com/news/copper-price-escondida-strike-october-2026/",
        "date": "2026-10-01"
+      }
+     ]
+    },
+    {
+     "week": "2026-W41",
+     "status": "Weaker",
+     "why": "The approved strike was pushed into formal government mediation rather than executed: BHP requested mediation with Chile's Labor Inspection on 2026-10-05, and the window opened 2026-10-08 for five business days, extendable by five more, so no walkout has happened. Copper markets read the move as de-risking — CPER gained on the news — and copper trades near $6.66/lb as of 2026-10-10, down from the September record and far from the $6.15 kill level, with the mediation outcome itself still open.",
+     "sources": [
+      {
+       "title": "Copper - Price - Chart - Historical Data - News",
+       "url": "https://tradingeconomics.com/commodity/copper",
+       "date": "2026-10-10"
+      },
+      {
+       "title": "BHP Seeks Formal Mediation at Escondida, Temporarily Delaying Strike at World's Largest Copper Mine",
+       "url": "https://news.metal.com/newscontent/104144101-bhp-seeks-formal-mediation-at-escondida-temporarily-delaying-strike-at-worlds-largest-copper-mine",
+       "date": "2026-10-07"
+      },
+      {
+       "title": "Copper Tracker Gains 0.9% as Escondida Strike Pauses",
+       "url": "https://www.riotimesonline.com/copper-markets-latam-monday-october-5-2026",
+       "date": "2026-10-05"
       }
      ]
     }
