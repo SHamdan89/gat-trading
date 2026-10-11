@@ -1,0 +1,853 @@
+{
+ "schema": 1,
+ "week": "2026-W41",
+ "forecast_week": "2026-W42",
+ "review_friday": "2026-10-09",
+ "generated_utc": "2026-10-10T02:02:12Z",
+ "vintage": {
+  "asof": "2026-10-10",
+  "note": null
+ },
+ "params_version": 3,
+ "calendar_frozen": {
+  "source_file": "config/macro_calendar.json",
+  "calendar_schema": 2,
+  "calendar_updated": "2026-08-23",
+  "sha256": "7c30990fad0abb0083848754e6b19fdc2ff69b8ad6519f740e3d0f3850411329",
+  "frozen_utc": "2026-10-10T02:02:12Z",
+  "gate_window_days": 7,
+  "horizon_days": 28,
+  "events": [
+   {
+    "date": "2026-10-14",
+    "name": "US CPI release (September data)",
+    "kind": "CPI",
+    "scope": "market_wide",
+    "primary": "gold",
+    "instruments": [
+     "gold",
+     "silver",
+     "dxy",
+     "spx",
+     "ndx"
+    ],
+    "time_local": "08:30 America/New_York",
+    "confirmed": "official",
+    "source": "https://www.bls.gov/schedule/news_release/cpi.htm"
+   },
+   {
+    "date": "2026-10-27",
+    "name": "FOMC meeting (day 1 of 2)",
+    "kind": "FOMC",
+    "scope": "market_wide",
+    "primary": "dxy",
+    "instruments": [
+     "dxy",
+     "gold",
+     "spx",
+     "ndx",
+     "btc"
+    ],
+    "time_local": "no release on day 1",
+    "confirmed": "official",
+    "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+   },
+   {
+    "date": "2026-10-28",
+    "name": "FOMC decision and press conference (day 2 of 2)",
+    "kind": "FOMC",
+    "scope": "market_wide",
+    "primary": "dxy",
+    "instruments": [
+     "dxy",
+     "gold",
+     "spx",
+     "ndx",
+     "btc"
+    ],
+    "time_local": "14:00 America/New_York",
+    "confirmed": "official",
+    "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+   },
+   {
+    "date": "2026-10-29",
+    "name": "ECB Governing Council monetary policy decision",
+    "kind": "ECB",
+    "scope": "market_wide",
+    "primary": "dxy",
+    "instruments": [
+     "dxy",
+     "gold",
+     "spx"
+    ],
+    "time_local": "14:15 Europe/Berlin",
+    "confirmed": "official",
+    "note": "Day 2 of the 28-29 October meeting.",
+    "source": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html"
+   },
+   {
+    "date": "2026-10-29",
+    "name": "US PCE price index (September data)",
+    "kind": "PCE",
+    "scope": "market_wide",
+    "primary": "gold",
+    "instruments": [
+     "gold",
+     "silver",
+     "dxy",
+     "spx",
+     "ndx"
+    ],
+    "time_local": "08:30 America/New_York",
+    "confirmed": "official",
+    "source": "https://www.bea.gov/news/schedule"
+   },
+   {
+    "date": "2026-10-30",
+    "name": "Bank of Japan monetary policy decision",
+    "kind": "BoJ",
+    "scope": "market_wide",
+    "primary": "dxy",
+    "instruments": [
+     "dxy",
+     "spx",
+     "ndx"
+    ],
+    "time_local": "around midday Asia/Tokyo",
+    "confirmed": "official",
+    "note": "Day 2 of the 29-30 October meeting.",
+    "source": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm"
+   },
+   {
+    "date": "2026-11-04",
+    "name": "US Treasury quarterly refunding announcement",
+    "kind": "Treasury refunding",
+    "scope": "market_wide",
+    "primary": "dxy",
+    "instruments": [
+     "dxy",
+     "gold",
+     "spx"
+    ],
+    "time_local": "08:30 America/New_York",
+    "confirmed": "secondary",
+    "note": "Carries the coupon issuance sizes and the buyback schedule for the quarter. Consistent with Treasury's published convention of the first Wednesday of February, May, August and November, but Treasury's own page could not be read on 2026-08-23 (the site timed out). MARKED SECONDARY: it will not gate a forecast until the date is read from the source below and upgraded to official.",
+    "source": "https://home.treasury.gov/policy-issues/financing-the-government/quarterly-refunding/most-recent-quarterly-refunding-documents"
+   },
+   {
+    "date": "2026-11-06",
+    "name": "US Employment Situation (October data)",
+    "kind": "Payrolls",
+    "scope": "market_wide",
+    "primary": "spx",
+    "instruments": [
+     "spx",
+     "ndx",
+     "dxy",
+     "gold"
+    ],
+    "time_local": "08:30 America/New_York",
+    "confirmed": "official",
+    "source": "https://www.bls.gov/schedule/news_release/empsit.htm"
+   }
+  ],
+  "note": "The macro calendar as it stood when this review was generated. Declines in this review were gated on THIS copy and nothing else. An event absent here could not have gated this review, whatever the live calendar says now."
+ },
+ "nominal_coverage": 0.8,
+ "assets": [
+  {
+   "id": "gold",
+   "name": "Gold (front-month)",
+   "price": 4220.299805,
+   "price_date": "2026-10-09",
+   "week_change_pct": 1.393,
+   "signals": {
+    "trend_score": -0.2562,
+    "trend_components": {
+     "21": -0.8548,
+     "63": 0.4914,
+     "126": -0.7853,
+     "252": 0.1238
+    },
+    "z21": -0.8548,
+    "range_pos_252d": 0.1913,
+    "sigma_daily": 0.012248,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:GC=F",
+   "price_basis_note": "COMEX front-month futures price, not spot - the same quote as the Markets tab; level and volatility from one series",
+   "state": "No read",
+   "no_read": {
+    "name": "US CPI release (September data)",
+    "date": "2026-10-14",
+    "kind": "CPI",
+    "source": "https://www.bls.gov/schedule/news_release/cpi.htm"
+   },
+   "last_week": null,
+   "words": {
+    "note": "No read this week: the US CPI release on 14 October falls inside the forecast window."
+   }
+  },
+  {
+   "id": "silver",
+   "name": "Silver (front-month)",
+   "price": 61.110001,
+   "price_date": "2026-10-09",
+   "week_change_pct": 1.889,
+   "signals": {
+    "trend_score": -0.1604,
+    "trend_components": {
+     "21": -0.5948,
+     "63": 0.3369,
+     "126": -0.7124,
+     "252": 0.3288
+    },
+    "z21": -0.5948,
+    "range_pos_252d": 0.2123,
+    "sigma_daily": 0.021192,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:SI=F",
+   "price_basis_note": "COMEX front-month futures price, not spot - the same quote as the Markets tab; level and volatility from one series",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-10-16",
+     "base": 61.110001,
+     "lo": 57.527416,
+     "hi": 65.288671,
+     "steps": 5,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-11-06",
+     "base": 61.110001,
+     "lo": 54.990655,
+     "hi": 70.19741,
+     "steps": 20,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 61.110001,
+     "steps": 59,
+     "central": {
+      "lo": 55.593575,
+      "hi": 69.330094,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 69.330094,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 55.593575,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 50.980962,
+      "hi": 77.539733
+     },
+     "lo": 50.980962,
+     "hi": 77.539733,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Flat",
+   "stance": {
+    "state": "Flat",
+    "flip_level": 58.358834,
+    "flip_to": "Wait",
+    "confidence": 0.8038,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": null,
+   "words": {
+    "technical": "Silver gained 1.9% on the week to 61.11 but sits low in its 252-day range, at about 21%. The trend score is mildly negative at -0.16, with the 21-day and 126-day readings negative and the 63-day and 252-day readings positive. Daily volatility of about 2.1% is wide, so the stance is Flat: the model expects the week to close inside its published range.",
+    "macro": "Payrolls rose by 29,000, well below pre-release estimates. The softer labor-market signal helped silver recover part of the week's rate- and dollar-driven losses. October rate-hike odds fell into the mid-teens after the data.",
+    "long_term": "Silver remains well off the top of its year-long range, and its direction is tied to rate expectations and the dollar more than to any single data point.",
+    "eoy_scenarios": {
+     "central": "Silver finishes the year between roughly 55.6 and 69.3 as rate-hike fears come and go without a decisive break either way.",
+     "upside": "A move above about 69.3 would need rate-hike pricing to fade and the dollar to weaken together, letting the metal recover the ground it lost on tighter policy.",
+     "downside": "A finish below about 55.6 would reflect renewed rate-hike pricing and a firmer dollar, the same pressures that drove this month's losses."
+    },
+    "citations": [
+     {
+      "title": "Gold, silver rise as weak payrolls cut Fed-hike odds - Kitco AM Report",
+      "url": "https://www.kitco.com/news/article/2026-10-02/gold-silver-rise-weak-payrolls-cut-fed-hike-odds-kitco-am-report",
+      "date": "2026-10-02"
+     }
+    ]
+   }
+  },
+  {
+   "id": "wti",
+   "name": "Oil (WTI)",
+   "price": 91.660004,
+   "price_date": "2026-10-09",
+   "week_change_pct": 0.604,
+   "signals": {
+    "trend_score": 0.0567,
+    "trend_components": {
+     "21": -1.0019,
+     "63": 0.6778,
+     "126": -0.1335,
+     "252": 0.6846
+    },
+    "z21": -1.0019,
+    "range_pos_252d": 0.6309,
+    "sigma_daily": 0.025468,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:CL=F",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-10-16",
+     "base": 91.660004,
+     "lo": 85.15284,
+     "hi": 98.294292,
+     "steps": 5,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-11-06",
+     "base": 91.660004,
+     "lo": 79.571198,
+     "hi": 106.437822,
+     "steps": 20,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 91.660004,
+     "steps": 59,
+     "central": {
+      "lo": 81.043215,
+      "hi": 104.883336,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 104.883336,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 81.043215,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 71.892027,
+      "hi": 118.488705
+     },
+     "lo": 71.892027,
+     "hi": 118.488705,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Flat",
+   "stance": {
+    "state": "Flat",
+    "flip_level": 98.578985,
+    "flip_to": "Hold",
+    "confidence": 0.8038,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": {
+    "week": "2026-W40",
+    "stance": "Flat",
+    "stance_hit": true,
+    "range_hit": true,
+    "realized_pct": 0.438
+   },
+   "words": {
+    "technical": "WTI added 0.6% on the week to 91.66 and sits about 63% of the way up its 252-day range. The trend score is essentially flat at 0.06, with the 21-day reading at -1.0 against a positive 63-day reading, so there is no clear direction. Daily volatility of about 2.5% is high, and the stance is Flat: the model expects the week to close inside its published range.",
+    "macro": "Traders read Washington as unlikely to attack Iran before the November midterms, which eased escalation fears. Iran says it will not reopen the Strait of Hormuz until its conditions are met. A hurricane shut down 62.9% of Gulf of Mexico oil production.",
+    "long_term": "Oil carries a large geopolitical premium and a wide spread of outcomes, so a range stance is the honest reading until the supply picture in the Gulf region settles.",
+    "eoy_scenarios": {
+     "central": "WTI ends the year between roughly 81 and 105, with the Hormuz standoff unresolved but supply continuing to flow.",
+     "upside": "A finish above about 105 would reflect an escalation that further restricts shipping, or a prolonged loss of Gulf production.",
+     "downside": "A finish below about 81 would reflect a diplomatic opening that reopens the strait and removes the risk premium."
+    },
+    "citations": [
+     {
+      "title": "WTI holds steady as traders weigh US-Iran tensions and supply risks",
+      "url": "https://www.fxstreet.com/news/wti-holds-steady-as-traders-weigh-us-iran-tensions-and-supply-risks-202610091425",
+      "date": "2026-10-09"
+     }
+    ]
+   }
+  },
+  {
+   "id": "btc",
+   "name": "Bitcoin",
+   "price": 82591.859375,
+   "price_date": "2026-10-10",
+   "week_change_pct": -2.255,
+   "signals": {
+    "trend_score": 0.7435,
+    "trend_components": {
+     "21": 0.2439,
+     "63": 1.3784,
+     "126": 1.3992,
+     "252": -0.0474
+    },
+    "z21": 0.2439,
+    "range_pos_252d": 0.857,
+    "sigma_daily": 0.018658,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:BTC-USD",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-10-16",
+     "base": 82591.859375,
+     "lo": 78280.396702,
+     "hi": 88006.488001,
+     "steps": 6,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-11-06",
+     "base": 82591.859375,
+     "lo": 72470.78184,
+     "hi": 98109.576408,
+     "steps": 27,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 82591.859375,
+     "steps": 82,
+     "central": {
+      "lo": 76396.577876,
+      "hi": 95051.131544,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 95051.131544,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 76396.577876,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 65765.197208,
+      "hi": 111492.817673
+     },
+     "lo": 65765.197208,
+     "hi": 111492.817673,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Hold",
+   "stance": {
+    "state": "Hold",
+    "flip_level": 77744.398778,
+    "flip_to": "Flat",
+    "confidence": 0.5688,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": {
+    "week": "2026-W40",
+    "stance": "Hold",
+    "stance_hit": false,
+    "range_hit": true,
+    "realized_pct": -3.494
+   },
+   "words": {
+    "technical": "Bitcoin fell 2.3% on the week to about 82,590 but remains high in its 252-day range, at roughly 86%. The trend score of 0.74 is positive, driven by strong 63-day and 126-day readings, while the 21-day reading is only slightly positive. The stance is Hold, which carries the lowest historical hit rate of the stances in use, so it deserves modest weight.",
+    "macro": "Bitcoin closed the week at US$82,123, down 2.81%. Oil, rate fears and Middle East tension weighed on crypto. US spot bitcoin ETFs saw net outflows of $487.1 million on Wednesday, the most since June 25.",
+    "long_term": "The medium-term trend is still up, but the buying that drove the late-summer rally has slowed, which leaves price more exposed to macro shocks.",
+    "eoy_scenarios": {
+     "central": "Bitcoin ends the year between roughly 76,400 and 95,100, consolidating while fund flows and rate expectations pull in opposite directions.",
+     "upside": "A finish above about 95,100 would need fund inflows to return and rate fears to ease, restoring the bid seen in August and September.",
+     "downside": "A finish below about 76,400 would reflect continued outflows and a higher-rate backdrop that reduces appetite for speculative assets."
+    },
+    "citations": [
+     {
+      "title": "Bitcoin Ends Week 2.8% Lower at US$82,123; Ether Falls 6.8%",
+      "url": "https://www.riotimesonline.com/crypto-markets-bitcoin-majors-friday-october-9-2026/",
+      "date": "2026-10-09"
+     },
+     {
+      "title": "Bitcoin ETFs bleed nearly $500 million in one day: Crypto Daily",
+      "url": "https://www.coindesk.com/daybook-us/2026/10/08/bitcoin-etf-investors-head-for-the-exit-and-it-s-the-biggest-rush-in-months",
+      "date": "2026-10-08"
+     }
+    ]
+   }
+  },
+  {
+   "id": "spx",
+   "name": "S&P 500",
+   "price": 7811.540039,
+   "price_date": "2026-10-09",
+   "week_change_pct": 1.15,
+   "signals": {
+    "trend_score": 1.1035,
+    "trend_components": {
+     "21": 0.9866,
+     "63": 0.7065,
+     "126": 1.6033,
+     "252": 1.1177
+    },
+    "z21": 0.9866,
+    "range_pos_252d": 0.995,
+    "sigma_daily": 0.006099,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:^GSPC",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-10-16",
+     "base": 7811.540039,
+     "lo": 7684.873311,
+     "hi": 7949.460607,
+     "steps": 5,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-11-06",
+     "base": 7811.540039,
+     "lo": 7556.240672,
+     "hi": 8083.00126,
+     "steps": 20,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 7811.540039,
+     "steps": 59,
+     "central": {
+      "lo": 7740.979369,
+      "hi": 8141.54949,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 8141.54949,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 7740.979369,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 7378.206584,
+      "hi": 8283.584396
+     },
+     "lo": 7378.206584,
+     "hi": 8283.584396,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Hold",
+   "stance": {
+    "state": "Hold",
+    "flip_level": 7556.151895,
+    "flip_to": "Flat",
+    "confidence": 0.5688,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": {
+    "week": "2026-W40",
+    "stance": "Hold",
+    "stance_hit": true,
+    "range_hit": true,
+    "realized_pct": 1.15
+   },
+   "words": {
+    "technical": "The S&P 500 rose 1.15% on the week to 7,811.54, sitting at the very top of its 252-day range (99.5%). The trend score of 1.10 is positive across every window. Daily volatility is low at about 0.6%, and the stance is Hold; the flip level to Flat is well below the current price.",
+    "macro": "All four major indexes closed higher on Friday. Treasury yields rose across the curve. Strong earnings combined with moderating inflation would offer the most supportive backdrop for equities, according to one analyst.",
+    "long_term": "The uptrend is broad and persistent, but price at the top of its range leaves little cushion if inflation or yields surprise.",
+    "eoy_scenarios": {
+     "central": "The index ends the year between roughly 7,741 and 8,142, extending the current trend at a slower pace.",
+     "upside": "A finish above about 8,142 would need earnings to beat and inflation to cool, keeping yields from tightening conditions.",
+     "downside": "A finish below about 7,741 would reflect higher yields or a hawkish policy surprise forcing a reset of valuations."
+    },
+    "citations": [
+     {
+      "title": "Stock Market Today (Oct. 9, 2026): Dow, S&P 500 end week higher as market rallies into earnings season",
+      "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-09-2026",
+      "date": "2026-10-09"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ndx",
+   "name": "Nasdaq 100",
+   "price": 30883.148438,
+   "price_date": "2026-10-09",
+   "week_change_pct": 0.244,
+   "signals": {
+    "trend_score": 1.0879,
+    "trend_components": {
+     "21": 1.342,
+     "63": 0.5916,
+     "126": 1.3843,
+     "252": 1.0337
+    },
+    "z21": 1.342,
+    "range_pos_252d": 0.9587,
+    "sigma_daily": 0.009611,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:^NDX",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-10-16",
+     "base": 30883.148438,
+     "lo": 30139.246411,
+     "hi": 31808.363561,
+     "steps": 5,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-11-06",
+     "base": 30883.148438,
+     "lo": 29417.561746,
+     "hi": 32767.070434,
+     "steps": 20,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 30883.148438,
+     "steps": 59,
+     "central": {
+      "lo": 30231.039893,
+      "hi": 32856.380888,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 32856.380888,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 30231.039893,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 28408.973749,
+      "hi": 34189.309369
+     },
+     "lo": 28408.973749,
+     "hi": 34189.309369,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Hold",
+   "stance": {
+    "state": "Hold",
+    "flip_level": 29355.248252,
+    "flip_to": "Flat",
+    "confidence": 0.5688,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": {
+    "week": "2026-W40",
+    "stance": "Hold",
+    "stance_hit": true,
+    "range_hit": true,
+    "realized_pct": 0.244
+   },
+   "words": {
+    "technical": "The Nasdaq 100 rose 0.24% on the week to 30,883, at about 96% of its 252-day range. The trend score of 1.09 is positive in every window, with the 21-day reading the strongest at 1.34. Daily volatility is about 1.0%, and the stance is Hold.",
+    "macro": "Nasdaq gains were middling as tension showed in the tech portion of the market. Treasury yield increases were largest in the 2- and 3-year maturities.",
+    "long_term": "Technology leadership has driven the index to the upper end of its range, which makes it more sensitive to rate expectations than the broader market.",
+    "eoy_scenarios": {
+     "central": "The index ends the year between roughly 30,231 and 32,856, with leadership narrowing but the trend intact.",
+     "upside": "A finish above about 32,856 would need earnings to confirm the technology leadership while yields stay contained.",
+     "downside": "A finish below about 30,231 would reflect rising short-term yields and weaker confidence in the leading names."
+    },
+    "citations": [
+     {
+      "title": "Stock Market Today (Oct. 9, 2026): Dow, S&P 500 end week higher as market rallies into earnings season",
+      "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-09-2026",
+      "date": "2026-10-09"
+     }
+    ]
+   }
+  },
+  {
+   "id": "dxy",
+   "name": "US Dollar Index",
+   "price": 102.231003,
+   "price_date": "2026-10-09",
+   "week_change_pct": 0.295,
+   "signals": {
+    "trend_score": 1.1617,
+    "trend_components": {
+     "21": 2.5243,
+     "63": 0.388,
+     "126": 1.0842,
+     "252": 0.6502
+    },
+    "z21": 2.5243,
+    "range_pos_252d": 0.9985,
+    "sigma_daily": 0.002982,
+    "trend_weight_in_numbers": 0.0
+   },
+   "source": "yahoo:DX-Y.NYB",
+   "forecast": {
+    "next_week": {
+     "target_date": "2026-10-16",
+     "base": 102.231003,
+     "lo": 101.413981,
+     "hi": 103.080724,
+     "steps": 5,
+     "coverage": 0.8
+    },
+    "next_month": {
+     "target_date": "2026-11-06",
+     "base": 102.231003,
+     "lo": 100.637574,
+     "hi": 103.975912,
+     "steps": 20,
+     "coverage": 0.8
+    },
+    "eoy": {
+     "target_date": "2026-12-31",
+     "base": 102.231003,
+     "steps": 59,
+     "central": {
+      "lo": 100.804151,
+      "hi": 103.960098,
+      "prob": 0.5
+     },
+     "upside": {
+      "above": 103.960098,
+      "prob": 0.25
+     },
+     "downside": {
+      "below": 100.804151,
+      "prob": 0.25
+     },
+     "envelope_80": {
+      "lo": 99.509526,
+      "hi": 105.246306
+     },
+     "lo": 99.509526,
+     "hi": 105.246306,
+     "note": "scenarios, not a forecast; excluded from the headline record"
+    }
+   },
+   "state": "Hold",
+   "stance": {
+    "state": "Hold",
+    "flip_level": 100.733482,
+    "flip_to": "Flat",
+    "confidence": 0.5688,
+    "confidence_meaning": "historical probability that this stance's one-week claim holds (backtest, pooled)"
+   },
+   "last_week": {
+    "week": "2026-W40",
+    "stance": "Hold",
+    "stance_hit": true,
+    "range_hit": true,
+    "realized_pct": 0.301
+   },
+   "words": {
+    "technical": "The dollar index rose 0.3% on the week to 102.23 and sits at the very top of its 252-day range (99.9%). The trend score of 1.16 is positive in every window, and the 21-day reading of 2.5 shows the recent move is stretched. Daily volatility is low at about 0.3%, and the stance is Hold, with the flip level to Flat about 1.5 points below.",
+    "macro": "The dollar index has made a lower high in each session since Wednesday. Futures put the odds of a Fed hike near 20% for October 28 and near 70% for December 9. The October 14 CPI report is the first release with a real chance to change the picture.",
+    "long_term": "The dollar is in a strong uptrend driven by rate-hike pricing, and its direction from here depends on whether inflation data keep that pricing alive.",
+    "eoy_scenarios": {
+     "central": "The index ends the year between roughly 100.8 and 104.0, holding near current levels as policy pricing stays hawkish.",
+     "upside": "A finish above about 104.0 would reflect inflation data confirming the case for further rate increases.",
+     "downside": "A finish below about 100.8 would reflect cooling inflation that removes the hike pricing supporting the dollar."
+    },
+    "citations": [
+     {
+      "title": "Dollar Index stalls under its high as the Fed's hawks repeat themselves",
+      "url": "https://www.fxstreet.com/news/dollar-index-stalls-under-its-high-as-the-feds-hawks-repeat-themselves-202610091910",
+      "date": "2026-10-09"
+     }
+    ]
+   }
+  }
+ ],
+ "coherence": {
+  "violations": [],
+  "note": null
+ },
+ "declines": {
+  "no_read": 1,
+  "no_data": 0
+ },
+ "scorecard": {
+  "weekly": {
+   "weeks": 7,
+   "directional": {
+    "n": 30,
+    "hit": 18,
+    "rate": 0.6
+   },
+   "flat": {
+    "n": 13,
+    "hit": 11,
+    "rate": 0.8462
+   },
+   "range_1w": {
+    "n": 43,
+    "hit": 38,
+    "coverage": 0.8837
+   },
+   "avg_width_pct": 9.79,
+   "best_read": {
+    "week": "2026-W36",
+    "asset": "wti",
+    "stance": "Hold",
+    "realized_pct": 9.614
+   },
+   "worst_read": {
+    "week": "2026-W37",
+    "asset": "wti",
+    "stance": "Hold",
+    "realized_pct": -4.52
+   }
+  },
+  "rolling_12w": {
+   "weeks": 7,
+   "directional": {
+    "n": 30,
+    "hit": 18,
+    "rate": 0.6
+   },
+   "flat": {
+    "n": 13,
+    "hit": 11,
+    "rate": 0.8462
+   },
+   "range_1w": {
+    "n": 43,
+    "hit": 38,
+    "coverage": 0.8837
+   },
+   "avg_width_pct": 9.79,
+   "best_read": {
+    "week": "2026-W36",
+    "asset": "wti",
+    "stance": "Hold",
+    "realized_pct": 9.614
+   },
+   "worst_read": {
+    "week": "2026-W37",
+    "asset": "wti",
+    "stance": "Hold",
+    "realized_pct": -4.52
+   }
+  },
+  "declines_all_time": {
+   "no_read": 3,
+   "no_data": 2
+  }
+ },
+ "calibration": {
+  "pooled": {
+   "n": 43,
+   "coverage": 0.8837
+  },
+  "flag": "OK"
+ },
+ "week_summary": "A week of firm equities and a strong dollar against a backdrop of weak payrolls, elevated oil and Iran tension. Silver and oil were held inside their ranges, while bitcoin gave back ground on ETF outflows. Gold is not read this week because the US CPI release on 14 October falls inside the window, and that report is the next test for every instrument here.",
+ "published_utc": "2026-10-11T18:32:24Z"
+}
