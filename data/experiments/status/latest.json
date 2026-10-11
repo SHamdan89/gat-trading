@@ -1,15 +1,15 @@
 {
  "kind": "experiments-status",
- "date": "2026-10-10",
- "generated_utc": "2026-10-10T07:44:00Z",
+ "date": "2026-10-11",
+ "generated_utc": "2026-10-11T07:42:00Z",
  "projects": [
   {
    "id": "mgat",
    "name": "MGAT Alpha v3.1",
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
    "state": "needs-check",
-   "state_reason": "no daily snapshot since 2026-10-07; doctor read HEALTHY on 2026-10-09",
-   "last_checked": "2026-10-09T20:00:11Z",
+   "state_reason": "doctor read HEALTHY on 2026-10-10, but no daily snapshot since 2026-10-07; figures below are as of that snapshot",
+   "last_checked": "2026-10-10T20:00:13Z",
    "closed_total": 71,
    "wins_total": 36,
    "win_rate_pct": 51,
@@ -26,7 +26,7 @@
    "name": "Hades Trading",
    "sub": "Sealed agent, own wallet, no human decisions in the loop",
    "state": "needs-check",
-   "state_reason": "today's report has not arrived; newest daily check line is 2026-10-07",
+   "state_reason": "no daily report for 2026-10-11; newest report on record is 2026-10-07",
    "last_checked": "2026-10-07T06:08:20Z",
    "closed_total": 0,
    "wins_total": 0,
@@ -37,8 +37,8 @@
    "pnl_total_pct": null,
    "open_positions": null,
    "trades_label": "16 tx · 12 trades +3 unverified",
-   "note": "Today's report has not arrived, so holdings and returns ship blank. The SOL-measured line cannot be computed without it. Transaction count is the verified baseline plus 3 measured from balance steps since; an on-chain re-verify is not yet done."
+   "note": "The day's report has not arrived, so holdings, the dollar return and the SOL-measured return ship blank rather than carry an old figure. The transaction count is measured from the daily check's balance log (three clean fee-sized steps since the last on-chain verification) and is not yet verified on-chain."
   }
  ],
- "published_utc": "2026-10-10T07:45:22Z"
+ "published_utc": "2026-10-11T07:42:56Z"
 }
