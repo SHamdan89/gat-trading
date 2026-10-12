@@ -1,44 +1,44 @@
 {
  "kind": "experiments-status",
- "date": "2026-10-11",
- "generated_utc": "2026-10-11T07:42:00Z",
+ "date": "2026-10-12",
+ "generated_utc": "2026-10-12T07:45:00Z",
  "projects": [
   {
    "id": "mgat",
    "name": "MGAT Alpha v3.1",
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
-   "state": "needs-check",
-   "state_reason": "doctor read HEALTHY on 2026-10-10, but no daily snapshot since 2026-10-07; figures below are as of that snapshot",
-   "last_checked": "2026-10-10T20:00:13Z",
-   "closed_total": 71,
-   "wins_total": 36,
-   "win_rate_pct": 51,
-   "pnl_realized_usd": 591.49,
-   "avg_trade_pct": 6.96,
-   "pnl_total_usd": 564.49,
-   "pnl_total_pct": 7.06,
-   "open_positions": 10,
-   "trades_label": "71 / 200",
-   "hold_pct": 4.3
+   "state": "live",
+   "state_reason": "doctor read HEALTHY on 2026-10-11; daily snapshot current",
+   "last_checked": "2026-10-11T20:00:09Z",
+   "closed_total": 86,
+   "wins_total": 37,
+   "win_rate_pct": 43,
+   "pnl_realized_usd": 464.34,
+   "avg_trade_pct": 4.59,
+   "pnl_total_usd": 470.85,
+   "pnl_total_pct": 5.89,
+   "open_positions": 8,
+   "trades_label": "86 / 200",
+   "hold_pct": 5.43
   },
   {
    "id": "hades",
    "name": "Hades Trading",
    "sub": "Sealed agent, own wallet, no human decisions in the loop",
-   "state": "needs-check",
-   "state_reason": "no daily report for 2026-10-11; newest report on record is 2026-10-07",
-   "last_checked": "2026-10-07T06:08:20Z",
+   "state": "live",
+   "state_reason": "today's report present and complete; daily check shows no stub",
+   "last_checked": "2026-10-12T06:08:15Z",
    "closed_total": 0,
    "wins_total": 0,
    "win_rate_pct": null,
    "pnl_realized_usd": null,
    "avg_trade_pct": null,
-   "pnl_total_usd": null,
-   "pnl_total_pct": null,
-   "open_positions": null,
-   "trades_label": "16 tx · 12 trades +3 unverified",
-   "note": "The day's report has not arrived, so holdings, the dollar return and the SOL-measured return ship blank rather than carry an old figure. The transaction count is measured from the daily check's balance log (three clean fee-sized steps since the last on-chain verification) and is not yet verified on-chain."
+   "pnl_total_usd": 33.43,
+   "pnl_total_pct": 25.72,
+   "open_positions": 0,
+   "trades_label": "16 tx · 12 trades +4 unverified",
+   "note": "in SOL: +6.54% vs the pinned 1.36228651 — all of it held as SOL, part in wrapped form, no token position. Most of the dollar move is SOL price drift on a held stake. The transaction count is measured from the daily check's balance log (four clean fee-sized steps since the last on-chain verification) and is not yet verified on-chain."
   }
  ],
- "published_utc": "2026-10-11T07:42:56Z"
+ "published_utc": "2026-10-12T07:47:01Z"
 }
