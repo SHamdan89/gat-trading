@@ -1,58 +1,18 @@
 {
- "date": "2026-10-11",
- "generated_utc": "2026-10-11T06:12:24Z",
+ "date": "2026-10-12",
+ "generated_utc": "2026-10-12T06:12:22Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "OpenAI told investors ahead of a new funding round that it expects annualized revenue to reach or exceed $70 billion by the end of 2026, driven mainly by enterprise sales, after a Thursday selloff in AI-linked chip stocks tied to a lower $50 billion run-rate figure reported for late September",
-     "why": "The gap between the two revenue figures comes down to accounting methods, not lost sales, which means chip-stock investors sold off AI's biggest customer on a comparison that was never apples to apples.",
+     "headline": "Nvidia fell 2.94% to $230.48 on October 8, erasing roughly $169 billion in market value, after OpenAI reportedly told investors its annualized revenue was approaching $50 billion at the end of September — about $20 billion below a $70 billion figure that had circulated a week earlier, a gap tied to accounting methodology rather than lost sales; CoreWeave, Oracle, Broadcom and AMD all fell harder than Nvidia on the news",
+     "why": "A $170 billion chip-stock selloff triggered by a dispute over how a private company counts its own revenue, not by any confirmed demand shortfall, shows how thin the data trail behind the AI buildout still is.",
      "sources": [
       {
-       "title": "Nvidia and Micron stocks bounce on OpenAI $70B revenue target",
-       "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-micron-stocks-bounce-openai-133435783.html"
-      }
-     ]
-    },
-    {
-     "headline": "Executives at Anthropic, OpenAI and other AI companies are privately planning for a public and political backlash after a catastrophic AI event, most likely a large-scale cyberattack on financial services, internet access or utilities, with some insiders expecting such an event within six to twelve months",
-     "why": "An industry quietly war-gaming its own worst-case disaster, rather than only lobbying against regulation, signals the companies themselves see a shock to AI's social license as a live near-term risk, not a hypothetical one.",
-     "sources": [
-      {
-       "title": "Scoop: AI companies plot \"day after\" scenarios for public revolt",
-       "url": "https://www.axios.com/2026/10/09/ai-companies-day-after-major-attack"
-      }
-     ]
-    },
-    {
-     "headline": "A cyberattack on legacy Cerner systems now run by Oracle Health exposed personal and medical data on nearly 20 million people, traced to an old server that had not yet been migrated to Oracle Cloud",
-     "why": "A breach traced to a server still waiting on a cloud migration shows the biggest risk in these giant health-data consolidations is often the leftover legacy infrastructure, not the new platform itself.",
-     "sources": [
-      {
-       "title": "Top Tech News Today, October 8, 2026: Adobe, Google, Manus, Microsoft, Nvidia, OpenAI, Tencent & More",
-       "url": "https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/"
-      }
-     ]
-    },
-    {
-     "headline": "AI-agent startup Manus raised more than $500 million after its proposed acquisition by Meta fell apart, according to an October 8 report",
-     "why": "A $500 million raise landing right after a Big Tech buyout collapses shows investors still want exposure to agentic-AI startups even when the easiest exit path disappears.",
-     "sources": [
-      {
-       "title": "Top Tech News Today, October 8, 2026: Adobe, Google, Manus, Microsoft, Nvidia, OpenAI, Tencent & More",
-       "url": "https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/"
-      }
-     ]
-    },
-    {
-     "headline": "Finland's regulator ordered a Google subsidiary to suspend preparatory work at two planned data center sites over suspected illegal forest clearing, part of Google's previously announced €13 billion Finland investment",
-     "why": "A single national regulator halting groundwork over a land-use violation is a reminder that the AI buildout's bottleneck is shifting from chips toward the mundane permitting and environmental fights every new site has to clear.",
-     "sources": [
-      {
-       "title": "Top Tech News Today, October 8, 2026: Adobe, Google, Manus, Microsoft, Nvidia, OpenAI, Tencent & More",
-       "url": "https://techstartups.com/2026/10/08/top-tech-news-today-october-8-2026-globalfoundries-google-manus-microsoft-nvidia-openai-tencent-more/"
+       "title": "OpenAI's Revenue Is Reportedly $20 Billion Lower Than Thought. Nvidia Just Lost $170 Billion",
+       "url": "https://247wallst.com/investing/2026/10/09/openais-revenue-is-reportedly-20-billion-lower-than-thought-nvidia-just-lost-170-billion/"
       }
      ]
     }
@@ -62,26 +22,12 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin and ethereum opened at their lowest levels in about three weeks on October 9, with bitcoin near $81,690 and ethereum near $2,472, as the total crypto market cap fell below $2.8 trillion",
-     "why": "Crypto selling off alongside a surge in oil and Gulf-conflict risk, rather than on any crypto-specific news, shows it is still trading as a leveraged bet on broad risk appetite rather than as an independent asset class.",
+     "headline": "Bitcoin slid from an $83,275 open toward $82,347 and ethereum from $2,573 toward $2,532 on October 8, as Brent crude surged to $105.21 a barrel on at least nine reported Strait of Hormuz tanker attacks so far in October",
+     "why": "Crypto selling off in lockstep with an oil-driven inflation scare, rather than on anything crypto-specific, is more evidence it is still trading as a leveraged macro-risk asset rather than an independent one.",
      "sources": [
       {
-       "title": "Bitcoin and ethereum prices today, Friday, October 9, 2026: Bitcoin, ethereum open at lowest levels in about 3 weeks",
-       "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-october-9-2026-bitcoin-ethereum-open-at-lowest-levels-in-about-3-weeks-113350511.html"
-      }
-     ]
-    },
-    {
-     "headline": "Bitcoin opened Monday, October 5 above $86,500, up 2.1% on the day after a weak September jobs report pushed the odds of the Fed holding rates steady to 80.6%, then fell back to roughly $81,700 by Friday as oil spiked on Middle East tensions",
-     "why": "A nearly 6% round trip in bitcoin inside one week, moving opposite the rate-hold odds that should have helped it, shows the asset is currently more hostage to the oil-and-Hormuz headline cycle than to its own rate-cut narrative.",
-     "sources": [
-      {
-       "title": "Bitcoin and ethereum prices today, Monday, October 5, 2026: Bitcoin back above $86,000 after higher rate expectations fade",
-       "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-october-5-2026-bitcoin-back-above-86000-after-higher-rate-expectations-fade-114459647.html"
-      },
-      {
-       "title": "Bitcoin and ethereum prices today, Friday, October 9, 2026: Bitcoin, ethereum open at lowest levels in about 3 weeks",
-       "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-october-9-2026-bitcoin-ethereum-open-at-lowest-levels-in-about-3-weeks-113350511.html"
+       "title": "Bitcoin and ethereum prices today, Thursday, October 8, 2026: Crypto values fall as oil prices soar",
+       "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-october-8-2026-crypto-values-fall-as-oil-prices-soar-113341860.html"
       }
      ]
     }
@@ -91,46 +37,22 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "The Pentagon was reported to be preparing potential military strikes on Iranian nuclear and energy targets on October 8, the same day a Marshall Islands-flagged tanker caught fire in the Gulf of Oman and Tehran reiterated that the Strait of Hormuz will not reopen under economic pressure",
-     "why": "Tehran explicitly refusing to reopen the strait under pressure, rather than just trading fire, is the detail that keeps a full closure on the table rather than this being read as a one-off skirmish.",
+     "headline": "Maritime security sources counted at least 12 attacks on oil, LNG and LPG tankers in the Strait of Hormuz in the week of September 28–October 5, the most of any week since the US-Iran war began in February, while the UN's IMO recorded nine and India's foreign ministry said 12 crew members were injured when a projectile struck a Panama-flagged tanker",
+     "why": "Attack intensity hitting a new wartime high even as Gulf exporters pushed flows back above pre-war levels shows the recovery in oil supply is running on borrowed time, not resolution.",
      "sources": [
       {
-       "title": "Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Decline as Pentagon Prepares for Potential Military Strikes on Iran",
-       "url": "https://www.benzinga.com/markets/equities/26/10/62239479/stock-market-today-sp-500-dow-jones-futures-decline-as-pentagon-prepares-for-potential-military-strikes-on-iran-apld-levi-mu-in-focus"
+       "title": "Attacks on tankers in Hormuz hit highest of any week since start of Iran war, sources say",
+       "url": "https://www.thestar.com.my/news/world/2026/10/07/attacks-on-tankers-in-hormuz-hit-highest-of-any-week-since-start-of-iran-war-sources-say"
       }
      ]
     },
     {
-     "headline": "Market-implied odds of a second straight Fed rate hike at the October 28 meeting fell to 19.4% by October 7, down from 50.9% a week earlier and from a September 24 peak of 77.5%, after October 2 payrolls rose only 29,000 against roughly 90,000 expected",
-     "why": "Traders pushed the hike back to December rather than dropping it altogether, which makes the September CPI print due October 14 the real decision point for whether a hike happens at all this year.",
+     "headline": "Market-implied odds of a second straight Fed rate hike at the October 28 meeting fell to 19.4% by October 7, down from 50.9% a week earlier and a September 24 peak of 77.5%, after October 2 payrolls came in at 29,000 against roughly 90,000 expected, even though 12 of 18 Fed officials had projected one more hike this year as of September",
+     "why": "Traders are betting the Fed backs off on one weak jobs report even though most of the Fed's own officials haven't changed their view, which makes the September CPI print due October 14 the real test of who has the economy right.",
      "sources": [
       {
        "title": "October Rate-Hike Odds Just Fell From 51% to 19% in One Week",
-       "url": "https://247wallst.com/investing/2026/10/07/october-rate-hike-odds-just-fell-from-51-to-19-in-one-week"
-      }
-     ]
-    },
-    {
-     "headline": "The 10-year Treasury yield climbed to about 5.35% and the 30-year to about 5.70% by October 8, their highest levels since 2002 and in 24 years respectively, even as Fed officials signaled an October hike was becoming less likely",
-     "why": "Long-end yields grinding to multi-decade highs while the Fed itself leans toward pausing shows the bond market is pricing in a bigger deficit and inflation problem than the Fed's own meeting-by-meeting language admits.",
-     "sources": [
-      {
-       "title": "Stock Market Today: S&P 500 Falls as Bond Yields Keep Climbing",
-       "url": "https://www.benzinga.com/markets/equities/26/10/62226685/stock-market-today-sp-500-russell-2000-fall-bond-yields-rise"
-      },
-      {
-       "title": "Stock Market Today: S&P 500 Slips as Oil Spikes 5%, Yields Rise",
-       "url": "https://www.benzinga.com/markets/equities/26/10/62255036/stock-market-today-sp-500-slips-oil-rallies-yields"
-      }
-     ]
-    },
-    {
-     "headline": "The S&P 500 set a new all-time high on October 6 as falling October rate-hike odds, down to about 20% from near 70% a week earlier, pulled Treasury yields lower and lifted tech stocks ahead of Q3 earnings season",
-     "why": "A record high built almost entirely on hike odds collapsing, rather than on improving fundamentals, is a rally that can reverse just as fast if the September CPI print due October 14 revives the hike case.",
-     "sources": [
-      {
-       "title": "S&P 500 hits new record high",
-       "url": "https://www.xtb.com/en/market-analysis/s-p-500-hits-new-record-high"
+       "url": "https://247wallst.com/investing/2026/10/07/october-rate-hike-odds-just-fell-from-51-to-19-in-one-week/"
       }
      ]
     }
@@ -140,32 +62,22 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Spot gold traded near $4,117 an ounce on October 8, still up more than 25% since early 2025 even after pulling back about 6.6% from its level a month earlier",
-     "why": "Gold giving back some of its one-month gain while still holding most of this year's run makes the retreat look like profit-taking inside an uptrend rather than the start of a reversal.",
+     "headline": "Spot gold traded near $4,169 an ounce on October 9, up about 1.3% on the day but still down roughly 5.6% from a month earlier, after climbing more than 25% since early 2025",
+     "why": "Gold bouncing within a month-long pullback rather than breaking to a fresh high suggests the metal is digesting its 2025 run rather than losing its bid outright.",
      "sources": [
       {
-       "title": "The price of gold today, Oct. 8, 2026",
-       "url": "https://fortune.com/article/current-price-of-gold-10-08-2026/"
+       "title": "Current price of gold: October 9, 2026",
+       "url": "https://fortune.com/article/current-price-of-gold-10-09-2026/"
       }
      ]
     },
     {
-     "headline": "Silver traded near $59 an ounce, platinum near $1,642 and palladium near $1,126 on October 8, moving alongside gold's broader precious-metals rally",
-     "why": "Every precious metal moving together, rather than just gold, suggests the bid is coming from broad safe-haven and inflation-hedge demand rather than a gold-specific story like central-bank buying alone.",
+     "headline": "Brent crude futures climbed to $105.21 a barrel on October 8 as at least nine Strait of Hormuz tanker attacks were reported so far in October amid the ongoing US-Iran conflict",
+     "why": "Oil holding above $105 on attack counts alone, with no confirmed flow disruption yet, means the market is pricing the risk of a future supply shock rather than reacting to one that has already happened.",
      "sources": [
       {
-       "title": "The price of gold today, Oct. 8, 2026",
-       "url": "https://fortune.com/article/current-price-of-gold-10-08-2026/"
-      }
-     ]
-    },
-    {
-     "headline": "WTI crude rose about 5% to roughly $93 a barrel and Brent rose about 5.6% to around $106 on October 8, as renewed tanker attacks in the Persian Gulf, reduced Hormuz traffic, reports of possible large-scale US strikes on Iran, and Gulf Coast hurricane shut-ins all hit at once",
-     "why": "Four separate supply threats landing on the same day, rather than one escalating story, is what turned a 5% daily move from an outlier into the kind of spike that forces producers and refiners to react immediately.",
-     "sources": [
-      {
-       "title": "Stock Market Today: S&P 500 Slips as Oil Spikes 5%, Yields Rise",
-       "url": "https://www.benzinga.com/markets/equities/26/10/62255036/stock-market-today-sp-500-slips-oil-rallies-yields"
+       "title": "Bitcoin and ethereum prices today, Thursday, October 8, 2026: Crypto values fall as oil prices soar",
+       "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-october-8-2026-crypto-values-fall-as-oil-prices-soar-113341860.html"
       }
      ]
     }
@@ -175,37 +87,27 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "The S&P 500 tested the 7,800 level intraday on October 9 before closing the week at 7,811.51, up 0.95% on the week",
-     "why": "Closing the week just above round-number resistance, rather than failing at it, keeps the index's short-term structure intact heading into an earnings season investors are counting on to justify current prices.",
+     "headline": "The S&P 500 closed at 7,724.38 and the Nasdaq-100 at 30,715.36 on October 5, up 22.97% year to date, while the Dow Jones Industrial Average closed October 2 at 50,933.60, about 6% below its August 5 record of 54,349.12",
+     "why": "A roughly 3,400-point gap opening between the Dow and the Nasdaq since early August is breadth deteriorating in real time, with the rally narrowing to tech and AI-linked names while the rest of the index stalls.",
      "sources": [
       {
-       "title": "Stock Market Today (Oct. 9, 2026): Dow, S&P 500 end week higher as market rallies into earnings season",
-       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-09-2026"
+       "title": "Nasdaq Surges, Dow Stalls: What the Split Means for 2026 Forecasts",
+       "url": "https://stockwirex.com/analysis/stock-market-forecast-2026-nasdaq-dow-divergence-october-2026/"
       }
      ]
     },
     {
-     "headline": "The Russell 2000 underperformed the broader market on October 7, falling 1.4% to 2,792 even as large-cap benchmarks held up better",
-     "why": "Small caps breaking down relative to large caps on an otherwise unremarkable day is the kind of internal divergence that often shows up before a broader index-level pullback, not after one.",
+     "headline": "The 10-year Treasury yield eased to 5.28% on October 7, about 8 basis points off an intraday 24-year high, as oil prices swung lower, OPEC+ tankers moved through the Persian Gulf, and a 10-year note auction cleared 1.7 basis points below prevailing yields",
+     "why": "Yields pulling back only slightly off a multi-decade high, and only on one strong auction, reads as a pause inside an uptrend rather than a reversal, since the deficit and inflation pressures behind the move are still intact.",
      "sources": [
       {
-       "title": "Stock Market Today: S&P 500 Falls as Bond Yields Keep Climbing",
-       "url": "https://www.benzinga.com/markets/equities/26/10/62226685/stock-market-today-sp-500-russell-2000-fall-bond-yields-rise"
-      }
-     ]
-    },
-    {
-     "headline": "The 10-year Treasury yield pushed to about 5.35% and the 30-year to about 5.70% by October 8, levels not seen since 2002 and in 24 years respectively, advancing without any corrective pullback",
-     "why": "A multi-decade breakout in long-end yields with no pullback at all is a stronger directional signal than the headline level itself, since the move hasn't even paused long enough to be tested.",
-     "sources": [
-      {
-       "title": "Stock Market Today: S&P 500 Slips as Oil Spikes 5%, Yields Rise",
-       "url": "https://www.benzinga.com/markets/equities/26/10/62255036/stock-market-today-sp-500-slips-oil-rallies-yields"
+       "title": "US 10-Year Yield Eases From 24-Year High",
+       "url": "https://tradingeconomics.com/united-states/government-bond-yield/news/590272"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-10-11T06:22:01Z"
+ "published_utc": "2026-10-12T06:16:13Z"
 }
