@@ -1,0 +1,44 @@
+{
+ "kind": "experiments-status",
+ "date": "2026-10-13",
+ "generated_utc": "2026-10-13T07:44:00Z",
+ "projects": [
+  {
+   "id": "mgat",
+   "name": "MGAT Alpha v3.1",
+   "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
+   "state": "live",
+   "state_reason": "doctor read HEALTHY on 2026-10-12; daily snapshot current",
+   "last_checked": "2026-10-12T20:00:09Z",
+   "closed_total": 88,
+   "wins_total": 39,
+   "win_rate_pct": 44,
+   "pnl_realized_usd": 469.79,
+   "avg_trade_pct": 4.54,
+   "pnl_total_usd": 414.0,
+   "pnl_total_pct": 5.18,
+   "open_positions": 8,
+   "trades_label": "88 / 200",
+   "hold_pct": 3.91
+  },
+  {
+   "id": "hades",
+   "name": "Hades Trading",
+   "sub": "Sealed agent, own wallet, no human decisions in the loop",
+   "state": "live",
+   "state_reason": "today's report present and complete; daily check shows no stub",
+   "last_checked": "2026-10-13T06:08:09Z",
+   "closed_total": 0,
+   "wins_total": 0,
+   "win_rate_pct": null,
+   "pnl_realized_usd": null,
+   "avg_trade_pct": null,
+   "pnl_total_usd": 27.1,
+   "pnl_total_pct": 20.85,
+   "open_positions": 0,
+   "trades_label": "16 tx · 12 trades +4 unverified",
+   "note": "in SOL: +6.54% vs the pinned 1.36228651 — all of it held as SOL, part in wrapped form, no token position. Most of the dollar move is SOL price drift on a held stake. The dollar figure is the agent's own latest hourly wallet total because the site price feed was stale. The transaction count is measured from the daily check's balance log (four clean fee-sized steps since the last on-chain verification) and is not yet verified on-chain."
+  }
+ ],
+ "published_utc": "2026-10-13T07:43:40Z"
+}
