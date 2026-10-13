@@ -1,11 +1,11 @@
 {
  "schema": 1,
- "run_utc": "2026-10-13T19:01:03Z",
- "fetch_utc": "2026-10-13T19:01:02Z",
- "payload_sha256": "dae5089d838e17730cc2f0f4d6ee3b98a342d6e111727c5c006326e97a583fca",
+ "run_utc": "2026-10-13T20:01:46Z",
+ "fetch_utc": "2026-10-13T20:01:46Z",
+ "payload_sha256": "52d6fb7a868bc4cc8d05bff6be8e0210bb9389634a17a130535f4393fdbc7eee",
  "upstream": {
   "coingecko": {
-   "stamp": "2026-10-13T18:58:53Z",
+   "stamp": "2026-10-13T19:59:54Z",
    "observations": 9,
    "unparsed": 0,
    "expected_live": true
@@ -17,13 +17,13 @@
    "expected_live": false
   },
   "gold-api": {
-   "stamp": "2026-10-13T18:59:48Z",
+   "stamp": "2026-10-13T19:59:49Z",
    "observations": 1,
    "unparsed": 0,
    "expected_live": true
   },
   "yahoo": {
-   "stamp": "2026-10-13T19:00:52Z",
+   "stamp": "2026-10-13T20:01:17Z",
    "observations": 38,
    "unparsed": 0,
    "expected_live": true
