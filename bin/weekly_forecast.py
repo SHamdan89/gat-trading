@@ -449,6 +449,8 @@ def pick_no_read(assets_order, calendar, review_friday, failures):
     for c in cands:
         if c["asset"] in prev_no_read or c["asset"] in failures:
             continue
+        if c["asset"] in gatlib.NEVER_NO_READ:     # gold is always called (2026-10-13)
+            continue
         return c
     return None
 

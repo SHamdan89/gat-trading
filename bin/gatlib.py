@@ -62,6 +62,13 @@ TRADING_DAYS = {"1w": 5, "1m": 21}     # nominal, for display; maths uses actual
 # calendar days, everyone else's use weekdays.
 SEVEN_DAY = {"btc"}
 
+# Assets the event calendar may NEVER decline (Solomon, 2026-10-13: "gold is critical
+# for us"). CPI and PCE name gold as their primary instrument, so without this gold sat
+# out one or two weeks a month. The event stays in the calendar and in the model input;
+# it just cannot turn this asset into a "No read". weekly_forecast.py skips the pick and
+# publish_weekly.py refuses the document - two walls, so neither alone is load-bearing.
+NEVER_NO_READ = {"gold"}
+
 
 def expected_steps(iid, start, target):
     """Expected number of return observations between two dates (exclusive
