@@ -278,6 +278,9 @@
       if (!isNum(p) || p < 0.05 || p > 5) return SCR_DASH;
       return "Purify " + p.toFixed(1) + "%";
     }
+    // Gold and silver are priced from COMEX futures, but the Halal ruling is for the
+    // physical metal (B.6) - the cell says so itself (2026-10-15).
+    if (v === "Halal" && (a.id === "gold" || a.id === "silver")) return "Halal (spot)";
     return v;
   }
   function scrTd(a) {
