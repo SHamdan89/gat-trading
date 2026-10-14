@@ -245,7 +245,7 @@
 
   /* ---------- SCREENING column (2026-09-07) ----------------------------------
      Reads data/screening/latest.json, joined to the price feed by id. The word
-     is the verdict: exactly Halal, Haram, Purify x.x%, or — for no verdict. No
+     is the verdict: exactly Halal, Not permissible, Purify x.x%, or — for no verdict. No
      colour implies a verdict, no score, no sentence. Fail-closed on this side
      as well as the publisher's: a row or a document older than SCR_STALE_DAYS
      renders — whatever the file says, and a missing or malformed file renders
@@ -270,7 +270,7 @@
     const r = d.rows[a.id];
     if (!r || typeof r !== "object") return SCR_DASH;
     const v = r.verdict;
-    if (v !== "Halal" && v !== "Haram" && v !== "Purify") return SCR_DASH;
+    if (v !== "Halal" && v !== "Not permissible" && v !== "Purify") return SCR_DASH;
     if (r.static !== true && !scrAgeOk(r.screened_utc)) return SCR_DASH;
     if (r.static === true && typeof r.ruling_expires === "string" && !scrRulingOk(r.ruling_expires)) return SCR_DASH;
     if (v === "Purify") {
