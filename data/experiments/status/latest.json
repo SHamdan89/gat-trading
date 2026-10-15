@@ -1,25 +1,25 @@
 {
  "kind": "experiments-status",
- "date": "2026-10-14",
- "generated_utc": "2026-10-14T07:42:27Z",
+ "date": "2026-10-15",
+ "generated_utc": "2026-10-15T07:42:40Z",
  "projects": [
   {
    "id": "mgat",
    "name": "MGAT Alpha v3.1",
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
-   "state": "live",
-   "state_reason": "doctor read HEALTHY on 2026-10-13; daily snapshot current",
-   "last_checked": "2026-10-13T20:00:11Z",
-   "closed_total": 93,
+   "state": "needs-check",
+   "state_reason": "doctor read ATTENTION on 2026-10-14, not HEALTHY; daily snapshot current",
+   "last_checked": "2026-10-14T20:00:05Z",
+   "closed_total": 98,
    "wins_total": 39,
-   "win_rate_pct": 42,
-   "pnl_realized_usd": 404.14,
-   "avg_trade_pct": 3.76,
-   "pnl_total_usd": 370.21,
-   "pnl_total_pct": 4.63,
+   "win_rate_pct": 40,
+   "pnl_realized_usd": 341.39,
+   "avg_trade_pct": 3.02,
+   "pnl_total_usd": 343.39,
+   "pnl_total_pct": 4.29,
    "open_positions": 6,
-   "trades_label": "93 / 200",
-   "hold_pct": 2.17
+   "trades_label": "98 / 200",
+   "hold_pct": -0.22
   },
   {
    "id": "hades",
@@ -27,18 +27,18 @@
    "sub": "Sealed agent, own wallet, no human decisions in the loop",
    "state": "live",
    "state_reason": "today's report present and complete; daily check shows no stub",
-   "last_checked": "2026-10-14T06:07:33Z",
+   "last_checked": "2026-10-15T06:08:27Z",
    "closed_total": 0,
    "wins_total": 0,
    "win_rate_pct": null,
    "pnl_realized_usd": null,
    "avg_trade_pct": null,
-   "pnl_total_usd": 25.54,
-   "pnl_total_pct": 19.64,
+   "pnl_total_usd": 18.03,
+   "pnl_total_pct": 13.87,
    "open_positions": 0,
    "trades_label": "16 tx · 12 trades +4 unverified",
    "note": "in SOL: +6.54% vs the pinned 1.36228651 — all of it held as SOL, part in wrapped form, no token position. Most of the dollar move is SOL price drift on a held stake. The transaction count is measured from the daily check's balance log (four clean fee-sized steps since the last on-chain verification) and is not yet verified on-chain."
   }
  ],
- "published_utc": "2026-10-14T07:50:45Z"
+ "published_utc": "2026-10-15T07:46:56Z"
 }
