@@ -1,0 +1,315 @@
+{
+ "kind": "allocation",
+ "date": "2026-10-17",
+ "generated_utc": "2026-10-17T04:21Z",
+ "start_date": "2026-09-29",
+ "full": {
+  "running_pct": 3.257,
+  "long_term_pct": 96.743,
+  "since_start_pct": -2.628,
+  "today_pct": -0.096,
+  "gain_on_money_in_pct": 17.49
+ },
+ "running": {
+  "since_start_pct": -2.656,
+  "today_pct": 0.018,
+  "gain_on_money_in_pct": -3.879,
+  "weights": [
+   {
+    "name": "Cash (uninvested)",
+    "group": "Stocks",
+    "pct": 42.226
+   },
+   {
+    "name": "Gold (saved as cash)",
+    "group": "Gold",
+    "pct": 16.585
+   },
+   {
+    "name": "Bitcoin",
+    "group": "Crypto",
+    "pct": 11.618
+   },
+   {
+    "name": "Ethereum",
+    "group": "Crypto",
+    "pct": 9.24
+   },
+   {
+    "name": "Solana",
+    "group": "Crypto",
+    "pct": 6.48
+   },
+   {
+    "name": "ASML",
+    "group": "Stocks",
+    "pct": 3.105
+   },
+   {
+    "name": "Eli Lilly (LLY)",
+    "group": "Stocks",
+    "pct": 3.011
+   },
+   {
+    "name": "Alphabet (GOOGL)",
+    "group": "Stocks",
+    "pct": 2.83
+   },
+   {
+    "name": "Southern Copper (SCCO)",
+    "group": "Stocks",
+    "pct": 2.795
+   },
+   {
+    "name": "Cameco (CCJ)",
+    "group": "Stocks",
+    "pct": 2.11
+   },
+   {
+    "name": "World index fund (ISDW)",
+    "group": "Stocks",
+    "pct": 0.0
+   }
+  ],
+  "plan_split": [
+   {
+    "leg": "Stocks",
+    "pct": 60
+   },
+   {
+    "leg": "Gold fund",
+    "pct": 20
+   },
+   {
+    "leg": "Crypto pot",
+    "pct": 10
+   },
+   {
+    "leg": "Cash reserve",
+    "pct": 10
+   }
+  ],
+  "put_in_split": [
+   {
+    "leg": "Stocks",
+    "pct": 54.859
+   },
+   {
+    "leg": "Gold fund",
+    "pct": 15.942
+   },
+   {
+    "leg": "Crypto pot",
+    "pct": 29.199
+   }
+  ],
+  "series": [
+   {
+    "date": "2026-09-29",
+    "pct": 0.0
+   },
+   {
+    "date": "2026-09-30",
+    "pct": 0.115
+   },
+   {
+    "date": "2026-10-01",
+    "pct": -0.003
+   },
+   {
+    "date": "2026-10-02",
+    "pct": 0.679
+   },
+   {
+    "date": "2026-10-03",
+    "pct": 0.843
+   },
+   {
+    "date": "2026-10-04",
+    "pct": 1.346
+   },
+   {
+    "date": "2026-10-05",
+    "pct": 1.345
+   },
+   {
+    "date": "2026-10-06",
+    "pct": 1.704
+   },
+   {
+    "date": "2026-10-07",
+    "pct": 0.1
+   },
+   {
+    "date": "2026-10-08",
+    "pct": -1.176
+   },
+   {
+    "date": "2026-10-09",
+    "pct": -0.609
+   },
+   {
+    "date": "2026-10-10",
+    "pct": -0.435
+   },
+   {
+    "date": "2026-10-11",
+    "pct": -0.144
+   },
+   {
+    "date": "2026-10-12",
+    "pct": -1.307
+   },
+   {
+    "date": "2026-10-13",
+    "pct": -1.276
+   },
+   {
+    "date": "2026-10-14",
+    "pct": -2.539
+   },
+   {
+    "date": "2026-10-15",
+    "pct": -2.452
+   },
+   {
+    "date": "2026-10-16",
+    "pct": -2.673
+   },
+   {
+    "date": "2026-10-17",
+    "pct": -2.656
+   }
+  ],
+  "weekly": [
+   {
+    "iso_week": "2026-W40",
+    "to": "2026-10-04",
+    "pct": 1.346
+   },
+   {
+    "iso_week": "2026-W41",
+    "to": "2026-10-11",
+    "pct": -1.47
+   },
+   {
+    "iso_week": "2026-W42",
+    "to": "2026-10-17",
+    "pct": -2.515
+   }
+  ]
+ },
+ "long_term": [
+  {
+   "name": "Bitcoin (long-term)",
+   "valuation": "daily",
+   "share_of_total_pct": 96.743,
+   "since_start_pct": -2.627,
+   "today_pct": -0.099,
+   "gain_on_money_in_pct": 18.376,
+   "held_since": "2024",
+   "series": [
+    {
+     "date": "2026-09-29",
+     "pct": 0.0
+    },
+    {
+     "date": "2026-09-30",
+     "pct": -0.076
+    },
+    {
+     "date": "2026-10-01",
+     "pct": 1.437
+    },
+    {
+     "date": "2026-10-02",
+     "pct": 1.036
+    },
+    {
+     "date": "2026-10-03",
+     "pct": 1.318
+    },
+    {
+     "date": "2026-10-04",
+     "pct": 3.407
+    },
+    {
+     "date": "2026-10-05",
+     "pct": 2.548
+    },
+    {
+     "date": "2026-10-06",
+     "pct": 2.272
+    },
+    {
+     "date": "2026-10-07",
+     "pct": -0.428
+    },
+    {
+     "date": "2026-10-08",
+     "pct": -2.336
+    },
+    {
+     "date": "2026-10-09",
+     "pct": -1.286
+    },
+    {
+     "date": "2026-10-10",
+     "pct": -0.863
+    },
+    {
+     "date": "2026-10-11",
+     "pct": 0.061
+    },
+    {
+     "date": "2026-10-12",
+     "pct": -2.206
+    },
+    {
+     "date": "2026-10-13",
+     "pct": -0.628
+    },
+    {
+     "date": "2026-10-14",
+     "pct": -2.435
+    },
+    {
+     "date": "2026-10-15",
+     "pct": -1.775
+    },
+    {
+     "date": "2026-10-16",
+     "pct": -2.53
+    },
+    {
+     "date": "2026-10-17",
+     "pct": -2.627
+    }
+   ],
+   "weekly": [
+    {
+     "iso_week": "2026-W40",
+     "to": "2026-10-04",
+     "pct": 3.407
+    },
+    {
+     "iso_week": "2026-W41",
+     "to": "2026-10-11",
+     "pct": -3.236
+    },
+    {
+     "iso_week": "2026-W42",
+     "to": "2026-10-17",
+     "pct": -2.686
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "Real allocation, shown only as percentages; no amounts.",
+  "Full allocation = everything; Running = the monthly plan's pots (stocks, crypto, gold saved as cash); Long-term = assets owned outside the plan.",
+  "Gold is saved as cash until bought; the cash reserve is kept elsewhere and not shown.",
+  "Information only, not advice."
+ ],
+ "published_utc": "2026-10-17T04:27:27Z"
+}
