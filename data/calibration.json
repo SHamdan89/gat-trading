@@ -1,40 +1,40 @@
 {
- "updated_utc": "2026-10-10T02:02:12Z",
+ "updated_utc": "2026-10-17T02:07:04Z",
  "note": "Measures the FROZEN formula's trailing coverage. Never re-fits.",
- "trailing_weeks": 7,
+ "trailing_weeks": 8,
  "per_asset": {
   "btc": {
-   "n": 7,
+   "n": 8,
    "coverage": 1.0
   },
   "dxy": {
-   "n": 6,
-   "coverage": 0.6667
+   "n": 7,
+   "coverage": 0.7143
   },
   "gold": {
    "n": 5,
    "coverage": 1.0
   },
   "ndx": {
+   "n": 8,
+   "coverage": 0.75
+  },
+  "silver": {
+   "n": 6,
+   "coverage": 0.8333
+  },
+  "spx": {
    "n": 7,
    "coverage": 0.8571
   },
-  "silver": {
-   "n": 5,
-   "coverage": 1.0
-  },
-  "spx": {
-   "n": 6,
-   "coverage": 1.0
-  },
   "wti": {
-   "n": 7,
-   "coverage": 0.7143
+   "n": 8,
+   "coverage": 0.625
   }
  },
  "pooled": {
-  "n": 43,
-  "coverage": 0.8837
+  "n": 49,
+  "coverage": 0.8163
  },
  "band": [
   0.7,
