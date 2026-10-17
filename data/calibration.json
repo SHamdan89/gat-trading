@@ -1,44 +1,115 @@
 {
- "updated_utc": "2026-10-17T02:07:04Z",
- "note": "Measures the FROZEN formula's trailing coverage. Never re-fits.",
- "trailing_weeks": 8,
+ "updated_utc": "2026-10-17T18:59:47Z",
+ "note": "Measures the FROZEN formula's trailing coverage. Never re-fits. Headline = parameters v3 only; versions are never pooled.",
+ "params_version": 3,
+ "trailing_weeks": 1,
  "per_asset": {
   "btc": {
-   "n": 8,
+   "n": 1,
    "coverage": 1.0
   },
   "dxy": {
-   "n": 7,
-   "coverage": 0.7143
-  },
-  "gold": {
-   "n": 5,
+   "n": 1,
    "coverage": 1.0
   },
   "ndx": {
-   "n": 8,
-   "coverage": 0.75
+   "n": 1,
+   "coverage": 0.0
   },
   "silver": {
-   "n": 6,
-   "coverage": 0.8333
+   "n": 1,
+   "coverage": 0.0
   },
   "spx": {
-   "n": 7,
-   "coverage": 0.8571
+   "n": 1,
+   "coverage": 0.0
   },
   "wti": {
-   "n": 8,
-   "coverage": 0.625
+   "n": 1,
+   "coverage": 0.0
   }
  },
  "pooled": {
-  "n": 49,
-  "coverage": 0.8163
+  "n": 6,
+  "coverage": 0.3333
  },
  "band": [
   0.7,
   0.9
  ],
- "flag": "OK"
+ "flag": "INSUFFICIENT-HISTORY",
+ "by_version": {
+  "2": {
+   "trailing_weeks": 7,
+   "per_asset": {
+    "btc": {
+     "n": 7,
+     "coverage": 1.0
+    },
+    "dxy": {
+     "n": 6,
+     "coverage": 0.6667
+    },
+    "gold": {
+     "n": 5,
+     "coverage": 1.0
+    },
+    "ndx": {
+     "n": 7,
+     "coverage": 0.8571
+    },
+    "silver": {
+     "n": 5,
+     "coverage": 1.0
+    },
+    "spx": {
+     "n": 6,
+     "coverage": 1.0
+    },
+    "wti": {
+     "n": 7,
+     "coverage": 0.7143
+    }
+   },
+   "pooled": {
+    "n": 43,
+    "coverage": 0.8837
+   },
+   "flag": "OK"
+  },
+  "3": {
+   "trailing_weeks": 1,
+   "per_asset": {
+    "btc": {
+     "n": 1,
+     "coverage": 1.0
+    },
+    "dxy": {
+     "n": 1,
+     "coverage": 1.0
+    },
+    "ndx": {
+     "n": 1,
+     "coverage": 0.0
+    },
+    "silver": {
+     "n": 1,
+     "coverage": 0.0
+    },
+    "spx": {
+     "n": 1,
+     "coverage": 0.0
+    },
+    "wti": {
+     "n": 1,
+     "coverage": 0.0
+    }
+   },
+   "pooled": {
+    "n": 6,
+    "coverage": 0.3333
+   },
+   "flag": "INSUFFICIENT-HISTORY"
+  }
+ }
 }

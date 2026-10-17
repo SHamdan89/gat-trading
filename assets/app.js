@@ -1212,7 +1212,10 @@
       r12d.n ? Math.round(r12d.rate * 100) + "%" : "—",
       r12d.n ? r12d.hit + "/" + r12d.n + " directional calls" : "record starts this week",
       { pending: !r12d.n }));
-    rec.appendChild(recCell("All time",
+    // A scorecard carrying params_version is per-version (never pooled, signed
+    // 2026-10-05): its "all time" is "since this version". Older files pooled.
+    const scv = sc.params_version;
+    rec.appendChild(recCell(scv ? "Since v" + scv : "All time",
       wkd.n ? Math.round(wkd.rate * 100) + "%" : "—",
       wkd.n ? wkd.hit + "/" + wkd.n + " directional calls" : "record starts this week",
       { pending: !wkd.n }));
@@ -1233,7 +1236,8 @@
     if (doc.calibration && doc.calibration.flag) {
       const cf = el("div", "calflag");
       cf.appendChild(el("b", null, doc.calibration.flag));
-      const bits = ["Range calibration is pooled across all published forecasts; n = " +
+      const bits = [(scv ? "Range calibration counts parameters v" + scv + " forecasts only (versions are never pooled); n = "
+        : "Range calibration is pooled across all published forecasts; n = ") +
         (doc.calibration.pooled ? doc.calibration.pooled.n : 0) + "."];
       if (isNum(doc.nominal_coverage)) bits.push("Nominal coverage " + Math.round(doc.nominal_coverage * 100) + "%" +
         (doc.params_version ? ", parameters v" + doc.params_version : "") + ".");

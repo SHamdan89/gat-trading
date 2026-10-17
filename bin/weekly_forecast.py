@@ -136,6 +136,9 @@ def score_matured(series, asof):
         if not wk:
             continue
         rec = sc["weeks"].setdefault(wk, {"assets": {}})
+        # Each week is scored under the version it was issued with (signed
+        # rule, 2026-10-05). Read from the immutable week file every run.
+        rec["params_version"] = doc.get("params_version")
         for a in doc.get("assets", []):
             iid = a.get("id")
             fc = a.get("forecast")
@@ -193,9 +196,49 @@ def score_matured(series, asof):
                         entry["stance_hit"] = entry["range_hit"]
                 arec[hz] = entry
 
-    # aggregate - recomputed in full from the scorecard every run (derived truth)
-    agg = {"weekly": _agg(sc, None),
-           "rolling_12w": _agg(sc, 12)}
+    sc, calib = summarize(sc, week_files)
+    os.makedirs(WEEKLY, exist_ok=True)
+    json.dump(sc, open(sc_path, "w"), indent=1)
+    json.dump(calib, open(os.path.join(DATA, "calibration.json"), "w"), indent=1)
+    return sc, calib
+
+
+def _versions(sc, week_files):
+    """The version each scored week was issued with, and the CURRENT version
+    (the newest issued week's). A week with no version on file is v1."""
+    ver = {wk: (rec.get("params_version") or 1)
+           for wk, rec in sc["weeks"].items()}
+    cur = None
+    for fn in sorted(week_files):
+        doc = json.load(open(os.path.join(WEEKLY, fn)))
+        cur = doc.get("params_version") or 1
+    if cur is None:
+        cur = max(ver.values()) if ver else None
+    return ver, cur
+
+
+def summarize(sc, week_files):
+    """Derive the scorecard aggregate and the calibration from the scored
+    weeks. Signed rule (2026-10-05, line 1): the scorecard reports each
+    params_version separately, NEVER pooled across versions. The headline
+    (weekly / rolling_12w / calibration pooled+flag) is the CURRENT version
+    only; every version's own figures sit under by_version. Pure: reads
+    sc + the week files, writes nothing."""
+    ver, cur = _versions(sc, week_files)
+    versions = sorted(set(ver.values()) | ({cur} if cur else set()))
+
+    def agg_for(v):
+        sub = {"weeks": {wk: r for wk, r in sc["weeks"].items() if ver[wk] == v}}
+        return {"weekly": _agg(sub, None), "rolling_12w": _agg(sub, 12)}
+
+    by_version = {str(v): agg_for(v) for v in versions}
+    head = by_version.get(str(cur)) or agg_for(cur)
+    agg = {"params_version": cur,
+           "note": "Headline = parameters v%s only; versions are never pooled "
+                   "(signed 2026-10-05). Each version's own figures: by_version." % cur,
+           "weekly": head["weekly"],
+           "rolling_12w": head["rolling_12w"],
+           "by_version": by_version}
     decl = {"no_read": 0, "no_data": 0}
     for fn in week_files:
         doc = json.load(open(os.path.join(WEEKLY, fn)))
@@ -207,39 +250,50 @@ def score_matured(series, asof):
     agg["declines_all_time"] = decl
     sc["aggregate"] = agg
     sc["updated_utc"] = dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
-    os.makedirs(WEEKLY, exist_ok=True)
-    json.dump(sc, open(sc_path, "w"), indent=1)
 
-    # calibration - trailing 52 reviewed weeks of 1-week range hits
-    weeks_sorted = sorted(sc["weeks"])[-52:]
-    per_asset, pooled_n, pooled_hit = {}, 0, 0
-    for wk in weeks_sorted:
-        for iid, arec in sc["weeks"][wk]["assets"].items():
-            e = arec.get("next_week")
-            if e and e.get("range_hit") is not None:
-                pa = per_asset.setdefault(iid, [0, 0])
-                pa[0] += 1 if e["range_hit"] else 0
-                pa[1] += 1
-                pooled_n += 1
-                pooled_hit += 1 if e["range_hit"] else 0
+    # calibration - trailing 52 reviewed weeks of 1-week range hits, per version
     band = [0.70, 0.90]
-    pooled_cov = round(pooled_hit / pooled_n, 4) if pooled_n else None
+
+    def calib_for(v):
+        weeks_sorted = sorted(wk for wk in sc["weeks"] if ver[wk] == v)[-52:]
+        per_asset, pooled_n, pooled_hit = {}, 0, 0
+        for wk in weeks_sorted:
+            for iid, arec in sc["weeks"][wk]["assets"].items():
+                e = arec.get("next_week")
+                if e and e.get("range_hit") is not None:
+                    pa = per_asset.setdefault(iid, [0, 0])
+                    pa[0] += 1 if e["range_hit"] else 0
+                    pa[1] += 1
+                    pooled_n += 1
+                    pooled_hit += 1 if e["range_hit"] else 0
+        pooled_cov = round(pooled_hit / pooled_n, 4) if pooled_n else None
+        return {
+            "trailing_weeks": len(weeks_sorted),
+            "per_asset": {i: {"n": n, "coverage": round(k / n, 4)}
+                          for i, (k, n) in sorted(per_asset.items())},
+            "pooled": {"n": pooled_n, "coverage": pooled_cov},
+            "flag": ("INSUFFICIENT-HISTORY" if pooled_n < 35 else
+                     ("OK" if band[0] <= pooled_cov <= band[1] else "COVERAGE-DRIFT")),
+        }
+
+    cal_by_version = {str(v): calib_for(v) for v in versions}
+    c = cal_by_version.get(str(cur)) or calib_for(cur)
     calib = {
         "updated_utc": sc["updated_utc"],
-        "note": "Measures the FROZEN formula's trailing coverage. Never re-fits.",
-        "trailing_weeks": len(weeks_sorted),
-        "per_asset": {i: {"n": n, "coverage": round(k / n, 4)}
-                      for i, (k, n) in sorted(per_asset.items())},
-        "pooled": {"n": pooled_n, "coverage": pooled_cov},
+        "note": "Measures the FROZEN formula's trailing coverage. Never re-fits. "
+                "Headline = parameters v%s only; versions are never pooled." % cur,
+        "params_version": cur,
+        "trailing_weeks": c["trailing_weeks"],
+        "per_asset": c["per_asset"],
+        "pooled": c["pooled"],
         "band": band,
-        "flag": ("INSUFFICIENT-HISTORY" if pooled_n < 35 else
-                 ("OK" if band[0] <= pooled_cov <= band[1] else "COVERAGE-DRIFT")),
+        "flag": c["flag"],
+        "by_version": cal_by_version,
     }
     if calib["flag"] == "COVERAGE-DRIFT":
         calib["action"] = ("Raise for review. The frozen formula's trailing "
                            "coverage left its band; re-fitting is NOT the fix "
                            "and needs his sign-off.")
-    json.dump(calib, open(os.path.join(DATA, "calibration.json"), "w"), indent=1)
     return sc, calib
 
 
