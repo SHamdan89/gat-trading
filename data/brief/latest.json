@@ -1,42 +1,38 @@
 {
- "date": "2026-10-16",
- "generated_utc": "2026-10-16T06:30:00Z",
+ "date": "2026-10-17",
+ "generated_utc": "2026-10-17T06:05:37Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "TSMC posts record Q3 profit (net income up 69% to roughly $24B) but U.S. shares fall 4.14% as gross margin slips to 66.4% from 67.7%",
-     "why": "Record profit failing to lift the stock on a margin dip shows the market is now pricing the quality of AI capex, not just its headline growth.",
+     "headline": "AI-infrastructure selloff deepens: CoreWeave fell 15% and Oracle nearly 9% in one session, with both companies' bonds sold to record-high yields",
+     "why": "The stress is in the debt financing the AI build-out, not just in equity valuations, which makes higher rates a direct threat to data-center spending.",
      "sources": [
       {
-       "title": "Top Tech News Today, October 15, 2026 — Tech Startups",
-       "url": "https://techstartups.com/2026/10/15/top-tech-news-today-october-15-2026-anthropic-cisco-gartner-google-openai-ramp-tsmc-more/"
-      },
-      {
-       "title": "Stock Market Today (Oct. 15, 2026): Dow edges higher as tech sell-off pivots — TheStreet",
-       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026"
+       "title": "Nasdaq futures fall 1% as AI rout deepens on debt concerns",
+       "url": "https://www.kitco.com/news/off-the-wire/2026-10-15/nasdaq-futures-fall-1-ai-rout-deepens-debt-concerns"
       }
      ]
     },
     {
-     "headline": "Gartner warns more than $3.5 trillion of AI infrastructure spending could face impairment by 2030, even while forecasting roughly $1 trillion of AI infra spend in 2026 alone",
-     "why": "It is one of the first widely-cited estimates of how much of the current AI buildout could end up as stranded capital — a useful counterweight to pure growth narratives.",
+     "headline": "TSMC posts a sixth straight record quarterly profit but guides cautiously on 2027 citing macro uncertainty",
+     "why": "When the foundry at the center of AI chip supply hedges its outlook despite record earnings, it signals the market's growth assumptions are running ahead of the supplier's own.",
      "sources": [
       {
-       "title": "Top Tech News Today, October 15, 2026 — Tech Startups",
-       "url": "https://techstartups.com/2026/10/15/top-tech-news-today-october-15-2026-anthropic-cisco-gartner-google-openai-ramp-tsmc-more/"
+       "title": "Nasdaq futures fall 1% as AI rout deepens on debt concerns",
+       "url": "https://www.kitco.com/news/off-the-wire/2026-10-15/nasdaq-futures-fall-1-ai-rout-deepens-debt-concerns"
       }
      ]
     },
     {
-     "headline": "A leading AI lab's reported Q3 revenue reached $16.8B, up about 45% versus the prior quarter, with an adjusted profit and a reported public-listing path as early as November",
-     "why": "A frontier AI company reporting profitability directly challenges the 'AI spending is all unprofitable' argument that has weighed on sector sentiment.",
+     "headline": "South Korea's Kospi closes down 7.5% at 5,554 as SK Hynix falls 11% and Samsung Electronics 9.5%",
+     "why": "Memory makers are the most leveraged public proxy for AI hardware demand, and both report Q3 results on October 28-29, so the volatility has a scheduled next test.",
      "sources": [
       {
-       "title": "Top Tech News Today, October 15, 2026 — Tech Startups",
-       "url": "https://techstartups.com/2026/10/15/top-tech-news-today-october-15-2026-anthropic-cisco-gartner-google-openai-ramp-tsmc-more/"
+       "title": "Bitcoin Price Sinks Toward $80,000 as Korea's Stock Rout Worsens",
+       "url": "https://cointelegraph.com/markets/bitcoin-dips-korea-kospi-lowest-close-since-april"
       }
      ]
     }
@@ -46,22 +42,32 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin holds near $83,760 (+~1% on the day, ~$1.68T market cap) with Ethereum near $2,539 and Solana near $111, as liquidity rebuilds roughly a year after the prior October flash crash",
-     "why": "The report frames the move as 'steady' rather than a breakout, and flags that order-book depth in altcoins is still thin — a caveat worth carrying forward since thin books mean gains can reverse quickly.",
+     "headline": "Bitcoin drops below $81,000 and ether falls 6.5% to $2,353 as roughly $951 million of crypto positions are liquidated, $876 million of them longs",
+     "why": "A leverage flush this large means the move was forced selling into a risk-off tape, and the open question is whether spot demand returns once the leverage is gone.",
      "sources": [
       {
-       "title": "Bitcoin steady at $83K as crypto markets rebound — Oct 12",
-       "url": "https://pickaxe.io/resources/news/bitcoin-steady-at-83k-as-crypto-markets-rebound-oct-12"
+       "title": "Bitcoin drops as Asian equities tumble",
+       "url": "https://theblock.co/news/markets/2026-10-15-bitcoin-drops-asian-equities-tumble-418623"
       }
      ]
     },
     {
-     "headline": "A major public corporate bitcoin holder signaled further purchases, extending a buying pattern that followed its September share buybacks",
-     "why": "Continued corporate treasury buying is one of the few bitcoin demand drivers right now that isn't tied to Fed rate-cut expectations.",
+     "headline": "US spot bitcoin ETFs record $150.5 million of outflows on October 14, reversing a $175.7 million inflow the day before",
+     "why": "Institutional demand is flipping day to day with the macro tape rather than providing a steady bid.",
      "sources": [
       {
-       "title": "Bitcoin steady at $83K as crypto markets rebound — Oct 12",
-       "url": "https://pickaxe.io/resources/news/bitcoin-steady-at-83k-as-crypto-markets-rebound-oct-12"
+       "title": "Bitcoin is back below $81,000 as Fed rate uncertainty weighs",
+       "url": "https://coindesk.com/markets/2026/10/15/bitcoin-is-back-below-usd81-000-as-fed-rate-uncertainty-weighs"
+      }
+     ]
+    },
+    {
+     "headline": "Strategy bought another 250 BTC at an average of about $86,194, lifting holdings to 848,250 BTC against an average cost near $75,444",
+     "why": "The largest corporate holder is still adding but at prices well above its average cost, so its position stays profitable only while bitcoin holds above the mid-$70,000s.",
+     "sources": [
+      {
+       "title": "Bitcoin holds $83,000 as dollar strength keeps markets on edge",
+       "url": "https://www.coindesk.com/markets/2026/10/12/bitcoin-holds-usd83-000-as-dollar-strength-keeps-markets-on-edge"
       }
      ]
     }
@@ -71,32 +77,42 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "September FOMC minutes (released Oct 7) show a unanimous 12-0 hike to 3.75%-4.00%, with most officials saying another hike 'would likely be appropriate by year end'",
-     "why": "Markets had been leaning toward cuts; a unanimous hawkish vote resets the baseline every other asset in this brief has been reacting to this week.",
+     "headline": "US September CPI runs hotter than forecast: 3.7% year over year (3.6% expected) with core at 2.6% (2.5% expected)",
+     "why": "Core inflation accelerating alongside an energy shock is what moves the Fed from holding to hiking.",
      "sources": [
       {
-       "title": "Headline: Sept FOMC minutes support hawkish stance — BabyPips",
-       "url": "https://www.babypips.com/news/headline-sept-fomc-minutes-support-hawkish-stance-2026-10-08"
+       "title": "Headline, core inflation reaccelerates, raising Fed hike odds as dollar gains fade",
+       "url": "https://www.babypips.com/news/headline-core-inflation-reaccelerates-raising-fed-hike-odds-as-dollar-gains-fade-2026-10-15"
       }
      ]
     },
     {
-     "headline": "A hot September CPI print and PPI (+6.3% y/y, the largest gain since 2022) pushed next-meeting hike odds to roughly a coin flip, before an afternoon pullback in Treasury yields (10-year -10.5bp to 5.085%) helped stocks pare their losses",
-     "why": "The intraday reversal shows how sensitive the tape now is to yield moves layered on top of the inflation data itself.",
+     "headline": "US producer prices jump 1.3% in September, the largest monthly gain since March 2022, and are up 6.3% from a year earlier",
+     "why": "Producer costs lead consumer prices, so this raises the odds that the CPI pressure spreads beyond energy in the coming months.",
      "sources": [
       {
-       "title": "Stock Market Today (Oct. 15, 2026): Dow edges higher as tech sell-off pivots — TheStreet",
-       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026"
+       "title": "US producer prices post largest increase in 4-1/2 years in September",
+       "url": "https://www.devdiscourse.com/article/international/3993054-us-producer-prices-post-largest-increase-in-4-12-years-in-september"
       }
      ]
     },
     {
-     "headline": "The next Fed rate decision is due October 27-28, with markets currently pricing roughly a 20-25% chance of a hike",
-     "why": "It is the single scheduled event most likely to confirm or unwind this week's hawkish repricing across rates, the dollar, and gold.",
+     "headline": "Fed hike odds reprice: about 37% for the October 27-28 meeting and about 91% for at least one hike by December",
+     "why": "The December meeting is now the live decision, and rate-sensitive assets are trading off that date rather than October.",
      "sources": [
       {
-       "title": "Headline: Sept FOMC minutes support hawkish stance — BabyPips",
-       "url": "https://www.babypips.com/news/headline-sept-fomc-minutes-support-hawkish-stance-2026-10-08"
+       "title": "U.S. stocks close drop as hot CPI revives Fed rate-hike bets",
+       "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
+      }
+     ]
+    },
+    {
+     "headline": "A tanker is sunk in the Strait of Hormuz, yet Brent slips about 2% to near $103.7 on the day",
+     "why": "Shipping attacks in the strait are keeping oil near $100 and feeding the inflation prints, while the muted price reaction suggests the risk is already largely priced.",
+     "sources": [
+      {
+       "title": "Bitcoin Price Sinks Toward $80,000 as Korea's Stock Rout Worsens",
+       "url": "https://cointelegraph.com/markets/bitcoin-dips-korea-kospi-lowest-close-since-april"
       }
      ]
     }
@@ -106,22 +122,22 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Gold slipped 0.83% to $4,181.50 on Oct 12 as WTI crude gained 1.59% to $93.31, both tracking the firmer-dollar, higher-yield backdrop from the hawkish Fed minutes",
-     "why": "Gold falling while yields and the dollar firm is the textbook rates-driven move rather than a safe-haven one.",
+     "headline": "Gold falls nearly 2% to $4,073.73 an ounce, its lowest since early October, and silver drops 4.1% to $56.99",
+     "why": "Gold is trading as a rates-and-dollar instrument right now: higher hike odds and a firmer dollar are outweighing the geopolitical bid.",
      "sources": [
       {
-       "title": "Market pulse — tapeboard, Oct 12 2026",
-       "url": "https://tapeboard.com/blog/market-pulse-2026-10-12"
+       "title": "Gold extends losses, down nearly 2% as inflation fears lift dollar and yields",
+       "url": "https://www.roic.ai/news/gold-extends-losses-down-nearly-2-as-inflation-fears-lift-dollar-and-yields-10-14-2026"
       }
      ]
     },
     {
-     "headline": "A gold-mine restart study filed Oct 14 pegs after-tax project value at $181M using a $3,000/oz gold price, rising to $439M at $4,000/oz",
-     "why": "Mine-economics studies like this show what price level the industry itself is underwriting new supply at, a useful real-world anchor for where miners expect gold to settle.",
+     "headline": "WTI settles at $95 a barrel and Brent at $106.06 on October 14, supported by Middle East supply concerns",
+     "why": "Oil near $100 is the input behind the hot inflation data, so it is the commodity that decides the rate path.",
      "sources": [
       {
-       "title": "Stock Market News for October 14, 2026 — StockTitan",
-       "url": "https://www.stocktitan.net/news/2026-10-14/"
+       "title": "U.S. stocks close drop as hot CPI revives Fed rate-hike bets",
+       "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
       }
      ]
     }
@@ -131,37 +147,41 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 opened down 0.49% on hot CPI Oct 15 before paring to +0.30% by early afternoon as yields eased; Nasdaq opened down 1.34% on the same data",
-     "why": "The swing from red to green within one session shows yields, not the inflation print itself, are what's setting the tape right now.",
+     "headline": "S&P 500 closes at 7,718.94 (-1.11%), its first 1%-plus daily drop in more than 50 trading days; Nasdaq Composite closes at 26,692.87 (-1.88%)",
+     "why": "A long run of calm ended on a single macro print, which resets how much downside the market had been pricing.",
      "sources": [
       {
-       "title": "Stock Market Today (Oct. 15, 2026): Dow edges higher as tech sell-off pivots — TheStreet",
-       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026"
+       "title": "U.S. stocks close drop as hot CPI revives Fed rate-hike bets",
+       "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
       }
      ]
     },
     {
-     "headline": "Asian chip-linked indices sold off sharply overnight into Oct 15 (one major Asian index -8%, with two large chipmakers down 9-11%; two other regional indices fell 3-5%) ahead of the U.S. open",
-     "why": "A move of that size overnight in the supply chain is a leading indicator for the U.S. semiconductor complex, which did sell off in sympathy that morning.",
+     "headline": "Nasdaq Composite trades near 26,410 on Thursday morning, a one-month low and more than 4% below last week's record, while the Dow holds near 51,785 on a rotation into defensives",
+     "why": "Leadership is narrowing: the damage is concentrated in AI and semiconductors while healthcare and staples rise. These are intraday levels, not closes.",
      "sources": [
       {
-       "title": "Stock Market Today (Oct. 15, 2026): Dow edges higher as tech sell-off pivots — TheStreet",
-       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-15-2026"
+       "title": "Nasdaq slides to near one-month low as AI rout deepens",
+       "url": "https://www.kitco.com/news/off-the-wire/2026-10-15/nasdaq-slides-near-one-month-low-ai-rout-deepens"
       }
      ]
     },
     {
-     "headline": "On Oct 12, the Dow rose 0.38% to 51,850.55 while the S&P 500 slipped 0.06% to 7,807.24 and the Nasdaq fell 0.44% to 27,245.90; the VIX rose 2.49% to 15.21",
-     "why": "Defensive sectors leading while tech lagged on Oct 12 was a de-risking rotation that preceded the sharper Oct 15 selloff by three sessions.",
+     "headline": "Semiconductor index (SOXX) falls 4% on October 14, extending its five-day decline to more than 10%; the 10-year Treasury yield touches 5.33% before settling near 5.19%",
+     "why": "The chip sector's losing streak and a 10-year yield above 5% are the two levels the equity rally has to contend with.",
      "sources": [
       {
-       "title": "Market pulse — tapeboard, Oct 12 2026",
-       "url": "https://tapeboard.com/blog/market-pulse-2026-10-12"
+       "title": "US Open: CPI reading weighs on American indices",
+       "url": "https://www.xtb.com/en/market-analysis/us-open-cpi-reading-weighs-on-american-indices-14-10-2026"
+      },
+      {
+       "title": "U.S. stocks close drop as hot CPI revives Fed rate-hike bets",
+       "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-10-17T00:56:04Z"
+ "published_utc": "2026-10-17T06:08:38Z"
 }
