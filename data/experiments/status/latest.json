@@ -1,44 +1,44 @@
 {
  "kind": "experiments-status",
- "date": "2026-10-16",
- "generated_utc": "2026-10-16T07:46:00Z",
+ "date": "2026-10-17",
+ "generated_utc": "2026-10-17T07:50:00Z",
  "projects": [
   {
    "id": "mgat",
    "name": "MGAT Alpha v3.1",
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
    "state": "needs-check",
-   "state_reason": "doctor read ATTENTION on 2026-10-15, not HEALTHY; daily snapshot current",
-   "last_checked": "2026-10-15T20:00:14Z",
+   "state_reason": "doctor read ATTENTION (cycles run vs expected failed), not HEALTHY",
+   "last_checked": "2026-10-16T20:00:09Z",
    "closed_total": 101,
    "wins_total": 40,
    "win_rate_pct": 40,
    "pnl_realized_usd": 341.6,
    "avg_trade_pct": 2.94,
-   "pnl_total_usd": 349.06,
-   "pnl_total_pct": 4.36,
-   "open_positions": 6,
+   "pnl_total_usd": 331.43,
+   "pnl_total_pct": 4.14,
+   "open_positions": 7,
    "trades_label": "101 / 200",
-   "hold_pct": -0.58
+   "hold_pct": -2.06
   },
   {
    "id": "hades",
    "name": "Hades Trading",
    "sub": "Sealed agent, own wallet, no human decisions in the loop",
    "state": "live",
-   "state_reason": "today's report present and complete; daily check shows no stub",
-   "last_checked": "2026-10-16T06:08:24Z",
+   "state_reason": "today's report present and complete; daily check shows no stub, no truncation",
+   "last_checked": "2026-10-17T06:08:26Z",
    "closed_total": 0,
    "wins_total": 0,
    "win_rate_pct": null,
    "pnl_realized_usd": null,
    "avg_trade_pct": null,
-   "pnl_total_usd": 24.26,
-   "pnl_total_pct": 18.66,
+   "pnl_total_usd": null,
+   "pnl_total_pct": null,
    "open_positions": 0,
    "trades_label": "16 tx · 12 trades +4 unverified",
-   "note": "in SOL: +6.54% vs the pinned 1.36228651 — all of it held as SOL, part in wrapped form, no token position. Most of the dollar move is SOL price drift on a held stake. The transaction count is measured from the daily check's balance log (four clean fee-sized steps since the last on-chain verification) and is not yet verified on-chain."
+   "note": "in SOL: +6.54% vs the pinned 1.36228651 — holding 1.451435 SOL and no token position. Dollar return ships blank today: the site price feed was stale and his report states no dollar total."
   }
  ],
- "published_utc": "2026-10-16T07:52:41Z"
+ "published_utc": "2026-10-17T07:50:11Z"
 }
