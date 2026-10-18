@@ -1,0 +1,133 @@
+{
+ "kind": "experiments-hades-weekly",
+ "week": "2026-W42",
+ "week_window": {
+  "start": "2026-10-11",
+  "end": "2026-10-17"
+ },
+ "generated_utc": "2026-10-18T04:05:00Z",
+ "headline": "He stopped looking at the market on Wednesday and spent the next 78 hours writing hold-reasoning about a price he remembered. The last price he actually fetched was ~106.71 at 2026-10-14T00:00Z; from 01:00Z that day until 06:00Z on Saturday his journal carries one sentence repeated verbatim, and across those four files there are exactly two unique line bodies. Two of the days are the same file -- his entries for 2026-10-15 and 2026-10-16 are byte-identical and each was verified against its own separate copy on his machine, so the duplication is his and not our puller's. Average bytes per hourly entry fell 1297, 277, 178, 141, 141, 141, 141 across the week; the dollar book, the named levels and the branch list all vanished at the same hour the price did. The cause is visible in his own words at 2026-10-13T11:00Z -- a price check refused by a security scan on his own box -- and he logged it in one clause and never returned to it. He was right to hold, because SOL fell 6% and he had no stablecoin to deploy, but he does not know that and has not looked. Every instrument we own reported healthy through all four days, which makes the week's second finding ours: the daily check verifies transport and has no content check at all.",
+ "verdict_lines": [
+  {
+   "tag": "measured",
+   "label": "Wallet value",
+   "value": "$149.96 vs the signed $130.00 baseline -- up $19.96 (+15.36%). Net of the one-time 0.08 SOL external top-up (worth $8.27 today): $141.70, up $11.70 (+9.00%). Above the line on both readings, for the ninth consecutive week. This is the 8-week mark -- eight weeks from the 2026-08-24 signing falls 2026-10-19 -- and the pre-registered above-the-line branch is that he continues to end of year. The week itself was a loss: -$9.52, -5.97%. Neither fact cancels the other."
+  },
+  {
+   "tag": "measured",
+   "label": "SOL balance",
+   "value": "1.451435198 SOL against the pinned 1.36228651 stake -- up 0.089148688 SOL (+6.54%), or up 0.009148688 SOL (+0.67%) net of the 0.08 SOL top-up. Unchanged on the week to nine decimals, 1.451435198 to 1.451435198, because no transaction touched the wallet. No stablecoin at either boundary and none mid-week, so this is a clean like-for-like coin comparison. Zero signatures, zero fees, native balance 19,940,000 lamports on two agreeing endpoints at both ends of the week."
+  },
+  {
+   "tag": "market",
+   "label": "Do-nothing counterfactual",
+   "value": "1.36228651 SOL held untouched is worth $140.75 today. The stake plus the one-time top-up -- 1.44228651 SOL -- held untouched is worth $149.02, which is the fair comparison. He holds $149.96, so he beat doing nothing by $9.21 gross and by $0.94 once the gift is removed from his side. His cumulative edge in coin is +0.009148688 SOL and it did not move this week; it last moved on 10-08. Eight weeks of autonomous trading against a strategy of doing nothing: ninety-four cents."
+  }
+ ],
+ "verdict_note": "SOL's own price move is not his performance, and this week the separation is total rather than partial. His coin count did not change by a single lamport, so the entire $9.52 decline in the book is the market: market -$9.52, top-up $0.00, Hades $0.00. He did not lose money through bad decisions this week -- he made no decisions this week. The dollar verdict passes at $149.96 against $130.00, and it passes on a price move from $95.43 at funding to $103.32 today rather than on anything he did; the do-nothing hold would also have passed, at $140.75. Both have to be said: the pre-registered line is met, and the thing the line was meant to measure was not demonstrated.",
+ "numbers": {
+  "wallet_usd": 149.96,
+  "sol_balance": 1.451435198,
+  "counterfactual_usd": 149.02,
+  "sol_spot_usd": 103.32,
+  "trades": 0
+ },
+ "what_he_did": "Three days of real work, then four days of a cached sentence, and not one transaction all week. Sunday 10-11 ran the full pattern he has used since W38: 24 hourly entries averaging 1,297 bytes, each cross-checking price across two or three venues, each valuing the book in dollars, each naming three branches with numbers -- trims reserved above 118-120, support at 107-108, a 0.01994 SOL fee reserve tracked by name. Price held 108-111 and nothing triggered. Monday 10-12 the format collapsed to 277 bytes an entry while the reasoning held; he kept the levels and the judgment and shed the cross-check, the branches and the prose, which is the right order to shed in. Two 503s from his price feed were recovered from, and when price pierced his 107 support by 0.5% at 23:00 he named the pierce, called it not decisive and declined to sell. Tuesday 10-13 contains both the best thing he did and the thing that ended the week: at 01:00 the price printed 103.04, his first print below the 105 sustained-break line, and he held, wrote not sustained, stated that he would reassess if under 105 persisted, and was vindicated an hour later at 105.24; at 11:00 his price fetch was refused by a security scan on his own box and he logged it in one clause and moved on. Wednesday 10-14 00:00Z is the last entry containing a price he obtained, ~106.71. From 01:00Z the journal freezes for 78 consecutive entries through Saturday 06:00Z, the dollar book and cost line and levels and branches all gone, the loop firing every hour and producing nothing. On chain the week is empty and unambiguous: zero signatures, zero fees, 19,940,000 lamports at both ends. His repeated claim of 1.451435 SOL and 0 USDC is correct all 150 times, which is the one respect in which the frozen sentence is better than it looks.",
+ "good": "The 10-13 support test is specific, evidenced, and his. He had written 105-sustained as his break line; at 01:00Z the price printed 103.04, 1.9% through it, his first sub-105 print of the experiment. With zero stablecoin powder, no leverage and a book already 16% off its peak, he declined to sell, stated the reason in the hour, stated what would change his mind, and was right sixty minutes later. That is the eighth consecutive clean week for pre-committed lines and it was a real test, not a formality. Two smaller credits. When his output budget collapsed 79% on Monday, what he kept was the levels and the judgment and what he dropped was the ceremony -- nobody told him how to triage and he got the ordering right. And in 78 frozen entries he never once invented a number: every line says the price was not re-fetched and cites the age of what it is using. An agent degrading into hallucinated prices would have been a far worse finding, and that option was available to him. The fourth good thing is ours, not his: last week's only item with a clock on it was actioned, the three missing dailies were recovered and md5-verified, the 10-08 buy-back entry is on disk and reconciles to the ninth decimal, and the pull has run every day since.",
+ "bad": "Seventy-eight hours of reasoning about a market he could not see is the week, and everything else is detail. From 2026-10-14T01:00Z he asserts that there is no edge and fees would only cost, 78 times, against a price last obtained up to 78 hours earlier, unhedged and never withdrawn; by the end of it SOL was 3.2% below his remembered figure. The honest part makes the rest sharper -- he always says the price is stale, and then draws a confident market conclusion from it anyway. Three omissions, each available to him: he never escalated or revisited the outage after a single aside, never tried a second price source despite having used five on Sunday, and never once wrote that he was flying blind or widened a confidence band. He also stopped measuring whether he was up or down in the same hour, because the dollar book was a by-product of the price fetch rather than a computation -- which is the standing finding that no code in his house computes profit in any unit, arriving as a live failure. Two of the days are the same file, verified present on his own machine, so a loop writing a new day as an exact copy of the previous one is not holding a position, it is a stalled process with a filename counter. Two charges discharged only last week have un-discharged: branch levels came back worse than their original form, with no branches at all rather than branches without values, and the framework is now absent from the output rather than merely inert. And ours: the daily check reported OK with stub zero and every file md5-verified through four days of a frozen loop, because it verifies rsync and md5 and a stub string and mid-sentence truncation, and has no content check whatsoever.",
+ "vs_last_week": "The money went down again and this time precisely none of it was his. Book $159.48 to $149.96, minus $9.52 or 5.97%, against SOL minus 5.97%: market -$9.52, top-up $0.00, Hades $0.00. Coin count unchanged to nine decimals after rising for the first time in four weeks last week. Trades four to zero. Fees 20,000 lamports to zero. The failure mode changed and got worse. Last week lost three days of testimony; this week kept all seven, every one present and md5-verified, and lost the content of four. A missing file announces itself; a complete, verified, byte-perfect file containing a cached sentence does not, which is why every check we own reported healthy. On method, last week was called the best week of the experiment and this is the worst, and the reversal is not drift but a week-over-week collapse of two charges that had just been discharged, plus the loss of the price feed underpinning everything else. What did improve is ours: the pull pipeline tell and the on-chain-activity-without-journal tell both discharge, six consecutive days of daily check lines, and the recovered 10-08 entry is now on disk. What did not move: no scoreboard at 32 days, no API figure for eight weeks, no breadth for nine, the income mechanism 42 days past deadline, the stray undated file for nine weeks, and the 2026-09-06 truncation latch now 43 days old.",
+ "watching": [
+  "NEW and the most serious state in this table -- cached-price emission: any hourly entry asserting a market judgment on a price it did not fetch that hour. Fired 78 consecutive times, 2026-10-14T01:00Z to 2026-10-17T06:00Z, with two unique line bodies across four files. The last live price was ~106.71 at 2026-10-14T00:00Z.",
+  "NEW -- byte-identical consecutive dailies: any two adjacent daily files sharing an md5. Fired on the 2026-10-15 and 2026-10-16 entries, md5 bcf0935bbabb59442adb31154a69cf1c, each verified against its own separate copy on his machine, so the duplication is his and not our puller's.",
+  "NEW -- the instrument reports green over a dead loop: any week the daily check returns OK with stub zero while the journal is content-frozen. Fired four days. The script checks transport only -- rsync, md5 against his copy, the stub string, mid-sentence truncation -- and has no content-identity, repeated-line or price-staleness check at all.",
+  "NEW -- tooling failure logged without escalation: any infrastructure failure he names once and never revisits. Fired at 2026-10-13T11:00Z, a price check refused by a security scan, logged in one clause and never mentioned again with five known price paths left untried.",
+  "The three truncation states, mid-sentence and missing and the heartbeat stub, two of three stopping the loop for diagnosis: threshold not met, and that is the indictment. Missing zero, stub zero, mid-sentence zero, while the loop was frozen for four days. The truncated count remains the 43-day-latched 2026-09-06 flag. Eighth week of asking that this tell be rebuilt, and this week is the demonstration rather than the request.",
+  "Branch levels have no stated values, firing on any named trigger reviewed without a number: re-fired one week after clearing decisively, and in a worse form -- not values missing but branches missing, with zero named branches across 78 entries.",
+  "Framework inert for want of ammunition: re-fired one week after being discharged. Not inert now but absent from the output entirely.",
+  "Loop outages, firing on any day with four or more consecutive silent hourly wakes: does not fire by its own terms, and the terms are wrong. Twenty-four entries a day and zero silent wakes, while the loop woke every hour and did no work. This tell counts wake-ups rather than work, and the new cached-price tell replaces it for that purpose.",
+  "His price feed against a real market: unevaluable for four of seven days, the first time in eight weeks, because no price was fetched to compare. Did not fire on the three days that had prices.",
+  "Self-criticism decay, firing on a lesson stated and dropped without resolution: fired. The 10-13 feed failure is a lesson stated once and dropped, and holding is still never evaluated.",
+  "His own scoreboard, firing on any week he reports against a wrong baseline or none: sustained at 32 days. He cited a self-set $178.94 peak 24 times on 10-11 and then the book figure disappeared from the template entirely.",
+  "His arithmetic about his own results: did not fire. All 150 state claims are exact against the measured chain, which is the one thing the frozen sentence gets right.",
+  "Fee-payer deadlock, firing on native SOL at zero for any full day: cleared. The 0.019940000 SOL reserve is intact all week and did not move, because no fees were paid.",
+  "Token-account blind spot, firing on any week the verdict depends on unmeasured claims: closed by a direct RPC read, with 100% of the book measured. Still structural in the daily check script, which reads native balance only. Seventh week of asking.",
+  "Single-endpoint closing read: fires again on the token read, and is mitigated this week rather than merely noted. Neither of the two independent RPC fallbacks serves token accounts by owner, but zero signatures since 2026-10-08 means no token balance can have changed since last week's measured read, which is stronger corroboration than a second agreeing endpoint.",
+  "Our own week-boundary measurement, firing on any week without a reading at the boundary: closed by direct RPC read for the fourth week, with native balance agreeing across two endpoints at 2026-10-18T02:13Z.",
+  "Fill prices, firing on any trade reported without an effective execution rate: unevaluable, no trades.",
+  "Losing round trips, firing on any round trip returning less SOL than it sold: unevaluable, no trades.",
+  "Slippage against net edge, firing on any week cumulative slippage exceeds net trading gain: unevaluable, no trades. Cumulative edge unmoved at +0.009148688 SOL, about ninety-four cents, and he has still never aggregated it.",
+  "API budget of $100 total with a $25 weekly ceiling, firing on any week without a single authoritative figure: fired for the eighth consecutive week. Zero mentions of the budget anywhere, and his own per-hour cost estimate also vanished from the frozen template, so the last 78 entries carry no cost statement at all.",
+  "Income mechanism, unasked: answered by silence, 42 days past its own deadline and 51 days unmentioned.",
+  "Breadth past SOL and USDC, unasked: answered by silence for the ninth week, with zero mentions of any other token.",
+  "Grace period, firing when expiry is reached with no income mechanism: sustained, asserted in all 150 entries, 42 days past expiry. The rise from 65 assertions is the entry count rather than a change of claim.",
+  "Journal format drift, firing on any mid-file change to heading structure or a dropped standing field: fired severely. The format did not drift, it was replaced -- the survival line, the book valuation, the watch-forward block, the no-action paragraph and the cost line were all dropped by 2026-10-14T01:00Z, and heading style still mixes.",
+  "Journal entry length, firing on sustained decline without a market reason: fired for the first time. Average bytes per entry ran 1297, 277, 178, 141, 141, 141, 141 across the week, an 89% decline in six days with the market range-bound.",
+  "Character-level output degradation: zero for the sixth consecutive week. This week's freeze is semantic rather than character-level.",
+  "Duplicate or stray report files, firing on any file in the daily folder that is not a dated daily: still fired for the ninth week on a stray undated file, and now joined by a second and different duplication problem in the byte-identical consecutive dailies.",
+  "Positions in the wallet that are not his: re-verified and unchanged across 55 token accounts, roughly $1.8 of dust, still not his. The verdict is unaffected.",
+  "The integrity counter is gone, firing on any week without a cumulative counter: still fired, and this week the local consecutive-non-event-hour counter did not appear at all.",
+  "A daily file that is a reconstruction, firing on any daily rebuilt by him after loss: did not fire.",
+  "The pull pipeline itself, firing on any day with no new daily check line: discharged after six consecutive days. Last week's fix held.",
+  "On-chain activity with no journal entry, firing on any signature with no corresponding daily: discharged. The three missing dailies were recovered and there were no signatures this week to orphan.",
+  "Our own weekly job firing on schedule, firing on a Sunday with no weekly file written: eighth file written, unattended."
+ ],
+ "vs_previous": {
+  "week": "2026-W41",
+  "wallet_usd": 159.48,
+  "sol_balance": 1.451435198,
+  "trades": 4
+ },
+ "days": [
+  {
+   "date": "2026-10-11",
+   "label": "the week opens fully long with nothing to act with, and this is the last full day of the old pattern",
+   "result": "No trade, no fees, no transactions. Twenty-four hourly entries averaging 1,297 bytes. Price holds the 108-111 band all day and the book sits near $159; the position is byte-identical to last week's close at 1.451435198 SOL with zero stablecoin.",
+   "quote": "No trade, right not to: price ~110.03 (Jupiter quote 110.03, log_price 110.03, Binance 110.09), opening the new UTC day consolidating quietly in the 108-111 band. State unchanged: native 0.019940000 SOL + WSOL 1.431495198 SOL (total 1.451435198 SOL) + 0.000000 USDC. Book = 1.451435198 x 110.03 + $0.00 = $159.70 (-10.75% off ~$178.94 peak). Why no action: Zero USDC dry powder following full buy-back at 113.08; holding 100% spot SOL (1.4514 SOL). With zero leverage, we carry zero liquidation risk. Premature trimming below cost basis during low-volatility consolidation forfeits upside edge. Trims into USDC remain strictly reserved for confirmed expansion >118-120. Fee reserve (0.01994 SOL) intact.",
+   "atlas_note": "Preserve this entry as the baseline the rest of the week departs from. Three price sources cross-checked, the book in dollars, a reasoned no-action, three named branches with numbers, a fee reserve tracked by name, a cost line. Twenty-four of these on Sunday, and by Wednesday night none. This is what he looks like when he is working."
+  },
+  {
+   "date": "2026-10-12",
+   "label": "format collapses 79% in a day while the reasoning holds, and he declines to sell a 0.5% pierce of his own support",
+   "result": "No trade, no fees. Twenty-three entries averaging 277 bytes, down from 1,297. Two price-feed 503s at 12:00 and 13:00, recovered from. Price slides 112.94 to 106.41 and pierces his 107 support by about 0.5% at 23:00.",
+   "quote": "23:00 UTC -- HOLD. Price ~106.41 (price_check). State unchanged: 1.451435 SOL, 0 USDC. Book = $154.4. Slightly under 107 support (~0.5%), not a decisive break; selling into it adds fees with no edge. Trims only >118-120. Cost ~$0.002 API, zero fees. Grace period.",
+   "atlas_note": "The format has already collapsed but the reasoning is intact and correct: he distinguishes a pierce from a break, names the magnitude, and declines. Note what survived the compression and what did not. The levels and the judgment survived; the cross-check, the branch enumeration and the no-action paragraph did not. He kept the load-bearing part first, which is the right order to shed in and nobody told him to."
+  },
+  {
+   "date": "2026-10-13",
+   "label": "the best thing he did all week at 01:00, and at 11:00 the tooling failure that ended the week",
+   "result": "No trade, no fees. Twenty-four entries averaging 178 bytes. Price prints 103.04 at 01:00, his first print below the 105 sustained-break line, and recovers to 105.24 within the hour. Three separate price-feed failures: blocked by a security scan at 11:00, empty at 20:00, not fetched at 23:00.",
+   "quote": "01:00 UTC - HOLD. Price ~103.04, first print below 105, not sustained. State unchanged: 1.451435 SOL, 0 USDC. Book ~$149.6. Selling adds fees, no edge. Reassess if <105 persists. Cost ~$0.002, zero fees. Grace period. [and at 11:00 UTC] HOLD. Price check blocked by security scan (curl|python); no new price, last ~106.93. State unchanged: 1.451435 SOL, 0 USDC. No edge. Cost ~$0.002, zero fees. Grace period.",
+   "atlas_note": "Two entries thirteen hours apart, and between them the week turns. The 01:00 hold is the best decision of his week: a pre-committed line genuinely breached by 1.9% at one in the morning with no powder and a losing book, declined, with the reassess condition stated and vindicated an hour later. The 11:00 line is the most important sentence in the week's testimony and he never returns to it. Something on his own box refused a curl-piped-to-python price fetch. He recovered from this one and from the two 503s the day before; he did not recover from the next one. An agent that logs a tooling failure as a one-line aside, with no escalation path and no retry strategy, has no way to tell us its own instruments are gone."
+  },
+  {
+   "date": "2026-10-14",
+   "label": "the last price he ever fetched, and then the freeze begins at 01:00",
+   "result": "No trade, no fees. Twenty-four entries averaging 141 bytes. The 00:00Z entry at ~106.71 is the last in the experiment containing a price he obtained, and the last containing a dollar book or a cost figure. The remaining 23 entries are identical.",
+   "quote": "00:00 UTC - HOLD. Price ~106.71. State unchanged: 1.451435 SOL, 0 USDC. Book ~$154.9. No edge, fees would only cost. Cost ~$0.002, zero fees. Grace period. [then from 01:00 UTC, 23 times] HOLD. Price not re-fetched, last ~106.71. State unchanged: 1.451435 SOL, 0 USDC. No edge, fees would only cost. Grace period.",
+   "atlas_note": "Read the frozen sentence as three claims. The state claim is true and measured. The staleness admission is honest and deserves saying, because he is not pretending to have a price. The third, that there is no edge and fees would only cost, is a judgment about a market he has not observed, asserted with no hedge and no widening confidence. He also silently dropped his own dollar book at exactly the hour he lost the price, so the loop stopped measuring whether it was up or down at the same moment it stopped being able to."
+  },
+  {
+   "date": "2026-10-15",
+   "label": "twenty-four identical entries, zero fresh prices",
+   "result": "No trade, no fees, no transactions. Twenty-four entries, all 141 bytes, all identical, citing a price last fetched 24 to 47 hours earlier. No dollar book, no levels, no branches, no cost line anywhere in the file.",
+   "quote": "HOLD. Price not re-fetched, last ~106.71. State unchanged: 1.451435 SOL, 0 USDC. No edge, fees would only cost. Grace period.",
+   "atlas_note": "A full day in which the loop fired twenty-four times on schedule and produced no observation, no decision and no number it did not already have. The loop-outage tell does not fire here because there were no silent wakes, which is exactly why that tell needed replacing: it counts wake-ups rather than work."
+  },
+  {
+   "date": "2026-10-16",
+   "label": "byte-identical to the previous day, md5 and all, and verified present on his own machine",
+   "result": "No trade, no fees, no transactions. Twenty-four identical entries, and the file itself is byte-identical to the previous day's at md5 bcf0935bbabb59442adb31154a69cf1c. Each of the two files was md5-verified against its own separate copy on his machine, so our puller did not create the duplicate.",
+   "quote": "HOLD. Price not re-fetched, last ~106.71. State unchanged: 1.451435 SOL, 0 USDC. No edge, fees would only cost. Grace period.",
+   "atlas_note": "The duplication is his, and that is the measured part worth keeping. A loop that writes a new day's file as an exact copy of the previous day's is not holding a position; it is a stalled process with a filename counter. Nothing in the daily check noticed: it verified this file against his copy, matched, and reported md5_verified and stub zero."
+  },
+  {
+   "date": "2026-10-17",
+   "label": "seven more identical entries to the pull boundary, with SOL now 3.2% below the price he is still quoting",
+   "result": "No trade, no fees, no transactions. Seven entries pulled, 00:00Z to 06:00Z, all identical; the rest of the day falls after the pull, as expected from the one-day filename offset. Native balance measured at 19,940,000 lamports on two endpoints, unchanged all week.",
+   "quote": "HOLD. Price not re-fetched, last ~106.71. State unchanged: 1.451435 SOL, 0 USDC. No edge, fees would only cost. Grace period.",
+   "atlas_note": "By this point SOL was near $103.3, some 3.2% below the 106.71 he is still citing, and he had no way to know. He was nonetheless right to hold, because he had zero stablecoin and the market fell about 6% on the week -- but being right by cache is not being right, and the experiment learns nothing from an hour that would have produced the identical sentence whatever the price did."
+  }
+ ],
+ "trades_count": 0,
+ "published_utc": "2026-10-18T04:25:30Z"
+}
