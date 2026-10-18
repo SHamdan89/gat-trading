@@ -1,38 +1,48 @@
 {
- "date": "2026-10-17",
- "generated_utc": "2026-10-17T06:05:37Z",
+ "date": "2026-10-18",
+ "generated_utc": "2026-10-18T06:08:26Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "AI-infrastructure selloff deepens: CoreWeave fell 15% and Oracle nearly 9% in one session, with both companies' bonds sold to record-high yields",
-     "why": "The stress is in the debt financing the AI build-out, not just in equity valuations, which makes higher rates a direct threat to data-center spending.",
+     "headline": "Microsoft unveils Maia 300 custom AI chip, with large-scale deployment from 2027",
+     "why": "Another hyperscaler moving inference onto its own silicon (company-claimed ~40% more output per unit of power than leading GPU systems) caps the share of its AI spend that goes to Nvidia over time.",
      "sources": [
       {
-       "title": "Nasdaq futures fall 1% as AI rout deepens on debt concerns",
-       "url": "https://www.kitco.com/news/off-the-wire/2026-10-15/nasdaq-futures-fall-1-ai-rout-deepens-debt-concerns"
+       "title": "GeekWire: Microsoft makes 'biggest bet yet' on its own silicon",
+       "url": "https://www.geekwire.com/2026/microsoft-makes-biggest-bet-yet-on-its-own-silicon-unveils-new-ai-chip-to-reduce-reliance-on-nvidia/"
       }
      ]
     },
     {
-     "headline": "TSMC posts a sixth straight record quarterly profit but guides cautiously on 2027 citing macro uncertainty",
-     "why": "When the foundry at the center of AI chip supply hedges its outlook despite record earnings, it signals the market's growth assumptions are running ahead of the supplier's own.",
+     "headline": "ASML posts record Q3 revenue of EUR 11.7B and guides Q4 to EUR 14.2-15.2B",
+     "why": "The chip-equipment maker's guide implies customers are still expanding capacity sharply, which is the demand signal the AI buildout trade depends on.",
      "sources": [
       {
-       "title": "Nasdaq futures fall 1% as AI rout deepens on debt concerns",
-       "url": "https://www.kitco.com/news/off-the-wire/2026-10-15/nasdaq-futures-fall-1-ai-rout-deepens-debt-concerns"
+       "title": "Tech Startups: Top Tech News Today, October 14, 2026",
+       "url": "https://techstartups.com/2026/10/14/top-tech-news-today-october-14-2026-apple-asml-google-openai-microsoft-nvidia-more/"
       }
      ]
     },
     {
-     "headline": "South Korea's Kospi closes down 7.5% at 5,554 as SK Hynix falls 11% and Samsung Electronics 9.5%",
-     "why": "Memory makers are the most leveraged public proxy for AI hardware demand, and both report Q3 results on October 28-29, so the volatility has a scheduled next test.",
+     "headline": "CoreWeave falls about 25% on the week as AI financing worries spread to credit",
+     "why": "Corporate spreads widened and the company's high-yield debt traded near 14-15%, showing the AI buildout's funding cost is now a market risk rather than a footnote.",
      "sources": [
       {
-       "title": "Bitcoin Price Sinks Toward $80,000 as Korea's Stock Rout Worsens",
-       "url": "https://cointelegraph.com/markets/bitcoin-dips-korea-kospi-lowest-close-since-april"
+       "title": "eMorningCoffee: Week ended Oct 16, 2026",
+       "url": "https://www.emorningcoffee.com/post/week-ended-oct-16-2026-tech-shares-hammered-treasuries-rally"
+      }
+     ]
+    },
+    {
+     "headline": "Japan to invest up to $21B in two GlobalFoundries New York fabs; US stake rises to about 7%",
+     "why": "Allied state-backed money is now funding US chip capacity directly, shifting where leading and mature-node supply gets built.",
+     "sources": [
+      {
+       "title": "Tech Startups: Top Tech News Today, October 14, 2026",
+       "url": "https://techstartups.com/2026/10/14/top-tech-news-today-october-14-2026-apple-asml-google-openai-microsoft-nvidia-more/"
       }
      ]
     }
@@ -42,32 +52,22 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin drops below $81,000 and ether falls 6.5% to $2,353 as roughly $951 million of crypto positions are liquidated, $876 million of them longs",
-     "why": "A leverage flush this large means the move was forced selling into a risk-off tape, and the open question is whether spot demand returns once the leverage is gone.",
+     "headline": "Bitcoin pinned near $82K with US spot ETF flows at roughly zero",
+     "why": "Without fund buying, price has failed repeatedly at $83-84K, so the range holds until flows return or something else forces a break.",
      "sources": [
       {
-       "title": "Bitcoin drops as Asian equities tumble",
-       "url": "https://theblock.co/news/markets/2026-10-15-bitcoin-drops-asian-equities-tumble-418623"
+       "title": "CryptoTicker: Bitcoin at $81,963, ETF inflows close to zero",
+       "url": "https://cryptoticker.io/en/bitcoin-price-etf-inflows-standstill-october-16-2026/"
       }
      ]
     },
     {
-     "headline": "US spot bitcoin ETFs record $150.5 million of outflows on October 14, reversing a $175.7 million inflow the day before",
-     "why": "Institutional demand is flipping day to day with the macro tape rather than providing a steady bid.",
+     "headline": "Bitcoin and Ether ETFs lose about $1.15B combined over Oct 7-12",
+     "why": "Institutional demand turned net negative for the month ahead of hot inflation data, removing the main marginal buyer.",
      "sources": [
       {
-       "title": "Bitcoin is back below $81,000 as Fed rate uncertainty weighs",
-       "url": "https://coindesk.com/markets/2026/10/15/bitcoin-is-back-below-usd81-000-as-fed-rate-uncertainty-weighs"
-      }
-     ]
-    },
-    {
-     "headline": "Strategy bought another 250 BTC at an average of about $86,194, lifting holdings to 848,250 BTC against an average cost near $75,444",
-     "why": "The largest corporate holder is still adding but at prices well above its average cost, so its position stays profitable only while bitcoin holds above the mid-$70,000s.",
-     "sources": [
-      {
-       "title": "Bitcoin holds $83,000 as dollar strength keeps markets on edge",
-       "url": "https://www.coindesk.com/markets/2026/10/12/bitcoin-holds-usd83-000-as-dollar-strength-keeps-markets-on-edge"
+       "title": "Coincall: October 14, 2026 market update",
+       "url": "https://support.coincall.com/hc/en-us/articles/63227747720601-October-14-2026-Bitcoin-Holds-Near-84K-as-Crypto-ETF-Outflows-Top-1-1B-and-U-S-Inflation-Data-Looms"
       }
      ]
     }
@@ -77,42 +77,36 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "US September CPI runs hotter than forecast: 3.7% year over year (3.6% expected) with core at 2.6% (2.5% expected)",
-     "why": "Core inflation accelerating alongside an energy shock is what moves the Fed from holding to hiking.",
+     "headline": "September CPI hit 3.7% and PPI 6.3% year over year, both above expectations",
+     "why": "Hotter inflation keeps the Fed biased toward hiking, with futures near 89% for a December increase.",
      "sources": [
       {
-       "title": "Headline, core inflation reaccelerates, raising Fed hike odds as dollar gains fade",
-       "url": "https://www.babypips.com/news/headline-core-inflation-reaccelerates-raising-fed-hike-odds-as-dollar-gains-fade-2026-10-15"
+       "title": "eMorningCoffee: Week ended Oct 16, 2026",
+       "url": "https://www.emorningcoffee.com/post/week-ended-oct-16-2026-tech-shares-hammered-treasuries-rally"
+      },
+      {
+       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
       }
      ]
     },
     {
-     "headline": "US producer prices jump 1.3% in September, the largest monthly gain since March 2022, and are up 6.3% from a year earlier",
-     "why": "Producer costs lead consumer prices, so this raises the odds that the CPI pressure spreads beyond energy in the coming months.",
+     "headline": "10-year Treasury yield spiked to 5.33% after CPI, then settled near 5.09%",
+     "why": "A 10-year above 5% raises the discount rate on every long-duration asset, which is why tech took the brunt of the week's selling.",
      "sources": [
       {
-       "title": "US producer prices post largest increase in 4-1/2 years in September",
-       "url": "https://www.devdiscourse.com/article/international/3993054-us-producer-prices-post-largest-increase-in-4-12-years-in-september"
+       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
       }
      ]
     },
     {
-     "headline": "Fed hike odds reprice: about 37% for the October 27-28 meeting and about 91% for at least one hike by December",
-     "why": "The December meeting is now the live decision, and rate-sensitive assets are trading off that date rather than October.",
+     "headline": "Missile aimed at Saudi Red Sea export port Yanbu intercepted as Hormuz shipping stays disrupted",
+     "why": "Yanbu is the route that bypasses Hormuz, so threats there remove the main workaround for Gulf crude and are driving the oil move.",
      "sources": [
       {
-       "title": "U.S. stocks close drop as hot CPI revives Fed rate-hike bets",
-       "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
-      }
-     ]
-    },
-    {
-     "headline": "A tanker is sunk in the Strait of Hormuz, yet Brent slips about 2% to near $103.7 on the day",
-     "why": "Shipping attacks in the strait are keeping oil near $100 and feeding the inflation prints, while the muted price reaction suggests the risk is already largely priced.",
-     "sources": [
-      {
-       "title": "Bitcoin Price Sinks Toward $80,000 as Korea's Stock Rout Worsens",
-       "url": "https://cointelegraph.com/markets/bitcoin-dips-korea-kospi-lowest-close-since-april"
+       "title": "EnergyNow: Oil surges as Middle East supply fears push Brent near $110",
+       "url": "https://energynow.com/2026/10/oil-surges-as-middle-east-supply-fears-push-brent-near-110-and-wti-above-100-both-post-strong-weekly-gains/"
       }
      ]
     }
@@ -122,22 +116,36 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Gold falls nearly 2% to $4,073.73 an ounce, its lowest since early October, and silver drops 4.1% to $56.99",
-     "why": "Gold is trading as a rates-and-dollar instrument right now: higher hike odds and a firmer dollar are outweighing the geopolitical bid.",
+     "headline": "Brent settles at $109.86 (touched $110, highest since May); WTI at $101.41, up 10.4% on the week",
+     "why": "Oil above $100 feeds straight into the inflation prints and rate-hike odds above, even with 20M+ barrels of emergency IEA releases and a US reserve exchange offsetting part of it.",
      "sources": [
       {
-       "title": "Gold extends losses, down nearly 2% as inflation fears lift dollar and yields",
-       "url": "https://www.roic.ai/news/gold-extends-losses-down-nearly-2-as-inflation-fears-lift-dollar-and-yields-10-14-2026"
+       "title": "EnergyNow: Oil surges as Middle East supply fears push Brent near $110",
+       "url": "https://energynow.com/2026/10/oil-surges-as-middle-east-supply-fears-push-brent-near-110-and-wti-above-100-both-post-strong-weekly-gains/"
       }
      ]
     },
     {
-     "headline": "WTI settles at $95 a barrel and Brent at $106.06 on October 14, supported by Middle East supply concerns",
-     "why": "Oil near $100 is the input behind the hot inflation data, so it is the commodity that decides the rate path.",
+     "headline": "US crude inventories fall 8.6M barrels to 415.6M, far more than expected",
+     "why": "A large draw while Russian refining is being hit by strikes tightens the near-term balance and supports the price floor.",
      "sources": [
       {
-       "title": "U.S. stocks close drop as hot CPI revives Fed rate-hike bets",
-       "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
+       "title": "EnergyNow: Oil surges as Middle East supply fears push Brent near $110",
+       "url": "https://energynow.com/2026/10/oil-surges-as-middle-east-supply-fears-push-brent-near-110-and-wti-above-100-both-post-strong-weekly-gains/"
+      }
+     ]
+    },
+    {
+     "headline": "Gold holds near $4,190 even as the dollar sits near a one-and-a-half-year high",
+     "why": "Gold absorbing a strong dollar and higher yield expectations means safe-haven demand is offsetting the usual headwinds.",
+     "sources": [
+      {
+       "title": "Depor: Gold price today, October 12, 2026",
+       "url": "https://depor.com/en/us-live/gold-price-today-october-12-2026-spot-gold-falls-as-dollar-strength-weighs-on-bullion-nnda-nnrt-noticia/"
+      },
+      {
+       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
       }
      ]
     }
@@ -147,41 +155,41 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 closes at 7,718.94 (-1.11%), its first 1%-plus daily drop in more than 50 trading days; Nasdaq Composite closes at 26,692.87 (-1.88%)",
-     "why": "A long run of calm ended on a single macro print, which resets how much downside the market had been pricing.",
+     "headline": "Nasdaq Composite closes at 26,140, down 4.5% on the week and ending a four-week winning streak",
+     "why": "The index gave back the gains from its run to a record close near 27,244 earlier in the month, so that level is now overhead resistance.",
      "sources": [
       {
-       "title": "U.S. stocks close drop as hot CPI revives Fed rate-hike bets",
-       "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
+       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
       }
      ]
     },
     {
-     "headline": "Nasdaq Composite trades near 26,410 on Thursday morning, a one-month low and more than 4% below last week's record, while the Dow holds near 51,785 on a rotation into defensives",
-     "why": "Leadership is narrowing: the damage is concentrated in AI and semiconductors while healthcare and staples rise. These are intraday levels, not closes.",
+     "headline": "S&P 500 ends near 7,659, down about 2% on the week; Dow up 0.7% for a second weekly gain",
+     "why": "Leadership rotated away from AI-linked tech, with the semiconductor ETF down about 8% through Thursday and a further 4% Friday, while the less tech-heavy Dow held up.",
      "sources": [
       {
-       "title": "Nasdaq slides to near one-month low as AI rout deepens",
-       "url": "https://www.kitco.com/news/off-the-wire/2026-10-15/nasdaq-slides-near-one-month-low-ai-rout-deepens"
+       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
       }
      ]
     },
     {
-     "headline": "Semiconductor index (SOXX) falls 4% on October 14, extending its five-day decline to more than 10%; the 10-year Treasury yield touches 5.33% before settling near 5.19%",
-     "why": "The chip sector's losing streak and a 10-year yield above 5% are the two levels the equity rally has to contend with.",
+     "headline": "Bitcoin range: support at $80K, resistance in the $83-84K area",
+     "why": "Price dipped under $81K on Oct 13 and recovered, so $80K is the level whose loss would mark a break of the October range.",
      "sources": [
       {
-       "title": "US Open: CPI reading weighs on American indices",
-       "url": "https://www.xtb.com/en/market-analysis/us-open-cpi-reading-weighs-on-american-indices-14-10-2026"
+       "title": "Coincall: October 14, 2026 market update",
+       "url": "https://support.coincall.com/hc/en-us/articles/63227747720601-October-14-2026-Bitcoin-Holds-Near-84K-as-Crypto-ETF-Outflows-Top-1-1B-and-U-S-Inflation-Data-Looms"
       },
       {
-       "title": "U.S. stocks close drop as hot CPI revives Fed rate-hike bets",
-       "url": "https://www.thestar.com.my/news/world/2026/10/15/us-stocks-close-drop-as-hot-cpi-revives-fed-rate-hike-bets"
+       "title": "CryptoTicker: Bitcoin at $81,963, ETF inflows close to zero",
+       "url": "https://cryptoticker.io/en/bitcoin-price-etf-inflows-standstill-october-16-2026/"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-10-17T06:08:38Z"
+ "published_utc": "2026-10-18T06:17:12Z"
 }
