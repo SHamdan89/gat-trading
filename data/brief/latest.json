@@ -1,48 +1,42 @@
 {
- "date": "2026-10-18",
- "generated_utc": "2026-10-18T06:08:26Z",
+ "date": "2026-10-19",
+ "generated_utc": "2026-10-19T06:25:00Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Microsoft unveils Maia 300 custom AI chip, with large-scale deployment from 2027",
-     "why": "Another hyperscaler moving inference onto its own silicon (company-claimed ~40% more output per unit of power than leading GPU systems) caps the share of its AI spend that goes to Nvidia over time.",
+     "headline": "Semiconductor index falls eight straight sessions, about 24% below its June peak",
+     "why": "Roughly $1 trillion of value left chip stocks while the big AI spenders fell only about 1%, so the market is punishing the suppliers whose revenue depends on someone else's financing.",
      "sources": [
       {
-       "title": "GeekWire: Microsoft makes 'biggest bet yet' on its own silicon",
-       "url": "https://www.geekwire.com/2026/microsoft-makes-biggest-bet-yet-on-its-own-silicon-unveils-new-ai-chip-to-reduce-reliance-on-nvidia/"
+       "title": "Week #42 Market Update, Oct 12-16, 2026",
+       "url": "https://atranicapital.substack.com/p/week-42-market-update-for-october-e67"
       }
      ]
     },
     {
-     "headline": "ASML posts record Q3 revenue of EUR 11.7B and guides Q4 to EUR 14.2-15.2B",
-     "why": "The chip-equipment maker's guide implies customers are still expanding capacity sharply, which is the demand signal the AI buildout trade depends on.",
+     "headline": "CoreWeave 2032 bonds drop to about 78 cents; credit swaps imply over 60% five-year default odds",
+     "why": "It is the first visible credit stress in the AI data-center build-out, and one analyst estimate has about $10B of operating cash flow set against roughly $45B of capex over the next year.",
      "sources": [
       {
-       "title": "Tech Startups: Top Tech News Today, October 14, 2026",
-       "url": "https://techstartups.com/2026/10/14/top-tech-news-today-october-14-2026-apple-asml-google-openai-microsoft-nvidia-more/"
+       "title": "Week #42 Market Update, Oct 12-16, 2026",
+       "url": "https://atranicapital.substack.com/p/week-42-market-update-for-october-e67"
+      },
+      {
+       "title": "404K SEMI-AI, October 16, 2026",
+       "url": "https://404kresearch.substack.com/p/404k-semi-ai-october-16-2026-ai-industry"
       }
      ]
     },
     {
-     "headline": "CoreWeave falls about 25% on the week as AI financing worries spread to credit",
-     "why": "Corporate spreads widened and the company's high-yield debt traded near 14-15%, showing the AI buildout's funding cost is now a market risk rather than a footnote.",
+     "headline": "TSMC Q3 revenue $46.72B (+16.2% quarter on quarter, 66.4% gross margin); ASML lifts full-year sales guidance to EUR 44-45B",
+     "why": "Order and revenue data from the two key chip suppliers remain strong, so the sell-off is about how AI spending gets funded, not about demand disappearing.",
      "sources": [
       {
-       "title": "eMorningCoffee: Week ended Oct 16, 2026",
-       "url": "https://www.emorningcoffee.com/post/week-ended-oct-16-2026-tech-shares-hammered-treasuries-rally"
-      }
-     ]
-    },
-    {
-     "headline": "Japan to invest up to $21B in two GlobalFoundries New York fabs; US stake rises to about 7%",
-     "why": "Allied state-backed money is now funding US chip capacity directly, shifting where leading and mature-node supply gets built.",
-     "sources": [
-      {
-       "title": "Tech Startups: Top Tech News Today, October 14, 2026",
-       "url": "https://techstartups.com/2026/10/14/top-tech-news-today-october-14-2026-apple-asml-google-openai-microsoft-nvidia-more/"
+       "title": "404K SEMI-AI, October 16, 2026",
+       "url": "https://404kresearch.substack.com/p/404k-semi-ai-october-16-2026-ai-industry"
       }
      ]
     }
@@ -52,22 +46,32 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin pinned near $82K with US spot ETF flows at roughly zero",
-     "why": "Without fund buying, price has failed repeatedly at $83-84K, so the range holds until flows return or something else forces a break.",
+     "headline": "US spot bitcoin and ether ETFs shed about $548M in the week to Oct 16; ether funds log a third straight weekly outflow",
+     "why": "Ether funds have now lost roughly $1B over three weeks, a sign institutional demand is fading even as prices hold up.",
      "sources": [
       {
-       "title": "CryptoTicker: Bitcoin at $81,963, ETF inflows close to zero",
-       "url": "https://cryptoticker.io/en/bitcoin-price-etf-inflows-standstill-october-16-2026/"
+       "title": "Ethereum ETFs lose more money than Bitcoin ETFs last week",
+       "url": "https://crypto.news/ethereum-etf-outflows-bitcoin-etfs-october-2026"
       }
      ]
     },
     {
-     "headline": "Bitcoin and Ether ETFs lose about $1.15B combined over Oct 7-12",
-     "why": "Institutional demand turned net negative for the month ahead of hot inflation data, removing the main marginal buyer.",
+     "headline": "Bitcoin holds near $82K after hot CPI and PPI; ether near $2,440; bitcoin is still about 26% lower year on year",
+     "why": "Crypto did not sell off on an inflation surprise that hit stocks and bonds, but it remains well below its 2025 highs, so resilience is not yet a trend.",
      "sources": [
       {
-       "title": "Coincall: October 14, 2026 market update",
-       "url": "https://support.coincall.com/hc/en-us/articles/63227747720601-October-14-2026-Bitcoin-Holds-Near-84K-as-Crypto-ETF-Outflows-Top-1-1B-and-U-S-Inflation-Data-Looms"
+       "title": "Bitcoin and ethereum prices today, Friday, October 16, 2026",
+       "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-october-16-2026-bitcoin-ethereum-prices-firm-despite-two-strong-inflation-reports-113928147.html"
+      }
+     ]
+    },
+    {
+     "headline": "About $106M of leveraged ether longs liquidated within an hour of the CPI release",
+     "why": "Leverage is concentrated on the long side of ether, so a surprise data print can force selling that has nothing to do with spot demand.",
+     "sources": [
+      {
+       "title": "Ethereum ETFs lose more money than Bitcoin ETFs last week",
+       "url": "https://crypto.news/ethereum-etf-outflows-bitcoin-etfs-october-2026"
       }
      ]
     }
@@ -77,36 +81,50 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "September CPI hit 3.7% and PPI 6.3% year over year, both above expectations",
-     "why": "Hotter inflation keeps the Fed biased toward hiking, with futures near 89% for a December increase.",
+     "headline": "September CPI hits 3.7% year on year (3.6% expected), +0.6% on the month; PPI up 1.3% on the month",
+     "why": "Gasoline drove more than half the monthly CPI rise, and a producer-price jump this large means energy costs are feeding into the wider economy.",
      "sources": [
       {
-       "title": "eMorningCoffee: Week ended Oct 16, 2026",
-       "url": "https://www.emorningcoffee.com/post/week-ended-oct-16-2026-tech-shares-hammered-treasuries-rally"
+       "title": "The week in commodities, Oct 17, 2026",
+       "url": "https://sharetrader.com.au/news/2026-10-17-emergency-oil-reserves-fail-to-quiet-gulf-supply-fears-the-week-in-commodities"
       },
       {
-       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
-       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
+       "title": "Week #42 Market Update, Oct 12-16, 2026",
+       "url": "https://atranicapital.substack.com/p/week-42-market-update-for-october-e67"
       }
      ]
     },
     {
-     "headline": "10-year Treasury yield spiked to 5.33% after CPI, then settled near 5.09%",
-     "why": "A 10-year above 5% raises the discount rate on every long-duration asset, which is why tech took the brunt of the week's selling.",
+     "headline": "Fed funds at 3.75-4.00% after the Sept 16 hike; markets put only 10-16% odds on an Oct 27-28 hike but about 89% on December",
+     "why": "The next move is priced as up, so any soft data or an oil drop is what would change the path, not the October meeting itself.",
      "sources": [
       {
-       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
-       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
+       "title": "Gold Price Week Ahead: Bull and Bear Case From $4,166",
+       "url": "https://financefeeds.com/gold-price-4166-week-ahead-oil-110-fed-october-meeting-bull-4330-bear-3970/"
       }
      ]
     },
     {
-     "headline": "Missile aimed at Saudi Red Sea export port Yanbu intercepted as Hormuz shipping stays disrupted",
-     "why": "Yanbu is the route that bypasses Hormuz, so threats there remove the main workaround for Gulf crude and are driving the oil move.",
+     "headline": "Renewed attacks near the Strait of Hormuz push Brent to about $110; the IEA speeds up emergency reserve releases",
+     "why": "Even a larger release, including over 20M barrels of diesel, failed to calm prices, which tells you the supply fear is about flow through the Gulf, not stock levels.",
      "sources": [
       {
-       "title": "EnergyNow: Oil surges as Middle East supply fears push Brent near $110",
-       "url": "https://energynow.com/2026/10/oil-surges-as-middle-east-supply-fears-push-brent-near-110-and-wti-above-100-both-post-strong-weekly-gains/"
+       "title": "The week in commodities, Oct 17, 2026",
+       "url": "https://sharetrader.com.au/news/2026-10-17-emergency-oil-reserves-fail-to-quiet-gulf-supply-fears-the-week-in-commodities"
+      },
+      {
+       "title": "Week #42 Market Update, Oct 12-16, 2026",
+       "url": "https://atranicapital.substack.com/p/week-42-market-update-for-october-e67"
+      }
+     ]
+    },
+    {
+     "headline": "IMF flags rising government bond yields as the main financial-stability threat; French spread over Germany widens to about 139 bp",
+     "why": "Global yields near 4.5% are at an 18-year high, and wider spreads in France show markets starting to charge for fiscal risk.",
+     "sources": [
+      {
+       "title": "Week #42 Market Update, Oct 12-16, 2026",
+       "url": "https://atranicapital.substack.com/p/week-42-market-update-for-october-e67"
       }
      ]
     }
@@ -116,36 +134,42 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Brent settles at $109.86 (touched $110, highest since May); WTI at $101.41, up 10.4% on the week",
-     "why": "Oil above $100 feeds straight into the inflation prints and rate-hike odds above, even with 20M+ barrels of emergency IEA releases and a US reserve exchange offsetting part of it.",
+     "headline": "Brent up 6.6% on the week to $109.68 and WTI up 12.0% to $101.89",
+     "why": "WTI gained far more than Brent and the gap narrowed from about $12 to under $8, a sign US crude is being pulled hard into export demand.",
      "sources": [
       {
-       "title": "EnergyNow: Oil surges as Middle East supply fears push Brent near $110",
-       "url": "https://energynow.com/2026/10/oil-surges-as-middle-east-supply-fears-push-brent-near-110-and-wti-above-100-both-post-strong-weekly-gains/"
+       "title": "The week in commodities, Oct 17, 2026",
+       "url": "https://sharetrader.com.au/news/2026-10-17-emergency-oil-reserves-fail-to-quiet-gulf-supply-fears-the-week-in-commodities"
       }
      ]
     },
     {
-     "headline": "US crude inventories fall 8.6M barrels to 415.6M, far more than expected",
-     "why": "A large draw while Russian refining is being hit by strikes tightens the near-term balance and supports the price floor.",
+     "headline": "Gold slips 0.7% to about $4,166 while silver drops 6.3% to about $57",
+     "why": "Gold is holding near $4,200 despite a surging oil price and hot inflation, but silver's much larger drop shows the industrial side of metals is weakening.",
      "sources": [
       {
-       "title": "EnergyNow: Oil surges as Middle East supply fears push Brent near $110",
-       "url": "https://energynow.com/2026/10/oil-surges-as-middle-east-supply-fears-push-brent-near-110-and-wti-above-100-both-post-strong-weekly-gains/"
+       "title": "The week in commodities, Oct 17, 2026",
+       "url": "https://sharetrader.com.au/news/2026-10-17-emergency-oil-reserves-fail-to-quiet-gulf-supply-fears-the-week-in-commodities"
       }
      ]
     },
     {
-     "headline": "Gold holds near $4,190 even as the dollar sits near a one-and-a-half-year high",
-     "why": "Gold absorbing a strong dollar and higher yield expectations means safe-haven demand is offsetting the usual headwinds.",
+     "headline": "Lithium carbonate falls 16.5% to CNY 102,150 a tonne; copper down 2.2% to about $6.52 a pound",
+     "why": "Lithium was the biggest weekly mover of nine commodities tracked, and weak copper alongside it points to softer industrial and battery demand expectations.",
      "sources": [
       {
-       "title": "Depor: Gold price today, October 12, 2026",
-       "url": "https://depor.com/en/us-live/gold-price-today-october-12-2026-spot-gold-falls-as-dollar-strength-weighs-on-bullion-nnda-nnrt-noticia/"
-      },
+       "title": "The week in commodities, Oct 17, 2026",
+       "url": "https://sharetrader.com.au/news/2026-10-17-emergency-oil-reserves-fail-to-quiet-gulf-supply-fears-the-week-in-commodities"
+      }
+     ]
+    },
+    {
+     "headline": "US distillate stocks at their lowest seasonal level on record; pump diesel and gasoline average about $6.17 a gallon",
+     "why": "Thin diesel inventories into winter leave little buffer, which is why the diesel releases matter more than the headline crude number.",
+     "sources": [
       {
-       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
-       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
+       "title": "Week #42 Market Update, Oct 12-16, 2026",
+       "url": "https://atranicapital.substack.com/p/week-42-market-update-for-october-e67"
       }
      ]
     }
@@ -155,41 +179,51 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "Nasdaq Composite closes at 26,140, down 4.5% on the week and ending a four-week winning streak",
-     "why": "The index gave back the gains from its run to a record close near 27,244 earlier in the month, so that level is now overhead resistance.",
+     "headline": "S&P 500 down about 2.0% on the week, its worst since June; Nasdaq Composite down about 4.5%; equal-weight S&P and Dow both up",
+     "why": "Losses were confined to mega-cap AI and chip names while the average stock gained, so this looks like a leadership break rather than a broad market break.",
      "sources": [
       {
-       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
-       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
-      }
-     ]
-    },
-    {
-     "headline": "S&P 500 ends near 7,659, down about 2% on the week; Dow up 0.7% for a second weekly gain",
-     "why": "Leadership rotated away from AI-linked tech, with the semiconductor ETF down about 8% through Thursday and a further 4% Friday, while the less tech-heavy Dow held up.",
-     "sources": [
-      {
-       "title": "Yahoo Finance: Markets News, Oct. 16, 2026",
-       "url": "https://finance.yahoo.com/markets/stocks/articles/markets-news-oct-16-2026-103800633.html"
-      }
-     ]
-    },
-    {
-     "headline": "Bitcoin range: support at $80K, resistance in the $83-84K area",
-     "why": "Price dipped under $81K on Oct 13 and recovered, so $80K is the level whose loss would mark a break of the October range.",
-     "sources": [
-      {
-       "title": "Coincall: October 14, 2026 market update",
-       "url": "https://support.coincall.com/hc/en-us/articles/63227747720601-October-14-2026-Bitcoin-Holds-Near-84K-as-Crypto-ETF-Outflows-Top-1-1B-and-U-S-Inflation-Data-Looms"
+       "title": "Week #42 Market Update, Oct 12-16, 2026",
+       "url": "https://atranicapital.substack.com/p/week-42-market-update-for-october-e67"
       },
       {
-       "title": "CryptoTicker: Bitcoin at $81,963, ETF inflows close to zero",
-       "url": "https://cryptoticker.io/en/bitcoin-price-etf-inflows-standstill-october-16-2026/"
+       "title": "Stocks on Pace for Weekly Loss Despite Yield Drop",
+       "url": "https://www.schwab.com/learn/story/stock-market-update-open"
+      }
+     ]
+    },
+    {
+     "headline": "10-year Treasury yield falls from about 5.33% to 5.05% in roughly 24 hours, the sharpest drop since June, then steadies near 5.1%",
+     "why": "The pullback from a multi-year high is what let non-tech stocks rise this week, and a move back above 5.3% would put that support at risk.",
+     "sources": [
+      {
+       "title": "Stocks on Pace for Weekly Loss Despite Yield Drop",
+       "url": "https://www.schwab.com/learn/story/stock-market-update-open"
+      }
+     ]
+    },
+    {
+     "headline": "Gold sits in a $4,100-$4,240 range, with $4,330 above and $3,970 below as the levels to watch; record is $5,597",
+     "why": "Gold is still about 25% under its January high, so a close outside this range is the signal that the next leg has started.",
+     "sources": [
+      {
+       "title": "Gold Price Week Ahead: Bull and Bear Case From $4,166",
+       "url": "https://financefeeds.com/gold-price-4166-week-ahead-oil-110-fed-october-meeting-bull-4330-bear-3970/"
+      }
+     ]
+    },
+    {
+     "headline": "Fear & Greed index drops to 18 (extreme fear) from 45; money-market funds take in $166.4B, the most since April 2020",
+     "why": "Extreme-fear readings with record cash moving to the sidelines have often marked short-term lows, but the index alone is not a buy signal.",
+     "sources": [
+      {
+       "title": "Week #42 Market Update, Oct 12-16, 2026",
+       "url": "https://atranicapital.substack.com/p/week-42-market-update-for-october-e67"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-10-18T06:17:12Z"
+ "published_utc": "2026-10-19T06:25:53Z"
 }
