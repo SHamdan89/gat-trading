@@ -1,7 +1,7 @@
 {
  "kind": "experiments-status",
- "date": "2026-10-18",
- "generated_utc": "2026-10-18T07:40:00Z",
+ "date": "2026-10-19",
+ "generated_utc": "2026-10-19T07:36:12Z",
  "projects": [
   {
    "id": "mgat",
@@ -9,36 +9,36 @@
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
    "state": "live",
    "state_reason": "doctor read HEALTHY",
-   "last_checked": "2026-10-17T20:00:04Z",
-   "closed_total": 102,
+   "last_checked": "2026-10-18T20:00:10Z",
+   "closed_total": 107,
    "wins_total": 41,
-   "win_rate_pct": 40,
-   "pnl_realized_usd": 357.88,
-   "avg_trade_pct": 3.06,
-   "pnl_total_usd": 328.75,
-   "pnl_total_pct": 4.11,
+   "win_rate_pct": 38,
+   "pnl_realized_usd": 296.92,
+   "avg_trade_pct": 2.4,
+   "pnl_total_usd": 271.88,
+   "pnl_total_pct": 3.4,
    "open_positions": 7,
-   "trades_label": "102 / 200",
-   "hold_pct": -4.02
+   "trades_label": "107 / 200",
+   "hold_pct": -6.14
   },
   {
    "id": "hades",
    "name": "Hades Trading",
    "sub": "Sealed agent, own wallet, no human decisions in the loop",
    "state": "live",
-   "state_reason": "today's report present and complete; daily check shows no stub, no truncation",
-   "last_checked": "2026-10-18T06:07:28Z",
+   "state_reason": "today's report present and complete; daily check shows no stub",
+   "last_checked": "2026-10-19T06:07:31Z",
    "closed_total": 0,
    "wins_total": 0,
    "win_rate_pct": null,
    "pnl_realized_usd": null,
    "avg_trade_pct": null,
-   "pnl_total_usd": 20.3,
-   "pnl_total_pct": 15.61,
+   "pnl_total_usd": 23.47,
+   "pnl_total_pct": 18.06,
    "open_positions": 0,
    "trades_label": "16 tx · 12 trades +4 unverified",
-   "note": "in SOL: +6.54% vs the pinned 1.36228651 — holding 1.451435 SOL and no token position. Dollar figure uses the site's SOL price of 103.55 (feed generated within the hour)."
+   "note": "in SOL: +6.54% vs the pinned 1.36228651 — all of it held as SOL, no token position; the dollar figure uses the site's SOL price, so most of the move is price drift on a held stake. Four transactions since the last on-chain check are counted from balance steps, not yet verified."
   }
  ],
- "published_utc": "2026-10-18T07:37:58Z"
+ "published_utc": "2026-10-19T07:36:39Z"
 }
