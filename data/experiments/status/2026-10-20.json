@@ -1,0 +1,44 @@
+{
+ "kind": "experiments-status",
+ "date": "2026-10-20",
+ "generated_utc": "2026-10-20T16:03:00Z",
+ "projects": [
+  {
+   "id": "mgat",
+   "name": "MGAT Alpha v3.1",
+   "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
+   "state": "live",
+   "state_reason": "doctor read HEALTHY",
+   "last_checked": "2026-10-19T20:00:08Z",
+   "closed_total": 109,
+   "wins_total": 41,
+   "win_rate_pct": 38,
+   "pnl_realized_usd": 279.69,
+   "avg_trade_pct": 2.22,
+   "pnl_total_usd": 290.79,
+   "pnl_total_pct": 3.63,
+   "open_positions": 6,
+   "trades_label": "109 / 200",
+   "hold_pct": -6.33
+  },
+  {
+   "id": "hades",
+   "name": "Hades Trading",
+   "sub": "Sealed agent, own wallet, no human decisions in the loop",
+   "state": "needs-check",
+   "state_reason": "today's report has not arrived",
+   "last_checked": "2026-10-19T06:07:31Z",
+   "closed_total": 0,
+   "wins_total": 0,
+   "win_rate_pct": null,
+   "pnl_realized_usd": null,
+   "avg_trade_pct": null,
+   "pnl_total_usd": null,
+   "pnl_total_pct": null,
+   "open_positions": null,
+   "trades_label": "16 tx · 12 trades +4 unverified",
+   "note": "Today's report has not arrived, so holdings and returns ship blank; the SOL-measured line cannot be computed without its balance section. Four transactions since the last on-chain check are counted from balance steps, not yet verified."
+  }
+ ],
+ "published_utc": "2026-10-20T16:05:23Z"
+}

@@ -1,7 +1,7 @@
 {
  "kind": "experiments-status",
- "date": "2026-10-19",
- "generated_utc": "2026-10-19T07:36:12Z",
+ "date": "2026-10-20",
+ "generated_utc": "2026-10-20T16:03:00Z",
  "projects": [
   {
    "id": "mgat",
@@ -9,36 +9,36 @@
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
    "state": "live",
    "state_reason": "doctor read HEALTHY",
-   "last_checked": "2026-10-18T20:00:10Z",
-   "closed_total": 107,
+   "last_checked": "2026-10-19T20:00:08Z",
+   "closed_total": 109,
    "wins_total": 41,
    "win_rate_pct": 38,
-   "pnl_realized_usd": 296.92,
-   "avg_trade_pct": 2.4,
-   "pnl_total_usd": 271.88,
-   "pnl_total_pct": 3.4,
-   "open_positions": 7,
-   "trades_label": "107 / 200",
-   "hold_pct": -6.14
+   "pnl_realized_usd": 279.69,
+   "avg_trade_pct": 2.22,
+   "pnl_total_usd": 290.79,
+   "pnl_total_pct": 3.63,
+   "open_positions": 6,
+   "trades_label": "109 / 200",
+   "hold_pct": -6.33
   },
   {
    "id": "hades",
    "name": "Hades Trading",
    "sub": "Sealed agent, own wallet, no human decisions in the loop",
-   "state": "live",
-   "state_reason": "today's report present and complete; daily check shows no stub",
+   "state": "needs-check",
+   "state_reason": "today's report has not arrived",
    "last_checked": "2026-10-19T06:07:31Z",
    "closed_total": 0,
    "wins_total": 0,
    "win_rate_pct": null,
    "pnl_realized_usd": null,
    "avg_trade_pct": null,
-   "pnl_total_usd": 23.47,
-   "pnl_total_pct": 18.06,
-   "open_positions": 0,
+   "pnl_total_usd": null,
+   "pnl_total_pct": null,
+   "open_positions": null,
    "trades_label": "16 tx · 12 trades +4 unverified",
-   "note": "in SOL: +6.54% vs the pinned 1.36228651 — all of it held as SOL, no token position; the dollar figure uses the site's SOL price, so most of the move is price drift on a held stake. Four transactions since the last on-chain check are counted from balance steps, not yet verified."
+   "note": "Today's report has not arrived, so holdings and returns ship blank; the SOL-measured line cannot be computed without its balance section. Four transactions since the last on-chain check are counted from balance steps, not yet verified."
   }
  ],
- "published_utc": "2026-10-19T07:36:39Z"
+ "published_utc": "2026-10-20T16:05:23Z"
 }
