@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "run_utc": "2026-10-21T16:01:01Z",
- "fetch_utc": "2026-10-21T16:01:00Z",
- "payload_sha256": "72c235989b367e35ac6241c4de3b0403afb739c357055dacf38a745ba91ab2d0",
+ "run_utc": "2026-10-21T17:01:40Z",
+ "fetch_utc": "2026-10-21T17:01:39Z",
+ "payload_sha256": "5408c21f02cee5d3e1d0683f2661de2ad15f29044b7d6d97eae63e9d725f3940",
  "upstream": {
   "coingecko": {
-   "stamp": "2026-10-21T15:59:55Z",
+   "stamp": "2026-10-21T16:59:56Z",
    "observations": 9,
    "unparsed": 0,
    "expected_live": true
   },
   "gold-api": {
-   "stamp": "2026-10-21T15:59:40Z",
+   "stamp": "2026-10-21T17:00:13Z",
    "observations": 1,
    "unparsed": 0,
    "expected_live": true
   },
   "yahoo": {
-   "stamp": "2026-10-21T16:00:53Z",
+   "stamp": "2026-10-21T17:01:33Z",
    "observations": 38,
    "unparsed": 0,
    "expected_live": true
@@ -33,11 +33,6 @@
    "asset": "us_m2",
    "last_good_utc": "2026-10-21T15:02:07Z",
    "detail": "us_m2 is published as a dash - no fresh price this run (US M2 money supply (weekly) (WM2NS): list index out of range); last good 2026-10-21T15:02:07Z"
-  },
-  {
-   "alarm": "upstream_missing",
-   "provider": "fred",
-   "detail": "fred reported a stamp last run (2026-08-31T00:00:00Z) and none this run"
   }
  ],
  "note": "Emitted by every run, including failed ones. status ok means this run saw the feed advance; ALARM means it did not, and the prices on the page may be older than they look."
