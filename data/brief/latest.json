@@ -1,28 +1,38 @@
 {
- "date": "2026-10-21",
- "generated_utc": "2026-10-21T06:10:00Z",
+ "date": "2026-10-22",
+ "generated_utc": "2026-10-22T06:20:00Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "TSMC posts a sixth straight record-profit quarter and guides Q4 sales up to $54.3B, but the stock still falls about 1.8%",
-     "why": "Net income rose nearly 69% and 2026-2028 capital spending is guided even higher, so AI chip demand is intact while the share price shows the market is trading the sector's mood, not the results.",
+     "headline": "SpaceX's AI segment reaches $7.5B of $14.6B Q3 revenue; Q4 capex guided to $35-40B",
+     "why": "AI compute is now over half the revenue of a company known for rockets, and a $35-40B quarterly spend signals the infrastructure build-out is still accelerating, not plateauing.",
      "sources": [
       {
-       "title": "TSMC stock drops despite record profit amid 'extremely robust demand' for AI chips",
-       "url": "https://finance.yahoo.com/markets/stocks/article/tsmc-stock-drops-despite-record-profit-amid-extremely-robust-demand-for-ai-chips-152649370.html"
+       "title": "SpaceX's AI business is beating expectations",
+       "url": "https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/"
       }
      ]
     },
     {
-     "headline": "Nvidia's CEO says frontier AI labs are only about a quarter to a third of its chip demand, as AI-revenue doubts hit tech stocks",
-     "why": "The October sell-off was triggered by OpenAI's lower-than-leaked revenue figure; if Nvidia's demand is broader than a few labs, a slowdown at one lab matters less than the market priced (this is the company's own claim, not independently verified).",
+     "headline": "Supermicro raises quarterly guidance on AI server demand; shares close up about 9.6%",
+     "why": "A hardware vendor lifting guidance is direct evidence that AI server orders are still outrunning supply, which supports the chip and data-centre supply chain.",
      "sources": [
       {
-       "title": "Will AI Companies Generate Enough Revenue to Continue the Build-Out?",
-       "url": "https://www.fool.com/investing/2026/10/19/will-ai-companies-generate-enough-revenue-to-conti/"
+       "title": "Market recap: SpaceX, Meta, Tesla, Supermicro",
+       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262230966-spacex-musk-spcx-meta-tesla-tradingkey"
+      }
+     ]
+    },
+    {
+     "headline": "Meta guides 2026 capex to $135-145B; Tesla cuts its 2026 capex plan to about $20B",
+     "why": "Hyperscale AI spending keeps climbing at Meta while Tesla pulls back, so the spending cycle is diverging by company rather than rising uniformly.",
+     "sources": [
+      {
+       "title": "Market recap: SpaceX, Meta, Tesla, Supermicro",
+       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262230966-spacex-musk-spcx-meta-tesla-tradingkey"
       }
      ]
     }
@@ -32,22 +42,32 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "US spot bitcoin ETFs take in $526.6M on Monday, the largest daily inflow in about a month, all of it from BlackRock's fund",
-     "why": "BlackRock's IBIT added $665.2M while other funds were net negative and October month-to-date flows remain about $90.5M negative, so the demand is narrow rather than a broad return of buyers.",
+     "headline": "Bitcoin rebounds about 2.4% to roughly $84,500 on the tech rally, ether near $2,490",
+     "why": "Crypto is trading as a risk asset tied to the Nasdaq, and bitcoin has now held above $80,000 for a month.",
      "sources": [
       {
-       "title": "Bitcoin ETFs just saw their biggest day in a month thanks entirely to BlackRock",
-       "url": "https://www.coindesk.com/business/2026/10/20/bitcoin-etfs-just-saw-their-biggest-day-in-a-month-thanks-entirely-to-blackrock"
+       "title": "Crypto Market Today, Oct. 21: Bitcoin Rebounds on Tech Rally",
+       "url": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-oct-21-213639350.html"
       }
      ]
     },
     {
-     "headline": "Bitcoin holds near $82,700 with $80,000 flagged as the level at risk if equities weaken",
-     "why": "Ether ETFs saw a fourth straight day of outflows, so the bid is bitcoin-specific, and a break below $80,000 would be the first sign the equity sell-off is spilling into crypto.",
+     "headline": "US spot bitcoin ETFs take in about $527M on Monday, the biggest day since Sept. 22; ether ETFs see outflows",
+     "why": "Institutional demand is concentrating in bitcoin while ether products lose assets, a split that matters for relative positioning.",
      "sources": [
       {
-       "title": "Equity weakness could damp demand for bitcoin after biggest ETF inflows in a month",
-       "url": "https://www.coindesk.com/daybook-us/2026/10/20/equity-weakness-could-damp-demand-for-bitcoin-after-biggest-etf-inflows-in-a-month"
+       "title": "Crypto Market Today, Oct. 21: Bitcoin Rebounds on Tech Rally",
+       "url": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-oct-21-213639350.html"
+      }
+     ]
+    },
+    {
+     "headline": "OCC finalizes stablecoin rules under the GENIUS Act; Solana's Alpenglow upgrade goes live",
+     "why": "Final federal stablecoin rules remove a major regulatory unknown for on-chain dollar products and favour programmable chains.",
+     "sources": [
+      {
+       "title": "Crypto Market Today, Oct. 21: Bitcoin Rebounds on Tech Rally",
+       "url": "https://finance.yahoo.com/markets/crypto/articles/crypto-market-today-oct-21-213639350.html"
       }
      ]
     }
@@ -57,36 +77,32 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "September US CPI comes in at 3.7% year over year, above forecasts; the 10-year Treasury yield jumps 9bp to 5.304%",
-     "why": "A hotter-than-expected print keeps the Fed in tightening mode and long yields near 24-year highs, which raises the discount rate on every risk asset.",
+     "headline": "Markets price an 83% chance the Fed holds on Oct. 27-28 and about 94% odds of a hike by Dec. 9",
+     "why": "With September CPI at 3.7% year on year and PPI at 6.3%, the policy path is priced as tightening, which keeps pressure on long-duration assets and gold.",
      "sources": [
       {
-       "title": "September inflation sends Treasury yields surging",
-       "url": "https://qz.com/september-cpi-inflation-treasury-yields-101426"
+       "title": "Gold gains, silver slips as oil prices rise, Fed rate hike expectations persist",
+       "url": "https://www.kitco.com/news/article/2026-10-21/gold-gains-silver-slips-oil-prices-rise-fed-rate-hike-expectations-persist"
       }
      ]
     },
     {
-     "headline": "Futures price about an 83% chance the Fed holds at its Oct 27-28 meeting and roughly a 92-94% chance of a hike in December",
-     "why": "The Fed already raised its target range to 3.75%-4.00% on Sept 16, its first increase since 2023, and producer prices running at 6.3% a year keep the next move a hike, not a cut.",
+     "headline": "New attacks on shipping in the Strait of Hormuz; Iran's foreign minister says near-term peace prospects are limited",
+     "why": "Direct Hormuz flows are about a third below prewar levels, so the conflict is feeding energy prices and inflation, which in turn drives the rate path.",
      "sources": [
       {
-       "title": "Gold pressured despite falling yields as Hormuz diplomacy sparks oil price reversal - Kitco PM Report",
-       "url": "https://www.kitco.com/news/article/2026-10-20/gold-pressured-despite-falling-yields-hormuz-diplomacy-sparks-oil-price"
-      },
-      {
-       "title": "U.S. Treasury yields inch lower as investors await key September inflation report",
-       "url": "https://political.org/2026/10/14/u-s-treasury-yields-inch-lower-as-investors-await-key-september-inflation-report/"
+       "title": "Gold gains, silver slips as oil prices rise, Fed rate hike expectations persist",
+       "url": "https://www.kitco.com/news/article/2026-10-21/gold-gains-silver-slips-oil-prices-rise-fed-rate-hike-expectations-persist"
       }
      ]
     },
     {
-     "headline": "Iran-mediation reports pull oil off a five-month high, but no de-escalation is confirmed and Hormuz shipments remain below prewar levels",
-     "why": "Attacks on Gulf vessels and Saudi energy sites are the main driver of the oil price, which feeds inflation and the Fed path, so a real diplomatic deal would matter far more than the headlines.",
+     "headline": "September housing starts fall 5.2% to 1.221M, well below the 1.305M expected",
+     "why": "Rate-sensitive housing is weakening under higher yields, the kind of labour and activity softness traders need to see before tightening expectations ease.",
      "sources": [
       {
-       "title": "Oil Prices Whipsaw as Brent Hits $111.99 Then Falls on Iran Talks",
-       "url": "https://discoveryalert.com/news/oil-prices-brent-iran-talks-october-2026/"
+       "title": "Gold gains as Treasury yields stabilize, Nasdaq surges despite Fed tightening concerns",
+       "url": "https://www.kitco.com/news/article/2026-10-21/gold-gains-treasury-yields-stabilize-nasdaq-surges-despite-fed-tightening"
       }
      ]
     }
@@ -96,26 +112,36 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Brent touches $111.99, a five-month high, then settles at $108.79; December WTI settles at $97.82",
-     "why": "A 13-dollar intraday-to-settle swing driven by headlines shows the supply risk premium is large and fragile, and it is the main input to the inflation numbers above.",
+     "headline": "Brent holds above $108 and WTI settles near $97 as Hormuz risk keeps crude elevated",
+     "why": "Brent is roughly $49 above a year ago, so energy remains the main driver of the inflation surprise behind the hawkish Fed pricing.",
      "sources": [
       {
-       "title": "Oil Prices Whipsaw as Brent Hits $111.99 Then Falls on Iran Talks",
-       "url": "https://discoveryalert.com/news/oil-prices-brent-iran-talks-october-2026/"
+       "title": "Gold gains as Treasury yields stabilize, Nasdaq surges despite Fed tightening concerns",
+       "url": "https://www.kitco.com/news/article/2026-10-21/gold-gains-treasury-yields-stabilize-nasdaq-surges-despite-fed-tightening"
       },
       {
-       "title": "Gold pressured despite falling yields as Hormuz diplomacy sparks oil price reversal - Kitco PM Report",
-       "url": "https://www.kitco.com/news/article/2026-10-20/gold-pressured-despite-falling-yields-hormuz-diplomacy-sparks-oil-price"
+       "title": "Current price of oil as of October 21, 2026",
+       "url": "https://fortune.com/article/price-of-oil-10-21-2026/"
       }
      ]
     },
     {
-     "headline": "Gold slips to about $4,122 even as yields fall, while silver gains about 1.5% to near $57.80",
-     "why": "Gold failing to rally on lower yields and a weak housing report shows expected Fed tightening outweighs its safe-haven bid, and silver outperforming points to industrial and oil-linked demand.",
+     "headline": "Gold gains about 0.7% to roughly $4,141 on a softer dollar and easing crude",
+     "why": "Gold is rising even as hike odds stay high, suggesting dollar weakness is currently outweighing the rate headwind.",
      "sources": [
       {
-       "title": "Gold pressured despite falling yields as Hormuz diplomacy sparks oil price reversal - Kitco PM Report",
-       "url": "https://www.kitco.com/news/article/2026-10-20/gold-pressured-despite-falling-yields-hormuz-diplomacy-sparks-oil-price"
+       "title": "Gold gains as Treasury yields stabilize, Nasdaq surges despite Fed tightening concerns",
+       "url": "https://www.kitco.com/news/article/2026-10-21/gold-gains-treasury-yields-stabilize-nasdaq-surges-despite-fed-tightening"
+      }
+     ]
+    },
+    {
+     "headline": "Silver edges higher to about $58 after recovering early losses",
+     "why": "Silver holding near $58 after profit-taking shows dip buyers still active, though it lags gold's move.",
+     "sources": [
+      {
+       "title": "Gold gains as Treasury yields stabilize, Nasdaq surges despite Fed tightening concerns",
+       "url": "https://www.kitco.com/news/article/2026-10-21/gold-gains-treasury-yields-stabilize-nasdaq-surges-despite-fed-tightening"
       }
      ]
     }
@@ -125,35 +151,41 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 closes at 7,712.57 (+0.28%) and the Dow at 52,495.88 (+1.02%) on Tuesday after Monday's tech-led rebound",
-     "why": "Monday's Nasdaq gain of about 1.1% reversed part of Friday's AI sell-off, but Tuesday's Dow-led gain with the S&P lagging means the rebound has not yet shown broad tech leadership.",
+     "headline": "Gold: resistance at $4,194, support at $4,105, with $3,999 below",
+     "why": "A daily close above $4,194 would confirm a new upward leg, while a sustained break under $4,105 reopens the decline.",
      "sources": [
       {
-       "title": "Stock Market Today (Oct. 19, 2026): Nasdaq climbs as tech rebounds from sell-off",
-       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-oct-19-2026-nasdaq-futures-climb-as-tech-rebound-from-sell-off"
-      },
-      {
-       "title": "Gold pressured despite falling yields as Hormuz diplomacy sparks oil price reversal - Kitco PM Report",
-       "url": "https://www.kitco.com/news/article/2026-10-20/gold-pressured-despite-falling-yields-hormuz-diplomacy-sparks-oil-price"
+       "title": "Gold price outlook: will $4,194 trigger the next rally?",
+       "url": "https://www.kitco.com/opinion/2026-10-21/gold-price-outlook-will-4194-trigger-next-rally"
       }
      ]
     },
     {
-     "headline": "Gold trades in a tight band: support near $4,132-$4,136 and resistance near $4,142-$4,171 at Monday's close, then a break lower Tuesday",
-     "why": "Gold ended Monday near $4,138 inside that band and traded near $4,122 on Tuesday, below the $4,132 support, so the break is the signal and the former support now acts as resistance.",
+     "headline": "Silver closes near $57.98 between resistance at $58.80 and support at $56.92",
+     "why": "A move out of the roughly $2 range around $58 would set the next direction for the metal.",
      "sources": [
       {
-       "title": "Gold falls as dollar, Treasury yields rise; silver holds modest gains - Kitco PM Report",
-       "url": "https://www.kitco.com/news/article/2026-10-19/gold-falls-dollar-treasury-yields-rise-silver-holds-modest-gains-kitco-pm"
+       "title": "Gold gains as Treasury yields stabilize, Nasdaq surges despite Fed tightening concerns",
+       "url": "https://www.kitco.com/news/article/2026-10-21/gold-gains-treasury-yields-stabilize-nasdaq-surges-despite-fed-tightening"
+      }
+     ]
+    },
+    {
+     "headline": "S&P 500 closes at 7,757, Nasdaq Composite +1.05% to 26,703; 10-year yield eases to about 5.1% from above 5.3%",
+     "why": "Equities rallied as yields pulled back from their highs, so the 5.3% area is the level that stressed stocks and a retest would be the risk.",
+     "sources": [
+      {
+       "title": "Gold gains as Treasury yields stabilize, Nasdaq surges despite Fed tightening concerns",
+       "url": "https://www.kitco.com/news/article/2026-10-21/gold-gains-treasury-yields-stabilize-nasdaq-surges-despite-fed-tightening"
       },
       {
-       "title": "Gold pressured despite falling yields as Hormuz diplomacy sparks oil price reversal - Kitco PM Report",
-       "url": "https://www.kitco.com/news/article/2026-10-20/gold-pressured-despite-falling-yields-hormuz-diplomacy-sparks-oil-price"
+       "title": "Gold gains, silver slips as oil prices rise, Fed rate hike expectations persist",
+       "url": "https://www.kitco.com/news/article/2026-10-21/gold-gains-silver-slips-oil-prices-rise-fed-rate-hike-expectations-persist"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-10-21T06:29:15Z"
+ "published_utc": "2026-10-22T06:15:18Z"
 }
