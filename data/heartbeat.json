@@ -1,39 +1,38 @@
 {
  "schema": 1,
- "run_utc": "2026-10-22T04:01:26Z",
- "fetch_utc": "2026-10-22T04:01:25Z",
- "payload_sha256": "1121f839567b6b53298ac6cdd1d4b95e20548019f5efdc3ce53e8f5b9c747d60",
+ "run_utc": "2026-10-22T05:01:26Z",
+ "fetch_utc": "2026-10-22T05:01:25Z",
+ "payload_sha256": "ec1133cf8db6368c531a741ea8dabd0631ee2b1c0d7a5bfc06cc6e40dd2fd028",
  "upstream": {
   "coingecko": {
-   "stamp": "2026-10-22T03:59:49Z",
+   "stamp": "2026-10-22T04:59:57Z",
    "observations": 9,
    "unparsed": 0,
    "expected_live": true
   },
+  "fred": {
+   "stamp": "2026-08-31T00:00:00Z",
+   "observations": 1,
+   "unparsed": 0,
+   "expected_live": false
+  },
   "gold-api": {
-   "stamp": "2026-10-22T03:59:43Z",
+   "stamp": "2026-10-22T04:59:43Z",
    "observations": 1,
    "unparsed": 0,
    "expected_live": true
   },
   "yahoo": {
-   "stamp": "2026-10-22T04:00:56Z",
+   "stamp": "2026-10-22T05:00:57Z",
    "observations": 38,
    "unparsed": 0,
    "expected_live": true
   }
  },
  "assets": 49,
- "feed_errors": 1,
+ "feed_errors": 0,
  "pull_rc": 0,
- "status": "ALARM",
- "alarms": [
-  {
-   "alarm": "row_withheld",
-   "asset": "us_m2",
-   "last_good_utc": "2026-10-21T15:02:07Z",
-   "detail": "us_m2 is published as a dash - no fresh price this run (US M2 money supply (weekly) (WM2NS): list index out of range); last good 2026-10-21T15:02:07Z"
-  }
- ],
+ "status": "ok",
+ "alarms": [],
  "note": "Emitted by every run, including failed ones. status ok means this run saw the feed advance; ALARM means it did not, and the prices on the page may be older than they look."
 }
