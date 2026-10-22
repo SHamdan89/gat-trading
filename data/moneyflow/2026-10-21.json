@@ -1,0 +1,488 @@
+{
+ "schema": 1,
+ "kind": "moneyflow-daily",
+ "date": "2026-10-21",
+ "fired_utc": "2026-10-22T01:01:28Z",
+ "window_days": 35,
+ "window_target": 90,
+ "window_floor": 30,
+ "warming_up": false,
+ "signals_absent": [
+  "cross_asset",
+  "futures_positioning"
+ ],
+ "headline": "No clear rotation this week",
+ "rotation": null,
+ "buckets": [
+  {
+   "id": "gold",
+   "label": "Gold",
+   "direction": "accumulating",
+   "agreement": 2,
+   "n_signals": 3,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "value": 226735341.7019925,
+     "unit": "usd",
+     "inputs": {
+      "shares": {
+       "GLD": 371803195.43
+      },
+      "nav": {
+       "GLD": 378.04
+      },
+      "as_of": {
+       "GLD": "2026-10-20"
+      },
+      "issuer": {
+       "GLD": "ssga"
+      },
+      "members_used": [
+       "GLD"
+      ],
+      "members_unreachable": [],
+      "fresh_as_of": [
+       "GLD"
+      ],
+      "priced_against": [
+       "GLD"
+      ],
+      "moved": [
+       "GLD"
+      ]
+     },
+     "backfilled": false,
+     "z": 0.576,
+     "window_days": 42,
+     "direction": 1
+    },
+    {
+     "name": "futures_positioning",
+     "value": -3898.0,
+     "unit": "contracts",
+     "backfilled": true,
+     "inputs": {
+      "report_date": "2026-10-13",
+      "net_position": 107089.0,
+      "previous_net_position": 110987.0
+     },
+     "z": -0.4166,
+     "window_days": 90,
+     "direction": 0
+    },
+    {
+     "name": "options_hedging",
+     "value": 0.27532479984658903,
+     "unit": "ratio",
+     "backfilled": false,
+     "inputs": {
+      "symbols_used": [
+       "GLD"
+      ],
+      "upside_volume": 20859.0,
+      "downside_volume": 5743.0,
+      "expiry_used": {
+       "GLD": "2026-10-22"
+      },
+      "source_stamp": "2026-10-22T01:01:40Z"
+     },
+     "z": 1.0914,
+     "window_days": 43,
+     "direction": 1
+    },
+    {
+     "name": "cross_asset",
+     "absent": true,
+     "reason": "no_close_reading",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    }
+   ]
+  },
+  {
+   "id": "btc",
+   "label": "BTC",
+   "direction": "accumulating",
+   "agreement": 3,
+   "n_signals": 3,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "value": 716438545.112187,
+     "unit": "usd",
+     "inputs": {
+      "shares": {
+       "IBIT": 1433479988.27
+      },
+      "nav": {
+       "IBIT": 47.762597
+      },
+      "as_of": {
+       "IBIT": "2026-10-21"
+      },
+      "issuer": {
+       "IBIT": "ishares"
+      },
+      "members_used": [
+       "IBIT"
+      ],
+      "members_unreachable": [],
+      "fresh_as_of": [
+       "IBIT"
+      ],
+      "priced_against": [
+       "IBIT"
+      ],
+      "moved": [
+       "IBIT"
+      ]
+     },
+     "backfilled": false,
+     "z": 4.2782,
+     "window_days": 43,
+     "direction": 1
+    },
+    {
+     "name": "futures_positioning",
+     "value": 1008.0,
+     "unit": "contracts",
+     "backfilled": true,
+     "inputs": {
+      "report_date": "2026-10-13",
+      "net_position": -5844.0,
+      "previous_net_position": -6852.0
+     },
+     "z": 1.0513,
+     "window_days": 90,
+     "direction": 1
+    },
+    {
+     "name": "options_hedging",
+     "value": 0.6735822446555819,
+     "unit": "ratio",
+     "backfilled": false,
+     "inputs": {
+      "symbols_used": [
+       "IBIT"
+      ],
+      "upside_volume": 26944.0,
+      "downside_volume": 18149.0,
+      "expiry_used": {
+       "IBIT": "2026-10-22"
+      },
+      "source_stamp": "2026-10-22T01:01:40Z"
+     },
+     "z": 0.5376,
+     "window_days": 43,
+     "direction": 1
+    },
+    {
+     "name": "cross_asset",
+     "absent": true,
+     "reason": "no_close_reading",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    }
+   ]
+  },
+  {
+   "id": "ai",
+   "label": "AI/Semis",
+   "direction": "flat",
+   "agreement": 0,
+   "n_signals": 3,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "value": 4505814374.395813,
+     "unit": "usd",
+     "inputs": {
+      "shares": {
+       "XLK": 659773325.42,
+       "SOXX": 89000000.03
+      },
+      "nav": {
+       "XLK": 185.42,
+       "SOXX": 510.397665
+      },
+      "as_of": {
+       "XLK": "2026-10-20",
+       "SOXX": "2026-10-21"
+      },
+      "issuer": {
+       "XLK": "ssga",
+       "SOXX": "ishares"
+      },
+      "members_used": [
+       "XLK",
+       "SOXX"
+      ],
+      "members_unreachable": [
+       "SMH"
+      ],
+      "fresh_as_of": [
+       "XLK",
+       "SOXX"
+      ],
+      "priced_against": [
+       "SOXX",
+       "XLK"
+      ],
+      "moved": [
+       "XLK",
+       "SOXX"
+      ]
+     },
+     "backfilled": false,
+     "z": 5.8224,
+     "window_days": 35,
+     "direction": 1
+    },
+    {
+     "name": "futures_positioning",
+     "absent": true,
+     "reason": "no_futures_contract",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "options_hedging",
+     "value": 0.5738031914893617,
+     "unit": "ratio",
+     "backfilled": false,
+     "inputs": {
+      "symbols_used": [
+       "XLK"
+      ],
+      "upside_volume": 1504.0,
+      "downside_volume": 863.0,
+      "expiry_used": {
+       "XLK": "2026-10-23"
+      },
+      "source_stamp": "2026-10-22T01:01:40Z"
+     },
+     "z": 0.4548,
+     "window_days": 43,
+     "direction": 0
+    },
+    {
+     "name": "cross_asset",
+     "value": -2.6194197881462578,
+     "unit": "pct_points",
+     "backfilled": true,
+     "inputs": {
+      "window_days": 5,
+      "readings": 246,
+      "first_reading": "2025-10-29"
+     },
+     "z": -0.5492,
+     "window_days": 90,
+     "direction": -1
+    }
+   ]
+  },
+  {
+   "id": "energy",
+   "label": "Energy",
+   "direction": "distributing",
+   "agreement": 2,
+   "n_signals": 3,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "value": 227471768.6569926,
+     "unit": "usd",
+     "inputs": {
+      "shares": {
+       "XLE": 660796555.28
+      },
+      "nav": {
+       "XLE": 67.93
+      },
+      "as_of": {
+       "XLE": "2026-10-20"
+      },
+      "issuer": {
+       "XLE": "ssga"
+      },
+      "members_used": [
+       "XLE"
+      ],
+      "members_unreachable": [],
+      "fresh_as_of": [
+       "XLE"
+      ],
+      "priced_against": [
+       "XLE"
+      ],
+      "moved": [
+       "XLE"
+      ]
+     },
+     "backfilled": false,
+     "z": 1.0541,
+     "window_days": 43,
+     "direction": 1
+    },
+    {
+     "name": "futures_positioning",
+     "value": -13024.0,
+     "unit": "contracts",
+     "backfilled": true,
+     "inputs": {
+      "report_date": "2026-10-13",
+      "net_position": 40574.0,
+      "previous_net_position": 53598.0
+     },
+     "z": -0.7838,
+     "window_days": 90,
+     "direction": -1
+    },
+    {
+     "name": "options_hedging",
+     "value": 2.6761919085576777,
+     "unit": "ratio",
+     "backfilled": false,
+     "inputs": {
+      "symbols_used": [
+       "XLE"
+      ],
+      "upside_volume": 6649.0,
+      "downside_volume": 17794.0,
+      "expiry_used": {
+       "XLE": "2026-10-23"
+      },
+      "source_stamp": "2026-10-22T01:01:40Z"
+     },
+     "z": -0.6313,
+     "window_days": 43,
+     "direction": -1
+    },
+    {
+     "name": "cross_asset",
+     "absent": true,
+     "reason": "no_close_reading",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    }
+   ]
+  },
+  {
+   "id": "cash",
+   "label": "Cash",
+   "direction": "accumulating",
+   "agreement": 1,
+   "n_signals": 3,
+   "signals": [
+    {
+     "name": "etf_flow",
+     "value": -223177012.71651876,
+     "unit": "usd",
+     "inputs": {
+      "shares": {
+       "SPY": 1064680630.18,
+       "BIL": 557781611.71,
+       "SGOV": 1159599994.94
+      },
+      "nav": {
+       "SPY": 768.67,
+       "BIL": 91.58,
+       "SGOV": 100.613991
+      },
+      "as_of": {
+       "SPY": "2026-10-20",
+       "BIL": "2026-10-20",
+       "SGOV": "2026-10-21"
+      },
+      "issuer": {
+       "SPY": "ssga",
+       "BIL": "ssga",
+       "SGOV": "ishares"
+      },
+      "members_used": [
+       "SPY",
+       "BIL",
+       "SGOV"
+      ],
+      "members_unreachable": [],
+      "fresh_as_of": [
+       "SPY",
+       "BIL",
+       "SGOV"
+      ],
+      "priced_against": [
+       "BIL",
+       "SGOV",
+       "SPY"
+      ],
+      "moved": [
+       "SPY",
+       "BIL",
+       "SGOV"
+      ]
+     },
+     "backfilled": false,
+     "z": -0.1769,
+     "window_days": 43,
+     "direction": 0
+    },
+    {
+     "name": "futures_positioning",
+     "absent": true,
+     "reason": "no_futures_contract",
+     "z": null,
+     "direction": 0,
+     "window_days": 0
+    },
+    {
+     "name": "options_hedging",
+     "value": 1.0428988155210768,
+     "unit": "ratio",
+     "backfilled": false,
+     "inputs": {
+      "symbols_used": [
+       "SPY"
+      ],
+      "upside_volume": 606427.0,
+      "downside_volume": 632442.0,
+      "expiry_used": {
+       "SPY": "2026-10-22"
+      },
+      "source_stamp": "2026-10-22T01:01:40Z"
+     },
+     "z": 0.8072,
+     "window_days": 43,
+     "direction": 1
+    },
+    {
+     "name": "cross_asset",
+     "value": -1.4648534882654791,
+     "unit": "pct_points",
+     "backfilled": true,
+     "inputs": {
+      "window_days": 5,
+      "readings": 246,
+      "first_reading": "2025-10-29"
+     },
+     "z": -0.3471,
+     "window_days": 90,
+     "direction": 0
+    }
+   ]
+  }
+ ],
+ "hard_asset_flag": null,
+ "bucket_line": "Gold ▲ accumulating (2/3) · BTC ▲ accumulating (3/3) · AI/Semis — flat (0/3) · Energy ▼ distributing (2/3) · Cash ▲ accumulating (1/3)",
+ "footer": "ETF flows, futures positioning, options hedging, cross-asset correlation · vs own trailing history · window 35 days · not a forecast",
+ "sources": [
+  "ETF flows · issuer-published fund assets and net asset value, shares outstanding derived; these funds are not in the site's price feed",
+  "futures positioning · CFTC Commitments of Traders, weekly, futures only",
+  "options hedging · exchange-reported options volume, delayed feed",
+  "cross-asset · daily closes from the same sources as the site's price feed"
+ ]
+}
