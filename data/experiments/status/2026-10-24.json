@@ -1,0 +1,44 @@
+{
+ "kind": "experiments-status",
+ "date": "2026-10-24",
+ "generated_utc": "2026-10-24T07:37:12Z",
+ "projects": [
+  {
+   "id": "mgat",
+   "name": "MGAT Alpha v3.1",
+   "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
+   "state": "live",
+   "state_reason": "doctor read HEALTHY",
+   "last_checked": "2026-10-23T20:00:08Z",
+   "closed_total": 113,
+   "wins_total": 44,
+   "win_rate_pct": 39,
+   "pnl_realized_usd": 360.67,
+   "avg_trade_pct": 2.57,
+   "pnl_total_usd": 335.72,
+   "pnl_total_pct": 4.2,
+   "open_positions": 8,
+   "trades_label": "113 / 200",
+   "hold_pct": -8.55
+  },
+  {
+   "id": "hades",
+   "name": "Hades Trading",
+   "sub": "Sealed agent, own wallet, no human decisions in the loop",
+   "state": "live",
+   "state_reason": "today's report present, daily check shows stub=0 truncated=0",
+   "last_checked": "2026-10-24T06:08:22Z",
+   "closed_total": 0,
+   "wins_total": 0,
+   "win_rate_pct": null,
+   "pnl_realized_usd": null,
+   "avg_trade_pct": null,
+   "pnl_total_usd": 18.09,
+   "pnl_total_pct": 13.92,
+   "open_positions": 0,
+   "trades_label": "16 tx · 12 trades +4 unverified",
+   "note": "in SOL: +6.54% vs the pinned 1.36228651 — holding only SOL, no token position. The dollar return is the SOL stake at the site feed's price of 102.03 (built 2026-10-24 07:01 UTC) against the pinned 130.00; most of it is SOL price drift on a held stake."
+  }
+ ],
+ "published_utc": "2026-10-24T07:39:27Z"
+}
