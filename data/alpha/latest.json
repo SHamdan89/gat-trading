@@ -1,13 +1,13 @@
 {
  "schema": 1,
- "week": "2026-W42",
- "review_friday": "2026-10-16",
- "generated_utc": "2026-10-17T07:15:30Z",
- "published_utc": "2026-10-17T07:19:30Z",
+ "week": "2026-W43",
+ "review_friday": "2026-10-23",
+ "generated_utc": "2026-10-24T07:07:03Z",
+ "published_utc": "2026-10-24T07:08:48Z",
  "new_call_id": null,
- "no_new_call_note": "A pass across commodities, crypto and stocks this week turned up disputed labor negotiations at a second mine, an unchanged OPEC+ output decision, and a rare-earth restriction already reported since September -- nothing new, confirmed by more than one independent source, and still ahead of what the market already expects, so no new call opens this week.",
+ "no_new_call_note": "A scan across commodities, crypto and stocks this week turned up nothing both new and confirmed by more than one independent source that the market has not already priced: China's rare-earth export truce, OPEC+'s unchanged October quota and the ongoing wait on sixteen crypto ETF decisions are each already reported and already reflected in price, so no new call opens this week.",
  "counts": {
-  "weeks_hunted": 9,
+  "weeks_hunted": 10,
   "weeks_with_call": 1,
   "live": 1,
   "dead_killed": 0,
@@ -179,6 +179,28 @@
        "title": "Copper - Price - Chart - Historical Data - News",
        "url": "https://tradingeconomics.com/commodity/copper",
        "date": "2026-10-16"
+      }
+     ]
+    },
+    {
+     "week": "2026-W43",
+     "status": "Weaker",
+     "why": "BHP's October 20 operational review confirmed Escondida's September disruption was real -- group copper output fell 19% to 400,700 tonnes and Escondida alone fell 23% to 252,600 tonnes -- but BHP left full-year guidance for both the group (1.65-1.80 million tonnes) and Escondida (1.00-1.10 million tonnes) unchanged, and the supervisors' agreement that took effect October 14 already removed the labor delay the thesis leaned on. Copper trades at $6.47/lb on October 23, little moved from two weeks ago, still well short of the September record and far from the $6.15 kill level, with no sign yet of the Sernageomin-driven restart delay the variant expected.",
+     "sources": [
+      {
+       "title": "BHP Quarterly Copper Output Falls 19% Year on Year and Quarter on Quarter; FY2027 Guidance Unchanged",
+       "url": "https://news.metal.com/newscontent/104167555-bhp-quarterly-copper-output-falls-19-year-on-year-and-quarter-on-quarter-fy2027-guidance-unchanged",
+       "date": "2026-10-20"
+      },
+      {
+       "title": "BHP no alcanza las previsiones de produccion trimestral de cobre por interrupciones en mina chilena",
+       "url": "https://gbm.com/media/noticia/bhp-no-alcanza-las-previsiones-de-produccion-trimestral-de-cobre-por-interrupciones-en-mina-chilena/",
+       "date": "2026-10-20"
+      },
+      {
+       "title": "Copper - Price - Chart - Historical Data - News",
+       "url": "https://tradingeconomics.com/commodity/copper",
+       "date": "2026-10-23"
       }
      ]
     }
