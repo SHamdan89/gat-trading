@@ -1,49 +1,42 @@
 {
  "kind": "experiments-mgat-weekly",
- "week": "2026-W42",
+ "week": "2026-W43",
  "week_window": {
-  "start": "2026-10-11",
-  "end": "2026-10-17"
+  "start": "2026-10-18",
+  "end": "2026-10-24"
  },
- "generated_utc": "2026-10-18T04:05:00Z",
- "headline": "MGAT Alpha closed 18 trades this week for a net -$135.14 (22.22% win rate, 4 of 18) -- its weakest week since launch. BC accounted for 11 of the 18 closes and two-thirds of the loss, and the exit mix shifted hard toward stop-losses (13 of 18) as the broader market turned lower. The book still came out ahead of its own hold-and-never-trade benchmark this week -- +4.11% since launch against -4.02% for holding the same seven coins untouched, the first week it has led even stripped of one early outsized print -- but that gap is the basket falling faster than the book, not the book gaining, so the call this week is 'needs improvement'.",
+ "generated_utc": "2026-10-25T04:13:07Z",
+ "headline": "MGAT Alpha closed 12 trades this week for a net -$9.72 (25.00% win rate, 3 of 12) -- a near-flat result that comes down to one trade: without a single 2-hour take-profit of +$59.30 the week would have lost $69.02. The book pulled further ahead of its own hold-and-never-trade benchmark this week -- +4.44% since launch against -9.53% for holding the same seven coins untouched, a gap that widens to 7.52 points even with one early outsized print excluded -- but that is the comparison basket falling faster than the book gained, not an edge being made. The losing pattern since the latest restart is now large enough to read on its own (39 closes, 20.51% win rate, -$209.19), so the call this week is 'needs improvement'.",
  "totals": {
-  "closed": 18,
-  "wins": 4,
-  "win_rate_pct": 22.22,
-  "pnl_usd": -135.14,
-  "pnl_pct_of_book": -1.59,
-  "all_time_closed": 102,
+  "closed": 12,
+  "wins": 3,
+  "win_rate_pct": 25.0,
+  "pnl_usd": -9.72,
+  "pnl_pct_of_book": -0.12,
+  "all_time_closed": 114,
   "target": 200
  },
  "families": [
   {
-   "family": "L1",
-   "closed": 1,
-   "wins": 0,
-   "win_rate_pct": 0.0,
-   "pnl_usd": -15.2
-  },
-  {
    "family": "BC",
-   "closed": 11,
+   "closed": 7,
    "wins": 2,
-   "win_rate_pct": 18.18,
-   "pnl_usd": -90.35
+   "win_rate_pct": 28.57,
+   "pnl_usd": -29.42
   },
   {
    "family": "MED",
-   "closed": 5,
-   "wins": 2,
-   "win_rate_pct": 40.0,
-   "pnl_usd": -16.94
+   "closed": 3,
+   "wins": 0,
+   "win_rate_pct": 0.0,
+   "pnl_usd": -33.64
   },
   {
    "family": "DEX",
-   "closed": 1,
-   "wins": 0,
-   "win_rate_pct": 0.0,
-   "pnl_usd": -12.65
+   "closed": 2,
+   "wins": 1,
+   "win_rate_pct": 50.0,
+   "pnl_usd": 53.34
   }
  ],
  "counterfactual": {
@@ -53,247 +46,175 @@
  "hold_benchmark": {
   "basis": "$8,000 split equally across the seven coins the book bought in its first two cycles on 2026-08-25, held untouched, no fees",
   "start_usd": 8000,
-  "value_usd": 7678.22,
-  "pct": -4.02,
-  "book_equity_usd": 8328.75,
-  "book_pct": 4.11,
-  "priced_utc": "2026-10-17T22:28:31Z"
+  "value_usd": 7237.83,
+  "pct": -9.53,
+  "book_equity_usd": 8355.22,
+  "book_pct": 4.44,
+  "priced_utc": "2026-10-24T23:05:14Z"
  },
  "beta_share": {
-  "opens": 17,
-  "measured": 14,
-  "family_default": 3,
-  "benchmark": 0,
-  "measured_pct": 82.35
+  "opens": 14,
+  "measured": 11,
+  "family_default": 2,
+  "benchmark": 1,
+  "measured_pct": 78.57
  },
  "regime": {
   "cycles": 167,
   "risk_on": 0,
-  "risk_off": 6,
+  "risk_off": 11,
   "unknown": 0,
-  "neutral": 161
+  "neutral": 156
  },
- "faults": [
-  {
-   "kind": "SOURCE_DEGRADED",
-   "severity": "warn",
-   "count": 1
-  }
- ],
+ "faults": [],
  "llm_adviser": "LLM adviser: observer only — logs what it would do, cannot affect a trade (settled from source 2026-09-22).",
- "sample_caveat": "18 closed trades this week, 102 all-time against the 200-trade target (about 51%). All-time is past the floor where win rate and PnL become directional rather than unreadable, but the current losing stretch since the latest restart is only 27 closes, which is under that floor and not yet a meaningful read on its own.",
+ "sample_caveat": "12 closed trades this week, 114 all-time against the 200-trade target (57%). All-time is past the floor where win rate and PnL become directional rather than unreadable. The current run since the latest restart is now 39 closes -- past that floor for the first time -- so its 20.51% win rate is a first meaningful read, still directional rather than conclusive.",
  "paper_caveat": "Alpha is paper — simulated fills, no slippage, no thin-liquidity exits, no can't-sell-into-dust. A clean logic result here is never a claim that the execution floor works; that claim belongs to the Beta rung alone.",
- "integrity": "No CLASS-A changes landed in this week's window, so the comparison with the previous week is clean.",
+ "integrity": "No CLASS-A changes landed in this week's window -- the latest health-log entry is dated before it -- so the comparison with the previous week is clean.",
  "verdict": {
   "call": "needs improvement",
-  "text": "Needs improvement. BC is dragging the book: 11 of 18 closes and -$90.35 of the -$135.14 loss, while the other three families lost smaller amounts on one to five trades each. The exit mix shifted hard toward stop-losses (13 of 18, against roughly a third in the prior stretch), consistent with entries timed into a falling market rather than a broken exit -- the stops fired close to their designed size. Sizing is not the problem: 82% of this week's opens used measured betas, and the measured-beta trades lost money too. Against the hold benchmark the book did better than holding for the first time even with one early outsized print excluded, but that is the basket falling faster than the book, not the book gaining, so it reads as the stop-losses limiting damage rather than an edge. No faults worth separating out this week -- one benign data-source alarm, a clean regime feed, no time-stop overruns. Not yet a 'needs a change' call: losing is an outcome, not automatically a fault, and the current losing stretch is still under the sample floor that would make a structural call safe."
+  "text": "Needs improvement. The losing pattern since the latest restart keeps repeating and is now large enough to read: 39 closes, 20.51% win rate, -$209.19, two-thirds of them stop-losses. This week on its own was close to flat only because of one trade -- a 2-hour take-profit worth +$59.30; the other 11 closes won twice and lost nine times, for -$69.02 without it. BC and MED are still dragging the book: BC lost $29.42 on 7 closes despite one strong win, and MED went 0 for 3 for -$33.64. The exit mix has not recovered -- 8 of 12 closes were stop-losses fired close to their designed size, which reads as entries timed into a falling market rather than a broken exit. Sizing is not the problem: about 79% of this week's opens used measured betas, and the measured-beta trades are the ones losing. Against the hold benchmark the book is still ahead -- 7.52 points even with one early outsized print excluded -- but that is damage limitation in a falling comparison basket, not an edge. No faults worth separating out this week: a clean regime feed and no time-stop overruns. Not yet a 'needs a change' call -- losing is an outcome, not automatically a fault, and the pre-set check point for the current run is 50 closes, with 39 logged so far."
  },
  "vs_previous": {
-  "week": "2026-W41",
-  "closed": 2,
-  "wins": 1,
-  "win_rate_pct": 50.0,
-  "pnl_usd": 24.41
+  "week": "2026-W42",
+  "closed": 18,
+  "wins": 4,
+  "win_rate_pct": 22.22,
+  "pnl_usd": -135.14
  },
  "history": [
   {
-   "date": "2026-10-11",
-   "ts": "2026-10-11T12:43:50Z",
-   "family": "MED",
-   "symbol": "AKE",
-   "entry_price": 0.0289571,
-   "exit_price": 0.0260031,
-   "pnl_usd": -11.53,
-   "beta": 1.496,
+   "date": "2026-10-18",
+   "ts": "2026-10-18T00:29:11Z",
+   "family": "BC",
+   "symbol": "CARDS",
+   "entry_price": 0.299651,
+   "exit_price": 0.267201,
+   "pnl_usd": -12.13,
+   "beta": 0.1,
    "beta_source": "measured"
   },
   {
-   "date": "2026-10-11",
-   "ts": "2026-10-11T14:44:09Z",
-   "family": "BC",
-   "symbol": "APEPE",
-   "entry_price": 1.43e-06,
-   "exit_price": 1.23e-06,
-   "pnl_usd": -17.14,
-   "beta": 2.5,
-   "beta_source": "family_default"
+   "date": "2026-10-18",
+   "ts": "2026-10-18T08:31:29Z",
+   "family": "MED",
+   "symbol": "ALLO",
+   "entry_price": 0.235569,
+   "exit_price": 0.21155,
+   "pnl_usd": -11.36,
+   "beta": 0.175,
+   "beta_source": "measured"
   },
   {
-   "date": "2026-10-12",
-   "ts": "2026-10-12T03:47:04Z",
+   "date": "2026-10-18",
+   "ts": "2026-10-18T09:31:39Z",
+   "family": "BC",
+   "symbol": "BR",
+   "entry_price": 0.457319,
+   "exit_price": 0.41058,
+   "pnl_usd": -11.62,
+   "beta": 0.1,
+   "beta_source": "measured"
+  },
+  {
+   "date": "2026-10-18",
+   "ts": "2026-10-18T16:33:11Z",
+   "family": "MED",
+   "symbol": "0G",
+   "entry_price": 0.248229,
+   "exit_price": 0.223208,
+   "pnl_usd": -11.0,
+   "beta": 0.1,
+   "beta_source": "measured"
+  },
+  {
+   "date": "2026-10-18",
+   "ts": "2026-10-18T17:33:29Z",
    "family": "BC",
    "symbol": "A",
-   "entry_price": 0.098087,
-   "exit_price": 0.102258,
-   "pnl_usd": 4.94,
+   "entry_price": 0.103567,
+   "exit_price": 0.0902,
+   "pnl_usd": -14.84,
    "beta": 2.5,
    "beta_source": "family_default"
   },
   {
-   "date": "2026-10-12",
-   "ts": "2026-10-12T10:48:38Z",
-   "family": "MED",
-   "symbol": "ADI",
-   "entry_price": 8.29,
-   "exit_price": 8.36,
-   "pnl_usd": 0.5,
-   "beta": 0.1,
-   "beta_source": "measured"
-  },
-  {
-   "date": "2026-10-12",
-   "ts": "2026-10-12T23:51:43Z",
-   "family": "L1",
-   "symbol": "SUI",
-   "entry_price": 1.1365,
-   "exit_price": 1.0296,
-   "pnl_usd": -15.2,
-   "beta": 1.584,
-   "beta_source": "measured"
-  },
-  {
-   "date": "2026-10-13",
-   "ts": "2026-10-13T00:51:57Z",
-   "family": "BC",
-   "symbol": "AERO",
-   "entry_price": 0.967343,
-   "exit_price": 0.86585,
-   "pnl_usd": -12.88,
-   "beta": 0.388,
-   "beta_source": "measured"
-  },
-  {
-   "date": "2026-10-13",
-   "ts": "2026-10-13T00:51:57Z",
-   "family": "BC",
-   "symbol": "2Z",
-   "entry_price": 0.03804981,
-   "exit_price": 0.03412452,
-   "pnl_usd": -12.91,
-   "beta": 0.113,
-   "beta_source": "measured"
-  },
-  {
-   "date": "2026-10-13",
-   "ts": "2026-10-13T14:55:16Z",
+   "date": "2026-10-19",
+   "ts": "2026-10-19T05:36:45Z",
    "family": "DEX",
    "symbol": "SUI",
-   "entry_price": 1.13,
-   "exit_price": 1.048,
-   "pnl_usd": -12.65,
-   "beta": 1.584,
+   "entry_price": 1.042,
+   "exit_price": 1.0092,
+   "pnl_usd": -5.96,
+   "beta": 1.649,
    "beta_source": "measured"
   },
   {
-   "date": "2026-10-13",
-   "ts": "2026-10-13T22:57:51Z",
-   "family": "BC",
-   "symbol": "CAP",
-   "entry_price": 0.098713,
-   "exit_price": 0.088733,
-   "pnl_usd": -12.0,
-   "beta": 0.1,
-   "beta_source": "measured"
-  },
-  {
-   "date": "2026-10-14",
-   "ts": "2026-10-14T06:59:30Z",
-   "family": "BC",
-   "symbol": "BDX",
-   "entry_price": 0.09508,
-   "exit_price": 0.085174,
-   "pnl_usd": -14.54,
-   "beta": 0.1,
-   "beta_source": "measured"
-  },
-  {
-   "date": "2026-10-14",
-   "ts": "2026-10-14T15:01:25Z",
-   "family": "BC",
-   "symbol": "AI",
-   "entry_price": 0.109891,
-   "exit_price": 0.097499,
-   "pnl_usd": -13.26,
-   "beta": 2.5,
-   "beta_source": "family_default"
-  },
-  {
-   "date": "2026-10-14",
-   "ts": "2026-10-14T15:01:25Z",
+   "date": "2026-10-19",
+   "ts": "2026-10-19T20:40:17Z",
    "family": "MED",
    "symbol": "2Z",
-   "entry_price": 0.03744904,
-   "exit_price": 0.03368264,
-   "pnl_usd": -11.06,
-   "beta": 0.102,
+   "entry_price": 0.03205304,
+   "exit_price": 0.02877528,
+   "pnl_usd": -11.27,
+   "beta": 0.163,
    "beta_source": "measured"
   },
   {
-   "date": "2026-10-14",
-   "ts": "2026-10-14T16:01:47Z",
+   "date": "2026-10-22",
+   "ts": "2026-10-22T14:54:19Z",
    "family": "BC",
-   "symbol": "AKT",
-   "entry_price": 0.743168,
-   "exit_price": 0.66783,
-   "pnl_usd": -12.76,
-   "beta": 2.5,
-   "beta_source": "family_default"
-  },
-  {
-   "date": "2026-10-14",
-   "ts": "2026-10-14T23:04:11Z",
-   "family": "MED",
-   "symbol": "AIOZ",
-   "entry_price": 0.119108,
-   "exit_price": 0.107161,
-   "pnl_usd": -11.14,
+   "symbol": "BEAM",
+   "entry_price": 0.00289703,
+   "exit_price": 0.00303466,
+   "pnl_usd": 4.86,
    "beta": 0.1,
    "beta_source": "measured"
   },
   {
-   "date": "2026-10-15",
-   "ts": "2026-10-15T04:05:11Z",
-   "family": "BC",
-   "symbol": "AIOZ",
-   "entry_price": 0.115455,
-   "exit_price": 0.103703,
-   "pnl_usd": -11.89,
-   "beta": 0.1,
-   "beta_source": "measured"
-  },
-  {
-   "date": "2026-10-15",
-   "ts": "2026-10-15T12:13:21Z",
-   "family": "BC",
-   "symbol": "CASHCAT",
-   "entry_price": 0.112235,
-   "exit_price": 0.100891,
-   "pnl_usd": -11.67,
-   "beta": 2.5,
+   "date": "2026-10-22",
+   "ts": "2026-10-22T18:55:01Z",
+   "family": "DEX",
+   "symbol": "BSC",
+   "entry_price": 0.00813,
+   "exit_price": 0.01054,
+   "pnl_usd": 59.3,
+   "beta": 3,
    "beta_source": "family_default"
   },
   {
-   "date": "2026-10-15",
-   "ts": "2026-10-15T14:13:47Z",
+   "date": "2026-10-23",
+   "ts": "2026-10-23T19:59:34Z",
    "family": "BC",
    "symbol": "AKE",
-   "entry_price": 0.0274206,
-   "exit_price": 0.03348474,
-   "pnl_usd": 23.78,
-   "beta": 1.807,
+   "entry_price": 0.0312051,
+   "exit_price": 0.03952817,
+   "pnl_usd": 28.27,
+   "beta": 3.376,
    "beta_source": "measured"
   },
   {
-   "date": "2026-10-17",
-   "ts": "2026-10-17T19:28:03Z",
-   "family": "MED",
-   "symbol": "ALT",
-   "entry_price": 0.00808477,
-   "exit_price": 0.00938755,
-   "pnl_usd": 16.28,
-   "beta": 0.268,
+   "date": "2026-10-23",
+   "ts": "2026-10-23T23:00:16Z",
+   "family": "BC",
+   "symbol": "AIOZ",
+   "entry_price": 0.108146,
+   "exit_price": 0.096895,
+   "pnl_usd": -11.45,
+   "beta": 0.1,
+   "beta_source": "measured"
+  },
+  {
+   "date": "2026-10-24",
+   "ts": "2026-10-24T16:03:49Z",
+   "family": "BC",
+   "symbol": "0G",
+   "entry_price": 0.233598,
+   "exit_price": 0.208411,
+   "pnl_usd": -12.51,
+   "beta": 0.128,
    "beta_source": "measured"
   }
  ],
- "published_utc": "2026-10-18T04:26:12Z"
+ "published_utc": "2026-10-25T04:14:20Z"
 }
