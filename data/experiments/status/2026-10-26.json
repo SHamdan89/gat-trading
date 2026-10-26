@@ -1,0 +1,44 @@
+{
+ "kind": "experiments-status",
+ "date": "2026-10-26",
+ "generated_utc": "2026-10-26T07:38:00Z",
+ "projects": [
+  {
+   "id": "mgat",
+   "name": "MGAT Alpha v3.1",
+   "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
+   "state": "live",
+   "state_reason": "doctor read HEALTHY",
+   "last_checked": "2026-10-25T20:00:07Z",
+   "closed_total": 117,
+   "wins_total": 45,
+   "win_rate_pct": 38,
+   "pnl_realized_usd": 337.6,
+   "avg_trade_pct": 2.41,
+   "pnl_total_usd": 322.03,
+   "pnl_total_pct": 4.03,
+   "open_positions": 8,
+   "trades_label": "117 / 200",
+   "hold_pct": -10.19
+  },
+  {
+   "id": "hades",
+   "name": "Hades Trading",
+   "sub": "Sealed agent, own wallet, no human decisions in the loop",
+   "state": "live",
+   "state_reason": "today's report present, complete, no stub",
+   "last_checked": "2026-10-26T06:07:37Z",
+   "closed_total": 0,
+   "wins_total": 0,
+   "win_rate_pct": null,
+   "pnl_realized_usd": null,
+   "avg_trade_pct": null,
+   "pnl_total_usd": 16.41,
+   "pnl_total_pct": 12.62,
+   "open_positions": 0,
+   "trades_label": "16 tx · 12 trades +4 unverified",
+   "note": "in SOL: +6.54% vs the pinned 1.36228651 — all held as SOL, no token position. Most of the dollar gain is SOL price drift on a held stake, not trading skill."
+  }
+ ],
+ "published_utc": "2026-10-26T07:43:05Z"
+}
