@@ -1,48 +1,52 @@
 {
- "date": "2026-10-26",
- "generated_utc": "2026-10-26T17:13:16Z",
+ "date": "2026-10-27",
+ "generated_utc": "2026-10-27T06:07:30Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Microsoft and Alphabet report Wednesday Oct 28 and Amazon Thursday Oct 29, with consensus EPS of $4.71, $2.94 and $2.01",
-     "why": "After last week's sell-off on AI spending, these three cloud reports are the next hard test of whether data-center outlays are turning into revenue.",
+     "headline": "Anthropic's public IPO filing shows $16.3B first-half revenue and an $80.7B net loss, mostly non-cash",
+     "why": "The first audited look at a frontier AI lab's economics shows revenue compounding fast but roughly 25% of it coming from two customers without long-term contracts, against about $518B of largely non-cancellable compute commitments.",
+     "sources": [
+      {
+       "title": "Anthropic S-1 shows $16.3B H1 revenue, 25% from two customers, and $80.7B non-cash loss",
+       "url": "https://aiweekly.co/alerts/anthropic-s-1-shows-163b-h1-revenue-25-from-two-customers-and-807b-non-cash"
+      },
+      {
+       "title": "Closing Look - Monday, October 26, 2026",
+       "url": "https://cappnotes.substack.com/p/closing-look-monday-october-26-2026"
+      }
+     ]
+    },
+    {
+     "headline": "Lam Research's supply-constraint warning knocked the Philadelphia Semiconductor Index down 6.72% on Oct 22",
+     "why": "Chip equipment orders are a leading read on AI buildout pace, so a guidance trim from the sector's key toolmaker erased about $200B of value in a day even as Nvidia's CEO called neocloud demand off the charts.",
+     "sources": [
+      {
+       "title": "Chip Stocks Lose $200 Billion as Equipment Maker's Warning Counters NVIDIA's AI Optimism",
+       "url": "https://www.techtimes.com/articles/329406/20261023/chip-stocks-lose-200-billion-equipment-makers-warning-counters-nvidias-ai-optimism.htm"
+      }
+     ]
+    },
+    {
+     "headline": "Semiconductor index rebounded 2.82% on Monday but is still down 12.2% for October",
+     "why": "One strong session on the IPO news did not repair the month: the AI-hardware trade is still in drawdown while rate-hike odds and funding worries hang over it.",
+     "sources": [
+      {
+       "title": "Closing Look - Monday, October 26, 2026",
+       "url": "https://cappnotes.substack.com/p/closing-look-monday-october-26-2026"
+      }
+     ]
+    },
+    {
+     "headline": "Microsoft and Alphabet report Wednesday, Amazon Thursday - the AI-spending test of the week",
+     "why": "With chips already selling off on funding worries, cloud growth and spending commentary from these three decide whether the AI capex story is validated or questioned.",
      "sources": [
       {
        "title": "Microsoft, Alphabet and Amazon Lead the Earnings Week of October 26",
        "url": "https://www.stocktitan.net/articles/earnings-calendar-week-of-october-26-2026"
-      }
-     ]
-    },
-    {
-     "headline": "Meta beat on revenue ($64.6B) and EPS but fell 7% after a $2.12B free-cash-flow outflow and $34.91B of Q3 AI capex; Nvidia -4%, AMD -8%, Micron -6% the same day",
-     "why": "Investors are now punishing cash burn rather than rewarding beats, so capex guidance matters more than headline results this earnings season.",
-     "sources": [
-      {
-       "title": "Stock Market News for Oct 23, 2026",
-       "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-oct-23-081700850.html"
-      }
-     ]
-    },
-    {
-     "headline": "Western Digital posts adjusted EPS of $4.64 against $4.11 expected on revenue of $4.38B, up 55% year on year",
-     "why": "Storage demand from AI data centers is still showing up in reported numbers, a counterpoint to the spending worries hitting chip stocks.",
-     "sources": [
-      {
-       "title": "Market Review: October 23, 2026",
-       "url": "https://www.eoption.com/market-review-october-23-2026/"
-      }
-     ]
-    },
-    {
-     "headline": "Korea's Kospi is nearly 20% lower this month and fell another 1.1% on Monday, with Goldman Sachs cutting its 12-month target by 25%",
-     "why": "Korea's index is dominated by memory-chip makers, so its slide shows the AI hardware de-rating spreading well beyond US markets.",
-     "sources": [
-      {
-       "title": "Daily Market Outlook, October 26, 2026",
-       "url": "https://www.tickmill.com/blog/daily-market-outlook-october-26-2026"
       }
      ]
     }
@@ -52,32 +56,36 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin slips below $80,000 on Monday, trading near $79,540 (-1.5% in 24 hours), while Ether falls to about $2,302 (-2.5%)",
-     "why": "Losing the round-number level after a weekend of tight trading shows sellers still in control despite no new crypto-specific bad news.",
+     "headline": "Bitcoin slipped below $80,000 to a low of $79,332, its weakest level since Sept 18",
+     "why": "The break came on thin weekend liquidity and pre-Fed de-risking, and it leaves price below its 50-day average, so the near-term question is whether $80K gets reclaimed quickly.",
      "sources": [
       {
-       "title": "Crypto Price Analysis, BTC, ETH, HYPE, QNT and ICP, October 26",
-       "url": "https://thecryptobasic.com/2026/10/26/crypto-price-analysis-btc-eth-hype-qnt-and-icp-october-26-quant-gains-3-2-as-bitcoin-falls-below-80000-and-ethereum-weakens/"
+       "title": "Bitcoin at $79,978: lowest level since September",
+       "url": "https://cryptoticker.io/en/bitcoin-price-lowest-since-september-26-october-2026/"
+      },
+      {
+       "title": "Crypto Market Today, Oct. 26: Bitcoin Slips Below $80,000 as Fed Decision Looms",
+       "url": "https://www.fool.com/coverage/stock-market-today/2026/10/26/crypto-market-today-oct-26-bitcoin-slips-below-usd80-000-as-fed-decision-looms/"
       }
      ]
     },
     {
-     "headline": "Spot Bitcoin ETFs took in more than $1B over three sessions, yet price fell from $84,500-84,800 toward $81,000 as $436M of mostly long positions were liquidated",
-     "why": "ETF buying is being absorbed by heavy selling around $84,000-85,000, so inflows alone are not enough to lift price while equities and geopolitics weigh.",
+     "headline": "Ether is down about 3.5% on the week near $2,314, and the spot Ether ETF fell 3.2% Monday",
+     "why": "Ether and Solana are lagging Bitcoin as traders trim risk ahead of the Fed and take profits after double-digit third-quarter rebounds.",
      "sources": [
       {
-       "title": "Daily Crypto Price Analysis - October 23, 2026: Bitcoin, Ethereum and Market Trends",
-       "url": "https://www.delta.exchange/blog/daily-crypto-price-analysis-october-23-2026-bitcoin-ethereum-and-market-trends"
+       "title": "Crypto Market Today, Oct. 26: Bitcoin Slips Below $80,000 as Fed Decision Looms",
+       "url": "https://www.fool.com/coverage/stock-market-today/2026/10/26/crypto-market-today-oct-26-bitcoin-slips-below-usd80-000-as-fed-decision-looms/"
       }
      ]
     },
     {
-     "headline": "Bitcoin ends the week at $80,797, down 1.0%, with $80,400 and $79,700 named as nearby support",
-     "why": "The weekly loss was small next to gold's 4% drop, but Monday's move already sits below both of those levels.",
+     "headline": "Event stack this week: Fed decision Wednesday, a ~5% mining difficulty rise Thursday, $11.1B options expiry Friday",
+     "why": "Three scheduled catalysts in three days mean volatility is likely to cluster, and the Fed's guidance on the next move matters more than the decision itself.",
      "sources": [
       {
-       "title": "Forex and Crypto Forecast October 26-30, 2026: Fed, ECB and BoJ Decisions",
-       "url": "https://nordfx.com/market-news/forex-cryptocurrency-forecast-october-26-30-2026"
+       "title": "Bitcoin at $79,978: lowest level since September",
+       "url": "https://cryptoticker.io/en/bitcoin-price-lowest-since-september-26-october-2026/"
       }
      ]
     }
@@ -87,42 +95,44 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "Odds of a Fed hike at Wednesday's meeting have collapsed to about 7-8% from about 52% a week earlier, while a December hike is priced at 80-90%",
-     "why": "The market has pushed the tightening out by one meeting rather than cancelling it, so the press conference tone on December will drive yields.",
+     "headline": "Lula won Brazil's runoff with about 51.8%; the Ibovespa fell 13.88% and the real dropped roughly 8% in a session that halted trading",
+     "why": "Investors had positioned for a Bolsonaro win, and the simultaneous fall in stocks and currency signals capital outflow, a risk-off shock for emerging-market assets.",
      "sources": [
       {
-       "title": "Forex and Crypto Forecast October 26-30, 2026: Fed, ECB and BoJ Decisions",
-       "url": "https://nordfx.com/market-news/forex-cryptocurrency-forecast-october-26-30-2026"
+       "title": "Brazil Stocks Fall 13.9% After Lula's Win",
+       "url": "https://www.riotimesonline.com/brazil-stocks-close-down-13-9-percent-lula-win-2026/"
+      },
+      {
+       "title": "Lula Wins Brazil Runoff With 51.78%",
+       "url": "https://www.riotimesonline.com/brazil-runoff-live-count-who-leads-2026/"
       }
      ]
     },
     {
-     "headline": "Busy central-bank week: ECB likely holds Thursday, BoJ decides Friday, Bank of Canada is priced for a hike, and a November Bank of England hike remains the base case with UK CPI at 3.5%",
-     "why": "Several central banks are leaning toward tighter policy at once because of energy pass-through, which keeps pressure on global bond yields.",
+     "headline": "Fed meets Wednesday: hold priced near 90%, but markets see roughly a 70-80% chance of a hike by December",
+     "why": "September CPI ran 3.7% year over year and producer prices 6.3%, so the debate has flipped from cuts to whether the next move is up, which is what is pressuring long-duration assets.",
      "sources": [
       {
-       "title": "Daily Market Outlook, October 26, 2026",
-       "url": "https://www.tickmill.com/blog/daily-market-outlook-october-26-2026"
+       "title": "Gold rebounds above $4,000 as lower oil prices ease Fed tightening concerns - Kitco AM Report",
+       "url": "http://www.kitco.com/news/article/2026-10-26/gold-rebounds-above-4000-lower-oil-prices-ease-fed-tightening-concerns"
+      },
+      {
+       "title": "Closing Look - Monday, October 26, 2026",
+       "url": "https://cappnotes.substack.com/p/closing-look-monday-october-26-2026"
       }
      ]
     },
     {
-     "headline": "US 10-year yield climbs back to about 5% on Friday as one-year inflation expectations rise to 4.7%; France's bond spread widens to 170 bp, its widest since 2011",
-     "why": "Oil-driven inflation fears are reversing the week's bond rally, and stress in French debt adds a European risk premium on top.",
+     "headline": "Reports of a possible renewed US-Israel strike on Iran pushed crude to a five-month high on Friday; diplomacy eased it Monday",
+     "why": "The Gulf supply risk is feeding straight into inflation expectations (Michigan 1-year at 4.7%), which is what keeps rate-hike odds alive.",
      "sources": [
       {
-       "title": "Closing Look - Friday, October 23, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-23-2026"
-      }
-     ]
-    },
-    {
-     "headline": "Concern over the debt hyperscalers have taken on for AI infrastructure, plus shifting midterm-election odds, are weighing on US stocks",
-     "why": "When the AI story becomes a credit story, weakness can spread from tech into lenders and the wider market, as Friday's broad decline showed.",
-     "sources": [
+       "title": "Stock Market News for Oct 26, 2026",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-oct-26-085200530.html"
+      },
       {
-       "title": "Stock Market Outlook for October 23, 2026",
-       "url": "https://equityclock.com/2026/10/22/stock-market-outlook-for-october-23-2026/"
+       "title": "Gold rebounds above $4,000 as lower oil prices ease Fed tightening concerns - Kitco AM Report",
+       "url": "http://www.kitco.com/news/article/2026-10-26/gold-rebounds-above-4000-lower-oil-prices-ease-fed-tightening-concerns"
       }
      ]
     }
@@ -132,42 +142,40 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Brent settles at $116.72 on Friday, its highest since April 29, and WTI at $103.27 after Houthi attacks on Saudi energy sites",
-     "why": "Crude at these levels feeds straight into the inflation expectations that are keeping rate hikes priced and pressuring stocks and gold.",
+     "headline": "Brent topped $116 on Friday, up about 17% in a month, then slipped to roughly $114 Monday on diplomatic efforts",
+     "why": "Oil is the transmission channel from Middle East risk to inflation and Fed pricing, so each swing in crude moves rate-hike odds and gold alike.",
      "sources": [
       {
-       "title": "Closing Look - Friday, October 23, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-23-2026"
+       "title": "Current price of oil as of October 23, 2026",
+       "url": "https://fortune.com/article/price-of-oil-10-23-2026/"
+      },
+      {
+       "title": "Gold rebounds above $4,000 as lower oil prices ease Fed tightening concerns - Kitco AM Report",
+       "url": "http://www.kitco.com/news/article/2026-10-26/gold-rebounds-above-4000-lower-oil-prices-ease-fed-tightening-concerns"
       }
      ]
     },
     {
-     "headline": "Brent eases 1.6% to $114.88 on Monday as Qatari mediators in Tehran work with the US to calm regional tensions",
-     "why": "Part of the oil price is a geopolitical premium that can fall quickly on diplomacy, so headlines on an Iran deal now move crude day to day.",
+     "headline": "Gold fell to about $3,975 on Friday, its lowest since July 20 and steepest weekly drop in over four months, then reclaimed $4,000 Monday",
+     "why": "Gold is trading as a rate-expectations asset right now: rising hike odds and a 5%-plus 10-year yield outweighed the geopolitical bid.",
      "sources": [
       {
-       "title": "Daily Market Outlook, October 26, 2026",
-       "url": "https://www.tickmill.com/blog/daily-market-outlook-october-26-2026"
+       "title": "Gold rebounds above $4,000 as lower oil prices ease Fed tightening concerns - Kitco AM Report",
+       "url": "http://www.kitco.com/news/article/2026-10-26/gold-rebounds-above-4000-lower-oil-prices-ease-fed-tightening-concerns"
+      },
+      {
+       "title": "Gold Price Today: $3,996 Into the Fed",
+       "url": "https://financefeeds.com/gold-price-today-3996-saturday-week-ahead-fed-28-october-silver-year-low-bull-4150-bear-3890/"
       }
      ]
     },
     {
-     "headline": "Comex gold posts its steepest weekly drop since June, over 4%, and silver falls more than 5% to settle below $55 for the first time since November 2025",
-     "why": "Rising oil and Fed-hike pricing plus a strong dollar are outweighing safe-haven demand, so precious metals are trading on real yields, not fear.",
+     "headline": "Silver slid below $54 for the first time in 2026, about 55% under its January peak near $121",
+     "why": "The metal that led the rally is now the weakest link in precious metals, and traders are watching $50 as the next psychological level.",
      "sources": [
       {
-       "title": "Commodities Weekly Insights 26th October 2026 by Axis Securities Ltd",
-       "url": "https://investmentguruindia.com/newsdetail/commodities-weekly-insights-26th-october-2026-by-axis-securities-ltd777490"
-      }
-     ]
-    },
-    {
-     "headline": "Comex copper ends the week down close to 1% as rising LME inventories ease physical tightness",
-     "why": "Easing stock tightness takes away a support that had kept copper firm while other metals fell, even as long-term electrification demand stays intact.",
-     "sources": [
-      {
-       "title": "Commodities Weekly Insights 26th October 2026 by Axis Securities Ltd",
-       "url": "https://investmentguruindia.com/newsdetail/commodities-weekly-insights-26th-october-2026-by-axis-securities-ltd777490"
+       "title": "Gold Price Today: $3,996 Into the Fed",
+       "url": "https://financefeeds.com/gold-price-today-3996-saturday-week-ahead-fed-28-october-silver-year-low-bull-4150-bear-3890/"
       }
      ]
     }
@@ -177,51 +185,73 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 closes at 7,623 on Friday, sitting on the lower edge of the roughly 7,620-7,800 range it has held since August",
-     "why": "That edge is the neckline of a short-term head-and-shoulders pattern, so whether it holds this week separates a range from a breakdown toward the July lows near 7,400.",
+     "headline": "S&P 500 closed Monday at 7,676.77, Nasdaq at 26,169.38, Dow at 52,361.58, after the S&P lost 0.5% last week",
+     "why": "The bounce was led by semiconductors, but breadth stayed poor with 349 Nasdaq new lows against 82 new highs, so the index level is stronger than the structure beneath it.",
      "sources": [
       {
-       "title": "Stock Market Outlook for October 23, 2026",
-       "url": "https://equityclock.com/2026/10/22/stock-market-outlook-for-october-23-2026/"
+       "title": "Closing Look - Monday, October 26, 2026",
+       "url": "https://cappnotes.substack.com/p/closing-look-monday-october-26-2026"
       },
       {
-       "title": "Market Review: October 23, 2026",
-       "url": "https://www.eoption.com/market-review-october-23-2026/"
+       "title": "Stock Market News for Oct 26, 2026",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-oct-26-085200530.html"
       }
      ]
     },
     {
-     "headline": "Chip ETF SOXX fell 6.62% Thursday and touched its 200-day moving average at $473.39; SOX is down 15% on the month",
-     "why": "The 200-day average is the line between a pullback and a trend break, and it held on the first test as chips steadied on Friday.",
+     "headline": "Semiconductor index closed at 10,731.98 on Oct 22 and 11,083.47 on Monday",
+     "why": "That 10.7K-11.1K band is the range the sector is defending after a 12.2% October drawdown.",
      "sources": [
       {
-       "title": "Market Review: October 23, 2026",
-       "url": "https://www.eoption.com/market-review-october-23-2026/"
+       "title": "Chip Stocks Lose $200 Billion as Equipment Maker's Warning Counters NVIDIA's AI Optimism",
+       "url": "https://www.techtimes.com/articles/329406/20261023/chip-stocks-lose-200-billion-equipment-makers-warning-counters-nvidias-ai-optimism.htm"
+      },
+      {
+       "title": "Closing Look - Monday, October 26, 2026",
+       "url": "https://cappnotes.substack.com/p/closing-look-monday-october-26-2026"
       }
      ]
     },
     {
-     "headline": "Bitcoin's four-hour candle closes at $79,489.60, below its lower Bollinger band; a daily close below $79,120.80 would confirm loss of the weekend floor, with the Sept 8 low at $77,609.40 next",
-     "why": "The weekend range has given way intraday, so the daily close against $79,120.80 decides whether the decline extends toward the September low.",
+     "headline": "10-year Treasury yield sits at 4.987% versus a recent high of 5.31%; the 30-year is at 5.30%",
+     "why": "Yields near 5% are the pressure point for equity valuations, and the 2-year rising on a soft auction (4.712%) keeps the curve only about 28 basis points steep.",
      "sources": [
       {
-       "title": "Crypto Price Analysis, BTC, ETH, HYPE, QNT and ICP, October 26",
-       "url": "https://thecryptobasic.com/2026/10/26/crypto-price-analysis-btc-eth-hype-qnt-and-icp-october-26-quant-gains-3-2-as-bitcoin-falls-below-80000-and-ethereum-weakens/"
+       "title": "Closing Look - Monday, October 26, 2026",
+       "url": "https://cappnotes.substack.com/p/closing-look-monday-october-26-2026"
+      },
+      {
+       "title": "Gold rebounds above $4,000 as lower oil prices ease Fed tightening concerns - Kitco AM Report",
+       "url": "http://www.kitco.com/news/article/2026-10-26/gold-rebounds-above-4000-lower-oil-prices-ease-fed-tightening-concerns"
       }
      ]
     },
     {
-     "headline": "Gold ends the week near $4,010, down 4.2%, just above support at $3,975 with resistance at $4,030",
-     "why": "Gold is holding just above the $4,000 area after its worst week since June, so $3,975 is the level that decides whether the selling deepens.",
+     "headline": "Bitcoin: $79,332 low held; resistance is the 50-day average near $81,800 and the Oct 5 high at $86,490, support the 200-day near $73,000",
+     "why": "Price is between its two key averages, so a reclaim of $81.8K or a loss of the $79K low defines the next leg.",
      "sources": [
       {
-       "title": "Forex and Crypto Forecast October 26-30, 2026: Fed, ECB and BoJ Decisions",
-       "url": "https://nordfx.com/market-news/forex-cryptocurrency-forecast-october-26-30-2026"
+       "title": "Bitcoin at $79,978: lowest level since September",
+       "url": "https://cryptoticker.io/en/bitcoin-price-lowest-since-september-26-october-2026/"
+      }
+     ]
+    },
+    {
+     "headline": "Gold: resistance at $4,032 and $4,075, support at $3,963 and $3,946, with $3,890 the level below that",
+     "why": "Gold reclaimed $4,000 but remains under its 20-day average near $4,149, so $4,032-$4,075 is the zone that decides whether the bounce is a recovery or a retest.",
+     "sources": [
+      {
+       "title": "Gold rebounds above $4,000 as lower oil prices ease Fed tightening concerns - Kitco AM Report",
+       "url": "http://www.kitco.com/news/article/2026-10-26/gold-rebounds-above-4000-lower-oil-prices-ease-fed-tightening-concerns"
+      },
+      {
+       "title": "Gold Price Today: $3,996 Into the Fed",
+       "url": "https://financefeeds.com/gold-price-today-3996-saturday-week-ahead-fed-28-october-silver-year-low-bull-4150-bear-3890/"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-10-26T17:15:51Z"
+ "published_utc": "2026-10-27T06:09:32Z"
 }
