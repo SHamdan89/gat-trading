@@ -1,79 +1,79 @@
 {
  "kind": "allocation",
- "date": "2026-10-27",
- "generated_utc": "2026-10-27T04:21Z",
+ "date": "2026-10-28",
+ "generated_utc": "2026-10-28T20:14Z",
  "start_date": "2026-09-29",
  "full": {
-  "running_pct": 3.225,
-  "long_term_pct": 96.775,
-  "since_start_pct": -4.748,
-  "today_pct": -0.407,
-  "gain_on_money_in_pct": 14.932
+  "running_pct": 3.25,
+  "long_term_pct": 96.75,
+  "since_start_pct": -2.764,
+  "today_pct": 0.707,
+  "gain_on_money_in_pct": 17.326
  },
  "running": {
-  "since_start_pct": -5.725,
-  "today_pct": -0.131,
-  "gain_on_money_in_pct": -6.91,
+  "since_start_pct": -3.004,
+  "today_pct": 2.091,
+  "gain_on_money_in_pct": -4.223,
   "weights": [
    {
     "name": "Gold (saved as cash)",
     "group": "Gold",
-    "pct": 17.125
+    "pct": 16.645
    },
    {
     "name": "Bitcoin",
     "group": "Crypto",
-    "pct": 11.738
+    "pct": 11.644
    },
    {
     "name": "Eli Lilly (LLY)",
     "group": "Stocks",
-    "pct": 9.566
-   },
-   {
-    "name": "Ethereum",
-    "group": "Crypto",
-    "pct": 9.1
+    "pct": 9.287
    },
    {
     "name": "Cameco (CCJ)",
     "group": "Stocks",
-    "pct": 9.079
+    "pct": 9.206
+   },
+   {
+    "name": "Ethereum",
+    "group": "Crypto",
+    "pct": 9.07
    },
    {
     "name": "Southern Copper (SCCO)",
     "group": "Stocks",
-    "pct": 8.61
+    "pct": 8.701
    },
    {
     "name": "Alphabet (GOOGL)",
     "group": "Stocks",
-    "pct": 8.591
-   },
-   {
-    "name": "NVIDIA (NVDA)",
-    "group": "Stocks",
-    "pct": 6.552
+    "pct": 8.535
    },
    {
     "name": "AMD",
     "group": "Stocks",
-    "pct": 6.491
-   },
-   {
-    "name": "Solana",
-    "group": "Crypto",
-    "pct": 6.399
+    "pct": 6.757
    },
    {
     "name": "ASML",
     "group": "Stocks",
-    "pct": 6.374
+    "pct": 6.485
+   },
+   {
+    "name": "NVIDIA (NVDA)",
+    "group": "Stocks",
+    "pct": 6.453
+   },
+   {
+    "name": "Solana",
+    "group": "Crypto",
+    "pct": 6.393
    },
    {
     "name": "Cash (uninvested)",
     "group": "Stocks",
-    "pct": 0.375
+    "pct": 0.824
    }
   ],
   "plan_split": [
@@ -219,11 +219,15 @@
    },
    {
     "date": "2026-10-26",
-    "pct": -5.601
+    "pct": -5.223
    },
    {
     "date": "2026-10-27",
-    "pct": -5.725
+    "pct": -4.991
+   },
+   {
+    "date": "2026-10-28",
+    "pct": -3.004
    }
   ],
   "weekly": [
@@ -249,8 +253,8 @@
    },
    {
     "iso_week": "2026-W44",
-    "to": "2026-10-27",
-    "pct": -0.189
+    "to": "2026-10-28",
+    "pct": 2.692
    }
   ]
  },
@@ -258,10 +262,10 @@
   {
    "name": "Bitcoin (long-term)",
    "valuation": "daily",
-   "share_of_total_pct": 96.775,
-   "since_start_pct": -4.715,
-   "today_pct": -0.416,
-   "gain_on_money_in_pct": 15.837,
+   "share_of_total_pct": 96.75,
+   "since_start_pct": -2.756,
+   "today_pct": 0.661,
+   "gain_on_money_in_pct": 18.219,
    "held_since": "2024",
    "series": [
     {
@@ -378,7 +382,11 @@
     },
     {
      "date": "2026-10-27",
-     "pct": -4.715
+     "pct": -3.395
+    },
+    {
+     "date": "2026-10-28",
+     "pct": -2.756
     }
    ],
    "weekly": [
@@ -404,8 +412,8 @@
     },
     {
      "iso_week": "2026-W44",
-     "to": "2026-10-27",
-     "pct": -0.441
+     "to": "2026-10-28",
+     "pct": 1.607
     }
    ]
   }
@@ -416,5 +424,5 @@
   "Gold is saved as cash until bought; the cash reserve is kept elsewhere and not shown.",
   "Information only, not advice."
  ],
- "published_utc": "2026-10-27T04:28:31Z"
+ "published_utc": "2026-10-28T20:18:27Z"
 }
