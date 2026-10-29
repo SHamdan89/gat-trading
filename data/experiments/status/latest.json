@@ -1,7 +1,7 @@
 {
  "kind": "experiments-status",
- "date": "2026-10-28",
- "generated_utc": "2026-10-28T07:40:00Z",
+ "date": "2026-10-29",
+ "generated_utc": "2026-10-29T07:35:35Z",
  "projects": [
   {
    "id": "mgat",
@@ -9,36 +9,36 @@
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
    "state": "live",
    "state_reason": "doctor read HEALTHY",
-   "last_checked": "2026-10-27T20:00:05Z",
-   "closed_total": 118,
+   "last_checked": "2026-10-28T20:00:06Z",
+   "closed_total": 119,
    "wins_total": 45,
    "win_rate_pct": 38,
-   "pnl_realized_usd": 326.84,
-   "avg_trade_pct": 2.3,
-   "pnl_total_usd": 324.03,
-   "pnl_total_pct": 4.05,
-   "open_positions": 8,
-   "trades_label": "118 / 200",
-   "hold_pct": -7.13
+   "pnl_realized_usd": 323.05,
+   "avg_trade_pct": 2.26,
+   "pnl_total_usd": 315.67,
+   "pnl_total_pct": 3.95,
+   "open_positions": 7,
+   "trades_label": "119 / 200",
+   "hold_pct": -7.8
   },
   {
    "id": "hades",
    "name": "Hades Trading",
    "sub": "Sealed agent, own wallet, no human decisions in the loop",
    "state": "live",
-   "state_reason": "today's report present and complete; daily check shows no stub or truncation",
-   "last_checked": "2026-10-28T06:08:25Z",
+   "state_reason": "today's report present and complete; daily check reads stub=0 truncated=0",
+   "last_checked": "2026-10-29T06:08:30Z",
    "closed_total": 0,
    "wins_total": 0,
    "win_rate_pct": null,
    "pnl_realized_usd": null,
    "avg_trade_pct": null,
-   "pnl_total_usd": 17.79,
-   "pnl_total_pct": 13.68,
+   "pnl_total_usd": 15.4,
+   "pnl_total_pct": 11.85,
    "open_positions": 0,
    "trades_label": "16 tx · 12 trades +4 unverified",
-   "note": "in SOL: +6.54% vs the pinned 1.36228651 — all SOL, no token position; part of it sits as wrapped SOL. Dollar figure uses SOL at 101.82; most of the move is SOL price drift on a held stake."
+   "note": "in SOL: +6.54% vs the pinned 1.36228651 — all held as SOL, native plus wrapped. Dollar figure is his own 06:00 UTC report total, because the site price feed was stale."
   }
  ],
- "published_utc": "2026-10-28T07:45:27Z"
+ "published_utc": "2026-10-29T07:42:00Z"
 }
