@@ -1,0 +1,143 @@
+{
+ "date": "2026-10-29",
+ "generated_utc": "2026-10-29T06:10:00Z",
+ "lookback_days": 7,
+ "sections": [
+  {
+   "name": "Tech",
+   "items": [
+    {
+     "headline": "TSMC Q3 profit up 68.7% on AI demand; Q4 revenue guided to $52.3-54.3B",
+     "why": "High-performance computing was 68% of revenue and guidance implies about 58% annual growth, so AI chip demand is still accelerating at the foundry level even as gross margin slipped to 66.4% on the 2nm ramp.",
+     "sources": [
+      {
+       "title": "TSMC Q3 2026 Earnings Surpass Expectations, Profit Rises 68.7% (third-party repost; figures not checked against TSMC filings)",
+       "url": "https://www.kucoin.com/news/flash/tsmc-q3-2026-earnings-surpass-expectations-profit-rises-68-7"
+      }
+     ]
+    },
+    {
+     "headline": "Meta fell 9.4% after raising quarterly capex to $34.9B; Alphabet, Microsoft and Amazon report this week",
+     "why": "Hyperscaler spending is above $800B and Meta's negative free cash flow showed the market punishing AI outlays without matching returns, which sets the bar for the other three reports.",
+     "sources": [
+      {
+       "title": "Alphabet, Microsoft, Meta Earnings This Week Will Judge Whether $800B AI Capex Pays Off (summarizing Bloomberg)",
+       "url": "https://aiweekly.co/alerts/bloomberg-alphabet-microsoft-meta-earnings-this-week-will-judge-whether-800b-ai"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Crypto",
+   "items": [
+    {
+     "headline": "US spot Bitcoin ETFs saw $635.6M net outflows on Oct 22, the largest single day since June",
+     "why": "The outflow erased the prior day's $528.4M inflow and came with over $440M of leveraged liquidations, showing how fragile the ETF-driven bid is when equities sell off.",
+     "sources": [
+      {
+       "title": "Bitcoin ETFs swing back to net outflows as $636 million in withdrawals erase previous day's inflows",
+       "url": "https://www.theblock.co/news/markets/2026-10-23-bitcoin-etfs-swing-back-to-net-outflows-erase-previous-day-inflows-426483"
+      }
+     ]
+    },
+    {
+     "headline": "Bitcoin holds near $80,800 as 14,942 BTC leave exchanges, the biggest daily outflow in five weeks",
+     "why": "Coins leaving exchanges reduce immediately sellable supply, but the source notes this alone does not prove accumulation, and price still failed to reclaim $82,000.",
+     "sources": [
+      {
+       "title": "Bitcoin price gains as 14,942 BTC leave exchanges ahead of Fed decision",
+       "url": "https://crypto.news/bitcoin-price-rebounds-fed-decision-iran-tensions/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Macro & Geopolitics",
+   "items": [
+    {
+     "headline": "Fed holds at 3.75%-4% in a 10-2 vote, with two dissenters wanting a hike",
+     "why": "The statement swapped 'raise' for 'maintain' and upgraded growth to 'strong', and traders price about an 84% chance of a December hike, so the next move is still up, not down.",
+     "sources": [
+      {
+       "title": "Rate decision live: Interest rates held steady in split vote (Yahoo Finance)",
+       "url": "https://finance.yahoo.com/economy/policy/live/fed-meeting-live-updates-federal-reserve-october-meeting-kevin-warsh-161129201.html"
+      }
+     ]
+    },
+    {
+     "headline": "September CPI ran 3.7% year over year while payrolls added only 29,000",
+     "why": "Hot inflation alongside a weak labor market is the stagflation mix that makes the Fed's next hike harder to justify and harder to avoid; the 10-year yield sat at 5.02%.",
+     "sources": [
+      {
+       "title": "Fed preview: what to watch, October 2026",
+       "url": "https://news.ifyouspent.com/en/news/fed-meeting-what-to-watch-october-2026"
+      }
+     ]
+    },
+    {
+     "headline": "US officials reportedly warned Gulf states to prepare for a 'short, intense' military campaign against Iran after the Nov 3 midterms",
+     "why": "No strike has been announced, but a widening conflict is the main upside risk to oil and therefore to the inflation path the Fed is reacting to.",
+     "sources": [
+      {
+       "title": "Bitcoin price gains as 14,942 BTC leave exchanges ahead of Fed decision (cites a Wall Street Journal report)",
+       "url": "https://crypto.news/bitcoin-price-rebounds-fed-decision-iran-tensions/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Commodities",
+   "items": [
+    {
+     "headline": "Brent near $114.68, about 61% above its pre-crisis level, with Hormuz tanker traffic near a standstill",
+     "why": "Tanker transits were reported at 4 a day against a pre-war baseline of 85, so the price reflects a real physical supply cut, not just a risk premium.",
+     "sources": [
+      {
+       "title": "Iran says Hormuz can reopen in 4-5 days if US lifts blockade (figures mostly from secondary trackers, unverified)",
+       "url": "https://houseofsaud.com/iran-hormuz-ceasefire-conditions-oct28/"
+      }
+     ]
+    },
+    {
+     "headline": "Iran extended its tanker blockade to the Gulf of Oman; Saudi loadings reportedly down over 70%",
+     "why": "Reopening depends on a US-Iran deal that the latest talks did not produce, so oil stays exposed to headline risk in both directions.",
+     "sources": [
+      {
+       "title": "Iran says Hormuz can reopen in 4-5 days if US lifts blockade",
+       "url": "https://houseofsaud.com/iran-hormuz-ceasefire-conditions-oct28/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Market TA",
+   "items": [
+    {
+     "headline": "S&P 500 closed at a record 7,738.81 on Oct 28 on thin volume ahead of the Fed",
+     "why": "The index is at fresh highs while the Dow and Nasdaq barely moved, so the breakout is narrow and leaves the next test to the post-Fed reaction.",
+     "sources": [
+      {
+       "title": "S&P 500 Closes at a Record 7,738 Ahead of the Fed Decision (the page's own framing of the decision timing conflicts with other reports)",
+       "url": "https://247wallst.com/cards/another-record-close-for-the-s-p-500-squeezed-out-of-a-16-p-gspc-market-bell-01m621sgwr684jfks32s1h71tc"
+      }
+     ]
+    },
+    {
+     "headline": "Bitcoin pinned under a resistance cluster at $81,600-$82,500, with support at $80,000 and $79,200-$79,500",
+     "why": "The 20- and 50-day averages converge just under $82,000 and daily RSI is near 45, so a daily close above $82,500 is the level that would change the neutral structure.",
+     "sources": [
+      {
+       "title": "Bitcoin Price Before the Fed Decision: BTC Near $81,000",
+       "url": "https://admiralmarkets.com/analytics/traders-blog/bitcoin-price-fed-decision-october-2026"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "published_utc": "2026-10-29T06:11:08Z"
+}

@@ -1,48 +1,28 @@
 {
- "date": "2026-10-28",
- "generated_utc": "2026-10-28T06:15:00Z",
+ "date": "2026-10-29",
+ "generated_utc": "2026-10-29T06:10:00Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Anthropic files its S-1: $16.3B first-half revenue, $80.7B net loss, Nasdaq ticker ANT",
-     "why": "The first public look at a frontier AI lab's books shows revenue quadrupling against 2025 while losses compound, which gives the market a real price anchor for AI compute economics.",
+     "headline": "TSMC Q3 profit up 68.7% on AI demand; Q4 revenue guided to $52.3-54.3B",
+     "why": "High-performance computing was 68% of revenue and guidance implies about 58% annual growth, so AI chip demand is still accelerating at the foundry level even as gross margin slipped to 66.4% on the 2nm ramp.",
      "sources": [
       {
-       "title": "Anthropic IPO live updates: S-1 filing discloses $16.3B in first-half revenue (Yahoo Finance)",
-       "url": "https://finance.yahoo.com/technology/live/anthropic-ipo-live-updates-frontier-ai-lab-discloses-revenue-and-risks-in-highly-anticipated-s-1-filing-141702607.html"
+       "title": "TSMC Q3 2026 Earnings Surpass Expectations, Profit Rises 68.7% (third-party repost; figures not checked against TSMC filings)",
+       "url": "https://www.kucoin.com/news/flash/tsmc-q3-2026-earnings-surpass-expectations-profit-rises-68-7"
       }
      ]
     },
     {
-     "headline": "Meta lifts 2026 capex to $135-145B as Q3 free cash flow turns negative (-$2.12B); stock fell about 7% on Oct 22",
-     "why": "When even the richest hyperscalers need new share classes to fund AI buildouts, the market starts pricing the financing risk of the capex cycle, not just the demand.",
+     "headline": "Meta fell 9.4% after raising quarterly capex to $34.9B; Alphabet, Microsoft and Amazon report this week",
+     "why": "Hyperscaler spending is above $800B and Meta's negative free cash flow showed the market punishing AI outlays without matching returns, which sets the bar for the other three reports.",
      "sources": [
       {
-       "title": "Meta Raises AI Spending Target Again as Cash Flow Turns Negative (Seoul Economic Daily)",
-       "url": "https://en.sedaily.com/international/2026/10/23/meta-raises-ai-spending-target-again-as-cash-flow-turns"
-      }
-     ]
-    },
-    {
-     "headline": "Lam Research's supply-constraint warning triggered a roughly $200B chip-sector selloff on Oct 22",
-     "why": "A record quarter was not enough to offset a hint that equipment shipments slip into March, showing how crowded and fragile semiconductor positioning is.",
-     "sources": [
-      {
-       "title": "Chip Stocks Lose $200 Billion as Equipment Maker's Warning Counters AI Optimism (TechTimes)",
-       "url": "https://www.techtimes.com/articles/329406/20261023/chip-stocks-lose-200-billion-equipment-makers-warning-counters-nvidias-ai-optimism.htm"
-      }
-     ]
-    },
-    {
-     "headline": "Alphabet and Microsoft report Wednesday after the bell with AI spending returns under scrutiny",
-     "why": "Together they are 11.5% of the S&P 500, and analysts want proof that more than $800B of expected 2026 hyperscaler AI spend turns into profit and cash flow.",
-     "sources": [
-      {
-       "title": "Alphabet and Microsoft Earnings Will Put Investors' AI Stress to the Test (The Daily Upside)",
-       "url": "https://www.thedailyupside.com/technology/big-tech/alphabet-and-microsoft-earnings-will-put-investors-ai-stress-to-the-test/"
+       "title": "Alphabet, Microsoft, Meta Earnings This Week Will Judge Whether $800B AI Capex Pays Off (summarizing Bloomberg)",
+       "url": "https://aiweekly.co/alerts/bloomberg-alphabet-microsoft-meta-earnings-this-week-will-judge-whether-800b-ai"
       }
      ]
     }
@@ -52,40 +32,22 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin slips below $80,000 on Oct 27 while Asian equities rally",
-     "why": "Crypto failed to follow a risk-on tech move into a Fed decision, which says the market is trading rate-hike risk, not equity momentum.",
+     "headline": "US spot Bitcoin ETFs saw $635.6M net outflows on Oct 22, the largest single day since June",
+     "why": "The outflow erased the prior day's $528.4M inflow and came with over $440M of leveraged liquidations, showing how fragile the ETF-driven bid is when equities sell off.",
      "sources": [
       {
-       "title": "Bitcoin dips below $80,000 as crypto ignores Asian tech rally and Fed meeting begins (CoinDesk)",
-       "url": "https://www.coindesk.com/markets/2026/10/27/bitcoin-drops-below-usd80-000-as-crypto-ignores-asian-tech-rally-fed-meeting-begins"
-      },
-      {
-       "title": "Current price of Bitcoin for October 27, 2026 (Fortune)",
-       "url": "https://fortune.com/article/price-of-bitcoin-10-27-2026/"
+       "title": "Bitcoin ETFs swing back to net outflows as $636 million in withdrawals erase previous day's inflows",
+       "url": "https://www.theblock.co/news/markets/2026-10-23-bitcoin-etfs-swing-back-to-net-outflows-erase-previous-day-inflows-426483"
       }
      ]
     },
     {
-     "headline": "Spot bitcoin ETFs saw $635.6M of outflows on Oct 22, the largest day since June, then took in $110M on Oct 26",
-     "why": "Flows swung from net inflow to the biggest exit in months within a week, so ETF demand is not providing a steady bid under price.",
+     "headline": "Bitcoin holds near $80,800 as 14,942 BTC leave exchanges, the biggest daily outflow in five weeks",
+     "why": "Coins leaving exchanges reduce immediately sellable supply, but the source notes this alone does not prove accumulation, and price still failed to reclaim $82,000.",
      "sources": [
       {
-       "title": "Bitcoin ETFs swing back to net outflows as $636 million in withdrawals erase previous day's inflows (The Block)",
-       "url": "https://theblock.co/news/markets/2026-10-23-bitcoin-etfs-swing-back-to-net-outflows-erase-previous-day-inflows-426483"
-      },
-      {
-       "title": "Bitcoin dips below $80,000 as crypto ignores Asian tech rally and Fed meeting begins (CoinDesk)",
-       "url": "https://www.coindesk.com/markets/2026/10/27/bitcoin-drops-below-usd80-000-as-crypto-ignores-asian-tech-rally-fed-meeting-begins"
-      }
-     ]
-    },
-    {
-     "headline": "Options traders lean defensive: the most-traded bitcoin option is a $72,000 December put and put-call skew is positive",
-     "why": "Paying up for downside protection while funding stays positive points to leveraged longs hedging rather than a one-sided bullish book.",
-     "sources": [
-      {
-       "title": "Bitcoin dips below $80,000 as crypto ignores Asian tech rally and Fed meeting begins (CoinDesk)",
-       "url": "https://www.coindesk.com/markets/2026/10/27/bitcoin-drops-below-usd80-000-as-crypto-ignores-asian-tech-rally-fed-meeting-begins"
+       "title": "Bitcoin price gains as 14,942 BTC leave exchanges ahead of Fed decision",
+       "url": "https://crypto.news/bitcoin-price-rebounds-fed-decision-iran-tensions/"
       }
      ]
     }
@@ -95,46 +57,32 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "Fed expected to hold at 3.75-4.00% today in a 'hawkish pause'; traders price about a 73% chance of another hike by year-end",
-     "why": "After a September hike, the signal about December matters more than today's hold, and it sets the tone for yields, the dollar and every risk asset.",
+     "headline": "Fed holds at 3.75%-4% in a 10-2 vote, with two dissenters wanting a hike",
+     "why": "The statement swapped 'raise' for 'maintain' and upgraded growth to 'strong', and traders price about an 84% chance of a December hike, so the next move is still up, not down.",
      "sources": [
       {
-       "title": "Precious metals weaken as Hormuz uncertainty keeps oil elevated ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/precious-metals-weaken-hormuz-uncertainty-keeps-oil-elevated-ahead-fed"
-      },
-      {
-       "title": "Gold climbs above $4,050 as Wall Street rallies ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/gold-climbs-above-4050-wall-street-rallies-ahead-fed-decision-kitco-pm"
+       "title": "Rate decision live: Interest rates held steady in split vote (Yahoo Finance)",
+       "url": "https://finance.yahoo.com/economy/policy/live/fed-meeting-live-updates-federal-reserve-october-meeting-kevin-warsh-161129201.html"
       }
      ]
     },
     {
-     "headline": "September CPI hit 3.7% year over year (0.6% m/m) and PPI 6.3% year over year",
-     "why": "Producer prices running well above consumer prices point to more pass-through ahead, which is the case for further tightening.",
+     "headline": "September CPI ran 3.7% year over year while payrolls added only 29,000",
+     "why": "Hot inflation alongside a weak labor market is the stagflation mix that makes the Fed's next hike harder to justify and harder to avoid; the 10-year yield sat at 5.02%.",
      "sources": [
       {
-       "title": "Precious metals weaken as Hormuz uncertainty keeps oil elevated ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/precious-metals-weaken-hormuz-uncertainty-keeps-oil-elevated-ahead-fed"
+       "title": "Fed preview: what to watch, October 2026",
+       "url": "https://news.ifyouspent.com/en/news/fed-meeting-what-to-watch-october-2026"
       }
      ]
     },
     {
-     "headline": "Saudi Arabia, Turkey and Pakistan held talks with Iranian officials; no US-Iran settlement, Houthi attacks continue",
-     "why": "Hormuz shipping risk is what keeps Brent above $110, so talks that stall or progress move oil and, through it, inflation expectations.",
+     "headline": "US officials reportedly warned Gulf states to prepare for a 'short, intense' military campaign against Iran after the Nov 3 midterms",
+     "why": "No strike has been announced, but a widening conflict is the main upside risk to oil and therefore to the inflation path the Fed is reacting to.",
      "sources": [
       {
-       "title": "Precious metals weaken as Hormuz uncertainty keeps oil elevated ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/precious-metals-weaken-hormuz-uncertainty-keeps-oil-elevated-ahead-fed"
-      }
-     ]
-    },
-    {
-     "headline": "10-year Treasury yield sits near 5% with the dollar index around 102",
-     "why": "A 5% risk-free rate raises the hurdle for equities and non-yielding assets like gold and bitcoin.",
-     "sources": [
-      {
-       "title": "Gold climbs above $4,050 as Wall Street rallies ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/gold-climbs-above-4050-wall-street-rallies-ahead-fed-decision-kitco-pm"
+       "title": "Bitcoin price gains as 14,942 BTC leave exchanges ahead of Fed decision (cites a Wall Street Journal report)",
+       "url": "https://crypto.news/bitcoin-price-rebounds-fed-decision-iran-tensions/"
       }
      ]
     }
@@ -144,40 +92,22 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Gold dipped under $4,000 on Oct 27 (low near $3,994.60) then recovered to about $4,058",
-     "why": "The round-number dip bought quickly shows dip demand intact despite a 5% 10-year yield.",
+     "headline": "Brent near $114.68, about 61% above its pre-crisis level, with Hormuz tanker traffic near a standstill",
+     "why": "Tanker transits were reported at 4 a day against a pre-war baseline of 85, so the price reflects a real physical supply cut, not just a risk premium.",
      "sources": [
       {
-       "title": "Precious metals weaken as Hormuz uncertainty keeps oil elevated ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/precious-metals-weaken-hormuz-uncertainty-keeps-oil-elevated-ahead-fed"
-      },
-      {
-       "title": "Gold climbs above $4,050 as Wall Street rallies ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/gold-climbs-above-4050-wall-street-rallies-ahead-fed-decision-kitco-pm"
+       "title": "Iran says Hormuz can reopen in 4-5 days if US lifts blockade (figures mostly from secondary trackers, unverified)",
+       "url": "https://houseofsaud.com/iran-hormuz-ceasefire-conditions-oct28/"
       }
      ]
     },
     {
-     "headline": "WTI hovers near $100 and Brent at $114-116 as Iran diplomacy and Houthi activity pull oil both ways",
-     "why": "Oil near the top of its yearly range is feeding the inflation prints that keep the Fed leaning toward hikes.",
+     "headline": "Iran extended its tanker blockade to the Gulf of Oman; Saudi loadings reportedly down over 70%",
+     "why": "Reopening depends on a US-Iran deal that the latest talks did not produce, so oil stays exposed to headline risk in both directions.",
      "sources": [
       {
-       "title": "Precious metals weaken as Hormuz uncertainty keeps oil elevated ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/precious-metals-weaken-hormuz-uncertainty-keeps-oil-elevated-ahead-fed"
-      },
-      {
-       "title": "Mapping the Market: Oil may be in for a slide (Kitco)",
-       "url": "https://www.kitco.com/news/off-the-wire/2026-10-27/mapping-market-oil-may-be-slide"
-      }
-     ]
-    },
-    {
-     "headline": "Silver fell about 2% to near $52.75 on industrial-demand worries, underperforming gold",
-     "why": "Silver's slide while gold held shows the market treating the two differently: monetary hedge versus growth-sensitive metal.",
-     "sources": [
-      {
-       "title": "Precious metals weaken as Hormuz uncertainty keeps oil elevated ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/precious-metals-weaken-hormuz-uncertainty-keeps-oil-elevated-ahead-fed"
+       "title": "Iran says Hormuz can reopen in 4-5 days if US lifts blockade",
+       "url": "https://houseofsaud.com/iran-hormuz-ceasefire-conditions-oct28/"
       }
      ]
     }
@@ -187,55 +117,27 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 closed Oct 27 at 7,722.60 and Nasdaq at 26,477.81, recovering after the Oct 22 drop (Nasdaq -2.60%, S&P -1.21%)",
-     "why": "Two up days have retraced the Meta and chip-led selloff, but with key earnings and the Fed ahead the move has not yet been tested.",
+     "headline": "S&P 500 closed at a record 7,738.81 on Oct 28 on thin volume ahead of the Fed",
+     "why": "The index is at fresh highs while the Dow and Nasdaq barely moved, so the breakout is narrow and leaves the next test to the post-Fed reaction.",
      "sources": [
       {
-       "title": "Stock Market Today (Oct. 27, 2026): Nasdaq and Russell 2000 gain (TheStreet)",
-       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-27-2026"
-      },
-      {
-       "title": "Meta Raises AI Spending Target Again as Cash Flow Turns Negative (Seoul Economic Daily)",
-       "url": "https://en.sedaily.com/international/2026/10/23/meta-raises-ai-spending-target-again-as-cash-flow-turns"
+       "title": "S&P 500 Closes at a Record 7,738 Ahead of the Fed Decision (the page's own framing of the decision timing conflicts with other reports)",
+       "url": "https://247wallst.com/cards/another-record-close-for-the-s-p-500-squeezed-out-of-a-16-p-gspc-market-bell-01m621sgwr684jfks32s1h71tc"
       }
      ]
     },
     {
-     "headline": "Philadelphia Semiconductor Index closed at 10,731.98 on Oct 22 after a 6.72% one-day drop with all 30 members lower",
-     "why": "That close is the reference low for the chip rebound; reclaiming ground above it is what separates a bounce from a repair.",
+     "headline": "Bitcoin pinned under a resistance cluster at $81,600-$82,500, with support at $80,000 and $79,200-$79,500",
+     "why": "The 20- and 50-day averages converge just under $82,000 and daily RSI is near 45, so a daily close above $82,500 is the level that would change the neutral structure.",
      "sources": [
       {
-       "title": "Chip Stocks Lose $200 Billion as Equipment Maker's Warning Counters AI Optimism (TechTimes)",
-       "url": "https://www.techtimes.com/articles/329406/20261023/chip-stocks-lose-200-billion-equipment-makers-warning-counters-nvidias-ai-optimism.htm"
-      }
-     ]
-    },
-    {
-     "headline": "Gold: support at $4,039/$4,015 and resistance at $4,079/$4,100; the $4,000 floor held intraday on Oct 27",
-     "why": "Gold defended the round number inside a session, so a daily close back below it would be the first real break of structure.",
-     "sources": [
-      {
-       "title": "Gold climbs above $4,050 as Wall Street rallies ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/gold-climbs-above-4050-wall-street-rallies-ahead-fed-decision-kitco-pm"
-      },
-      {
-       "title": "Precious metals weaken as Hormuz uncertainty keeps oil elevated ahead of Fed decision (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-27/precious-metals-weaken-hormuz-uncertainty-keeps-oil-elevated-ahead-fed"
-      }
-     ]
-    },
-    {
-     "headline": "WTI near $100 sits at the top of its 2026 range with unfilled chart gaps at $83.40-84.69 and $67.02-75.00 below",
-     "why": "Price at range-high with open gaps beneath is the setup where a loss of $100 would have visible air under it.",
-     "sources": [
-      {
-       "title": "Mapping the Market: Oil may be in for a slide (Kitco)",
-       "url": "https://www.kitco.com/news/off-the-wire/2026-10-27/mapping-market-oil-may-be-slide"
+       "title": "Bitcoin Price Before the Fed Decision: BTC Near $81,000",
+       "url": "https://admiralmarkets.com/analytics/traders-blog/bitcoin-price-fed-decision-october-2026"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-10-28T06:14:39Z"
+ "published_utc": "2026-10-29T06:11:08Z"
 }
