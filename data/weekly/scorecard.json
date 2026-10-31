@@ -804,6 +804,14 @@
       "scored_utc": "2026-10-10T02:02:12Z",
       "stance": "Flat",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-30",
+      "close": 102.949997,
+      "realized_pct": 12.81,
+      "range_hit": true,
+      "width_pct": 31.49,
+      "scored_utc": "2026-10-31T02:04:11Z"
      }
     },
     "btc": {
@@ -816,6 +824,14 @@
       "scored_utc": "2026-10-10T02:02:12Z",
       "stance": "Hold",
       "stance_hit": false
+     },
+     "next_month": {
+      "target_date": "2026-10-30",
+      "close": 76626.242188,
+      "realized_pct": -9.461,
+      "range_hit": true,
+      "width_pct": 33.3,
+      "scored_utc": "2026-10-31T02:04:11Z"
      }
     },
     "spx": {
@@ -828,6 +844,14 @@
       "scored_utc": "2026-10-10T02:02:12Z",
       "stance": "Hold",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-30",
+      "close": 7580.069824,
+      "realized_pct": -1.847,
+      "range_hit": true,
+      "width_pct": 7.06,
+      "scored_utc": "2026-10-31T02:04:11Z"
      }
     },
     "ndx": {
@@ -840,6 +864,14 @@
       "scored_utc": "2026-10-10T02:02:12Z",
       "stance": "Hold",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-30",
+      "close": 28384.845703,
+      "realized_pct": -7.865,
+      "range_hit": false,
+      "width_pct": 11.4,
+      "scored_utc": "2026-10-31T02:04:11Z"
      }
     },
     "dxy": {
@@ -852,6 +884,14 @@
       "scored_utc": "2026-10-10T02:02:12Z",
       "stance": "Hold",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-10-30",
+      "close": 101.963997,
+      "realized_pct": 0.039,
+      "range_hit": true,
+      "width_pct": 3.41,
+      "scored_utc": "2026-10-31T02:04:11Z"
      }
     }
    },
@@ -1022,34 +1062,111 @@
     }
    },
    "params_version": 3
+  },
+  "2026-W43": {
+   "assets": {
+    "gold": {
+     "next_week": {
+      "target_date": "2026-10-30",
+      "close": 3884.899902,
+      "realized_pct": -3.064,
+      "range_hit": false,
+      "width_pct": 6.71,
+      "scored_utc": "2026-10-31T02:04:11Z",
+      "stance": "Wait",
+      "stance_hit": true
+     }
+    },
+    "silver": {
+     "next_week": {
+      "target_date": "2026-10-30",
+      "close": 49.134998,
+      "realized_pct": -8.874,
+      "range_hit": false,
+      "width_pct": 14.28,
+      "scored_utc": "2026-10-31T02:04:11Z",
+      "stance": "Wait",
+      "stance_hit": true
+     }
+    },
+    "wti": {
+     "next_week": {
+      "target_date": "2026-10-30",
+      "close": 102.949997,
+      "realized_pct": -0.271,
+      "range_hit": true,
+      "width_pct": 15.17,
+      "scored_utc": "2026-10-31T02:04:11Z",
+      "stance": "Hold",
+      "stance_hit": false
+     }
+    },
+    "btc": {
+     "next_week": {
+      "target_date": "2026-10-30",
+      "close": 76626.242188,
+      "realized_pct": -5.776,
+      "range_hit": false,
+      "width_pct": 11.21,
+      "scored_utc": "2026-10-31T02:04:11Z",
+      "stance": "Flat",
+      "stance_hit": false
+     }
+    },
+    "spx": {
+     "next_week": {
+      "target_date": "2026-10-30",
+      "close": 7580.069824,
+      "realized_pct": -0.572,
+      "range_hit": true,
+      "width_pct": 3.66,
+      "scored_utc": "2026-10-31T02:04:11Z",
+      "stance": "Sell",
+      "stance_hit": true
+     }
+    },
+    "ndx": {
+     "next_week": {
+      "target_date": "2026-10-30",
+      "close": 28384.845703,
+      "realized_pct": -1.978,
+      "range_hit": true,
+      "width_pct": 7.08,
+      "scored_utc": "2026-10-31T02:04:11Z",
+      "stance": "Flat",
+      "stance_hit": true
+     }
+    }
+   },
+   "params_version": 3
   }
  },
  "aggregate": {
   "params_version": 3,
   "note": "Headline = parameters v3 only; versions are never pooled (signed 2026-10-05). Each version's own figures: by_version.",
   "weekly": {
-   "weeks": 2,
+   "weeks": 3,
    "directional": {
-    "n": 9,
-    "hit": 3,
-    "rate": 0.3333
+    "n": 13,
+    "hit": 6,
+    "rate": 0.4615
    },
    "flat": {
-    "n": 4,
-    "hit": 1,
-    "rate": 0.25
+    "n": 6,
+    "hit": 2,
+    "rate": 0.3333
    },
    "range_1w": {
-    "n": 13,
-    "hit": 8,
-    "coverage": 0.6154
+    "n": 19,
+    "hit": 11,
+    "coverage": 0.5789
    },
-   "avg_width_pct": 8.16,
+   "avg_width_pct": 8.64,
    "best_read": {
-    "week": "2026-W42",
+    "week": "2026-W43",
     "asset": "silver",
     "stance": "Wait",
-    "realized_pct": -5.627
+    "realized_pct": -8.874
    },
    "worst_read": {
     "week": "2026-W41",
@@ -1059,28 +1176,28 @@
    }
   },
   "rolling_12w": {
-   "weeks": 2,
+   "weeks": 3,
    "directional": {
-    "n": 9,
-    "hit": 3,
-    "rate": 0.3333
+    "n": 13,
+    "hit": 6,
+    "rate": 0.4615
    },
    "flat": {
-    "n": 4,
-    "hit": 1,
-    "rate": 0.25
+    "n": 6,
+    "hit": 2,
+    "rate": 0.3333
    },
    "range_1w": {
-    "n": 13,
-    "hit": 8,
-    "coverage": 0.6154
+    "n": 19,
+    "hit": 11,
+    "coverage": 0.5789
    },
-   "avg_width_pct": 8.16,
+   "avg_width_pct": 8.64,
    "best_read": {
-    "week": "2026-W42",
+    "week": "2026-W43",
     "asset": "silver",
     "stance": "Wait",
-    "realized_pct": -5.627
+    "realized_pct": -8.874
    },
    "worst_read": {
     "week": "2026-W41",
@@ -1156,28 +1273,28 @@
    },
    "3": {
     "weekly": {
-     "weeks": 2,
+     "weeks": 3,
      "directional": {
-      "n": 9,
-      "hit": 3,
-      "rate": 0.3333
+      "n": 13,
+      "hit": 6,
+      "rate": 0.4615
      },
      "flat": {
-      "n": 4,
-      "hit": 1,
-      "rate": 0.25
+      "n": 6,
+      "hit": 2,
+      "rate": 0.3333
      },
      "range_1w": {
-      "n": 13,
-      "hit": 8,
-      "coverage": 0.6154
+      "n": 19,
+      "hit": 11,
+      "coverage": 0.5789
      },
-     "avg_width_pct": 8.16,
+     "avg_width_pct": 8.64,
      "best_read": {
-      "week": "2026-W42",
+      "week": "2026-W43",
       "asset": "silver",
       "stance": "Wait",
-      "realized_pct": -5.627
+      "realized_pct": -8.874
      },
      "worst_read": {
       "week": "2026-W41",
@@ -1187,28 +1304,28 @@
      }
     },
     "rolling_12w": {
-     "weeks": 2,
+     "weeks": 3,
      "directional": {
-      "n": 9,
-      "hit": 3,
-      "rate": 0.3333
+      "n": 13,
+      "hit": 6,
+      "rate": 0.4615
      },
      "flat": {
-      "n": 4,
-      "hit": 1,
-      "rate": 0.25
+      "n": 6,
+      "hit": 2,
+      "rate": 0.3333
      },
      "range_1w": {
-      "n": 13,
-      "hit": 8,
-      "coverage": 0.6154
+      "n": 19,
+      "hit": 11,
+      "coverage": 0.5789
      },
-     "avg_width_pct": 8.16,
+     "avg_width_pct": 8.64,
      "best_read": {
-      "week": "2026-W42",
+      "week": "2026-W43",
       "asset": "silver",
       "stance": "Wait",
-      "realized_pct": -5.627
+      "realized_pct": -8.874
      },
      "worst_read": {
       "week": "2026-W41",
@@ -1220,9 +1337,9 @@
    }
   },
   "declines_all_time": {
-   "no_read": 4,
+   "no_read": 5,
    "no_data": 2
   }
  },
- "updated_utc": "2026-10-24T02:06:20Z"
+ "updated_utc": "2026-10-31T02:04:11Z"
 }

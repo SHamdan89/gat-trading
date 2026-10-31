@@ -1,41 +1,41 @@
 {
- "updated_utc": "2026-10-24T02:06:20Z",
+ "updated_utc": "2026-10-31T02:04:11Z",
  "note": "Measures the FROZEN formula's trailing coverage. Never re-fits. Headline = parameters v3 only; versions are never pooled.",
  "params_version": 3,
- "trailing_weeks": 2,
+ "trailing_weeks": 3,
  "per_asset": {
   "btc": {
-   "n": 2,
-   "coverage": 1.0
+   "n": 3,
+   "coverage": 0.6667
   },
   "dxy": {
    "n": 2,
    "coverage": 1.0
   },
   "gold": {
-   "n": 1,
+   "n": 2,
    "coverage": 0.0
   },
   "ndx": {
-   "n": 2,
-   "coverage": 0.5
+   "n": 3,
+   "coverage": 0.6667
   },
   "silver": {
-   "n": 2,
-   "coverage": 0.5
+   "n": 3,
+   "coverage": 0.3333
   },
   "spx": {
-   "n": 2,
-   "coverage": 0.5
+   "n": 3,
+   "coverage": 0.6667
   },
   "wti": {
-   "n": 2,
-   "coverage": 0.5
+   "n": 3,
+   "coverage": 0.6667
   }
  },
  "pooled": {
-  "n": 13,
-  "coverage": 0.6154
+  "n": 19,
+  "coverage": 0.5789
  },
  "band": [
   0.7,
@@ -82,40 +82,40 @@
    "flag": "OK"
   },
   "3": {
-   "trailing_weeks": 2,
+   "trailing_weeks": 3,
    "per_asset": {
     "btc": {
-     "n": 2,
-     "coverage": 1.0
+     "n": 3,
+     "coverage": 0.6667
     },
     "dxy": {
      "n": 2,
      "coverage": 1.0
     },
     "gold": {
-     "n": 1,
+     "n": 2,
      "coverage": 0.0
     },
     "ndx": {
-     "n": 2,
-     "coverage": 0.5
+     "n": 3,
+     "coverage": 0.6667
     },
     "silver": {
-     "n": 2,
-     "coverage": 0.5
+     "n": 3,
+     "coverage": 0.3333
     },
     "spx": {
-     "n": 2,
-     "coverage": 0.5
+     "n": 3,
+     "coverage": 0.6667
     },
     "wti": {
-     "n": 2,
-     "coverage": 0.5
+     "n": 3,
+     "coverage": 0.6667
     }
    },
    "pooled": {
-    "n": 13,
-    "coverage": 0.6154
+    "n": 19,
+    "coverage": 0.5789
    },
    "flag": "INSUFFICIENT-HISTORY"
   }
