@@ -1,46 +1,38 @@
 {
- "date": "2026-10-31",
- "generated_utc": "2026-10-31T06:08:09Z",
+ "date": "2026-11-01",
+ "generated_utc": "2026-11-01T06:08:10Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Chip stocks crushed: Philadelphia Semiconductor Index falls 7.2% on Friday as the AI trade enters a 'show me' phase",
-     "why": "A 7% one-day drop in the sector that has led the market means investors are now demanding proof that AI spending earns a return, which pressures every stock priced on that growth.",
+     "headline": "Alphabet falls 11-12% after a capex-heavy quarter leaves free cash flow negative for a second straight quarter",
+     "why": "Cloud revenue grew 103%, yet the market punished the stock because AI spending is now being funded with about $28.7B of new debt and $12.4B of stock sales, which makes the payback on the buildout the central question for mega-cap tech.",
      "sources": [
       {
-       "title": "Closing Look, Friday October 30, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-30-2026"
-      },
-      {
-       "title": "Wall Street drops to its worst day since June after the sell-off for tech stocks deepens",
-       "url": "https://bnnbloomberg.ca/markets/2026/10/30/the-sell-off-for-tech-stocks-deepens-and-drags-wall-street-toward-its-worst-day-since-june"
+       "title": "Alphabet sinks as AI spending pushes cash flow negative again (24/7 Wall St.)",
+       "url": "https://247wallst.com/investing/2026/10/29/alphabet-sinks-11-as-ai-spending-pushes-cash-flow-negative-again-microsoft-and-meta-edge-higher-amazon-slips/"
       }
      ]
     },
     {
-     "headline": "Intel plunges 28.6%, its worst day since 1974, after a fourth-quarter profit forecast missed expectations",
-     "why": "A beat on the latest quarter was ignored because guidance disappointed, showing the market is now pricing the next quarter, not the last one.",
+     "headline": "Microsoft reports quarterly capex of $45.2B, below consensus, and says demand still exceeds available supply",
+     "why": "The shortfall was blamed on delayed third-party capacity, so spending is supply-limited rather than demand-limited, which pushes some of the buildout into later quarters instead of cancelling it.",
      "sources": [
       {
-       "title": "Wall Street drops to its worst day since June after the sell-off for tech stocks deepens",
-       "url": "https://bnnbloomberg.ca/markets/2026/10/30/the-sell-off-for-tech-stocks-deepens-and-drags-wall-street-toward-its-worst-day-since-june"
-      },
-      {
-       "title": "Closing Look, Friday October 30, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-30-2026"
+       "title": "Amazon slides as Alphabet plunge raises stakes for AWS report (24/7 Wall St.)",
+       "url": "https://247wallst.com/investing/2026/10/29/amazon-slides-3-as-alphabets-12-plunge-raises-stakes-for-aws-report-meta-rises-3-microsoft-pulls-back/"
       }
      ]
     },
     {
-     "headline": "Alphabet had its worst day on record (down more than 12% Thursday) on higher cash burn; Amazon's trailing free cash flow is negative $42.4 billion",
-     "why": "Two of the largest AI spenders were punished for capital spending that is outrunning cash generation, a direct challenge to the assumption that the buildout pays for itself.",
+     "headline": "Meta rises about 3% while its AI-peers fall, after lifting the low end of 2026 capex guidance to $135-145B",
+     "why": "Meta was the only large AI spender to gain on the week's results because its spending is funded mostly by advertising revenue (up 26% year on year) rather than by new debt, which is the distinction the market is now pricing.",
      "sources": [
       {
-       "title": "Wall Street drops to its worst day since June after the sell-off for tech stocks deepens",
-       "url": "https://bnnbloomberg.ca/markets/2026/10/30/the-sell-off-for-tech-stocks-deepens-and-drags-wall-street-toward-its-worst-day-since-june"
+       "title": "Amazon slides as Alphabet plunge raises stakes for AWS report (24/7 Wall St.)",
+       "url": "https://247wallst.com/investing/2026/10/29/amazon-slides-3-as-alphabets-12-plunge-raises-stakes-for-aws-report-meta-rises-3-microsoft-pulls-back/"
       }
      ]
     }
@@ -50,22 +42,22 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "The world's largest crypto exchange suffers a hack affecting more than $6 billion; Bitcoin drops below $77,000 from above $86,000 earlier in October",
-     "why": "A breach of this size at the top venue is a counterparty-risk shock for the whole market, and a US blockchain intelligence firm attributing it to a North Korean unit adds a sanctions angle.",
+     "headline": "The world's largest crypto exchange loses about $6.3B in a hack, the largest theft in crypto history",
+     "why": "Issuers have frozen roughly $3B of the stolen stablecoins and the exchange says it will cover all losses from its own reserves, so the market risk is a liquidity and confidence shock rather than customer insolvency, with attribution pointing to a state-linked attacker.",
      "sources": [
       {
-       "title": "Wall Street drops to its worst day since June after the sell-off for tech stocks deepens",
-       "url": "https://bnnbloomberg.ca/markets/2026/10/30/the-sell-off-for-tech-stocks-deepens-and-drags-wall-street-toward-its-worst-day-since-june"
+       "title": "Crypto Market Update: record US$6.3 billion hack (Investing News Network)",
+       "url": "https://investingnews.com/cryptocurrency-market-recap/"
       }
      ]
     },
     {
-     "headline": "Ether ETFs bleed: outflows on 17 of October's 20 trading days (about $1.35 billion), while spot Bitcoin ETFs took in $137 million Wednesday",
-     "why": "Institutional demand is diverging, with Bitcoin still attracting inflows while Ether sees its second-largest monthly outflow on record, and Bitcoin is trading with the Nasdaq-100 (30-day correlation 0.64) rather than as a haven.",
+     "headline": "Bitcoin falls about 5% in 24 hours to roughly $77.6K and Ether drops about 5% to roughly $2,230 on the hack news",
+     "why": "The sell-off landed alongside a sharp tech-stock decline, so crypto is trading as a risk asset tied to equities rather than as a haven, and the price reaction to the hack was fast but not disorderly.",
      "sources": [
       {
-       "title": "Markets Today, October 29, 2026",
-       "url": "https://nexo.com/blog/markets-today-october-29"
+       "title": "Crypto Market Update: record US$6.3 billion hack (Investing News Network)",
+       "url": "https://investingnews.com/cryptocurrency-market-recap/"
       }
      ]
     }
@@ -75,40 +67,40 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "Fed holds at 3.75%-4.00% on October 28 after September's first hike since 2023; two officials dissented in favour of another hike",
-     "why": "With markets pricing roughly an 80% chance of a December hike, the debate has shifted from when to cut to whether to tighten further, which weighs on valuations of long-duration assets.",
+     "headline": "Fed holds at 3.75-4.00% in a 10-2 vote, with two dissenters wanting a hike",
+     "why": "Markets price roughly an 83-85% chance of a quarter-point hike at the December 8-9 meeting, so the policy debate has moved from when to cut to whether to tighten further.",
      "sources": [
       {
-       "title": "Fed Leaves Rates Unchanged at 3.75%-4% Following October 28 FOMC Meeting",
-       "url": "https://www.indexbox.io/blog/fed-holds-benchmark-rate-at-3754-after-october-28-meeting/"
+       "title": "FOMC press conference transcript, October 28, 2026 (Federal Reserve)",
+       "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20261028.pdf"
       },
       {
-       "title": "Markets Today, October 29, 2026",
-       "url": "https://nexo.com/blog/markets-today-october-29"
+       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
+       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
       }
      ]
     },
     {
-     "headline": "US data stays hot: Q3 GDP grew 3.4%, core PCE rose 0.3% on the month and jobless claims fell to 194,000",
-     "why": "Strong growth with sticky inflation gives the Fed cover to keep tightening, so good economic news is currently bad news for rate-sensitive markets.",
+     "headline": "Hot data backs the hawks: Q3 GDP grew 3.4%, September PCE inflation rose to 3.6% year on year, and the 10-year yield sits near 5%",
+     "why": "Growth beating expectations while inflation re-accelerates removes the argument for easing, and a 10-year yield at 5% raises borrowing costs across the economy and competes directly with equities and non-yielding assets.",
      "sources": [
       {
-       "title": "Markets Today, October 29, 2026",
-       "url": "https://nexo.com/blog/markets-today-october-29"
+       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
+       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
       }
      ]
     },
     {
-     "headline": "Treasury yields stay elevated: 10-year 4.94%, 30-year 5.31%, 2-year 4.56% at Friday's close",
-     "why": "A 5%-plus long bond raises the hurdle rate for equities and is the stated concern behind worries that data-center construction will slow.",
+     "headline": "Strait of Hormuz stays unresolved: a commercial tanker was hit by explosives on Friday while regional mediators work to restart US-Iran talks",
+     "why": "About a fifth of seaborne oil moves through the strait, so each escalation or diplomatic headline feeds directly into crude and then into the inflation numbers the Fed is reacting to.",
      "sources": [
       {
-       "title": "Closing Look, Friday October 30, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-30-2026"
+       "title": "Gold holds above $4,000 as Hormuz diplomacy cools crude (Kitco)",
+       "url": "https://www.kitco.com/news/article/2026-10-26/gold-holds-above-4000-hormuz-diplomacy-cools-crude-ahead-fed-decision-kitco"
       },
       {
-       "title": "Wall Street drops to its worst day since June after the sell-off for tech stocks deepens",
-       "url": "https://bnnbloomberg.ca/markets/2026/10/30/the-sell-off-for-tech-stocks-deepens-and-drags-wall-street-toward-its-worst-day-since-june"
+       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
+       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
       }
      ]
     }
@@ -118,30 +110,26 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Gold falls 3.3% to $3,898.90, a one-year low; silver drops 5.9% to $49.14, below $50 for the first time in 11 months",
-     "why": "Metals are being sold as rate-hike odds rise, a reminder that non-yielding assets lose when real yields climb, even with a war premium in oil.",
+     "headline": "Brent holds near $115-117, up about 13% in October and roughly 78% above a year ago",
+     "why": "Oil is the single biggest driver of this week's inflation worries and of the hawkish Fed tone, so the Hormuz risk premium is now a macro variable rather than a pure energy story.",
      "sources": [
       {
-       "title": "Closing Look, Friday October 30, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-30-2026"
+       "title": "Current price of oil as of October 29, 2026 (Fortune)",
+       "url": "https://fortune.com/article/price-of-oil-10-29-2026/"
       },
       {
-       "title": "Daily Gold and Silver Market Analysis, 28 October 2026",
-       "url": "https://www.isabullion.com/?p=9013"
+       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
+       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
       }
      ]
     },
     {
-     "headline": "Brent settles up 2.4% at $113.43 and WTI at $104.12 with the Middle East conflict ongoing; energy is the only strong sector",
-     "why": "Oil above $100 keeps inflation and rate-hike pressure alive, and energy stocks (+1.9% Friday) are the one place absorbing money leaving tech.",
+     "headline": "Gold slips back below $4,000 and silver drops about 7% on the week to its lowest level of 2026",
+     "why": "With the 10-year near 5% and rate-hike odds rising, metals that pay no yield are losing to Treasuries, and analysts have cut 2026 gold forecasts for a second straight quarter.",
      "sources": [
       {
-       "title": "Closing Look, Friday October 30, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-30-2026"
-      },
-      {
-       "title": "Wall Street drops to its worst day since June after the sell-off for tech stocks deepens",
-       "url": "https://bnnbloomberg.ca/markets/2026/10/30/the-sell-off-for-tech-stocks-deepens-and-drags-wall-street-toward-its-worst-day-since-june"
+       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
+       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
       }
      ]
     }
@@ -151,59 +139,47 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 closes at 7,580.07 (-1.8%), off an intraday low of 7,527.67, about 3.1% below its record, for a third straight weekly loss",
-     "why": "The 7,527 intraday low is now the level to watch: a close below it would confirm the pullback is deepening beyond a one-day shakeout.",
+     "headline": "Nasdaq stays under a declining trendline, with 26,560 the resistance a daily close must clear",
+     "why": "Large-cap indexes are holding support but have not confirmed a breakout, so a failure at that level keeps the post-earnings tech weakness intact.",
      "sources": [
       {
-       "title": "Closing Look, Friday October 30, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-30-2026"
-      },
-      {
-       "title": "Wall Street drops to its worst day since June after the sell-off for tech stocks deepens",
-       "url": "https://bnnbloomberg.ca/markets/2026/10/30/the-sell-off-for-tech-stocks-deepens-and-drags-wall-street-toward-its-worst-day-since-june"
+       "title": "Trading the Close market recap, 10/28/2026 (Verified Investing)",
+       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-10-28-2026-sticky-inflation-tech-divergence-historic-oil-setup"
       }
      ]
     },
     {
-     "headline": "Narrow, tech-led damage: Nasdaq-100 -3.5% and technology sector -4.9%, while the equal-weight S&P 500 fell only 0.8% and energy gained 1.9%",
-     "why": "The gap between the cap-weighted and equal-weight index shows the selling is concentrated in AI leaders, not a broad market break.",
+     "headline": "10-year Treasury yield consolidates near 4.96-5.0% with resistance at 5.02% and 5.07%",
+     "why": "A close above those levels would extend the pressure on equities and gold, while a rejection would be the first technical sign that the yield squeeze is easing.",
      "sources": [
       {
-       "title": "Closing Look, Friday October 30, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-30-2026"
+       "title": "Trading the Close market recap, 10/28/2026 (Verified Investing)",
+       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-10-28-2026-sticky-inflation-tech-divergence-historic-oil-setup"
       }
      ]
     },
     {
-     "headline": "Bitcoin loses the $79,000-$80,000 demand zone and trades below $77,000",
-     "why": "That zone was the support cited earlier in the week with $82,000 as the first reclaim target; with it broken, former support becomes resistance.",
+     "headline": "Crude oil has an inverse head-and-shoulders neckline near $103.53, and gold faces resistance at $4,104",
+     "why": "A daily close above the crude neckline would project a measured move far higher, while gold failing to reclaim $4,104 keeps it in a lower range; these are levels to watch, not forecasts.",
      "sources": [
       {
-       "title": "Daily Crypto Price Analysis, October 27, 2026",
-       "url": "https://www.delta.exchange/blog/daily-crypto-price-analysis-october-27-2026-bitcoin-ethereum-and-market-trends"
-      },
-      {
-       "title": "Wall Street drops to its worst day since June after the sell-off for tech stocks deepens",
-       "url": "https://bnnbloomberg.ca/markets/2026/10/30/the-sell-off-for-tech-stocks-deepens-and-drags-wall-street-toward-its-worst-day-since-june"
+       "title": "Trading the Close market recap, 10/28/2026 (Verified Investing)",
+       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-10-28-2026-sticky-inflation-tech-divergence-historic-oil-setup"
       }
      ]
     },
     {
-     "headline": "Gold breaks below $4,000, taking out the $4,000, $3,972 and $3,933 support levels one desk flagged on Wednesday",
-     "why": "All three published supports gave way in a single session, so $4,000 flips to resistance for now.",
+     "headline": "Bitcoin needs a daily close above $81,182 to improve short-term structure",
+     "why": "Price sits about 5% below that level after the week's sell-off, so until it closes above, rallies are lower-high attempts rather than a confirmed recovery.",
      "sources": [
       {
-       "title": "Daily Gold and Silver Market Analysis, 28 October 2026",
-       "url": "https://www.isabullion.com/?p=9013"
-      },
-      {
-       "title": "Closing Look, Friday October 30, 2026",
-       "url": "https://cappnotes.substack.com/p/closing-look-friday-october-30-2026"
+       "title": "Trading the Close market recap, 10/28/2026 (Verified Investing)",
+       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-10-28-2026-sticky-inflation-tech-divergence-historic-oil-setup"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-10-31T06:14:55Z"
+ "published_utc": "2026-11-01T06:13:39Z"
 }
