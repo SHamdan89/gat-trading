@@ -1,38 +1,38 @@
 {
- "date": "2026-11-01",
- "generated_utc": "2026-11-01T06:08:10Z",
+ "date": "2026-11-02",
+ "generated_utc": "2026-11-02T06:25:00Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Alphabet falls 11-12% after a capex-heavy quarter leaves free cash flow negative for a second straight quarter",
-     "why": "Cloud revenue grew 103%, yet the market punished the stock because AI spending is now being funded with about $28.7B of new debt and $12.4B of stock sales, which makes the payback on the buildout the central question for mega-cap tech.",
+     "headline": "Microsoft and Alphabet both report AI capex below Wall Street estimates: $45.2B vs $50.7B expected, and $51.4B vs $55.1B expected",
+     "why": "Slower-than-planned data-center spend, which Microsoft blamed on delayed third-party capacity, puts the revenue ramps of the outside AI-cloud providers it buys from in question, and AI-cloud stocks fell on the day.",
      "sources": [
       {
-       "title": "Alphabet sinks as AI spending pushes cash flow negative again (24/7 Wall St.)",
-       "url": "https://247wallst.com/investing/2026/10/29/alphabet-sinks-11-as-ai-spending-pushes-cash-flow-negative-again-microsoft-and-meta-edge-higher-amazon-slips/"
+       "title": "AI Cloud Stocks Fall as Big Tech Capex Comes in Light - 24/7 Wall St.",
+       "url": "https://247wallst.com/investing/2026/10/29/ai-cloud-stocks-fall-as-big-tech-capex-comes-in-light-fastly-sinks-6-oracle-and-nebius-drop-3/"
       }
      ]
     },
     {
-     "headline": "Microsoft reports quarterly capex of $45.2B, below consensus, and says demand still exceeds available supply",
-     "why": "The shortfall was blamed on delayed third-party capacity, so spending is supply-limited rather than demand-limited, which pushes some of the buildout into later quarters instead of cancelling it.",
+     "headline": "Intel falls about 29% in its worst day since 1974 after guiding Q4 revenue to $15-16B against $17.1B expected",
+     "why": "A guided gross-margin drop to 38% from 44.1% and a PC slowdown management expects to last into the first half of 2027 outweighed 78% growth in data-center and AI revenue.",
      "sources": [
       {
-       "title": "Amazon slides as Alphabet plunge raises stakes for AWS report (24/7 Wall St.)",
-       "url": "https://247wallst.com/investing/2026/10/29/amazon-slides-3-as-alphabets-12-plunge-raises-stakes-for-aws-report-meta-rises-3-microsoft-pulls-back/"
+       "title": "Stock Market Today October 30, 2026: Tech Stocks Fall as Intel Has Its Worst Day in Decades - StockTitan",
+       "url": "https://www.stocktitan.net/articles/stock-market-today-live-october-30-2026"
       }
      ]
     },
     {
-     "headline": "Meta rises about 3% while its AI-peers fall, after lifting the low end of 2026 capex guidance to $135-145B",
-     "why": "Meta was the only large AI spender to gain on the week's results because its spending is funded mostly by advertising revenue (up 26% year on year) rather than by new debt, which is the distinction the market is now pricing.",
+     "headline": "Amazon's AWS grows 39% but trailing-twelve-month free cash flow turns to a $42.4B outflow on AI investment",
+     "why": "Cloud growth is strong, yet the cost of funding it is now visible in free cash flow, which is the concern behind the AI-spending selloff.",
      "sources": [
       {
-       "title": "Amazon slides as Alphabet plunge raises stakes for AWS report (24/7 Wall St.)",
-       "url": "https://247wallst.com/investing/2026/10/29/amazon-slides-3-as-alphabets-12-plunge-raises-stakes-for-aws-report-meta-rises-3-microsoft-pulls-back/"
+       "title": "Stock Market Today October 30, 2026 - StockTitan",
+       "url": "https://www.stocktitan.net/articles/stock-market-today-live-october-30-2026"
       }
      ]
     }
@@ -42,22 +42,22 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "The world's largest crypto exchange loses about $6.3B in a hack, the largest theft in crypto history",
-     "why": "Issuers have frozen roughly $3B of the stolen stablecoins and the exchange says it will cover all losses from its own reserves, so the market risk is a liquidity and confidence shock rather than customer insolvency, with attribution pointing to a state-linked attacker.",
+     "headline": "US spot bitcoin ETFs lose $643M on Oct 30, the largest daily outflow since June 25, ending a four-day inflow run",
+     "why": "Ether funds lost another $156M the same day, so combined outflows hit $799M, though the source argues leveraged liquidations, not ETF selling, drove the price dip.",
      "sources": [
       {
-       "title": "Crypto Market Update: record US$6.3 billion hack (Investing News Network)",
-       "url": "https://investingnews.com/cryptocurrency-market-recap/"
+       "title": "Bitcoin Price After a $643 Million ETF Outflow - CryptoTicker",
+       "url": "https://cryptoticker.io/en/bitcoin-price-etf-outflow-643-million-october-31/"
       }
      ]
     },
     {
-     "headline": "Bitcoin falls about 5% in 24 hours to roughly $77.6K and Ether drops about 5% to roughly $2,230 on the hack news",
-     "why": "The sell-off landed alongside a sharp tech-stock decline, so crypto is trading as a risk asset tied to equities rather than as a haven, and the price reaction to the hack was fast but not disorderly.",
+     "headline": "Bitcoin trades near $77.5K, down 3.7% on the week, after about $427M of mostly long positions were liquidated",
+     "why": "The $76,000 area held on two consecutive days, and the Fear and Greed Index dropped to 30 from 51 two days earlier, so the level to watch is whether it holds.",
      "sources": [
       {
-       "title": "Crypto Market Update: record US$6.3 billion hack (Investing News Network)",
-       "url": "https://investingnews.com/cryptocurrency-market-recap/"
+       "title": "Bitcoin Price After a $643 Million ETF Outflow - CryptoTicker",
+       "url": "https://cryptoticker.io/en/bitcoin-price-etf-outflow-643-million-october-31/"
       }
      ]
     }
@@ -67,40 +67,44 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "Fed holds at 3.75-4.00% in a 10-2 vote, with two dissenters wanting a hike",
-     "why": "Markets price roughly an 83-85% chance of a quarter-point hike at the December 8-9 meeting, so the policy debate has moved from when to cut to whether to tighten further.",
+     "headline": "Fed holds at 3.75%-4.00% on Oct 28 in a 10-2 vote, with both dissenters favoring a hike; markets price roughly 75% odds of a December increase",
+     "why": "Strong Q3 GDP and energy-driven inflation have moved the debate from cuts to whether tightening continues, which is repricing every rate-sensitive asset.",
      "sources": [
       {
-       "title": "FOMC press conference transcript, October 28, 2026 (Federal Reserve)",
-       "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20261028.pdf"
+       "title": "Oil Rose 13.6% in October. Gold Fell 6.5%. - Lead-Lag Report",
+       "url": "https://www.leadlagreport.com/oil-rose-13-6-in-october-gold-fell-6-5-the-market-is-betting-on-the-central-banks/"
       },
       {
-       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
-       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
+       "title": "Gold hits 3-1/2-month low on Fed hike fears - Kitco / Reuters",
+       "url": "https://www.kitco.com/news/off-the-wire/2026-10-30/gold-hits-3-12-month-low-fed-hike-fears-set-monthly-loss"
       }
      ]
     },
     {
-     "headline": "Hot data backs the hawks: Q3 GDP grew 3.4%, September PCE inflation rose to 3.6% year on year, and the 10-year yield sits near 5%",
-     "why": "Growth beating expectations while inflation re-accelerates removes the argument for easing, and a 10-year yield at 5% raises borrowing costs across the economy and competes directly with equities and non-yielding assets.",
+     "headline": "Tanker attacked in the Strait of Hormuz on Oct 30 with no diplomatic deal between Washington and Tehran; traders brace for escalation after the Nov 3 US midterms",
+     "why": "Supply risk through Hormuz is feeding the oil move that keeps central banks hawkish, so this is the live link between the Iran conflict and rate expectations.",
      "sources": [
       {
-       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
-       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
+       "title": "Gold drops below $4,000, silver tumbles as Hormuz attack lifts oil prices - Kitco AM Report",
+       "url": "https://www.kitco.com/news/article/2026-10-30/gold-drops-below-4000-silver-tumbles-hormuz-attack-lifts-oil-prices-kitco"
+      },
+      {
+       "title": "Oil Rose 13.6% in October. Gold Fell 6.5%. - Lead-Lag Report",
+       "url": "https://www.leadlagreport.com/oil-rose-13-6-in-october-gold-fell-6-5-the-market-is-betting-on-the-central-banks/"
       }
      ]
     },
     {
-     "headline": "Strait of Hormuz stays unresolved: a commercial tanker was hit by explosives on Friday while regional mediators work to restart US-Iran talks",
-     "why": "About a fifth of seaborne oil moves through the strait, so each escalation or diplomatic headline feeds directly into crude and then into the inflation numbers the Fed is reacting to.",
+     "headline": "ECB holds its deposit rate at 2.50% on Oct 29 with a December hike reported as likely; Bank of Japan holds at about 1.25% in an 8-1 vote",
+     "why": "The major central banks are holding while signaling that the tightening cycle is not finished, so there is no easing offset abroad to the Fed's hawkish tilt.",
      "sources": [
       {
-       "title": "Gold holds above $4,000 as Hormuz diplomacy cools crude (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-10-26/gold-holds-above-4000-hormuz-diplomacy-cools-crude-ahead-fed-decision-kitco"
+       "title": "Oil Rose 13.6% in October. Gold Fell 6.5%. - Lead-Lag Report",
+       "url": "https://www.leadlagreport.com/oil-rose-13-6-in-october-gold-fell-6-5-the-market-is-betting-on-the-central-banks/"
       },
       {
-       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
-       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
+       "title": "Gold hits 3-1/2-month low on Fed hike fears - Kitco / Reuters",
+       "url": "https://www.kitco.com/news/off-the-wire/2026-10-30/gold-hits-3-12-month-low-fed-hike-fears-set-monthly-loss"
       }
      ]
     }
@@ -110,26 +114,44 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Brent holds near $115-117, up about 13% in October and roughly 78% above a year ago",
-     "why": "Oil is the single biggest driver of this week's inflation worries and of the hawkish Fed tone, so the Hormuz risk premium is now a macro variable rather than a pure energy story.",
+     "headline": "Brent December settles at $117.64 on Oct 30, up 13.6% in October and its fourth straight monthly gain, after the Hormuz tanker attack",
+     "why": "Higher crude is the main channel keeping inflation expectations and Fed hike odds elevated, with WTI near $104 up about 15% on the month.",
      "sources": [
       {
-       "title": "Current price of oil as of October 29, 2026 (Fortune)",
-       "url": "https://fortune.com/article/price-of-oil-10-29-2026/"
+       "title": "Oil Rose 13.6% in October. Gold Fell 6.5%. - Lead-Lag Report",
+       "url": "https://www.leadlagreport.com/oil-rose-13-6-in-october-gold-fell-6-5-the-market-is-betting-on-the-central-banks/"
       },
       {
-       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
-       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
+       "title": "Gold drops below $4,000, silver tumbles as Hormuz attack lifts oil prices - Kitco AM Report",
+       "url": "https://www.kitco.com/news/article/2026-10-30/gold-drops-below-4000-silver-tumbles-hormuz-attack-lifts-oil-prices-kitco"
       }
      ]
     },
     {
-     "headline": "Gold slips back below $4,000 and silver drops about 7% on the week to its lowest level of 2026",
-     "why": "With the 10-year near 5% and rate-hike odds rising, metals that pay no yield are losing to Treasuries, and analysts have cut 2026 gold forecasts for a second straight quarter.",
+     "headline": "Gold breaks below $4,000 to its lowest since early October 2025, trading near $3,880 on Oct 30; front-month Comex gold fell 6.5% in October",
+     "why": "Gold did not rally on a tech selloff or a weaker dollar; analysts attribute the drop to margin-driven liquidation and rate-hike expectations, so it is trading as a funding source rather than a haven.",
      "sources": [
       {
-       "title": "Silver hit a 2026 low as oil climbed and the Fed stayed firm, week ending 10.30.26 (GSI Exchange)",
-       "url": "https://gsiexchange.com/silver-hit-a-2026-low-as-oil-climbed-and-the-fed-stayed-firm/"
+       "title": "Gold prices plunge to one-year low below $3,900 - Kitco",
+       "url": "https://www.kitco.com/news/article/2026-10-30/gold-prices-plunge-one-year-low-below-3900-higher-oil-prices-fuel-fears"
+      },
+      {
+       "title": "Oil Rose 13.6% in October. Gold Fell 6.5%. - Lead-Lag Report",
+       "url": "https://www.leadlagreport.com/oil-rose-13-6-in-october-gold-fell-6-5-the-market-is-betting-on-the-central-banks/"
+      }
+     ]
+    },
+    {
+     "headline": "Silver falls below $50 to its lowest level of 2026, down about 9% on the week",
+     "why": "It is the worst weekly drop since early June, and silver underperformed gold on worries about industrial demand and tight monetary policy.",
+     "sources": [
+      {
+       "title": "Gold prices plunge to one-year low below $3,900 - Kitco",
+       "url": "https://www.kitco.com/news/article/2026-10-30/gold-prices-plunge-one-year-low-below-3900-higher-oil-prices-fuel-fears"
+      },
+      {
+       "title": "Gold drops below $4,000, silver tumbles as Hormuz attack lifts oil prices - Kitco AM Report",
+       "url": "https://www.kitco.com/news/article/2026-10-30/gold-drops-below-4000-silver-tumbles-hormuz-attack-lifts-oil-prices-kitco"
       }
      ]
     }
@@ -139,47 +161,47 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "Nasdaq stays under a declining trendline, with 26,560 the resistance a daily close must clear",
-     "why": "Large-cap indexes are holding support but have not confirmed a breakout, so a failure at that level keeps the post-earnings tech weakness intact.",
+     "headline": "S&P 500 closes Oct 30 at 7,580.07, down 1.8% on the day for its worst session since June, and down 0.6% on the week; Nasdaq Composite closes at 25,437.00, down 2.9%",
+     "why": "The index is still up 10.7% year to date, so this is a sharp one-day break led by tech rather than a change in the yearly trend.",
      "sources": [
       {
-       "title": "Trading the Close market recap, 10/28/2026 (Verified Investing)",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-10-28-2026-sticky-inflation-tech-divergence-historic-oil-setup"
+       "title": "How major US stock indexes fared Friday 10/30/2026 - AP via KRMG",
+       "url": "https://krmg.com/2026/10/30/how-major-us-stock-indexes-fared-friday-10-30-2026/"
       }
      ]
     },
     {
-     "headline": "10-year Treasury yield consolidates near 4.96-5.0% with resistance at 5.02% and 5.07%",
-     "why": "A close above those levels would extend the pressure on equities and gold, while a rejection would be the first technical sign that the yield squeeze is easing.",
+     "headline": "Russell 2000 closes at 2,811.84, up 1.3% on the week while the Nasdaq Composite is down 2.0%",
+     "why": "Small caps held a weekly gain through a tech-led selloff, so the damage was concentrated in large-cap growth rather than broad.",
      "sources": [
       {
-       "title": "Trading the Close market recap, 10/28/2026 (Verified Investing)",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-10-28-2026-sticky-inflation-tech-divergence-historic-oil-setup"
+       "title": "How major US stock indexes fared Friday 10/30/2026 - AP via KRMG",
+       "url": "https://krmg.com/2026/10/30/how-major-us-stock-indexes-fared-friday-10-30-2026/"
       }
      ]
     },
     {
-     "headline": "Crude oil has an inverse head-and-shoulders neckline near $103.53, and gold faces resistance at $4,104",
-     "why": "A daily close above the crude neckline would project a measured move far higher, while gold failing to reclaim $4,104 keeps it in a lower range; these are levels to watch, not forecasts.",
+     "headline": "A closely watched chip index falls 7.2% on Oct 30, and the Nasdaq-100 ETF drops 3.47% against 1.77% for the S&P 500 ETF",
+     "why": "The Nasdaq-100 fell about twice as much as the broad index, which shows the move was a semiconductor and AI-spending unwind.",
      "sources": [
       {
-       "title": "Trading the Close market recap, 10/28/2026 (Verified Investing)",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-10-28-2026-sticky-inflation-tech-divergence-historic-oil-setup"
+       "title": "Stock Market Today October 30, 2026 - StockTitan",
+       "url": "https://www.stocktitan.net/articles/stock-market-today-live-october-30-2026"
       }
      ]
     },
     {
-     "headline": "Bitcoin needs a daily close above $81,182 to improve short-term structure",
-     "why": "Price sits about 5% below that level after the week's sell-off, so until it closes above, rallies are lower-high attempts rather than a confirmed recovery.",
+     "headline": "10-year Treasury yield at 4.98% on Oct 29, below its 5.31% peak of Oct 5 but still near the 5% level",
+     "why": "Yields eased from the peak yet sit at about the level gold and equities have been reacting to, and real yields eased to 2.63% from 2.93% at end-September.",
      "sources": [
       {
-       "title": "Trading the Close market recap, 10/28/2026 (Verified Investing)",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-10-28-2026-sticky-inflation-tech-divergence-historic-oil-setup"
+       "title": "Oil Rose 13.6% in October. Gold Fell 6.5%. - Lead-Lag Report",
+       "url": "https://www.leadlagreport.com/oil-rose-13-6-in-october-gold-fell-6-5-the-market-is-betting-on-the-central-banks/"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-11-01T06:13:39Z"
+ "published_utc": "2026-11-02T06:20:48Z"
 }
