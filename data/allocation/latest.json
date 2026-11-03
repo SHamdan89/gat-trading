@@ -1,79 +1,79 @@
 {
  "kind": "allocation",
- "date": "2026-11-02",
- "generated_utc": "2026-11-02T04:21Z",
+ "date": "2026-11-03",
+ "generated_utc": "2026-11-03T04:20Z",
  "start_date": "2026-09-29",
  "full": {
-  "running_pct": 3.239,
-  "long_term_pct": 96.761,
-  "since_start_pct": -5.974,
-  "today_pct": 0.452,
-  "gain_on_money_in_pct": 13.453
+  "running_pct": 3.24,
+  "long_term_pct": 96.76,
+  "since_start_pct": -8.205,
+  "today_pct": 0.095,
+  "gain_on_money_in_pct": 10.761
  },
  "running": {
-  "since_start_pct": -6.524,
-  "today_pct": 0.698,
-  "gain_on_money_in_pct": -7.698,
+  "since_start_pct": -8.717,
+  "today_pct": -0.275,
+  "gain_on_money_in_pct": -9.864,
   "weights": [
    {
     "name": "Gold (saved as cash)",
     "group": "Gold",
-    "pct": 17.272
+    "pct": 17.687
    },
    {
     "name": "Bitcoin",
     "group": "Crypto",
-    "pct": 11.685
+    "pct": 11.681
    },
    {
     "name": "Eli Lilly (LLY)",
     "group": "Stocks",
-    "pct": 10.698
+    "pct": 10.87
    },
    {
     "name": "Ethereum",
     "group": "Crypto",
-    "pct": 9.155
+    "pct": 9.15
    },
    {
     "name": "Cameco (CCJ)",
     "group": "Stocks",
-    "pct": 8.97
+    "pct": 8.744
    },
    {
     "name": "Southern Copper (SCCO)",
     "group": "Stocks",
-    "pct": 8.244
+    "pct": 8.427
    },
    {
     "name": "Alphabet (GOOGL)",
     "group": "Stocks",
-    "pct": 7.736
-   },
-   {
-    "name": "ASML",
-    "group": "Stocks",
-    "pct": 6.473
-   },
-   {
-    "name": "AMD",
-    "group": "Stocks",
-    "pct": 6.391
+    "pct": 7.781
    },
    {
     "name": "NVIDIA (NVDA)",
     "group": "Stocks",
-    "pct": 6.364
+    "pct": 6.381
+   },
+   {
+    "name": "ASML",
+    "group": "Stocks",
+    "pct": 6.366
    },
    {
     "name": "Solana",
     "group": "Crypto",
-    "pct": 6.158
+    "pct": 6.087
+   },
+   {
+    "name": "AMD",
+    "group": "Stocks",
+    "pct": 5.951
    },
    {
     "name": "Cash (uninvested)",
     "group": "Stocks",
-    "pct": 0.855
+    "pct": 0.875
    }
   ],
   "plan_split": [
@@ -235,19 +235,23 @@
    },
    {
     "date": "2026-10-30",
-    "pct": -7.459
+    "pct": -7.452
    },
    {
     "date": "2026-10-31",
-    "pct": -7.305
+    "pct": -7.299
    },
    {
     "date": "2026-11-01",
-    "pct": -7.172
+    "pct": -7.174
    },
    {
     "date": "2026-11-02",
-    "pct": -6.524
+    "pct": -8.465
+   },
+   {
+    "date": "2026-11-03",
+    "pct": -8.717
    }
   ],
   "weekly": [
@@ -274,12 +278,12 @@
    {
     "iso_week": "2026-W44",
     "to": "2026-11-01",
-    "pct": -1.721
+    "pct": -1.723
    },
    {
     "iso_week": "2026-W45",
-    "to": "2026-11-02",
-    "pct": 0.698
+    "to": "2026-11-03",
+    "pct": -1.662
    }
   ]
  },
@@ -287,10 +291,10 @@
   {
    "name": "Bitcoin (long-term)",
    "valuation": "daily",
-   "share_of_total_pct": 96.761,
-   "since_start_pct": -5.956,
-   "today_pct": 0.444,
-   "gain_on_money_in_pct": 14.33,
+   "share_of_total_pct": 96.76,
+   "since_start_pct": -8.188,
+   "today_pct": 0.107,
+   "gain_on_money_in_pct": 11.616,
    "held_since": "2024",
    "series": [
     {
@@ -419,19 +423,23 @@
     },
     {
      "date": "2026-10-30",
-     "pct": -7.672
+     "pct": -7.61
     },
     {
      "date": "2026-10-31",
-     "pct": -7.372
+     "pct": -7.316
     },
     {
      "date": "2026-11-01",
-     "pct": -6.371
+     "pct": -6.392
     },
     {
      "date": "2026-11-02",
-     "pct": -5.956
+     "pct": -8.286
+    },
+    {
+     "date": "2026-11-03",
+     "pct": -8.188
     }
    ],
    "weekly": [
@@ -458,12 +466,12 @@
     {
      "iso_week": "2026-W44",
      "to": "2026-11-01",
-     "pct": -2.171
+     "pct": -2.192
     },
     {
      "iso_week": "2026-W45",
-     "to": "2026-11-02",
-     "pct": 0.444
+     "to": "2026-11-03",
+     "pct": -1.919
     }
    ]
   }
@@ -474,5 +482,5 @@
   "Gold is saved as cash until bought; the cash reserve is kept elsewhere and not shown.",
   "Information only, not advice."
  ],
- "published_utc": "2026-11-02T04:29:52Z"
+ "published_utc": "2026-11-03T04:28:57Z"
 }
