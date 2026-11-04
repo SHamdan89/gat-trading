@@ -1,7 +1,7 @@
 {
  "kind": "experiments-status",
- "date": "2026-11-03",
- "generated_utc": "2026-11-03T07:54:00Z",
+ "date": "2026-11-04",
+ "generated_utc": "2026-11-04T07:35:40Z",
  "projects": [
   {
    "id": "mgat",
@@ -9,36 +9,36 @@
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
    "state": "live",
    "state_reason": "doctor read HEALTHY",
-   "last_checked": "2026-11-02T20:00:09Z",
-   "closed_total": 132,
+   "last_checked": "2026-11-03T20:00:05Z",
+   "closed_total": 133,
    "wins_total": 48,
    "win_rate_pct": 36,
-   "pnl_realized_usd": 242.38,
-   "avg_trade_pct": 1.49,
-   "pnl_total_usd": 219.45,
-   "pnl_total_pct": 2.74,
+   "pnl_realized_usd": 231.84,
+   "avg_trade_pct": 1.4,
+   "pnl_total_usd": 228.53,
+   "pnl_total_pct": 2.86,
    "open_positions": 6,
-   "trades_label": "132 / 200",
-   "hold_pct": -17.99
+   "trades_label": "133 / 200",
+   "hold_pct": -16.24
   },
   {
    "id": "hades",
    "name": "Hades Trading",
    "sub": "Sealed agent, own wallet, no human decisions in the loop",
    "state": "live",
-   "state_reason": "daily report present and complete; daily check shows no stub, no truncation",
-   "last_checked": "2026-11-03T06:07:46Z",
+   "state_reason": "daily report present, complete, no stub marker; daily check read stub=0 truncated=0",
+   "last_checked": "2026-11-04T06:08:26Z",
    "closed_total": 0,
    "wins_total": 0,
    "win_rate_pct": null,
    "pnl_realized_usd": null,
    "avg_trade_pct": null,
-   "pnl_total_usd": 2.65,
-   "pnl_total_pct": 2.04,
+   "pnl_total_usd": 4.6,
+   "pnl_total_pct": 3.54,
    "open_positions": 0,
    "trades_label": "16 tx · 12 trades +4 unverified",
-   "note": "in SOL: 6.54% vs the pinned 1.36228651 — all SOL, no token holding; most of the dollar move is SOL price drift on a held stake. Transaction count past the verified baseline is measured from balance steps, not yet verified on-chain."
+   "note": "in SOL: +6.54% vs the pinned 1.36228651 — the whole balance is SOL (part parked as wrapped SOL), no token position. Dollar figure is the agent's own 06:00 UTC report (about $134.6) because the site price feed was not fresh. Most of the dollar move is SOL price drift on a held stake, not trading skill."
   }
  ],
- "published_utc": "2026-11-03T08:00:47Z"
+ "published_utc": "2026-11-04T07:36:39Z"
 }
