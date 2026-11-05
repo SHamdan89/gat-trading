@@ -1,0 +1,44 @@
+{
+ "kind": "experiments-status",
+ "date": "2026-11-05",
+ "generated_utc": "2026-11-05T07:38:00Z",
+ "projects": [
+  {
+   "id": "mgat",
+   "name": "MGAT Alpha v3.1",
+   "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
+   "state": "live",
+   "state_reason": "doctor read HEALTHY",
+   "last_checked": "2026-11-04T20:00:04Z",
+   "closed_total": 133,
+   "wins_total": 48,
+   "win_rate_pct": 36,
+   "pnl_realized_usd": 231.84,
+   "avg_trade_pct": 1.4,
+   "pnl_total_usd": 241.86,
+   "pnl_total_pct": 3.02,
+   "open_positions": 9,
+   "trades_label": "133 / 200",
+   "hold_pct": -13.48
+  },
+  {
+   "id": "hades",
+   "name": "Hades Trading",
+   "sub": "Test 2 live (5-11 Nov): at least 5 trades he can explain, and end ahead of simply holding SOL",
+   "state": "live",
+   "state_reason": "today's report present and complete; daily check shows no stub, no truncation",
+   "last_checked": "2026-11-05T06:07:30Z",
+   "closed_total": 0,
+   "wins_total": 0,
+   "win_rate_pct": null,
+   "pnl_realized_usd": null,
+   "avg_trade_pct": null,
+   "pnl_total_usd": 9.08,
+   "pnl_total_pct": 6.99,
+   "open_positions": 1,
+   "trades_label": "16 tx · 12 trades +5 unverified",
+   "note": "Test 1 ended 5 Nov: left free, he did not act. 0 trades. Across three model families (DeepSeek, Gemini, Sonnet), none beat simply holding SOL. Test 2: 1 of 5 so far. in SOL: -11.81% vs the pinned 1.36228651 — most of the dollar gain is SOL price, and part of the stake now sits in a USDC position"
+  }
+ ],
+ "published_utc": "2026-11-05T07:46:08Z"
+}

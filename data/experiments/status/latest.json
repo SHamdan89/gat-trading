@@ -1,7 +1,7 @@
 {
  "kind": "experiments-status",
- "date": "2026-11-04",
- "generated_utc": "2026-11-04T07:35:40Z",
+ "date": "2026-11-05",
+ "generated_utc": "2026-11-05T07:38:00Z",
  "projects": [
   {
    "id": "mgat",
@@ -9,36 +9,36 @@
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
    "state": "live",
    "state_reason": "doctor read HEALTHY",
-   "last_checked": "2026-11-03T20:00:05Z",
+   "last_checked": "2026-11-04T20:00:04Z",
    "closed_total": 133,
    "wins_total": 48,
    "win_rate_pct": 36,
    "pnl_realized_usd": 231.84,
    "avg_trade_pct": 1.4,
-   "pnl_total_usd": 228.53,
-   "pnl_total_pct": 2.86,
-   "open_positions": 6,
+   "pnl_total_usd": 241.86,
+   "pnl_total_pct": 3.02,
+   "open_positions": 9,
    "trades_label": "133 / 200",
-   "hold_pct": -16.24
+   "hold_pct": -13.48
   },
   {
    "id": "hades",
    "name": "Hades Trading",
-   "sub": "Sealed agent, own wallet, no human decisions in the loop",
+   "sub": "Test 2 live (5-11 Nov): at least 5 trades he can explain, and end ahead of simply holding SOL",
    "state": "live",
-   "state_reason": "daily report present, complete, no stub marker; daily check read stub=0 truncated=0",
-   "last_checked": "2026-11-04T06:08:26Z",
+   "state_reason": "today's report present and complete; daily check shows no stub, no truncation",
+   "last_checked": "2026-11-05T06:07:30Z",
    "closed_total": 0,
    "wins_total": 0,
    "win_rate_pct": null,
    "pnl_realized_usd": null,
    "avg_trade_pct": null,
-   "pnl_total_usd": 4.6,
-   "pnl_total_pct": 3.54,
-   "open_positions": 0,
-   "trades_label": "16 tx · 12 trades +4 unverified",
-   "note": "in SOL: +6.54% vs the pinned 1.36228651 — the whole balance is SOL (part parked as wrapped SOL), no token position. Dollar figure is the agent's own 06:00 UTC report (about $134.6) because the site price feed was not fresh. Most of the dollar move is SOL price drift on a held stake, not trading skill."
+   "pnl_total_usd": 9.08,
+   "pnl_total_pct": 6.99,
+   "open_positions": 1,
+   "trades_label": "16 tx · 12 trades +5 unverified",
+   "note": "Test 1 ended 5 Nov: left free, he did not act. 0 trades. Across three model families (DeepSeek, Gemini, Sonnet), none beat simply holding SOL. Test 2: 1 of 5 so far. in SOL: -11.81% vs the pinned 1.36228651 — most of the dollar gain is SOL price, and part of the stake now sits in a USDC position"
   }
  ],
- "published_utc": "2026-11-04T07:36:39Z"
+ "published_utc": "2026-11-05T07:46:08Z"
 }
