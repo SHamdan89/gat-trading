@@ -1,28 +1,52 @@
 {
- "date": "2026-11-05",
- "generated_utc": "2026-11-05T06:08:00Z",
+ "date": "2026-11-06",
+ "generated_utc": "2026-11-06T06:10:00Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Marvell agrees to buy Lumentum in a $115B all-stock deal built around optical AI networking",
-     "why": "It is a bet that copper links hit their physical limit in AI data centers, which would shift spending toward optical components, though the deal is not expected to close until the first half of 2028.",
+     "headline": "Chip stocks crater: Nvidia -9.3%, AMD -17.3%, Philadelphia Semiconductor Index down more than 12% in one session",
+     "why": "The market is repricing how fast the AI data-center buildout can proceed now that rising electricity costs have made new data centers a political issue, which puts chip and data-center capex forecasts at risk.",
      "sources": [
       {
-       "title": "Marvell to buy Lumentum in a $115bn all-stock deal",
-       "url": "https://thenextweb.com/news/marvell-lumentum-acquisition-115bn-all-stock"
+       "title": "Fox Business: Nasdaq tumbles 5%, Dow plunges more than 1,800 points",
+       "url": "https://www.foxbusiness.com/markets/stocks-nov-5-2026"
+      },
+      {
+       "title": "StockTitan: Stock market today, November 5, 2026",
+       "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-5-2026"
       }
      ]
     },
     {
-     "headline": "Data-center power and infrastructure stocks drop 10-24% after Democratic midterm wins raise moratorium fears",
-     "why": "The AI buildout depends on cheap, fast power approvals, and a possible Texas pause (about 27% of US data-center capacity) puts that assumption in play, even though some of the moves coincided with company earnings.",
+     "headline": "Microsoft reportedly scrutinizing Nscale, Nebius and IREN after construction delays and cost overruns; Nebius and IREN fall more than 13%",
+     "why": "If the largest AI cloud buyer tightens oversight of third-party capacity providers, the financing and timelines behind rented AI compute become less certain.",
      "sources": [
       {
-       "title": "Why AI Data Center Stocks Are Down Today After Democrats Won Congress",
-       "url": "https://www.stocktitan.net/articles/ai-data-center-stocks-fall-texas-vote-november-4-2026"
+       "title": "Tech Startups: Top Tech News Roundup, November 5, 2026",
+       "url": "https://techstartups.com/2026/11/05/top-tech-news-roundup-for-today-november-5-2026-googles-17b-ai-data-center-nvidia-ziplines-1-5b-funding-and-nasdaqs-5-5-plunge/"
+      }
+     ]
+    },
+    {
+     "headline": "About 600,000 Nvidia H200 chips reportedly sit in Hong Kong while Beijing withholds large-scale mainland import approval (unconfirmed by Nvidia)",
+     "why": "China demand for Nvidia's export-cleared chips is gated by Beijing's approvals, not just US licensing, so a large inventory can sit idle and weigh on expected China revenue.",
+     "sources": [
+      {
+       "title": "Tech Startups: Top Tech News Roundup, November 5, 2026",
+       "url": "https://techstartups.com/2026/11/05/top-tech-news-roundup-for-today-november-5-2026-googles-17b-ai-data-center-nvidia-ziplines-1-5b-funding-and-nasdaqs-5-5-plunge/"
+      }
+     ]
+    },
+    {
+     "headline": "AMD discloses plans to buy World Labs (~$8.2B) and Taalas (~$2.9B) for about $11.1B combined, both subject to closing conditions",
+     "why": "AMD is spending heavily on 3D world-model and inference-chip capability just as the market questions AI capex, a test of whether acquirers get rewarded for buying growth.",
+     "sources": [
+      {
+       "title": "Tech Startups: Top Tech News Roundup, November 5, 2026",
+       "url": "https://techstartups.com/2026/11/05/top-tech-news-roundup-for-today-november-5-2026-googles-17b-ai-data-center-nvidia-ziplines-1-5b-funding-and-nasdaqs-5-5-plunge/"
       }
      ]
     }
@@ -32,32 +56,26 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin rebounds above $80,000 after dipping to about $75,700 on Nov 4",
-     "why": "The bounce rode the broad risk rally and lower yields, but spot ETF flows were negative during the prior weakness and need to turn for the move to hold.",
+     "headline": "Binance estimates a $6.3B security breach, the largest crypto hack on record; says it has covered about 90% of losses",
+     "why": "A loss of this size at the largest exchange tests whether its reserve fund can absorb it without user losses, and it adds to risk-off pressure on crypto.",
      "sources": [
       {
-       "title": "Crypto Market Today, Nov. 4: Bitcoin Stages Sharp Recovery",
-       "url": "https://fool.com/coverage/stock-market-today/2026/11/04/crypto-market-today-nov-4-bitcoin-stages-sharp-recovery-as-wall-street-rallies-and-regulatory-hopes-return"
+       "title": "ABC7: Binance estimates security breach impact at $6.3 billion",
+       "url": "https://abc7news.com/story/binance-estimates-security-breach-impact-63-billion/19999397/"
+      },
+      {
+       "title": "LBC: Binance says it has replenished 90% of losses after $6.3bn hack",
+       "url": "https://www.lbc.co.uk/article/crypto-firm-binance-says-it-has-replenished-90-of-losses-after-63bn-hack-5HjdkjM_2/"
       }
      ]
     },
     {
-     "headline": "Ether leads majors, up about 6.6% to roughly $2,420, a two-week high",
-     "why": "Ether outpacing bitcoin on a risk-on day points to beta-seeking money returning, though it is a one-day move.",
+     "headline": "FBI attributes the Binance theft to North Korea's TraderTraitor group; stolen assets are being converted mainly into Ether",
+     "why": "Conversion into Ether and attempts to launder it can create selling and on-chain flow pressure, while attribution to a state actor raises the odds of freezes and enforcement actions.",
      "sources": [
       {
-       "title": "Crypto Market Today, Nov. 4: Bitcoin Stages Sharp Recovery",
-       "url": "https://fool.com/coverage/stock-market-today/2026/11/04/crypto-market-today-nov-4-bitcoin-stages-sharp-recovery-as-wall-street-rallies-and-regulatory-hopes-return"
-      }
-     ]
-    },
-    {
-     "headline": "Bitcoin still trades about 7% below a month ago and 23% below a year ago",
-     "why": "Even after the bounce the trend is down and the price is far from the October 2025 record near $126,000, so this is a rebound inside a weaker market, not a reversal.",
-     "sources": [
-      {
-       "title": "Current price of Bitcoin for November 4, 2026",
-       "url": "https://fortune.com/article/price-of-bitcoin-11-04-2026/"
+       "title": "ABC7: Binance estimates security breach impact at $6.3 billion",
+       "url": "https://abc7news.com/story/binance-estimates-security-breach-impact-63-billion/19999397/"
       }
      ]
     }
@@ -67,32 +85,44 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "Fed held at 3.75-4.00% on Oct 28 with two dissenters wanting a hike; markets price a December hike at about 75%",
-     "why": "September CPI of 3.7% against payrolls of just 29,000 leaves the Fed choosing between inflation and weak jobs, and the next rate move is more likely up than down.",
+     "headline": "Democrats win both chambers of Congress in the US midterms; Treasuries rally, 10-year yield falls to about 4.93% and the dollar softens",
+     "why": "Divided government lowers the odds of new fiscal stimulus and sets up a 2027 debt-limit fight, while the shift in policy expectations is already moving yields, defense stocks and clean-energy shares.",
      "sources": [
       {
-       "title": "Global economy briefing, November 4, 2026",
-       "url": "https://www.riotimesonline.com/global-economy-briefing-november-4-2026"
+       "title": "Euronews: What Trump's defeat means for Europe and global markets",
+       "url": "https://euronews.com/2026/11/04/us-midterms-what-trumps-defeat-means-for-europe-and-global-markets"
+      },
+      {
+       "title": "XTB: US Midterm Results 2026, what they mean for markets",
+       "url": "https://www.xtb.com/en/education/us-midterm-election-results-markets"
       }
      ]
     },
     {
-     "headline": "Democrats win House and Senate in the Nov 3 midterms; the Dow jumps 3%",
-     "why": "Divided government lowers the odds of sudden policy shocks, which is why stocks rallied, but it also puts regulation of AI and data centers back on the table.",
+     "headline": "Markets still price roughly a 70-75% chance of another Fed rate hike in December",
+     "why": "With a strong manufacturing report (ISM 55.5) and the 10-year near 4.9%, the policy path is still toward tightening, which caps upside for gold and long-duration tech.",
      "sources": [
       {
-       "title": "Stock Market Today (Nov. 4, 2026): Stocks rise, oil collapses after Dems sweep midterm elections",
-       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-04-2026"
+       "title": "Kitco: Gold, silver recover from October rout as oil drops, Fed tightening bets persist",
+       "url": "https://www.kitco.com/news/article/2026-11-02/gold-silver-recover-october-rout-oil-drops-fed-tightening-bets-persist"
+      },
+      {
+       "title": "StockTitan: Stock market today, November 5, 2026",
+       "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-5-2026"
       }
      ]
     },
     {
-     "headline": "Hormuz stays at the highest threat level with about 490 ships waiting, even as reports of a draft Iran war-ending deal circulate",
-     "why": "Oil is falling on hoped-for peace while shipping conditions have not improved, so any failed talks would reverse the price drop quickly. The draft is unconfirmed and an Iranian official said both sides remain far apart.",
+     "headline": "Reports of progress toward renewed US-Iran talks cut the oil risk premium, but no deal is announced and Strait of Hormuz disruption continues",
+     "why": "Energy prices are the main swing factor for inflation, so any talks breakthrough or collapse moves rate expectations, eurozone inflation (near 4%) and equities.",
      "sources": [
       {
-       "title": "Oil price, week 45/2026: Brent falls by 8 percent",
-       "url": "https://globaloilshock.com/en/news/oil-price-week-45-2026/"
+       "title": "Kitco: Gold, silver recover from October rout as oil drops, Fed tightening bets persist",
+       "url": "https://www.kitco.com/news/article/2026-11-02/gold-silver-recover-october-rout-oil-drops-fed-tightening-bets-persist"
+      },
+      {
+       "title": "Euronews: What Trump's defeat means for Europe and global markets",
+       "url": "https://euronews.com/2026/11/04/us-midterms-what-trumps-defeat-means-for-europe-and-global-markets"
       }
      ]
     }
@@ -102,26 +132,30 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Brent falls about 8% on the week, from $113 on Oct 30 to roughly $104-106, its lowest in about a month",
-     "why": "The drop prices in a possible end to the war, not an actual supply fix, so it is fragile while Hormuz traffic is still blocked.",
+     "headline": "Oil's biggest one-day drop since July on Iran-talks hopes: Brent settled at $104.77 and WTI at $96.46 on Nov 2; Brent about $105.84 on the morning of Nov 4",
+     "why": "Brent is still roughly $41 above a year ago, so energy remains the main inflation input even after the pullback.",
      "sources": [
       {
-       "title": "Oil price, week 45/2026: Brent falls by 8 percent",
-       "url": "https://globaloilshock.com/en/news/oil-price-week-45-2026/"
+       "title": "Kitco: Gold, silver recover from October rout as oil drops, Fed tightening bets persist",
+       "url": "https://www.kitco.com/news/article/2026-11-02/gold-silver-recover-october-rout-oil-drops-fed-tightening-bets-persist"
       },
       {
-       "title": "Current price of oil as of November 4, 2026",
+       "title": "Fortune: Current price of oil as of November 4, 2026",
        "url": "https://fortune.com/article/price-of-oil-11-04-2026/"
       }
      ]
     },
     {
-     "headline": "Gold climbs back above $4,000 and silver jumps about 4% to near $52 after hitting 12-month lows on Oct 30",
-     "why": "A weaker dollar and lower Treasury yields drove the rebound, but gold is still roughly a quarter below its January record, so this is a bounce from a deep drop.",
+     "headline": "Gold rebounds about 1.8% to near $3,945 and silver about 3.7% to near $50.80 on Nov 2 after a heavy October selloff; gold reached about $4,035 on Nov 4",
+     "why": "Metals are recovering as oil and the dollar ease, but prices are still capped by hawkish Fed pricing, so the October losses have not been reversed.",
      "sources": [
       {
-       "title": "Gold Tops US$4,000 as Silver Jumps",
-       "url": "https://www.riotimesonline.com/gold-silver-precious-metals-wednesday-november-4-2026/"
+       "title": "Kitco: Gold, silver recover from October rout as oil drops, Fed tightening bets persist",
+       "url": "https://www.kitco.com/news/article/2026-11-02/gold-silver-recover-october-rout-oil-drops-fed-tightening-bets-persist"
+      },
+      {
+       "title": "Euronews: What Trump's defeat means for Europe and global markets",
+       "url": "https://euronews.com/2026/11/04/us-midterms-what-trumps-defeat-means-for-europe-and-global-markets"
       }
      ]
     }
@@ -131,37 +165,35 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 closes at 7,688.62 (+1.58%), Dow at 53,356 (+3.03%), Nasdaq at 25,736 (+1.44%)",
-     "why": "Breadth was wide, with every sector except energy and industrials higher, but tech finished near flat, so the rally was led by cyclicals and not by AI.",
+     "headline": "S&P 500 closed at 7,353.73 (-4.36%, worst day since April 2025); Nasdaq Composite closed at 24,315 (-5.52%), in correction, more than 10% below its Oct 6 record close",
+     "why": "A single-day break of this size, with the Nasdaq slipping under its 200-day moving average for the first time since April, turns the trend from buy-the-dip to a test of whether prior support holds.",
      "sources": [
       {
-       "title": "Stock Market Today (Nov. 4, 2026)",
-       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-04-2026"
+       "title": "Fox Business: Nasdaq tumbles 5%, Dow plunges more than 1,800 points",
+       "url": "https://www.foxbusiness.com/markets/stocks-nov-5-2026"
+      },
+      {
+       "title": "StockTitan: Stock market today, November 5, 2026",
+       "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-5-2026"
       }
      ]
     },
     {
-     "headline": "Gold's key level is $4,000: it reclaimed it on Nov 4 after the dollar index slipped to about 101.5",
-     "why": "Holding above $4,000 would confirm the Oct 30 low as a floor, while a close back under it would make Nov 4 a failed bounce.",
+     "headline": "Dow closed at 51,523 (-3.44%), giving back its election rally; VIX touched 28.09 intraday, its highest since March 31; Nvidia closed at $181.60, below its 2026 starting price of $186.50",
+     "why": "The retreat erased the post-election gain, and a volatility spike plus the break of Nvidia's year-to-date level show the weakness is spreading beyond chips.",
      "sources": [
       {
-       "title": "Gold Tops US$4,000 as Silver Jumps",
-       "url": "https://www.riotimesonline.com/gold-silver-precious-metals-wednesday-november-4-2026/"
-      }
-     ]
-    },
-    {
-     "headline": "Bitcoin's line is $80,000 with $82,000 the next hurdle after the rebound from about $75,700",
-     "why": "A hold above $80,000 and a reclaim of $82,000 would show buyers in control, while a slip back under $80,000 would leave the rebound as a squeeze inside the downtrend.",
-     "sources": [
+       "title": "StockTitan: Stock market today, November 5, 2026",
+       "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-5-2026"
+      },
       {
-       "title": "Crypto Market Today, Nov. 4: Bitcoin Stages Sharp Recovery",
-       "url": "https://fool.com/coverage/stock-market-today/2026/11/04/crypto-market-today-nov-4-bitcoin-stages-sharp-recovery-as-wall-street-rallies-and-regulatory-hopes-return"
+       "title": "Fox Business: Nasdaq tumbles 5%, Dow plunges more than 1,800 points",
+       "url": "https://www.foxbusiness.com/markets/stocks-nov-5-2026"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-11-05T06:15:19Z"
+ "published_utc": "2026-11-06T14:17:21Z"
 }
