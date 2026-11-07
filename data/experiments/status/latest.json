@@ -1,7 +1,7 @@
 {
  "kind": "experiments-status",
- "date": "2026-11-06",
- "generated_utc": "2026-11-06T07:40:00Z",
+ "date": "2026-11-07",
+ "generated_utc": "2026-11-07T07:36:12Z",
  "projects": [
   {
    "id": "mgat",
@@ -9,36 +9,36 @@
    "sub": "Autonomous paper-trading experiment — zero capital, simulated fills",
    "state": "live",
    "state_reason": "doctor read HEALTHY",
-   "last_checked": "2026-11-05T20:00:05Z",
+   "last_checked": "2026-11-06T20:00:11Z",
    "closed_total": 134,
    "wins_total": 48,
    "win_rate_pct": 36,
    "pnl_realized_usd": 220.29,
    "avg_trade_pct": 1.31,
-   "pnl_total_usd": 176.94,
-   "pnl_total_pct": 2.21,
+   "pnl_total_usd": 179.57,
+   "pnl_total_pct": 2.24,
    "open_positions": 8,
    "trades_label": "134 / 200",
-   "hold_pct": -18.24
+   "hold_pct": -15.36
   },
   {
    "id": "hades",
    "name": "Hades Trading",
    "sub": "Test 2 live (5-11 Nov): at least 5 trades he can explain, and end ahead of simply holding SOL",
    "state": "live",
-   "state_reason": "daily report present and complete, daily check clean",
-   "last_checked": "2026-11-06T06:08:16Z",
+   "state_reason": "today's report present and complete, daily check counters stub=0 truncated=0",
+   "last_checked": "2026-11-07T06:08:18Z",
    "closed_total": 0,
    "wins_total": 0,
    "win_rate_pct": null,
    "pnl_realized_usd": null,
    "avg_trade_pct": null,
-   "pnl_total_usd": 0.74,
-   "pnl_total_pct": 0.57,
+   "pnl_total_usd": 1.92,
+   "pnl_total_pct": 1.48,
    "open_positions": 0,
    "trades_label": "16 tx · 12 trades +6 unverified",
-   "note": "Test 1 ended 5 Nov: left free, he did not act. 0 trades. Across three model families (DeepSeek, Gemini, Sonnet), none beat simply holding SOL. Test 2: 2 of 5 so far. in SOL: +7.40% vs the pinned 1.36228651 — all of it held as SOL. Priced at his own latest-hour SOL reading of 89.36 because the site feed was stale."
+   "note": "Test 1 ended 5 Nov: left free, he did not act. 0 trades. Across three model families (DeepSeek, Gemini, Sonnet), none beat simply holding SOL. Test 2: 2 of 5 so far. in SOL: +7.40% vs the pinned 1.36228651 — held almost entirely as wrapped SOL, no token position."
   }
  ],
- "published_utc": "2026-11-06T07:42:52Z"
+ "published_utc": "2026-11-07T07:44:54Z"
 }
