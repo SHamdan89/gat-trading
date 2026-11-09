@@ -1721,8 +1721,8 @@
       c.appendChild(el("div", "nm", p.name));
       c.appendChild(el("div", "sd", p.sub));
       const strip = el("div", "strip");
-      strip.appendChild(el("span", "pill " + (p.state === "live" ? "live" : "check"),
-        p.state === "live" ? "Live" : "Needs check"));
+      strip.appendChild(el("span", "pill " + (p.state === "live" ? "live" : p.state === "ended" ? "ended" : "check"),
+        p.state === "live" ? "Live" : p.state === "ended" ? "Ended" : "Needs check"));
       strip.appendChild(el("span", "exupd", "last daily check · " + p.last_checked));
       c.appendChild(strip);
       if (p.state !== "live") c.appendChild(el("p", "acnote", p.state_reason || ""));
