@@ -1,32 +1,56 @@
 {
- "date": "2026-11-09",
- "generated_utc": "2026-11-09T06:12:20Z",
+ "date": "2026-11-10",
+ "generated_utc": "2026-11-10T06:20:00Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Semiconductors rout on Nov 5: Philadelphia Semiconductor Index down more than 12%, Nvidia down 9.3% (worst day since Jan 2025)",
-     "why": "Memory and storage names fell hardest (SanDisk about -22%, Micron about -17%) even though both remain among 2026's top S&P 500 performers, so the AI hardware trade is being repriced on policy risk rather than on earnings; one bank called the move reactionary, and premarket on Nov 6 showed a partial rebound.",
+     "headline": "Post-midterm fears of AI and data-center curbs hit chip stocks; Qualcomm falls more than 11% on weak handset sales",
+     "why": "The AI trade is now pricing political risk, not just demand: Texas holds roughly a fifth of the US data-center pipeline, so any construction pause directly hits chip and infrastructure revenue.",
      "sources": [
       {
-       "title": "Oversold AI and chip stocks after the Nasdaq's worst day since 2020 (Yahoo Finance)",
-       "url": "https://finance.yahoo.com/markets/stocks/articles/oversold-ai-chip-stocks-nasdaq-144740381.html"
+       "title": "Qualcomm, Micron and Arm lead another chip selloff",
+       "url": "https://www.thewealthadvisor.com/article/qualcomm-micron-and-arm-lead-another-chip-selloff-ai-trade-loses-its-shine"
       },
       {
-       "title": "Why the midterm sweep triggered the worst Nasdaq day since 2020 (AOL)",
-       "url": "https://www.aol.com/articles/why-midterm-sweep-triggered-worst-120415000.html"
+       "title": "Stock Market Today (Nov. 6, 2026): Nasdaq, S&P 500 rise after midterms AI rout",
+       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-06-2026"
       }
      ]
     },
     {
-     "headline": "Data-center build-out becomes a political variable: five states holding 37% of planned US capacity elected governors who campaigned on pausing or taxing it",
-     "why": "US electricity prices are up about 10% since early 2024, so power cost and local permitting, not chip supply, are now the likeliest brake on AI capacity timelines.",
+     "headline": "AMD guides 2027 sales up 80% on data-center demand; shares jump 13.26% on Monday",
+     "why": "A December-quarter outlook above Intel's puts AMD on course to out-sell Intel for the first time, a structural shift in the processor market.",
      "sources": [
       {
-       "title": "AI Loses Its Political Cover: Midterms, Chips and War Costs (newsletter, author's analysis)",
-       "url": "https://olegov.substack.com/p/ai-economics-geopolitics-newsletter-nov-07-2026"
+       "title": "AI Roundup: AMD, Apple results puzzle investors",
+       "url": "https://stocktwits.com/news-articles/markets/equity/ai-roundup-amd-apple-results-puzzle-investors-democrats-midterm-win-weighs-on-traders/cNG1fJyR9EN"
+      },
+      {
+       "title": "Today's Market Recap: Oil plunge boosts US stocks; AMD jumps over 13%",
+       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262297330-oil-drop-us-stocks-rally-dow-1100-nasdaq-amd-nvda-tradingkey"
+      }
+     ]
+    },
+    {
+     "headline": "Apple guides holiday-quarter gross margin to 45%-46%, down from 47.9%, blaming surging memory-chip prices",
+     "why": "Memory costs are expected to keep rising into next year, so margin pressure is likely to spread to other hardware makers.",
+     "sources": [
+      {
+       "title": "AI Roundup: AMD, Apple results puzzle investors",
+       "url": "https://stocktwits.com/news-articles/markets/equity/ai-roundup-amd-apple-results-puzzle-investors-democrats-midterm-win-weighs-on-traders/cNG1fJyR9EN"
+      }
+     ]
+    },
+    {
+     "headline": "Nvidia falls 4.27% to $178.67 as it opens an independent investigation into its CEO over reports of possible foreign-intelligence targeting",
+     "why": "Governance risk at the sector's largest name was the one drag on an otherwise strong chip rebound.",
+     "sources": [
+      {
+       "title": "Today's Market Recap: Oil plunge boosts US stocks; Nvidia falls over 4%",
+       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262297330-oil-drop-us-stocks-rally-dow-1100-nasdaq-amd-nvda-tradingkey"
       }
      ]
     }
@@ -36,22 +60,36 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin fell about 6% to roughly $75,600 and Ether about 7.8% to roughly $2,230 on Nov 6, after a one-day bounce; total market cap near $2.65 trillion",
-     "why": "Crypto traded as a high-beta risk asset alongside the Nasdaq selloff, and the Fear & Greed index dropped from 50 to 28 in a day, which shows how fast sentiment is swinging with equities.",
+     "headline": "US spot Bitcoin ETFs lose $1.28B in a week, the worst since late June; year-to-date flows turn negative at about -$914M",
+     "why": "Institutional demand that carried the 2026 rally has reversed, and one fund (IBIT) accounted for about $1.21B of the exits.",
      "sources": [
       {
-       "title": "Crypto Market Summary: November 6, 2026 (CoinStats)",
-       "url": "https://coinstats.app/news/7053b7d34c74bd8f8f2ed0837ef593d1b92f0b76ba5564ff352105c58d945f3c_Crypto-News-Nov-6-Bitcoin-Falls-6-Midterm-Rally-Fades-Fear-Returns/"
+       "title": "Bitcoin ETFs see $1.3 billion weekly outflows, largest since June",
+       "url": "https://bitcoinist.com/bitcoin-etfs-see-1-3-billion-weekly-outflows-largest-since-june"
+      },
+      {
+       "title": "Bitcoin ETF outflows hit $1.28B as rate hike bets climb",
+       "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-etf-outflows-hit-1-102515678.html"
       }
      ]
     },
     {
-     "headline": "Regulatory overhang: reports that a Democratic-led Senate Banking Committee could mean tougher crypto oversight from January (not finalized)",
-     "why": "A change in who controls the committee that writes market-structure rules shifts the odds on pending crypto legislation, though the chair has not been confirmed and the report is unconfirmed.",
+     "headline": "Spot Ether ETFs shed about $365M, a sixth straight negative week",
+     "why": "Outflows are not confined to Bitcoin, which points to a broad retreat from crypto exposure as December rate-hike odds rise.",
      "sources": [
       {
-       "title": "Crypto Market Summary: November 6, 2026 (CoinStats)",
-       "url": "https://coinstats.app/news/7053b7d34c74bd8f8f2ed0837ef593d1b92f0b76ba5564ff352105c58d945f3c_Crypto-News-Nov-6-Bitcoin-Falls-6-Midterm-Rally-Fades-Fear-Returns/"
+       "title": "Bitcoin ETF outflows hit $1.28B as rate hike bets climb",
+       "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-etf-outflows-hit-1-102515678.html"
+      }
+     ]
+    },
+    {
+     "headline": "Bitcoin trades near $74,049, down about 5% on the week; Fear & Greed Index at 25 (extreme fear)",
+     "why": "Price has slipped under the $74,400-$75,000 support zone, so sentiment and structure are both weak heading into the CPI print.",
+     "sources": [
+      {
+       "title": "Bitcoin ETFs see $1.3 billion weekly outflows, largest since June",
+       "url": "https://bitcoinist.com/bitcoin-etfs-see-1-3-billion-weekly-outflows-largest-since-june"
       }
      ]
     }
@@ -61,54 +99,46 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "Democrats won both chambers of Congress in the Nov 3 midterms; the Dow rose 3% and Brent fell about 9% on Nov 4",
-     "why": "Markets first read the result as lowering the odds of renewed fighting with Iran, then reversed on AI policy risk the next day, so the election is now a two-sided driver of oil and equities.",
+     "headline": "October payrolls rise 165,000 against 59,000 expected; unemployment falls to 4.1%; December hike odds climb to about 81%",
+     "why": "A hot labor market with 3.1% wage growth removes the case for easing and makes a quarter-point hike at the Dec. 8-9 meeting the base case.",
      "sources": [
       {
-       "title": "Why the midterm sweep triggered the worst Nasdaq day since 2020 (AOL)",
-       "url": "https://www.aol.com/articles/why-midterm-sweep-triggered-worst-120415000.html"
+       "title": "October jobs report beats forecasts, lifting December Fed hike odds",
+       "url": "https://www.investmentnews.com/fixed-income/october-jobs-report-beats-forecasts-lifting-december-fed-hike-odds/268915"
+      },
+      {
+       "title": "Bitcoin ETF outflows hit $1.28B as rate hike bets climb",
+       "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-etf-outflows-hit-1-102515678.html"
       }
      ]
     },
     {
-     "headline": "October payrolls rose 165,000 against 65,000 expected; unemployment eased to 4.1%; the 10-year Treasury yield sits near 4.85%",
-     "why": "A strong labor print and a yield near 4.85% keep the Fed's next move skewed toward a hike and pressure high-multiple growth stocks.",
+     "headline": "10-year Treasury yield at 4.884% and 2-year at 4.57% ahead of October CPI, forecast at 3.9% headline and 2.8% core",
+     "why": "Headline inflation is expected to re-accelerate from 3.7%, so a miss would harden hike pricing and push long yields higher.",
      "sources": [
       {
-       "title": "Why the midterm sweep triggered the worst Nasdaq day since 2020 (AOL)",
-       "url": "https://www.aol.com/articles/why-midterm-sweep-triggered-worst-120415000.html"
-      },
-      {
-       "title": "AI Loses Its Political Cover: Midterms, Chips and War Costs (newsletter, author's analysis)",
-       "url": "https://olegov.substack.com/p/ai-economics-geopolitics-newsletter-nov-07-2026"
+       "title": "Treasury yields rise as CPI data tests mortgage rate outlook",
+       "url": "https://www.mpamag.com/us/mortgage-industry/industry-trends/treasury-yields-rise-as-cpi-data-tests-mortgage-rate-outlook/596712"
       }
      ]
     },
     {
-     "headline": "Market-implied odds of a December Fed hike are volatile and sources disagree: 76.9% on Nov 4, 67% on Nov 5, about 80% by Nov 7",
-     "why": "The range shows a hike is the base case but not settled; these are market estimates, not a Fed decision, and they will swing with each data release.",
+     "headline": "Trump says renewed Iran strikes are \"highly unlikely\" while talks progress, even as ships are hit in or near the Strait of Hormuz",
+     "why": "Lower odds of escalation removed a large risk premium from oil within a day, but both sides still report attacks on shipping.",
      "sources": [
       {
-       "title": "Fed Rate-Hike Odds for December Rise to 76.9% After Election (TokenPost)",
-       "url": "https://www.tokenpost.com/news/investing/48784"
-      },
-      {
-       "title": "Fed December Rate-Hike Odds Fall to 67% After U.S. Midterms (Bloomingbit)",
-       "url": "https://en.bloomingbit.io/feed/news/123761"
-      },
-      {
-       "title": "Why the midterm sweep triggered the worst Nasdaq day since 2020 (AOL)",
-       "url": "https://www.aol.com/articles/why-midterm-sweep-triggered-worst-120415000.html"
+       "title": "Oil slides as Trump signals restraint on Iran despite fresh shipping attacks",
+       "url": "https://gvwire.com/2026/11/09/oil-slides-as-trump-signals-restraint-on-iran-despite-fresh-shipping-attacks/"
       }
      ]
     },
     {
-     "headline": "Iran talks drive oil: Iran's oil exports are near zero and it is demanding an end to the US naval blockade, sanctions relief and frozen-asset releases before reopening the Strait of Hormuz",
-     "why": "Hormuz shipping remains the main swing factor for crude and refined products; refined products stayed tight even as crude fell on deal hopes.",
+     "headline": "Thursday's AI-led selloff: S&P 500 down 4.4% and Nasdaq 100 down 6.3%, the worst day since April 2025, before a Friday rebound",
+     "why": "Volatility peaked above 28 and fell to 24.19 only after a strong jobs print, showing how fragile the rebound is.",
      "sources": [
       {
-       "title": "Commodities Weekly: Election shock triggers broad selloff, with precious metals the exception (Saxo)",
-       "url": "https://www.home.saxo/content/articles/commodities/commodities-weekly-election-shock-triggers-broad-selloff-with-precious-metals-the-exception-06112026"
+       "title": "Stock Market Today (Nov. 6, 2026): Nasdaq, S&P 500 rise after midterms AI rout",
+       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-06-2026"
       }
      ]
     }
@@ -118,31 +148,39 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Worst week for commodities since April 2025: Bloomberg Commodity Total Return Index down about 4.5%, energy down about 9%, Brent and WTI each down close to 13%",
-     "why": "Crude fell on hopes of a US-Iran deal even though the index is still up about 27% year to date, and European gas fell about 16%, its biggest weekly drop in over a year.",
+     "headline": "Brent settles at $92.57 and WTI at $86.85 on Nov. 9, the lowest since late August; Brent fell 16% last week",
+     "why": "A reported 1.4M bpd global surplus in October and easing Iran risk are removing the supply premium, which also eases inflation pressure.",
      "sources": [
       {
-       "title": "Commodities Weekly: Election shock triggers broad selloff, with precious metals the exception (Saxo)",
+       "title": "Brent losses top US$7 a barrel after November 9 settlement",
+       "url": "https://www.nationthailand.com/news/world/40073309"
+      },
+      {
+       "title": "Oil slides as Trump signals restraint on Iran despite fresh shipping attacks",
+       "url": "https://gvwire.com/2026/11/09/oil-slides-as-trump-signals-restraint-on-iran-despite-fresh-shipping-attacks/"
+      }
+     ]
+    },
+    {
+     "headline": "Commodities post their worst week since April 2025: Bloomberg Commodity index down about 4.5%, copper down more than 4%, European gas down about 16%",
+     "why": "Energy led the drop, but copper at its lowest since July signals demand-side caution as well.",
+     "sources": [
+      {
+       "title": "Commodities weekly: election shock triggers broad selloff, precious metals the exception",
        "url": "https://www.home.saxo/content/articles/commodities/commodities-weekly-election-shock-triggers-broad-selloff-with-precious-metals-the-exception-06112026"
       }
      ]
     },
     {
-     "headline": "Gold rose about 5% on the week, silver about 5.7% and platinum about 6.8%, rebounding after gold broke below $3,970",
-     "why": "Lower Treasury yields, a softer dollar and short covering drove the bounce; the source flags $3,970-3,975 as the pivot zone and a sustained move above $4,225 as the sign selling has run its course, and all four precious metals are still lower year to date.",
+     "headline": "Gold rises about 5% on the week and silver 5.7%, with spot gold at $4,139 on Nov. 5, yet still down more than a fifth since late February",
+     "why": "Falling oil and a softer dollar helped metals, but a sustained recovery needs lower real yields, which this week's strong jobs data works against.",
      "sources": [
       {
-       "title": "Commodities Weekly: Election shock triggers broad selloff, with precious metals the exception (Saxo)",
-       "url": "https://www.home.saxo/content/articles/commodities/commodities-weekly-election-shock-triggers-broad-selloff-with-precious-metals-the-exception-06112026"
-      }
-     ]
-    },
-    {
-     "headline": "Copper fell more than 4% to its lowest since July, then rebounded",
-     "why": "Traders priced in possible delays to AI data-center projects and lower odds of US tariffs on refined copper, while physical supply stays tight with weak Chilean output, so price and physical market are pulling in opposite directions.",
-     "sources": [
+       "title": "Gold extends rebound above $4,100 as dollar and yields decline",
+       "url": "https://www.energyconnects.com/news/oil/2026/november/gold-extends-rebound-above-4-100-as-dollar-and-yields-decline/"
+      },
       {
-       "title": "Commodities Weekly: Election shock triggers broad selloff, with precious metals the exception (Saxo)",
+       "title": "Commodities weekly: election shock triggers broad selloff, precious metals the exception",
        "url": "https://www.home.saxo/content/articles/commodities/commodities-weekly-election-shock-triggers-broad-selloff-with-precious-metals-the-exception-06112026"
       }
      ]
@@ -153,45 +191,67 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "Nasdaq 100 closed Nov 5 nearly 15% below its Oct 6 record after a 6.4% one-day drop; S&P 500 fell 4.4%",
-     "why": "The index is in correction territory and heading for a fourth straight weekly decline; analyst-flagged levels before the drop were the lower channel boundary near 660 and 700 as the reference above, and whether 660 held is unverified.",
+     "headline": "S&P 500 closes at 7,549.94 (+2.35%) and Nasdaq Composite at 25,253.14 (+2.74%) on Nov. 9, recovering from Friday's closes of 7,376.86 and 24,579.42",
+     "why": "Two straight up sessions have recovered the S&P 500 well above Friday's close, after Thursday's 4.4% drop took both indexes to their worst day since April 2025.",
      "sources": [
       {
-       "title": "Why the midterm sweep triggered the worst Nasdaq day since 2020 (AOL)",
-       "url": "https://www.aol.com/articles/why-midterm-sweep-triggered-worst-120415000.html"
+       "title": "Today's Market Recap: Oil plunge boosts US stocks as Dow surges 1,100 points",
+       "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262297330-oil-drop-us-stocks-rally-dow-1100-nasdaq-amd-nvda-tradingkey"
       },
       {
-       "title": "Trading The Close Market Recap 11/03/2026 (Verified Investing)",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-03-2026-midterm-market-calm-key-technical-levels-for-smh-qqq-bitcoin-oil"
+       "title": "Stock Market Today (Nov. 6, 2026): Nasdaq, S&P 500 rise after midterms AI rout",
+       "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-06-2026"
       }
      ]
     },
     {
-     "headline": "Semiconductor ETF SMH had five straight weekly declines into the rout; flagged support zone is 495 to 503.63, with the 20-week average near 570 as the upside reference",
-     "why": "The zone combines the 50-week average (about 495) with a prior pivot low (503.63), so whether it held through the 12% index drop is the key structural question; this was not verified after the selloff.",
+     "headline": "Bitcoin broke below the $74,911 reference level flagged on Nov. 3 and trades near $74,049; the next marked support is $69,833, with resistance at $80,000 and $84,000",
+     "why": "Losing the $74,400-$75,000 zone puts the $70,000 area, the lower edge of a rising channel, in play as the next test.",
      "sources": [
       {
-       "title": "Trading The Close Market Recap 11/03/2026 (Verified Investing)",
+       "title": "Trading the Close Market Recap 11/03/2026: key technical levels for SMH, QQQ, Bitcoin and Oil",
        "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-03-2026-midterm-market-calm-key-technical-levels-for-smh-qqq-bitcoin-oil"
+      },
+      {
+       "title": "Bitcoin ETFs see $1.3 billion weekly outflows, largest since June",
+       "url": "https://bitcoinist.com/bitcoin-etfs-see-1-3-billion-weekly-outflows-largest-since-june"
+      },
+      {
+       "title": "Bitcoin ETF outflows hit $1.28B as rate hike bets climb",
+       "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-etf-outflows-hit-1-102515678.html"
       }
      ]
     },
     {
-     "headline": "Bitcoin structure sideways-to-lower: reference levels $74,911 and $69,833 (near the lower edge of a rising channel from 2021)",
-     "why": "Price printed about $75,600 on Nov 6, close to the first level, so a clean break below $74,911 would put the $70,000 area in play, while holding it keeps the range intact.",
+     "headline": "Brent settled at $92.57, below the 200-day moving average near $93.55 it tested last week",
+     "why": "A close under the 200-day line after a failed rebound toward $100 shifts the near-term bias in crude to the downside.",
      "sources": [
       {
-       "title": "Trading The Close Market Recap 11/03/2026 (Verified Investing)",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-03-2026-midterm-market-calm-key-technical-levels-for-smh-qqq-bitcoin-oil"
+       "title": "Commodities weekly: election shock triggers broad selloff, precious metals the exception",
+       "url": "https://www.home.saxo/content/articles/commodities/commodities-weekly-election-shock-triggers-broad-selloff-with-precious-metals-the-exception-06112026"
       },
       {
-       "title": "Crypto Market Summary: November 6, 2026 (CoinStats)",
-       "url": "https://coinstats.app/news/7053b7d34c74bd8f8f2ed0837ef593d1b92f0b76ba5564ff352105c58d945f3c_Crypto-News-Nov-6-Bitcoin-Falls-6-Midterm-Rally-Fades-Fear-Returns/"
+       "title": "Brent losses top US$7 a barrel after November 9 settlement",
+       "url": "https://www.nationthailand.com/news/world/40073309"
+      }
+     ]
+    },
+    {
+     "headline": "Gold's key support sits at $3,970-$3,975; a sustained move above $4,225 would signal the selling is over",
+     "why": "Those two levels bound the range gold must hold or clear, with spot near $4,079 to $4,139 this past week.",
+     "sources": [
+      {
+       "title": "Commodities weekly: election shock triggers broad selloff, precious metals the exception",
+       "url": "https://www.home.saxo/content/articles/commodities/commodities-weekly-election-shock-triggers-broad-selloff-with-precious-metals-the-exception-06112026"
+      },
+      {
+       "title": "Gold extends rebound above $4,100 as dollar and yields decline",
+       "url": "https://www.energyconnects.com/news/oil/2026/november/gold-extends-rebound-above-4-100-as-dollar-and-yields-decline/"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-11-09T06:18:24Z"
+ "published_utc": "2026-11-10T06:14:22Z"
 }
