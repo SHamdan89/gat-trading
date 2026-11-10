@@ -1,0 +1,72 @@
+/* ============================================================
+   gat.trading: final experiment reports (added 2026-11-10).
+   Two fixed, final documents inside the Experiments tab. Scoped to .fr;
+   every colour is a site token, so both themes work with no extra rules.
+   ============================================================ */
+.fr { max-width: 880px; display: flex; flex-direction: column; gap: 22px; }
+.fr > * { min-width: 0; }
+.fr-top { display: flex; flex-direction: column; gap: 10px; }
+.fr-eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--mut); }
+.fr-pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 99px; background: var(--wash); color: var(--brand); font-family: var(--sans); font-size: 11.5px; font-weight: 650; letter-spacing: .02em; text-transform: none; }
+.fr-pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.fr h2 { font-family: var(--serif); font-weight: 560; font-size: clamp(24px, 3.6vw, 34px); line-height: 1.12; letter-spacing: -.015em; color: var(--ink); text-wrap: balance; margin: 0; }
+.fr .fr-dek { font-size: 15.5px; line-height: 1.6; color: var(--ink2); max-width: 68ch; margin: 0; }
+
+.fr-sum { background: var(--card); border: 1px solid var(--line); border-radius: var(--rl); box-shadow: var(--sh1); padding: clamp(16px, 3vw, 24px); display: flex; flex-direction: column; gap: 16px; }
+.fr-sum .lbl { font-size: 11px; font-weight: 680; letter-spacing: .12em; text-transform: uppercase; color: var(--ink2); }
+.fr-verdict { font-family: var(--serif); font-size: clamp(17px, 2.2vw, 20px); line-height: 1.45; color: var(--ink); margin: 0; max-width: 64ch; text-wrap: pretty; }
+.fr-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); border-radius: var(--rm); overflow: hidden; }
+.fr-tile { background: var(--card2); padding: 13px 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.fr-tile .k { font-size: 10.5px; font-weight: 680; letter-spacing: .1em; text-transform: uppercase; color: var(--mut); }
+.fr-tile .v { font-family: var(--mono); font-size: clamp(17px, 2.4vw, 21px); font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.fr-tile .v.dn { color: var(--dn); } .fr-tile .v.up { color: var(--up); }
+.fr-tile .s { font-size: 12px; line-height: 1.4; color: var(--mut); }
+.fr-points { list-style: disc; margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: var(--ink2); font-size: 14.5px; line-height: 1.55; max-width: 72ch; }
+.fr-points b { color: var(--ink); }
+
+.fr-sec { display: flex; flex-direction: column; gap: 12px; padding-top: 8px; border-top: 1px solid var(--hair); }
+.fr-sec h3 { display: flex; align-items: baseline; gap: 10px; font-size: 19px; font-weight: 650; color: var(--ink); margin: 6px 0 0; text-wrap: balance; }
+.fr-sec h3 .n { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--brand); }
+.fr-sec h4 { font-size: 14.5px; font-weight: 650; color: var(--ink); margin: 6px 0 0; }
+.fr-sec p { font-size: 15px; line-height: 1.66; color: var(--ink2); margin: 0; max-width: 70ch; }
+.fr-sec p b, .fr-sec li b { color: var(--ink); }
+.fr-sec ul { list-style: disc; margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.6; color: var(--ink2); max-width: 70ch; }
+
+.fr-fig { margin: 4px 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--rm); padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.fr-fig .sc { overflow-x: auto; }
+.fr-fig figcaption { font-size: 12.5px; line-height: 1.55; color: var(--mut); max-width: 78ch; }
+.fr-fig figcaption b { color: var(--ink2); }
+.frc { display: block; width: 100%; min-width: 600px; height: auto; font-family: var(--sans); }
+.frc .g { stroke: var(--hair); stroke-width: 1; }
+.frc .z { stroke: var(--mut); stroke-width: 1; stroke-dasharray: 3 3; }
+.frc .m { stroke: var(--faint); stroke-width: 1; }
+.frc .t { fill: var(--mut); font-size: 12.5px; }
+.frc .tk { fill: var(--ink); font-size: 13px; }
+.frc .b { font-weight: 650; }
+.frc .sm { font-size: 11.5px; }
+.frc .band { fill: var(--bg2); }
+.frc .band2 { fill: var(--card); }
+
+.fr-tw { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--rm); background: var(--card); }
+.frt { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+.frt caption { caption-side: top; text-align: left; padding: 12px 14px 4px; font-size: 12.5px; color: var(--mut); }
+.frt caption b { color: var(--ink2); }
+.frt th, .frt td { padding: 8px 14px; text-align: right; border-bottom: 1px solid var(--hair); vertical-align: top; }
+.frt th { font-size: 11px; font-weight: 680; letter-spacing: .08em; text-transform: uppercase; color: var(--mut); white-space: nowrap; }
+.frt th:first-child, .frt td:first-child, .frt .l { text-align: left; }
+.frt td { color: var(--ink2); }
+.frt td:first-child { color: var(--ink); font-weight: 600; }
+.frt tr:last-child td { border-bottom: 0; }
+.frt tr.tot td { border-top: 1px solid var(--line); font-weight: 650; color: var(--ink); }
+.frt .nw { white-space: nowrap; }
+.frt .up { color: var(--up); } .frt .dn { color: var(--dn); }
+
+.fr-note { font-size: 12.5px; line-height: 1.6; color: var(--mut); max-width: 78ch; margin: 0; }
+.fr-end { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; border-radius: var(--rm); background: var(--bg2); }
+.fr-end p { font-size: 12.5px; line-height: 1.6; color: var(--mut); margin: 0; max-width: 80ch; }
+.fr-end b { color: var(--ink2); }
+
+@media (max-width: 640px) {
+  .fr-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .frt th, .frt td { padding: 7px 10px; }
+}

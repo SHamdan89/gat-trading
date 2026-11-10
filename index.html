@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>gat.trading — Growth Autonomous Trading</title>
-<meta name="description" content="Asset prices updated hourly, a daily market brief, a weekly review, a counted alpha hunt, two paper-money experiments watched weekly, and an allocation shown only in percent.">
+<meta name="description" content="Asset prices updated hourly, a daily market brief, a weekly review, a counted alpha hunt, the final results of two trading experiments, and an allocation shown only in percent.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f7f6f1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0d0c" media="(prefers-color-scheme: dark)">
@@ -13,6 +13,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230d7a4a'/><rect x='20' y='58' width='14' height='26' rx='4' fill='white' opacity='.45'/><rect x='43' y='42' width='14' height='42' rx='4' fill='white' opacity='.7'/><rect x='66' y='24' width='14' height='60' rx='4' fill='white'/></svg>">
 <link rel="stylesheet" href="assets/style.css?v=23">
+<link rel="stylesheet" href="assets/final.css?v=1">
 </head>
 <body>
 
@@ -213,41 +214,201 @@
   </section>
 
   <!-- ============ EXPERIMENTS ============ -->
+  <!-- Final since 2026-11-10: both experiments ended 9 Nov 2026. Two fixed reports, no data files, no updates. -->
   <section class="panel" id="p-experiments" role="tabpanel" aria-labelledby="tab-experiments" tabindex="0">
     <div class="phead">
-      <div class="no">05 · TWO EXPERIMENTS, WATCHED WEEKLY</div>
+      <div class="no">05 · TWO EXPERIMENTS, FINAL RESULTS</div>
       <h1>Experiments</h1>
-      <div class="psub" id="ex-sub"></div>
+      <div class="psub" id="ex-sub"><span>2 experiments, both ended 9 Nov 2026</span><span class="sep"></span><span class="num">final, not updated</span></div>
     </div>
 
     <div class="xtabs" role="tablist" aria-label="Experiments sections">
-      <button class="xtab" role="tab" aria-selected="true"  data-x="status">Status</button>
-      <button class="xtab" role="tab" aria-selected="false" data-x="mgat">MGAT Alpha — Weekly</button>
-      <button class="xtab" role="tab" aria-selected="false" data-x="hades">Hades Trading — Weekly</button>
+      <button class="xtab" role="tab" aria-selected="true"  data-x="mgat">MGAT Alpha v3.1 — Final result</button>
+      <button class="xtab" role="tab" aria-selected="false" data-x="hades">Hades — Final result</button>
     </div>
 
-    <div class="xpane on" id="x-status" role="tabpanel">
-      <p class="xintro">Two paper-money experiments, run unattended. This sub-tab is a glance, not a
-      report — the weekly sub-tabs carry the detail.</p>
-      <div id="exstatus" class="status">Loading status…</div>
-      <div id="ex-status-stale"></div>
-      <div id="ex-status-empty"></div>
-      <div id="ex-status-cards" class="exgrid"></div>
-      <div id="ex-status-note"></div>
-    </div>
+    <div class="xpane on" id="x-mgat" role="tabpanel">
+<article class="fr" id="fr-mgat">
+  <header class="fr-top">
+    <div class="fr-eyebrow"><span class="fr-pill">Final result</span><span>Ended 9 Nov 2026</span><span>Paper money · $8,000</span><span>This page is final and will not change</span></div>
+    <h2>MGAT Alpha v3.1: could rule-based trading programs beat simply holding the same coins?</h2>
+    <p class="fr-dek">Eight automated programs traded cryptocurrencies on paper, every hour, for eleven weeks, against rules for judging that were written and signed before the first trade. This is the final account of what they did and what it shows.</p>
+  </header>
 
-    <div class="xpane" id="x-mgat" role="tabpanel">
-      <div id="exmgatstatus" class="status">Loading weekly…</div>
-      <div id="ex-mgat-stale"></div>
-      <div id="ex-mgat-empty"></div>
-      <div id="ex-mgat-main" hidden></div>
+  <section class="fr-sum" aria-label="Summary of results">
+    <span class="lbl">Summary of results</span>
+    <p class="fr-verdict">No strategy family showed a reliable advantage over holding the same coins after fees. The programs lagged holding while prices rose and lost less while prices fell, which is what holding cash does, not what good trade selection does. The experiment was stopped on 9 November 2026 and will not continue with real money.</p>
+    <div class="fr-tiles">
+      <div class="fr-tile"><span class="k">Trades closed</span><span class="v">139</span><span class="s">of a planned 200; 7 still open at the stop</span></div>
+      <div class="fr-tile"><span class="k">Closed trades, retained</span><span class="v dn">−$227.15</span><span class="s">135 trades; +$170.52 as booked with 4 unverifiable trades</span></div>
+      <div class="fr-tile"><span class="k">Account value</span><span class="v">$8,154.90</span><span class="s">+1.9% as booked, open positions included</span></div>
+      <div class="fr-tile"><span class="k">Profit factor</span><span class="v dn">0.78</span><span class="s">dollars won per dollar lost, 135 trades</span></div>
+    </div>
+    <ul class="fr-points">
+      <li><b>Formal verdict: inconclusive for all four families.</b> The outside price check that was meant to confirm every trade confirmed none of them, so under the signed rules no family could pass or fail.</li>
+      <li><b>Picking small coins lost.</b> The two small-coin families (BC, MED) lost money in the falling segment and had the largest samples.</li>
+      <li><b>The AI adviser could not tell winners from losers.</b> Trades it approved and trades it rejected lost almost the same (−5.3% and −5.5%).</li>
+      <li><b>Three independent AI readers</b>, from three different companies, read the frozen records and all recommended ending the experiment.</li>
+    </ul>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">1</span>The experiment</h3>
+    <p>MGAT tested one question: <b>does an automated trading program earn more than an investor who buys the same coins and holds them?</b> Version 3.1 removed everything except the trading logic. It traded on paper: real market prices, simulated money, no slippage. That made the rules the only thing being tested.</p>
+    <p>A dedicated computer ran one decision round every hour, day and night. It held <b>$8,000 of paper money in eight programs of $1,000 each</b>: one each for the L1, BC and MED families and five for DEX, one per blockchain network. Each purchase used 15% of a program's available cash (minimum $20, maximum $600), at most three positions per program, with exchange fees of 0.1% to 0.3% charged on every buy and sell.</p>
+    <div class="fr-tw"><table class="frt">
+      <caption><b>The four strategy families.</b> Each family is a separate hypothesis with its own entry and exit rules.</caption>
+      <tr><th>Family</th><th class="l">What it bought</th><th>Take-profit</th><th>Stop-loss</th><th>Time limit</th></tr>
+      <tr><td>L1</td><td class="l">20 of the largest coins (Bitcoin, Ether, Solana and others) when up 2% in 24 hours and above their 20-day average</td><td>+12%</td><td>−8%</td><td>7 days</td></tr>
+      <tr><td>DEX</td><td class="l">New tokens on decentralised exchanges with rising price and enough trading; five programs, but only the Sui and BNB Chain ones ever traded</td><td>+25%</td><td>−12%</td><td>3 days</td></tr>
+      <tr><td>BC</td><td class="l">Coins worth over $100 million, up 3% in 24 hours, with a guard against buying a sharp fall</td><td>+20%</td><td>−10%</td><td>7 days</td></tr>
+      <tr><td>MED</td><td class="l">Coins that had been heavily sold (14-day RSI of 35 or less) or had just closed back above their 20-day average</td><td>+15%</td><td>−10%</td><td>14 days</td></tr>
+    </table></div>
+    <p>Two AI advisers recorded an opinion on trades without any power to change them: a simple built-in rule from the start, and from 13 October a large language model (Sonnet).</p>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">2</span>Test period and how it was judged</h3>
+    <p>The programs traded from <b>25 August to 8 November 2026</b>. The operator stopped the run on 9 November at 20:26 UTC, at 139 of the 200 planned trades; the books were frozen and fingerprinted at that moment. The rules for judging were signed before the first trade, so the results could not be read selectively afterwards:</p>
+    <ul>
+      <li>The run ends at 200 closed trades, on 30 January 2027, or earlier by the operator.</li>
+      <li>A software repair on 7 October splits the run into <b>segment 1</b> (before) and <b>segment 2</b> (after). Each family is judged on segment 2 alone and the two are never pooled.</li>
+      <li>A family passes only with at least 30 trades, a positive average after fees, a positive average even without its two best trades, and a better yearly return than both the Nasdaq-100 and the S&amp;P 500.</li>
+      <li>Every trade must be confirmed by a separate, outside price record.</li>
+    </ul>
+    <p>Reaching 200 trades would have taken about five more weeks, and no family was close enough to the pass line for those trades to change the answer, so the run was stopped early.</p>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">3</span>Results</h3>
+    <h4>The fleet as a whole</h4>
+    <p>The 139 closed trades booked <b>+$170.52</b>. Four of them, on BNB Chain, took their prices from a single source that could not be cross-checked; one alone booked +$515.83. The signed rules exclude them. <b>The 135 retained trades lost $227.15</b>, an average of −1.4% per trade after fees, with 34% of trades profitable. At the stop the account stood at $8,154.90, including 7 open positions bought for $728.11. The largest fall from a peak was 5.4% as booked, 11.2% without the four unverifiable trades.</p>
+    <figure class="fr-fig"><div class="sc"><svg class="frc" viewBox="0 0 760 330" role="img" aria-label="MGAT account value against Bitcoin, both indexed to 100 on 25 August 2026" xmlns="http://www.w3.org/2000/svg"><line x1="50.0" y1="294.0" x2="632.0" y2="294.0" class="g"/><text x="42.0" y="298.0" class="t" text-anchor="end">92.5</text><line x1="50.0" y1="254.6" x2="632.0" y2="254.6" class="g"/><text x="42.0" y="258.6" class="t" text-anchor="end">95</text><line x1="50.0" y1="215.1" x2="632.0" y2="215.1" class="g"/><text x="42.0" y="219.1" class="t" text-anchor="end">97.5</text><line x1="50.0" y1="175.7" x2="632.0" y2="175.7" class="g"/><text x="42.0" y="179.7" class="t" text-anchor="end">100</text><line x1="50.0" y1="136.3" x2="632.0" y2="136.3" class="g"/><text x="42.0" y="140.3" class="t" text-anchor="end">102.5</text><line x1="50.0" y1="96.9" x2="632.0" y2="96.9" class="g"/><text x="42.0" y="100.9" class="t" text-anchor="end">105</text><line x1="50.0" y1="57.4" x2="632.0" y2="57.4" class="g"/><text x="42.0" y="61.4" class="t" text-anchor="end">107.5</text><line x1="50.0" y1="18.0" x2="632.0" y2="18.0" class="g"/><text x="42.0" y="22.0" class="t" text-anchor="end">110</text><line x1="50.0" y1="175.7" x2="632.0" y2="175.7" class="z"/><line x1="383.7" y1="18.0" x2="383.7" y2="294.0" class="m"/><text x="389.7" y="30.0" class="t" text-anchor="start">repair, 7 Oct</text><text x="104.3" y="314.0" class="t" text-anchor="middle">1 Sep</text><text x="337.1" y="314.0" class="t" text-anchor="middle">1 Oct</text><text x="577.7" y="314.0" class="t" text-anchor="middle">1 Nov</text><path d="M50.0,175.7 L57.8,166.0 L65.5,141.4 L73.3,189.6 L81.0,181.9 L88.8,192.9 L96.6,174.9 L104.3,197.8 L112.1,199.8 L119.8,120.9 L127.6,153.2 L135.4,149.8 L143.1,139.5 L150.9,164.2 L158.6,177.4 L166.4,180.4 L174.2,215.3 L181.9,202.1 L189.7,201.0 L197.4,209.8 L205.2,182.7 L213.0,233.8 L220.7,222.6 L228.5,218.3 L236.2,128.6 L244.0,121.3 L251.8,122.7 L259.5,13.4 L267.3,21.7 L275.0,58.1 L282.8,57.8 L290.6,64.0 L298.3,57.4 L306.1,56.6 L313.8,76.1 L321.6,72.8 L329.4,73.6 L337.1,48.4 L344.9,55.7 L352.6,50.9 L360.4,15.2 L368.2,30.6 L375.9,34.9 L383.7,79.7 L391.4,111.1 L399.2,93.5 L407.0,86.4 L414.7,70.6 L422.5,109.2 L430.2,82.7 L438.0,112.6 L445.8,101.3 L453.5,113.9 L461.3,116.4 L469.0,103.9 L476.8,107.5 L484.6,85.6 L492.3,64.2 L500.1,117.9 L507.8,122.5 L515.6,128.5 L523.4,143.3 L531.1,143.4 L538.9,128.1 L546.6,119.4 L554.4,186.7 L562.2,199.2 L569.9,194.9 L577.7,179.4 L585.4,210.3 L593.2,197.5 L601.0,136.3 L608.7,224.9 L616.5,229.8 L624.2,229.4 L632.0,249.8" style="fill:none;stroke:var(--faint);stroke-width:2;stroke-linejoin:round"/><path d="M50.0,175.7 L57.8,178.3 L65.5,178.1 L73.3,185.7 L81.0,190.3 L88.8,195.3 L96.6,183.3 L104.3,181.0 L112.1,177.4 L119.8,171.2 L127.6,169.7 L135.4,156.7 L143.1,154.8 L150.9,150.2 L158.6,151.0 L166.4,165.1 L174.2,163.2 L181.9,161.3 L189.7,188.1 L197.4,193.1 L205.2,189.1 L213.0,202.6 L220.7,208.5 L228.5,203.6 L236.2,182.5 L244.0,177.2 L251.8,175.7 L259.5,164.3 L267.3,161.6 L275.0,171.8 L282.8,171.1 L290.6,153.0 L298.3,157.3 L306.1,154.4 L313.8,154.8 L321.6,157.1 L329.4,56.6 L337.1,59.8 L344.9,61.4 L352.6,55.0 L360.4,50.6 L368.2,52.4 L375.9,55.8 L383.7,68.2 L391.4,73.5 L399.2,68.4 L407.0,70.8 L414.7,74.4 L422.5,89.4 L430.2,95.6 L438.0,100.0 L445.8,99.8 L453.5,101.6 L461.3,102.9 L469.0,112.2 L476.8,110.2 L484.6,108.0 L492.3,108.1 L500.1,103.0 L507.8,101.6 L515.6,97.7 L523.4,104.2 L531.1,108.0 L538.9,104.0 L546.6,105.5 L554.4,117.4 L562.2,119.1 L569.9,120.8 L577.7,120.2 L585.4,124.7 L593.2,122.6 L601.0,120.1 L608.7,133.0 L616.5,132.8 L624.2,134.9 L632.0,140.8" style="fill:none;stroke:var(--blue);stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:5 4;opacity:0.6"/><path d="M50.0,175.7 L57.8,178.3 L65.5,178.1 L73.3,185.7 L81.0,190.3 L88.8,195.3 L96.6,183.3 L104.3,181.0 L112.1,177.4 L119.8,171.2 L127.6,169.7 L135.4,156.7 L143.1,154.8 L150.9,150.2 L158.6,151.0 L166.4,165.1 L174.2,163.2 L181.9,161.3 L189.7,158.3 L197.4,163.3 L205.2,159.3 L213.0,172.8 L220.7,178.7 L228.5,173.8 L236.2,152.7 L244.0,147.4 L251.8,145.9 L259.5,134.5 L267.3,131.8 L275.0,142.0 L282.8,141.3 L290.6,123.2 L298.3,127.5 L306.1,124.6 L313.8,125.0 L321.6,127.3 L329.4,128.9 L337.1,132.2 L344.9,133.8 L352.6,127.4 L360.4,123.0 L368.2,124.8 L375.9,128.1 L383.7,140.6 L391.4,145.9 L399.2,140.8 L407.0,143.2 L414.7,146.8 L422.5,161.8 L430.2,168.0 L438.0,172.4 L445.8,172.2 L453.5,174.0 L461.3,175.3 L469.0,184.6 L476.8,182.5 L484.6,180.4 L492.3,180.4 L500.1,187.1 L507.8,185.7 L515.6,181.8 L523.4,182.9 L531.1,186.8 L538.9,182.8 L546.6,184.3 L554.4,196.2 L562.2,197.9 L569.9,199.6 L577.7,199.0 L585.4,203.4 L593.2,201.3 L601.0,198.9 L608.7,211.8 L616.5,211.6 L624.2,213.7 L632.0,219.6" style="fill:none;stroke:var(--blue);stroke-width:2.4;stroke-linejoin:round"/><circle cx="632.0" cy="140.8" r="4.5" style="fill:var(--blue);stroke:var(--card);stroke-width:2"/><text x="642.0" y="144.8" class="t" text-anchor="start">As booked 102.2</text><circle cx="632.0" cy="219.6" r="4.5" style="fill:var(--blue);stroke:var(--card);stroke-width:2"/><text x="642.0" y="223.6" class="tk" text-anchor="start">Adjusted 97.2</text><circle cx="632.0" cy="249.8" r="4.5" style="fill:var(--faint);stroke:var(--card);stroke-width:2"/><text x="642.0" y="253.8" class="t" text-anchor="start">Bitcoin 95.3</text></svg></div><figcaption><b>Account value against Bitcoin, both indexed to 100 on 25 August.</b> Adjusted: account value minus the profit of the four unverifiable trades (ends at 97.2). As booked: exactly as recorded (102.2). Bitcoin ended at 95.3. Last hourly record 8 November. The fleet fell less than Bitcoin mainly because it held cash much of the time.</figcaption></figure>
+    <h4>By strategy family</h4>
+    <figure class="fr-fig"><div class="sc"><svg class="frc" viewBox="0 0 760 320" role="img" aria-label="Cumulative profit and loss of each MGAT family in dollars" xmlns="http://www.w3.org/2000/svg"><line x1="62.0" y1="284.0" x2="648.0" y2="284.0" class="g"/><text x="54.0" y="288.0" class="t" text-anchor="end">−$200</text><line x1="62.0" y1="239.7" x2="648.0" y2="239.7" class="g"/><text x="54.0" y="243.7" class="t" text-anchor="end">−$150</text><line x1="62.0" y1="195.3" x2="648.0" y2="195.3" class="g"/><text x="54.0" y="199.3" class="t" text-anchor="end">−$100</text><line x1="62.0" y1="151.0" x2="648.0" y2="151.0" class="g"/><text x="54.0" y="155.0" class="t" text-anchor="end">−$50</text><line x1="62.0" y1="106.7" x2="648.0" y2="106.7" class="g"/><text x="54.0" y="110.7" class="t" text-anchor="end">$0</text><line x1="62.0" y1="62.3" x2="648.0" y2="62.3" class="g"/><text x="54.0" y="66.3" class="t" text-anchor="end">$50</text><line x1="62.0" y1="18.0" x2="648.0" y2="18.0" class="g"/><text x="54.0" y="22.0" class="t" text-anchor="end">$100</text><line x1="62.0" y1="106.7" x2="648.0" y2="106.7" class="z"/><line x1="393.6" y1="18.0" x2="393.6" y2="284.0" class="m"/><text x="399.6" y="30.0" class="t" text-anchor="start">repair, 7 Oct</text><text x="116.0" y="304.0" class="t" text-anchor="middle">1 Sep</text><text x="347.3" y="304.0" class="t" text-anchor="middle">1 Oct</text><text x="586.3" y="304.0" class="t" text-anchor="middle">1 Nov</text><path d="M62.0,106.7 L116.0,110.6 L116.0,112.9 L116.0,116.2 L162.2,102.2 L169.9,102.9 L185.4,100.9 L247.1,100.8 L247.1,94.2 L254.8,90.1 L262.5,77.2 L301.0,73.4 L316.4,59.4 L324.2,59.8 L324.2,52.4 L393.6,55.5 L393.6,57.3 L393.6,57.3 L432.1,70.8 L555.5,74.2 L570.9,84.3 L617.2,94.6 L640.3,109.1 L648.0,109.1" style="fill:none;stroke:var(--blue);stroke-width:2;stroke-linejoin:round"/><path d="M62.0,106.7 L100.6,114.6 L154.5,106.0 L262.5,79.0 L316.4,50.7 L324.2,24.2 L393.6,39.1 L439.8,50.3 L486.1,55.6 L648.0,55.6" style="fill:none;stroke:var(--gold);stroke-width:2;stroke-linejoin:round"/><path d="M62.0,106.7 L62.0,116.8 L69.7,128.3 L85.1,141.0 L85.1,155.1 L92.8,167.3 L108.3,148.4 L123.7,128.4 L139.1,123.0 L146.8,102.8 L146.8,114.5 L146.8,95.1 L146.8,71.9 L162.2,48.1 L177.7,62.3 L177.7,56.4 L185.4,68.7 L193.1,46.6 L200.8,46.7 L208.5,24.7 L223.9,36.3 L231.6,48.2 L231.6,78.8 L231.6,90.7 L239.3,107.7 L247.1,79.9 L247.1,58.2 L270.2,33.4 L293.3,26.4 L293.3,40.5 L301.0,20.9 L324.2,15.4 L347.3,23.5 L355.0,32.3 L378.1,9.2 L378.1,10.6 L393.6,23.1 L393.6,36.0 L393.6,47.4 L401.3,67.3 L401.3,79.3 L409.0,55.8 L424.4,71.0 L432.1,66.6 L439.8,78.0 L439.8,89.5 L439.8,100.1 L447.5,113.0 L447.5,124.8 L447.5,136.1 L455.2,146.6 L455.2,157.0 L455.2,135.9 L478.4,146.6 L478.4,156.9 L478.4,170.1 L509.2,165.8 L516.9,140.7 L516.9,150.9 L524.6,162.0 L532.3,142.9 L532.3,147.4 L563.2,158.0 L563.2,168.2 L570.9,178.3 L570.9,189.9 L578.6,199.7 L586.3,180.5 L586.3,192.2 L632.6,202.2 L632.6,212.9 L632.6,216.7 L640.3,221.8 L648.0,221.8" style="fill:none;stroke:var(--violet);stroke-width:2;stroke-linejoin:round"/><path d="M62.0,106.7 L85.1,123.2 L100.6,133.3 L108.3,99.9 L169.9,108.8 L169.9,109.2 L177.7,137.0 L185.4,148.7 L208.5,160.5 L277.9,145.9 L285.6,131.4 L285.6,142.5 L285.6,132.6 L308.7,117.6 L324.2,128.4 L339.6,139.0 L393.6,139.4 L401.3,150.7 L401.3,161.3 L424.4,171.5 L432.1,171.1 L447.5,180.9 L447.5,190.8 L470.7,176.3 L478.4,186.4 L478.4,196.2 L486.1,206.1 L540.1,215.7 L563.2,225.0 L570.9,236.4 L578.6,223.7 L594.0,233.0 L594.0,232.2 L601.7,241.5 L648.0,241.5" style="fill:none;stroke:var(--amber);stroke-width:2;stroke-linejoin:round"/><circle cx="648.0" cy="55.6" r="4.5" style="fill:var(--gold);stroke:var(--card);stroke-width:2"/><text x="658.0" y="59.6" class="tk" text-anchor="start">DEX +$58</text><circle cx="648.0" cy="109.1" r="4.5" style="fill:var(--blue);stroke:var(--card);stroke-width:2"/><text x="658.0" y="113.1" class="tk" text-anchor="start">L1 −$3</text><circle cx="648.0" cy="221.8" r="4.5" style="fill:var(--violet);stroke:var(--card);stroke-width:2"/><text x="658.0" y="225.8" class="tk" text-anchor="start">BC −$130</text><circle cx="648.0" cy="241.5" r="4.5" style="fill:var(--amber);stroke:var(--card);stroke-width:2"/><text x="658.0" y="245.5" class="tk" text-anchor="start">MED −$152</text></svg></div><figcaption><b>Cumulative profit and loss of each family, in dollars,</b> unverifiable trades excluded. BC and MED drifted down after the October market peak, L1 gave back its earlier gains, and DEX rests on only eight trades.</figcaption></figure>
+    <div class="fr-tw"><table class="frt">
+      <caption><b>Results by family and segment, after fees.</b> "Without best 2" removes each group's two best trades, to test whether a result depends on a lucky few.</caption>
+      <tr><th>Family</th><th class="l">Period</th><th>Trades</th><th>Win rate</th><th>Average per trade</th><th>Without best 2</th><th>Profit / loss</th></tr>
+      <tr><td>L1</td><td class='l'>Segment 1 · 25 Aug–7 Oct</td><td>17</td><td>53%</td><td><span class="up">+2.8%</span></td><td><span class="up">+1.5%</span></td><td><span class="up">+$55.65</span></td></tr><tr><td>L1</td><td class='l'>Segment 2 · 7 Oct–8 Nov</td><td>5</td><td>0%</td><td><span class="dn">−8.3%</span></td><td><span class="dn">−10.2%</span></td><td><span class="dn">−$58.45</span></td></tr><tr><td>DEX</td><td class='l'>Segment 1 · 25 Aug–7 Oct</td><td>6</td><td>67%</td><td><span class="up">+9.0%</span></td><td><span class="up">+2.6%</span></td><td><span class="up">+$76.21</span></td></tr><tr><td>DEX</td><td class='l'>Segment 2 · 7 Oct–8 Nov</td><td>2</td><td>0%</td><td><span class="dn">−5.8%</span></td><td>—</td><td><span class="dn">−$18.61</span></td></tr><tr><td>BC</td><td class='l'>Segment 1 · 25 Aug–7 Oct</td><td>40</td><td>45%</td><td><span class="up">+1.4%</span></td><td><span class="up">+0.1%</span></td><td><span class="up">+$49.33</span></td></tr><tr><td>BC</td><td class='l'>Segment 2 · 7 Oct–8 Nov</td><td>32</td><td>19%</td><td><span class="dn">−4.9%</span></td><td><span class="dn">−6.8%</span></td><td><span class="dn">−$179.19</span></td></tr><tr><td>MED</td><td class='l'>Segment 1 · 25 Aug–7 Oct</td><td>18</td><td>33%</td><td><span class="dn">−2.0%</span></td><td><span class="dn">−5.4%</span></td><td><span class="dn">−$49.22</span></td></tr><tr><td>MED</td><td class='l'>Segment 2 · 7 Oct–8 Nov</td><td>15</td><td>20%</td><td><span class="dn">−6.4%</span></td><td><span class="dn">−9.8%</span></td><td><span class="dn">−$102.87</span></td></tr><tr class='tot'><td>All</td><td class='l'>25 Aug–8 Nov</td><td>135</td><td>34%</td><td><span class="dn">−1.4%</span></td><td><span class="dn">−1.9%</span></td><td><span class="dn">−$227.15</span></td></tr>
+    </table></div>
+    <p>In segment 2, the period the rules judge, only BC reached 30 trades, and it lost 4.9% per trade. L1 (5 trades), DEX (2) and MED (15) never reached the minimum.</p>
+    <h4>Against simply holding the same coins</h4>
+    <figure class="fr-fig"><div class="sc"><svg class="frc" viewBox="0 0 760 346" role="img" aria-label="Strategy result against holding the same coins over the same dates" xmlns="http://www.w3.org/2000/svg"><rect x="200" y="10" width="12" height="12" rx="2" style="fill:var(--blue)"/><text x="218.0" y="20.0" class="t" text-anchor="start">following the strategy</text><rect x="390" y="10" width="12" height="12" rx="2" style="fill:var(--faint)"/><text x="408.0" y="20.0" class="t" text-anchor="start">holding the same coins</text><text x="752.0" y="20.0" class="t" text-anchor="end">difference</text><line x1="200.0" y1="34.0" x2="200.0" y2="312.0" class="g"/><text x="200.0" y="330.0" class="t" text-anchor="middle">−20%</text><line x1="293.6" y1="34.0" x2="293.6" y2="312.0" class="g"/><text x="293.6" y="330.0" class="t" text-anchor="middle">−10%</text><line x1="387.2" y1="34.0" x2="387.2" y2="312.0" class="g"/><text x="387.2" y="330.0" class="t" text-anchor="middle">0</text><line x1="480.8" y1="34.0" x2="480.8" y2="312.0" class="g"/><text x="480.8" y="330.0" class="t" text-anchor="middle">+10%</text><line x1="574.4" y1="34.0" x2="574.4" y2="312.0" class="g"/><text x="574.4" y="330.0" class="t" text-anchor="middle">+20%</text><line x1="668.0" y1="34.0" x2="668.0" y2="312.0" class="g"/><text x="668.0" y="330.0" class="t" text-anchor="middle">+30%</text><line x1="387.2" y1="34.0" x2="387.2" y2="312.0" class="z"/><rect x="387.2" y="44" width="90.6" height="12" rx="2" style="fill:var(--blue)"/><rect x="387.2" y="58" width="157.1" height="12" rx="2" style="fill:var(--faint)"/><text x="8.0" y="61.0" class="t" text-anchor="start"><tspan class="tk b">L1</tspan>  Aug–Oct (seg. 1)</text><text x="752.0" y="61.0" class="tk b" text-anchor="end">−7.1 pts</text><rect x="289.9" y="82" width="97.3" height="12" rx="2" style="fill:var(--blue)"/><rect x="275.5" y="96" width="111.7" height="12" rx="2" style="fill:var(--faint)"/><text x="8.0" y="99.0" class="t" text-anchor="start"><tspan class="tk b">L1</tspan>  Oct–Nov (seg. 2)</text><text x="752.0" y="99.0" class="tk b" text-anchor="end">+1.5 pts</text><rect x="387.2" y="120" width="255.6" height="12" rx="2" style="fill:var(--blue)"/><rect x="387.2" y="134" width="302.1" height="12" rx="2" style="fill:var(--faint)"/><text x="8.0" y="137.0" class="t" text-anchor="start"><tspan class="tk b">DEX</tspan>  Aug–Oct (seg. 1)</text><text x="752.0" y="137.0" class="tk b" text-anchor="end">−5.0 pts</text><rect x="387.2" y="158" width="36.9" height="12" rx="2" style="fill:var(--blue)"/><rect x="387.2" y="172" width="181.0" height="12" rx="2" style="fill:var(--faint)"/><text x="8.0" y="175.0" class="t" text-anchor="start"><tspan class="tk b">BC</tspan>  Aug–Oct (seg. 1)</text><text x="752.0" y="175.0" class="tk b" text-anchor="end">−15.4 pts</text><rect x="324.7" y="196" width="62.5" height="12" rx="2" style="fill:var(--blue)"/><rect x="301.0" y="210" width="86.2" height="12" rx="2" style="fill:var(--faint)"/><text x="8.0" y="213.0" class="t" text-anchor="start"><tspan class="tk b">BC</tspan>  Oct–Nov (seg. 2)</text><text x="752.0" y="213.0" class="tk b" text-anchor="end">+2.5 pts</text><rect x="365.0" y="234" width="22.2" height="12" rx="2" style="fill:var(--blue)"/><rect x="363.5" y="248" width="23.7" height="12" rx="2" style="fill:var(--faint)"/><text x="8.0" y="251.0" class="t" text-anchor="start"><tspan class="tk b">MED</tspan>  Aug–Oct (seg. 1)</text><text x="752.0" y="251.0" class="tk b" text-anchor="end">+0.2 pts</text><rect x="292.9" y="272" width="94.3" height="12" rx="2" style="fill:var(--blue)"/><rect x="276.3" y="286" width="110.9" height="12" rx="2" style="fill:var(--faint)"/><text x="8.0" y="289.0" class="t" text-anchor="start"><tspan class="tk b">MED</tspan>  Oct–Nov (seg. 2)</text><text x="752.0" y="289.0" class="tk b" text-anchor="end">+1.8 pts</text></svg></div><figcaption><b>Strategy result against holding the same coins over the same dates</b> (equal money per coin, held from the first purchase to the last sale in each segment). In the rising segment 1, L1, DEX and BC earned clearly less than holding and MED was level. In the falling segment 2 every family lost slightly less. DEX segment 2 (2 trades) is too small to compare.</figcaption></figure>
+    <p>The pattern is the same in every family, which points to its cause: a program that is out of the market much of the time earns less when prices rise and loses less when they fall. Some of that idle cash was built in, since three of the five DEX programs ($3,000 of the $8,000) never made a trade.</p>
+    <h4>How trades ended</h4>
+    <figure class="fr-fig"><div class="sc"><svg class="frc" viewBox="0 0 760 112" role="img" aria-label="How the 135 retained MGAT trades ended" xmlns="http://www.w3.org/2000/svg"><rect x="8.0" y="10" width="360.7" height="36" rx="4" style="fill:var(--dn)"/><text x="8.0" y="70.0" class="tk b" text-anchor="start">Stop-loss</text><text x="8.0" y="90.0" class="t" text-anchor="start">66 trades · avg −11.7%</text><rect x="371.7" y="10" width="234.0" height="36" rx="4" style="fill:var(--faint)"/><text x="371.7" y="70.0" class="tk b" text-anchor="start">Time limit</text><text x="371.7" y="90.0" class="t" text-anchor="start">43 trades · avg +1.7%</text><rect x="608.7" y="10" width="140.3" height="36" rx="4" style="fill:var(--up)"/><text x="608.7" y="70.0" class="tk b" text-anchor="start">Take-profit</text><text x="608.7" y="90.0" class="t" text-anchor="start">26 trades · avg +19.8%</text></svg></div><figcaption><b>Exits of the 135 retained trades.</b> Half ended at the stop-loss, losing 11.7% on average; take-profits gained 19.8% but were too few to cover them. Prices were checked once an hour, so stops often filled beyond their level.</figcaption></figure>
+    <h4>The AI advisers</h4>
+    <p>The built-in adviser approved every trade in three families and rejected every trade in the fourth, so it was a label for the family rather than a judgement. The Sonnet adviser was scored on 50 trades: the 5 it approved lost 5.3% on average and the 45 it rejected lost 5.5%. A permutation test gives p ≈ 0.97, meaning the difference is easily explained by chance. Its questions contained only information available at the time of each trade.</p>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">4</span>Limits of the evidence</h3>
+    <ul>
+      <li><b>No outside confirmation.</b> The separate price record stored only the latest price, so it confirmed none of the 139 trades. Every figure is the program's own record.</li>
+      <li><b>Small samples.</b> L1 completed 22 trades and DEX 8. A small genuine advantage could hide in numbers this small.</li>
+      <li><b>One market cycle.</b> The period held one rise, to early October, and one fall. A sideways market was never tested.</li>
+      <li><b>Paper is not real.</b> Fees were modelled, but slippage, minimum order sizes and failed orders were not. Real execution would only lower the results.</li>
+    </ul>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">5</span>Conclusion</h3>
+    <p>On eleven weeks of hourly decisions and 135 retained trades, <b>no MGAT strategy beat holding the same coins</b>. Selecting small coins lost money, the AI adviser had no predictive value, and the one useful behaviour, sitting in cash while prices fell, is a known property of trend-following rules rather than a discovery. The experiment ended on 9 November 2026 and was not moved to real money.</p>
+    <p>What remains is the method: rules for judging written before the data, every number re-checked by independent readers, and a plain account of what the data cannot show.</p>
+  </section>
+
+  <footer class="fr-end">
+    <p><b>Data.</b> Ledger of 146 purchases and 139 sales, frozen 9 Nov 2026 20:26 UTC with SHA-256 fingerprints checked by all three readers. Market prices: daily closes. Averages are simple means of each trade's percentage result after fees; profit factor uses dollars.</p>
+    <p><b>Status.</b> Final. This page replaces the weekly reports and the status card and will not be updated.</p>
+  </footer>
+</article>
     </div>
 
     <div class="xpane" id="x-hades" role="tabpanel">
-      <div id="exhadesstatus" class="status">Loading weekly…</div>
-      <div id="ex-hades-stale"></div>
-      <div id="ex-hades-empty"></div>
-      <div id="ex-hades-main" hidden></div>
+<article class="fr" id="fr-hades">
+  <header class="fr-top">
+    <div class="fr-eyebrow"><span class="fr-pill">Final result</span><span>Ended 9 Nov 2026</span><span>Real money · $130</span><span>This page is final and will not change</span></div>
+    <h2>Hades: could an AI program left alone with real money beat simply holding?</h2>
+    <p class="fr-dek">One AI program held its own Solana wallet with $130 of real money, decided every hour with no human in the loop, and was told the whole market was open. Four AI set-ups from three makers took turns over eleven weeks. This is the final account.</p>
+  </header>
+
+  <section class="fr-sum" aria-label="Summary of results">
+    <span class="lbl">Summary of results</span>
+    <p class="fr-verdict">No AI model found an advantage over simply holding SOL. Left free, the most capable model made no trade in eight days. Given a deadline, it made three small, planned trades and finished slightly ahead of holding, but short of the five trades the test asked for. The experiment ended on 9 November 2026.</p>
+    <div class="fr-tiles">
+      <div class="fr-tile"><span class="k">Duration</span><span class="v">77 days</span><span class="s">24 Aug – 9 Nov 2026, hourly decisions</span></div>
+      <div class="fr-tile"><span class="k">Final wallet</span><span class="v">$126.70</span><span class="s">$3.30 below the $130 stake, because SOL fell</span></div>
+      <div class="fr-tile"><span class="k">Against holding</span><span class="v up">+1.3%</span><span class="s">1.4606 SOL against 1.4423 SOL held</span></div>
+      <div class="fr-tile"><span class="k">Real cost</span><span class="v">≈ $10</span><span class="s">plus about $24 of AI usage fees</span></div>
+    </div>
+    <ul class="fr-points">
+      <li><b>No edge found.</b> Over 77 days the wallet ended within about $1.60 of what plain holding would have been worth.</li>
+      <li><b>Freedom did not produce action.</b> With every restriction lifted, the model held for eight days without a trade.</li>
+      <li><b>It never left one trading pair.</b> Every trade was between SOL and a US-dollar token, because the one exchange route it built for itself covered only that pair.</li>
+      <li><b>Every transaction was checked</b> on the public Solana blockchain.</li>
+    </ul>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">1</span>The experiment</h3>
+    <p>MGAT tested fixed rules. Hades tested the opposite idea: <b>give an AI program real money and freedom, and see whether it finds and acts on an advantage that fixed rules miss.</b></p>
+    <ul>
+      <li><b>Money:</b> $130 of real money, 1.3623 SOL, in a dedicated Solana wallet. A one-time top-up of 0.08 SOL was added later.</li>
+      <li><b>Freedom:</b> internet access, its own wallet, and a wake every hour to decide on its own. No human approved or placed any trade.</li>
+      <li><b>One rule:</b> the wallet must never reach zero.</li>
+      <li><b>Benchmark:</b> simply holding the same SOL, measured in SOL and in dollars at the same moment.</li>
+    </ul>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">2</span>Test period and stages</h3>
+    <p>The experiment ran from <b>24 August to 9 November 2026</b>. The decision-maker changed in five stages, each one designed from what the previous stage showed. The last two stages were formal tests with a pass line set in advance.</p>
+    <div class="fr-tw"><table class="frt">
+      <caption><b>The five stages.</b> Stages 4 and 5 overlap by a day: the stage-5 deadline was given on 4 November and stage 4 was formally closed on 5 November.</caption>
+      <tr><th>Stage</th><th class="l">Decision-maker</th><th class="l">Dates</th><th>Trades</th><th class="l">Result</th></tr>
+      <tr><td>1</td><td class="l">DeepSeek</td><td class="l nw">24 Aug – 6 Oct</td><td>12</td><td class="l">$174.13 against $174.29 for holding: level</td></tr>
+      <tr><td>2</td><td class="l">Gemini</td><td class="l nw">6 – 12 Oct</td><td>2</td><td class="l">too short to score</td></tr>
+      <tr><td>3</td><td class="l">Sonnet, with limits</td><td class="l nw">12 – 27 Oct</td><td>0</td><td class="l">held throughout</td></tr>
+      <tr><td>4</td><td class="l">Sonnet, every limit lifted (test 1)</td><td class="l nw">27 Oct – 5 Nov</td><td>0</td><td class="l">test 1 failed: no trade in 8 days</td></tr>
+      <tr><td>5</td><td class="l">Sonnet, given a deadline (test 2)</td><td class="l nw">4 – 9 Nov</td><td>3</td><td class="l">+0.63% against holding, but 3 of the 5 trades required: stopped</td></tr>
+    </table></div>
+    <p><b>Test 1</b> asked whether the model would trade at all once nothing held it back. <b>Test 2</b> asked for at least five trades it could explain, and a finish ahead of holding SOL, by 11 November. It reached three trades, so the experiment was ended on 9 November.</p>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">3</span>Results</h3>
+    <figure class="fr-fig"><div class="sc"><svg class="frc" viewBox="0 0 760 340" role="img" aria-label="Hades wallet value against simply holding the same SOL, weekly, 24 August to 9 November 2026" xmlns="http://www.w3.org/2000/svg"><rect x="52.0" y="18" width="328.4" height="286.0" class="band"/><text x="216.2" y="32.0" class="t sm" text-anchor="middle">1 DeepSeek</text><rect x="380.4" y="18" width="45.8" height="286.0" class="band2"/><text x="403.3" y="32.0" class="t sm" text-anchor="middle">2</text><rect x="426.2" y="18" width="114.5" height="286.0" class="band"/><text x="483.5" y="32.0" class="t sm" text-anchor="middle">3 Sonnet, limits</text><rect x="540.7" y="18" width="61.1" height="286.0" class="band2"/><text x="571.3" y="32.0" class="t sm" text-anchor="middle">4 free</text><rect x="601.8" y="18" width="38.2" height="286.0" class="band"/><text x="620.9" y="32.0" class="t sm" text-anchor="middle">5</text><line x1="52.0" y1="304.0" x2="640.0" y2="304.0" class="g"/><text x="44.0" y="308.0" class="t" text-anchor="end">$120</text><line x1="52.0" y1="251.2" x2="640.0" y2="251.2" class="g"/><text x="44.0" y="255.2" class="t" text-anchor="end">$130</text><line x1="52.0" y1="198.4" x2="640.0" y2="198.4" class="g"/><text x="44.0" y="202.4" class="t" text-anchor="end">$140</text><line x1="52.0" y1="145.6" x2="640.0" y2="145.6" class="g"/><text x="44.0" y="149.6" class="t" text-anchor="end">$150</text><line x1="52.0" y1="92.8" x2="640.0" y2="92.8" class="g"/><text x="44.0" y="96.8" class="t" text-anchor="end">$160</text><line x1="52.0" y1="40.0" x2="640.0" y2="40.0" class="g"/><text x="44.0" y="44.0" class="t" text-anchor="end">$170</text><line x1="52.0" y1="251.2" x2="640.0" y2="251.2" class="z"/><text x="56.0" y="245.2" class="t sm" text-anchor="start">$130 stake</text><text x="113.1" y="324.0" class="t" text-anchor="middle">1 Sep</text><text x="342.2" y="324.0" class="t" text-anchor="middle">1 Oct</text><text x="578.9" y="324.0" class="t" text-anchor="middle">1 Nov</text><path d="M52.0,251.2 L90.2,180.0 L143.6,188.3 L197.1,160.2 L250.5,97.4 L304.0,13.1 L357.5,22.8 L410.9,100.8 L464.4,150.8 L517.8,158.2 L571.3,208.8 L624.7,260.0 L640.0,277.0" style="fill:none;stroke:var(--faint);stroke-width:2;stroke-linejoin:round;stroke-dasharray:5 4"/><path d="M52.0,251.2 L90.2,178.0 L143.6,181.9 L197.1,147.3 L250.5,92.9 L304.0,8.7 L357.5,18.5 L410.9,95.5 L464.4,145.8 L517.8,153.2 L571.3,204.2 L624.7,250.2 L640.0,268.6" style="fill:none;stroke:var(--brand);stroke-width:2.4;stroke-linejoin:round"/><circle cx="52.0" cy="251.2" r="2.6" style="fill:var(--brand)"/><circle cx="90.2" cy="178.0" r="2.6" style="fill:var(--brand)"/><circle cx="143.6" cy="181.9" r="2.6" style="fill:var(--brand)"/><circle cx="197.1" cy="147.3" r="2.6" style="fill:var(--brand)"/><circle cx="250.5" cy="92.9" r="2.6" style="fill:var(--brand)"/><circle cx="304.0" cy="8.7" r="2.6" style="fill:var(--brand)"/><circle cx="357.5" cy="18.5" r="2.6" style="fill:var(--brand)"/><circle cx="410.9" cy="95.5" r="2.6" style="fill:var(--brand)"/><circle cx="464.4" cy="145.8" r="2.6" style="fill:var(--brand)"/><circle cx="517.8" cy="153.2" r="2.6" style="fill:var(--brand)"/><circle cx="571.3" cy="204.2" r="2.6" style="fill:var(--brand)"/><circle cx="624.7" cy="250.2" r="2.6" style="fill:var(--brand)"/><circle cx="640.0" cy="268.6" r="2.6" style="fill:var(--brand)"/><circle cx="640.0" cy="268.6" r="4.5" style="fill:var(--brand);stroke:var(--card);stroke-width:2"/><text x="650.0" y="264.6" class="tk b" text-anchor="start">Wallet $126.70</text><text x="650.0" y="289.0" class="t" text-anchor="start">Holding $125.11</text></svg></div><figcaption><b>Wallet value against simply holding the same SOL, in dollars.</b> Weekly readings from the published weekly reports, plus the start and the final on-chain reading of 9 November. The two lines move together because almost all of the wallet stayed in SOL: the market, not the trading, set the result. The peak of $175.92 came with SOL at $121 in late September.</figcaption></figure>
+    <p>Measured in dollars, the wallet rose to $175.92 in late September and fell to $126.70 by the end, almost exactly in step with SOL itself (about $95 at the start, $121 at the peak, $86.75 at the end). Holding the same SOL, including the top-up, would have ended at $125.11.</p>
+    <figure class="fr-fig"><div class="sc"><svg class="frc" viewBox="0 0 760 150" role="img" aria-label="Hades wallet in SOL: start, holding and final" xmlns="http://www.w3.org/2000/svg"><text x="8.0" y="32.0" class="tk" text-anchor="start">Pinned at the start</text><rect x="270" y="18" width="138.4" height="20" rx="3" style="fill:var(--faint)"/><text x="416.4" y="33.0" class="tk b" text-anchor="start">1.3623 SOL</text><text x="8.0" y="74.0" class="tk" text-anchor="start">Start plus the 0.08 top-up (holding)</text><rect x="270" y="60" width="316.2" height="20" rx="3" style="fill:var(--faint)"/><text x="594.2" y="75.0" class="tk b" text-anchor="start">1.4423 SOL</text><text x="8.0" y="116.0" class="tk" text-anchor="start">Final wallet, SOL-equivalent</text><rect x="270" y="102" width="356.9" height="20" rx="3" style="fill:var(--brand)"/><text x="634.9" y="117.0" class="tk b" text-anchor="start">1.4606 SOL</text><text x="270.0" y="144.0" class="t sm" text-anchor="start">axis starts at 1.30 SOL to show the small differences</text></svg></div><figcaption><b>The wallet counted in SOL.</b> The final wallet held SOL, wrapped SOL and a US-dollar token worth 1.4606 SOL together: 1.3% more than holding the starting SOL plus the top-up. Most of the 7.2% gain over the pinned start is the top-up itself.</figcaption></figure>
+    <h4>What the AI models did</h4>
+    <ul>
+      <li><b>DeepSeek</b> traded most, twelve times in six weeks, and ended level with holding.</li>
+      <li><b>Gemini</b> made two trades in six days, too few to judge.</li>
+      <li><b>Sonnet, with limits</b>, held for fifteen days. When every limit was lifted it changed its words, not its actions: eight more days, no trade.</li>
+      <li><b>Sonnet, given a deadline,</b> acted within the hour. Each trade had a stated reason, size, target and stop, written before execution. It finished 0.63% ahead of holding on about $1 of gains, but its first stated reason was the deadline, not the market.</li>
+    </ul>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">4</span>Limits of the evidence</h3>
+    <ul>
+      <li><b>One small wallet.</b> $130 cannot show how an AI program behaves with sums where costs, slippage and risk matter more.</li>
+      <li><b>One asset in practice.</b> The program only ever traded SOL against a US-dollar token, so the rest of the market was never tested.</li>
+      <li><b>One market phase.</b> SOL rose into late September and fell through October and November.</li>
+      <li><b>Changing set-ups.</b> Each stage used a different model or instruction, so no single set-up ran long enough to judge on its own.</li>
+    </ul>
+  </section>
+
+  <section class="fr-sec">
+    <h3><span class="n">5</span>Conclusion</h3>
+    <p>Over 77 days with real money, <b>four AI set-ups from three makers found no advantage over simply holding SOL</b>. Given freedom, the most capable model chose not to trade; given a deadline, it traded small and carefully, which is discipline but not evidence of an edge. The real cost was about $10 plus AI usage fees. The experiment ended on 9 November 2026, the wallet was emptied and retired, and no successor is running.</p>
+  </section>
+
+  <footer class="fr-end">
+    <p><b>Data.</b> Every transaction read from the public Solana blockchain. Final reading 9 Nov 2026 16:47 UTC: 1.4606 SOL-equivalent at SOL $86.745. Weekly values from the eleven published weekly reports.</p>
+    <p><b>Status.</b> Final. This page replaces the weekly reports and the status card and will not be updated.</p>
+  </footer>
+</article>
     </div>
   </section>
 
