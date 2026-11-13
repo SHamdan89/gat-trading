@@ -1,58 +1,42 @@
 {
- "date": "2026-11-12",
- "generated_utc": "2026-11-12T06:08:09Z",
+ "date": "2026-11-13",
+ "generated_utc": "2026-11-13T06:07:56Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "ASML raises its 2026 revenue forecast to €44–45 billion after a record quarter (Nov 5)",
-     "why": "Chip-equipment demand is still being revised up even as chip stocks sold off, which says AI-driven capital spending has not rolled over.",
+     "headline": "Chip and AI-infrastructure stocks sell off after Democrats win both chambers of Congress",
+     "why": "Markets are pricing a higher chance of AI regulation and data-center limits, and they are splitting spenders (Amazon and Microsoft rose over 6% on Nov 4) from suppliers (Micron, CoreWeave and Marvell fell sharply).",
      "sources": [
       {
-       "title": "Semiconductors & AI Chips Weekly Briefing, Nov 6",
-       "url": "https://www.distillintelligence.com/briefings/semiconductors-ai-chips-2026-11-06"
+       "title": "AI Roundup: AMD, Apple Results Puzzle Investors, Midterm Win Weighs On Traders",
+       "url": "https://stocktwits.com/news-articles/markets/equity/ai-roundup-amd-apple-results-puzzle-investors-democrats-midterm-win-weighs-on-traders/cNG1fJyR9EN"
+      },
+      {
+       "title": "Qualcomm, Micron and Arm Lead Another Chip Selloff as AI Trade Loses Its Shine",
+       "url": "https://www.thewealthadvisor.com/article/qualcomm-micron-and-arm-lead-another-chip-selloff-ai-trade-loses-its-shine"
       }
      ]
     },
     {
-     "headline": "Arm shares fall 9% as royalty growth slows to 8% on $1.44 billion quarterly revenue (Nov 5)",
-     "why": "The market is punishing any slowdown in licensing growth, showing how little room is left in expectations for AI-linked names.",
+     "headline": "Qualcomm falls more than 11% as handset-chip sales drop 26% to $5.1 billion",
+     "why": "Smartphone weakness plus Apple's shift to its own modems removes the company's core growth leg, so its pivot to auto, industrial and data-center revenue now has to carry the story.",
      "sources": [
       {
-       "title": "Semiconductors & AI Chips Weekly Briefing, Nov 6",
-       "url": "https://www.distillintelligence.com/briefings/semiconductors-ai-chips-2026-11-06"
+       "title": "Qualcomm, Micron and Arm Lead Another Chip Selloff as AI Trade Loses Its Shine",
+       "url": "https://www.thewealthadvisor.com/article/qualcomm-micron-and-arm-lead-another-chip-selloff-ai-trade-loses-its-shine"
       }
      ]
     },
     {
-     "headline": "About 600,000 Nvidia AI chips are waiting on Chinese import approval in Hong Kong (Nov 5, per Reuters as relayed in the briefing)",
-     "why": "A large block of shipments hinges on a government sign-off rather than on customer demand, so policy is the swing factor for that revenue.",
+     "headline": "Apple guides holiday-quarter gross margin down to 45-46% on rising memory prices; AMD forecasts 80% sales growth in 2027",
+     "why": "Memory-chip inflation is now squeezing hardware makers while data-center demand lifts chip designers, a split that determines who captures the AI build-out's profits.",
      "sources": [
       {
-       "title": "Semiconductors & AI Chips Weekly Briefing, Nov 6",
-       "url": "https://www.distillintelligence.com/briefings/semiconductors-ai-chips-2026-11-06"
-      }
-     ]
-    },
-    {
-     "headline": "AMD agrees to pay about $2.9 billion for Toronto AI chip startup Taalas (Nov 5)",
-     "why": "Large chipmakers are buying AI inference silicon rather than building it, which concentrates the field further.",
-     "sources": [
-      {
-       "title": "Semiconductors & AI Chips Weekly Briefing, Nov 6",
-       "url": "https://www.distillintelligence.com/briefings/semiconductors-ai-chips-2026-11-06"
-      }
-     ]
-    },
-    {
-     "headline": "Kioxia reports record first-half profit of ¥2,197.9 billion on AI-driven memory demand (Nov 6)",
-     "why": "Memory is where AI demand is showing up most clearly in earnings, which is the opposite of the weakness seen in handset-exposed chips.",
-     "sources": [
-      {
-       "title": "Semiconductors & AI Chips Weekly Briefing, Nov 6",
-       "url": "https://www.distillintelligence.com/briefings/semiconductors-ai-chips-2026-11-06"
+       "title": "AI Roundup: AMD, Apple Results Puzzle Investors, Midterm Win Weighs On Traders",
+       "url": "https://stocktwits.com/news-articles/markets/equity/ai-roundup-amd-apple-results-puzzle-investors-democrats-midterm-win-weighs-on-traders/cNG1fJyR9EN"
       }
      ]
     }
@@ -62,41 +46,31 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "US spot bitcoin ETFs lose about $1.28 billion net in the week of Nov 2–6, including $411.9 million on Nov 6",
-     "why": "Steady fund outflows remove the main source of marginal buying, so rallies lack support until flows turn.",
+     "headline": "Bitcoin trades near $75,800, between its 100-day (~$77,100) and 200-day (~$73,200) averages",
+     "why": "The weekly low of $74,921 held above the 200-day average; a close below it would turn the longer-term trend negative.",
      "sources": [
       {
-       "title": "Crypto News This Week: What Happened Since November 1",
+       "title": "Crypto News This Week: What Happened Since November 1 and the Key Dates for November 9 to 15",
        "url": "https://cryptoticker.io/en/crypto-news-this-week-recap-key-dates-november-2026/"
       }
      ]
     },
     {
-     "headline": "Bitcoin drops from $80,882 to $75,573 on Nov 5, hits a weekly low of $74,921 on Nov 6, and sentiment falls to extreme fear (index 25 on Nov 7)",
-     "why": "The rejection near $81,000 and the slide back to the mid-$70,000s leave $75,000 as the level traders are now defending.",
+     "headline": "US spot bitcoin ETFs post $1.28 billion of net outflows for Nov 2-6",
+     "why": "Persistent ETF selling removes the main marginal buyer of 2026, which is why rallies above $80,000 have not held.",
      "sources": [
       {
-       "title": "Crypto News This Week: What Happened Since November 1",
+       "title": "Crypto News This Week: What Happened Since November 1 and the Key Dates for November 9 to 15",
        "url": "https://cryptoticker.io/en/crypto-news-this-week-recap-key-dates-november-2026/"
       }
      ]
     },
     {
-     "headline": "A short squeeze lifts bitcoin near $80,000 on Nov 4–5, with $730 million liquidated in 24 hours, $448 million of it shorts",
-     "why": "The rally was forced covering rather than new buying, which fits how quickly it reversed.",
+     "headline": "Democratic Congress puts the CLARITY market-structure bill on a lame-duck deadline of January 3, 2027",
+     "why": "If the Senate does not pass it before the term ends, US crypto market-structure legislation restarts from zero under a less sympathetic committee lineup.",
      "sources": [
       {
-       "title": "Cryptos Extend Gains Amidst Short Squeeze (RTTNews, Nov 5)",
-       "url": "https://www.rttnews.com/3710651/cryptos-extend-gains-amidst-short-squeeze.aspx"
-      }
-     ]
-    },
-    {
-     "headline": "US Treasury cuts off crypto exchange MEXC through a FinCEN order (Nov 6); Russia says licensed firms may sell crypto to retail clients from Nov 17",
-     "why": "Enforcement is tightening on offshore venues in the US while Russia opens a retail channel, a split that shapes where volume migrates.",
-     "sources": [
-      {
-       "title": "Crypto News This Week: What Happened Since November 1",
+       "title": "Crypto News This Week: What Happened Since November 1 and the Key Dates for November 9 to 15",
        "url": "https://cryptoticker.io/en/crypto-news-this-week-recap-key-dates-november-2026/"
       }
      ]
@@ -107,59 +81,45 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "October US CPI rises 0.4% on the month versus 0.3% expected; core is up 0.3% versus 0.2% expected (Nov 10)",
-     "why": "A hotter print on both measures keeps the Fed on a tightening path; no official annual rate was published because shutdown-era data gaps broke the comparison.",
+     "headline": "October US CPI rises 0.4% against 0.3% expected; core holds at 0.3% for a third straight month",
+     "why": "Sticky shelter and services inflation shows the energy-driven spike has not been the only source of price pressure, which keeps the Fed on a tightening path.",
      "sources": [
       {
-       "title": "US Treasury yields surge as October CPI inflation exceeds forecasts",
-       "url": "https://beinsure.com/news/us-treasury-yields-surge-as-cpi-inflation-exceeds-forecasts/"
+       "title": "US consumer prices rise 0.4% in October, above forecasts, as core inflation holds at 0.3%",
+       "url": "https://stockanalysis.com/news/us-cpi-rises-october-2026/"
       },
       {
-       "title": "October 2026 CPI Recap: Inflation & Dollar Reaction",
-       "url": "https://fxnx.com/en/blog/cpi-october-2026-recap-inflation-print-dollar-reaction"
+       "title": "US stocks slide, yields jump, USD higher after hotter-than-expected October CPI",
+       "url": "https://investinglive.com/technical-analysis/us-stocks-slide-yields-jump-usd-higher-after-hotter-than-expected-october-cpi/"
       }
      ]
     },
     {
-     "headline": "10-year Treasury yield approaches 5% (about 4.94–4.99%) and the 2-year jumps roughly 15–19 basis points after the CPI print",
-     "why": "Yields near 5% raise borrowing costs across the economy and compete directly with equities for capital.",
+     "headline": "Markets price a December Fed hike as near-certain and about 54% odds of another in January",
+     "why": "The 2-year yield jumped 14 basis points to 4.69% on the print, so tightening is now the base case that equities and credit have to absorb.",
      "sources": [
       {
-       "title": "US Treasury yields surge as October CPI inflation exceeds forecasts",
-       "url": "https://beinsure.com/news/us-treasury-yields-surge-as-cpi-inflation-exceeds-forecasts/"
+       "title": "US stocks slide, yields jump, USD higher after hotter-than-expected October CPI",
+       "url": "https://investinglive.com/technical-analysis/us-stocks-slide-yields-jump-usd-higher-after-hotter-than-expected-october-cpi/"
       }
      ]
     },
     {
-     "headline": "Markets price a December Fed rate hike at roughly 89% after the CPI release; the Fed held at 3.75%–4.00% in October and a Fed governor said he would back a 25 basis point hike",
-     "why": "A hike is now the base case rather than a risk, so the debate has moved to whether it is 25 or 50 basis points.",
+     "headline": "Treasury yields climb on the CPI: 10-year near 4.93%, 30-year near 5.29%",
+     "why": "Long yields above 5% on the 30-year raise discount rates on expensive tech valuations and tighten financial conditions beyond what the Fed itself does.",
      "sources": [
       {
-       "title": "October 2026 CPI Recap: Inflation & Dollar Reaction",
-       "url": "https://fxnx.com/en/blog/cpi-october-2026-recap-inflation-print-dollar-reaction"
-      },
-      {
-       "title": "US Treasury yields surge as October CPI inflation exceeds forecasts",
-       "url": "https://beinsure.com/news/us-treasury-yields-surge-as-cpi-inflation-exceeds-forecasts/"
+       "title": "US stocks slide, yields jump, USD higher after hotter-than-expected October CPI",
+       "url": "https://investinglive.com/technical-analysis/us-stocks-slide-yields-jump-usd-higher-after-hotter-than-expected-october-cpi/"
       }
      ]
     },
     {
-     "headline": "US dollar index gains 0.51% and reclaims 102 after CPI; EUR/USD falls to 1.1170 and USD/JPY reaches 158.66",
-     "why": "A stronger dollar tightens conditions further for dollar borrowers and commodity buyers.",
+     "headline": "Advancing US-Iran talks drive Brent down 16% in a week",
+     "why": "A diplomatic path removing the supply-risk premium is the main force easing energy inflation, partly offsetting the hot core CPI.",
      "sources": [
       {
-       "title": "October 2026 CPI Recap: Inflation & Dollar Reaction",
-       "url": "https://fxnx.com/en/blog/cpi-october-2026-recap-inflation-print-dollar-reaction"
-      }
-     ]
-    },
-    {
-     "headline": "Advancing US–Iran talks and flat OPEC+ December output help drive Brent down about 16% in a week",
-     "why": "Diplomacy is draining the war premium from oil, which eases the inflation pressure that is driving the Fed.",
-     "sources": [
-      {
-       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4%",
+       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4% - three commodity regimes just reset",
        "url": "https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105"
       }
      ]
@@ -170,41 +130,35 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Brent falls 16.42% to $98.32 and WTI falls 12.76% to $90.83, the largest weekly drop since 2020; Brent closes below $100 for the first time since September",
-     "why": "Roughly $20 a barrel of supply premium came out in one week, and the 200-day average near 93.24 is the next level to watch.",
+     "headline": "Brent closes the week at $98.32, down 16.4%, its largest weekly drop since 2020",
+     "why": "Iran talks, flat OPEC+ output for a third month and weak US demand growth erased roughly $20 of supply premium in a week.",
      "sources": [
       {
-       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4%",
+       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4% - three commodity regimes just reset",
        "url": "https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105"
       }
      ]
     },
     {
-     "headline": "Gold rises 4.51% to $4,074.90, its best week since August, after a one-year low of $3,869.85 on Oct 30",
-     "why": "The bounce came despite higher rate-hike odds, with central-bank buying cited as support under $4,000, and resistance sits at the 50- and 100-day averages near $4,197–4,202.",
+     "headline": "Gold gains 4.5% on the week to $4,074.90, then gives back about $89 after the hot CPI",
+     "why": "The rebound from a one-year low of $3,869.85 on Oct 30 shows dip-buying demand, but rising rate-hike odds are now the main headwind.",
      "sources": [
       {
-       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4%",
+       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4% - three commodity regimes just reset",
        "url": "https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105"
+      },
+      {
+       "title": "US stocks slide, yields jump, USD higher after hotter-than-expected October CPI",
+       "url": "https://investinglive.com/technical-analysis/us-stocks-slide-yields-jump-usd-higher-after-hotter-than-expected-october-cpi/"
       }
      ]
     },
     {
-     "headline": "Silver rises 5.51% to $51.80; the gold-silver ratio sits at 78.7 versus a 2026 average of 63.8",
-     "why": "Silver lagged gold's percentage gain only on a lower base, and a ratio this far above its yearly average leaves room for catch-up if gold holds.",
+     "headline": "Silver rises 5.5% to $51.80 while copper falls 3.7% to $6.218",
+     "why": "Silver is moving with gold as a monetary metal while copper breaking its $6.30 September support signals weaker industrial-demand expectations.",
      "sources": [
       {
-       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4%",
-       "url": "https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105"
-      }
-     ]
-    },
-    {
-     "headline": "Copper falls 3.72% to $6.218, below September support at $6.30",
-     "why": "Copper is the cleanest read on industrial demand in China, and it is not joining the metals rally.",
-     "sources": [
-      {
-       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4%",
+       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4% - three commodity regimes just reset",
        "url": "https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105"
       }
      ]
@@ -215,51 +169,61 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 trades near 7,542 intraday on Nov 9, above its prior-Friday close of 7,376.86 and above the 7,444.20 Friday high, which held as the level for any pullback",
-     "why": "As long as 7,444 holds, Monday's rebound keeps its structure; a move back below it would weaken it. These are intraday figures, not final closes.",
+     "headline": "Gold holds above $4,000 on the weekly close; $4,197-4,202 (50- and 100-day averages) is the overhead cap",
+     "why": "Gold bounced off the $3,869.85 low, so the $4,000 round number is the line separating a recovery from a renewed break lower.",
      "sources": [
       {
-       "title": "Evening Review, 2026-11-09",
-       "url": "https://thriveinmarkets.com/market-insights/evening-review-2026-11-09/"
+       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4% - three commodity regimes just reset",
+       "url": "https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105"
       }
      ]
     },
     {
-     "headline": "Nasdaq-100 ETF (QQQ) still sits below its 10-, 50- and 200-day averages as of Nov 6 despite a 1.40% gain; S&P 500 ETF (SPY) is above its 200-day but below the 50- and 10-day",
-     "why": "The rebound has not repaired the trend: growth stocks are still in a downtrend while the broader index has held its long-term average.",
+     "headline": "Gold slips below its 100-hour average after CPI; the 200-hour average near $4,025 is the next level in view",
+     "why": "The intraday low of $4,039 shows how quickly the weekly bounce can fade when yields rise.",
      "sources": [
       {
-       "title": "Stock Market Recap, 2026-11-06",
-       "url": "https://swingtradebot.com/market-recap/2026-11-06"
+       "title": "US stocks slide, yields jump, USD higher after hotter-than-expected October CPI",
+       "url": "https://investinglive.com/technical-analysis/us-stocks-slide-yields-jump-usd-higher-after-hotter-than-expected-october-cpi/"
       }
      ]
     },
     {
-     "headline": "On Nov 5, SPY broke its consolidation (support $729.10–729.46, then $723.43), QQQ broke its rising trendline from April 2025 (support $636.60), and the semiconductor ETF SMH broke its weekly 20- and 50-period averages (support $427.94)",
-     "why": "Those levels mark where a failed bounce would turn into a deeper leg down; the source itself says a bounce and a confirmed bottom are different things.",
+     "headline": "Brent broke below $100 and has not reclaimed it; the 200-day average at $93.24 is the next support",
+     "why": "Failure to retake $100 leaves the post-premium downtrend intact, while a hold above $93 would mark a base.",
      "sources": [
       {
-       "title": "Trading the Close, Nov 5, 2026",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-05-2026-tech-bloodbath-semiconductor-capitulation-and-oversold-buy-zones"
+       "title": "Weekly Report: Gold up 4.5%, Brent down 16.4% - three commodity regimes just reset",
+       "url": "https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105"
       }
      ]
     },
     {
-     "headline": "Bitcoin remains below the $74,800–75,100 zone as of Nov 9 (about $74,500); support was $74,911 on Nov 5 with resistance at $80,524",
-     "why": "A sustained move back above $75,100 would ease pressure, while $80,524 was the ceiling that capped the Nov 4 spike.",
+     "headline": "Bitcoin's range: $74,921 weekly low above the 200-day (~$73,200); $81,004 Nov 4 high rejected",
+     "why": "The 200-day average has held as support while the 100-day (~$77,100) has capped rallies, defining the range.",
      "sources": [
       {
-       "title": "Evening Review, 2026-11-09",
-       "url": "https://thriveinmarkets.com/market-insights/evening-review-2026-11-09/"
+       "title": "Crypto News This Week: What Happened Since November 1 and the Key Dates for November 9 to 15",
+       "url": "https://cryptoticker.io/en/crypto-news-this-week-recap-key-dates-november-2026/"
+      }
+     ]
+    },
+    {
+     "headline": "Nasdaq and S&P 500 rallied 2.7% and 2.3% on Nov 9, then fell in early trading on CPI day (Nasdaq -322 points, S&P -46)",
+     "why": "The midterm-selloff rebound was erased quickly by the hot print, so the bounce has not been confirmed by a close.",
+     "sources": [
+      {
+       "title": "US CPI takes centre stage as markets look to steady the ship after the midterm selloff",
+       "url": "https://investinglive.com/news/us-cpi-takes-centre-stage-as-markets-look-to-steady-the-ship-after-the-midterm-selloff/"
       },
       {
-       "title": "Trading the Close, Nov 5, 2026",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-05-2026-tech-bloodbath-semiconductor-capitulation-and-oversold-buy-zones"
+       "title": "US stocks slide, yields jump, USD higher after hotter-than-expected October CPI",
+       "url": "https://investinglive.com/technical-analysis/us-stocks-slide-yields-jump-usd-higher-after-hotter-than-expected-october-cpi/"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-11-12T06:14:36Z"
+ "published_utc": "2026-11-13T06:09:28Z"
 }
