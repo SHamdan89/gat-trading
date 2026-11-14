@@ -1,0 +1,35 @@
+{
+ "week": "2026-W46",
+ "review_friday": "2026-11-13",
+ "generated_utc": "2026-11-14T07:07:03Z",
+ "reviews": [
+  {
+   "id": "alpha-2026-001",
+   "status": "Dead — killed",
+   "why": "Copper traded at $6.08/lb on tradingeconomics.com on 2026-11-13, at or below the $6.15 kill level -- the same site had already flagged a four-month low of $6.20/lb on November 10. The slide was driven by Fed rate-hike pricing and a stronger dollar after hot US inflation data, not by anything happening at Escondida, so the kill condition fired on its own terms.",
+   "sources": [
+    {
+     "title": "Copper - Price - Chart - Historical Data - News",
+     "url": "https://tradingeconomics.com/commodity/copper",
+     "date": "2026-11-13"
+    },
+    {
+     "title": "Copper Falls to 4-Month Low",
+     "url": "https://tradingeconomics.com/commodity/copper/news/600135",
+     "date": "2026-11-10"
+    }
+   ]
+  }
+ ],
+ "post_mortems": [
+  {
+   "id": "alpha-2026-001",
+   "assumption_broke": "The call assumed Escondida's regional output loss was, by itself, large enough to keep the global copper market tight and push a new record high. The global refined market was already running a surplus for most of 2026, so a real but regional disruption never had the leverage over price the thesis needed.",
+   "earlier_catch": "ICSG's own global refined balance releases, public through the quarter (reported in roughly April, July/August and October 2026), kept showing a widening surplus. The hunt's checkpoints tracked only Escondida-specific output and labor news and never checked that global number against the thesis it was supposed to test.",
+   "rule": "A thesis pinned to a single mine or region's supply disruption needs a checkpoint on the global refined balance, not only the regional disruption -- a tight region inside a confirmed global surplus will not move price on its own."
+  }
+ ],
+ "new_call": null,
+ "no_new_call_note": "A scan across commodities, crypto and stocks this week turned up nothing both new and confirmed by more than one independent source that the market has not already priced: the Fed's rate-hike pricing after hot inflation data, China's tight physical copper market, the Escondida labor peace, and the DRC's copper-cobalt concentrate export ban are each already reported and already reflected in price, so no new call opens this week.",
+ "published_utc": "2026-11-14T07:15:24Z"
+}
