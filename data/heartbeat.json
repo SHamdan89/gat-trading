@@ -1,328 +1,38 @@
 {
  "schema": 1,
- "run_utc": "2026-11-17T17:22:52Z",
- "fetch_utc": "2026-11-17T17:22:51Z",
- "payload_sha256": "840018a40a418209450a290bedd5bdd89bcbe92e042375ca7fae1b4f02b285a6",
+ "run_utc": "2026-11-17T18:01:23Z",
+ "fetch_utc": "2026-11-17T18:01:23Z",
+ "payload_sha256": "49c8636b89924be113f05b0f18439381e4774ad98e612e5f9acb1cd14f1b9452",
  "upstream": {
+  "coingecko": {
+   "stamp": "2026-11-17T17:59:55Z",
+   "observations": 9,
+   "unparsed": 0,
+   "expected_live": true
+  },
   "fred": {
    "stamp": "2026-10-05T00:00:00Z",
    "observations": 1,
    "unparsed": 0,
    "expected_live": false
+  },
+  "gold-api": {
+   "stamp": "2026-11-17T18:00:01Z",
+   "observations": 1,
+   "unparsed": 0,
+   "expected_live": true
+  },
+  "yahoo": {
+   "stamp": "2026-11-17T18:01:16Z",
+   "observations": 38,
+   "unparsed": 0,
+   "expected_live": true
   }
  },
  "assets": 49,
- "feed_errors": 48,
- "pull_rc": 1,
- "status": "ALARM",
- "alarms": [
-  {
-   "alarm": "pull_failed",
-   "detail": "latest.json has only 1 of 49 assets (floor 40) - prices were NOT published this run"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "gold",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "gold is published as a dash - no fresh price this run (Gold (front-month) (GC=F): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "silver",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "silver is published as a dash - no fresh price this run (Silver (front-month) (SI=F): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "gs_ratio",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "gs_ratio is published as a dash - no fresh price this run (computed from a row that is withheld this run); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "copper",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "copper is published as a dash - no fresh price this run (Copper (spot) (HG): GET failed after 3 tries: api.gold-api.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "wti",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "wti is published as a dash - no fresh price this run (Oil (WTI, front-month) (CL=F): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "natgas",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "natgas is published as a dash - no fresh price this run (Natural gas (front-month) (NG=F): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "nasdaq",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "nasdaq is published as a dash - no fresh price this run (NASDAQ Composite (^IXIC): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "ndx",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "ndx is published as a dash - no fresh price this run (Nasdaq 100 (^NDX): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "sp500",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "sp500 is published as a dash - no fresh price this run (S&P 500 (^GSPC): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "dxy",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "dxy is published as a dash - no fresh price this run (US Dollar Index (DXY) (DX-Y.NYB): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "amd",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "amd is published as a dash - no fresh price this run (AMD (AMD): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "aapl",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "aapl is published as a dash - no fresh price this run (Apple (AAPL): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "googl",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "googl is published as a dash - no fresh price this run (Alphabet (GOOGL): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "msft",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "msft is published as a dash - no fresh price this run (Microsoft (MSFT): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "tsla",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "tsla is published as a dash - no fresh price this run (Tesla (TSLA): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "nvda",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "nvda is published as a dash - no fresh price this run (Nvidia (NVDA): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "qcom",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "qcom is published as a dash - no fresh price this run (Qualcomm (QCOM): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "lly",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "lly is published as a dash - no fresh price this run (Eli Lilly (LLY): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "amzn",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "amzn is published as a dash - no fresh price this run (Amazon (AMZN): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "meta",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "meta is published as a dash - no fresh price this run (Meta Platforms (META): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "spcx",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "spcx is published as a dash - no fresh price this run (SpaceX (SPCX): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "asml",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "asml is published as a dash - no fresh price this run (ASML (ASML): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "scco",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "scco is published as a dash - no fresh price this run (Southern Copper (SCCO): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "ccj",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "ccj is published as a dash - no fresh price this run (Cameco (CCJ): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "iswd",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "iswd is published as a dash - no fresh price this run (iShares MSCI World Islamic (ISDW.L): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "hiws",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "hiws is published as a dash - no fresh price this run (HSBC MSCI World Islamic Screened (HIWO.L): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "spus",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "spus is published as a dash - no fresh price this run (SP Funds S&P 500 Sharia (SPUS): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "spwo",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "spwo is published as a dash - no fresh price this run (SP Funds S&P World (ex-US) (SPWO): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "btc",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "btc is published as a dash - no fresh price this run (Bitcoin (BTC-USD): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "eth",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "eth is published as a dash - no fresh price this run (Ethereum (ethereum): not returned by coingecko); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "xrp",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "xrp is published as a dash - no fresh price this run (XRP (ripple): not returned by coingecko); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "sol",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "sol is published as a dash - no fresh price this run (Solana (solana): not returned by coingecko); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "sui",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "sui is published as a dash - no fresh price this run (Sui (sui): not returned by coingecko); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "wld",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "wld is published as a dash - no fresh price this run (Worldcoin (worldcoin-wld): not returned by coingecko); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "hype",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "hype is published as a dash - no fresh price this run (Hyperliquid (hyperliquid): not returned by coingecko); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "doge",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "doge is published as a dash - no fresh price this run (Dogecoin (dogecoin): not returned by coingecko); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "wlfi",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "wlfi is published as a dash - no fresh price this run (World Liberty Financial (world-liberty-financial): not returned by coingecko); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "qnt",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "qnt is published as a dash - no fresh price this run (Quant (quant-network): not returned by coingecko); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "aramco",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "aramco is published as a dash - no fresh price this run (Saudi Aramco (2222.SR): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "bp",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "bp is published as a dash - no fresh price this run (BP (BP): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "shel",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "shel is published as a dash - no fresh price this run (Shell (SHEL): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "tte",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "tte is published as a dash - no fresh price this run (TotalEnergies (TTE): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "xom",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "xom is published as a dash - no fresh price this run (ExxonMobil (XOM): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "cvx",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "cvx is published as a dash - no fresh price this run (Chevron (CVX): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "slb",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "slb is published as a dash - no fresh price this run (SLB (SLB): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "hal",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "hal is published as a dash - no fresh price this run (Halliburton (HAL): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "wfrd",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "wfrd is published as a dash - no fresh price this run (Weatherford (WFRD): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "bkr",
-   "last_good_utc": "2026-11-17T16:01:11Z",
-   "detail": "bkr is published as a dash - no fresh price this run (Baker Hughes (BKR): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 8] nodename nor servname provided, or not known>)); last good 2026-11-17T16:01:11Z"
-  },
-  {
-   "alarm": "upstream_missing",
-   "provider": "coingecko",
-   "detail": "coingecko reported a stamp last run (2026-11-17T15:59:51Z) and none this run"
-  },
-  {
-   "alarm": "upstream_missing",
-   "provider": "gold-api",
-   "detail": "gold-api reported a stamp last run (2026-11-17T16:00:01Z) and none this run"
-  },
-  {
-   "alarm": "upstream_missing",
-   "provider": "yahoo",
-   "detail": "yahoo reported a stamp last run (2026-11-17T16:01:09Z) and none this run"
-  }
- ],
+ "feed_errors": 0,
+ "pull_rc": 0,
+ "status": "ok",
+ "alarms": [],
  "note": "Emitted by every run, including failed ones. status ok means this run saw the feed advance; ALARM means it did not, and the prices on the page may be older than they look."
 }
