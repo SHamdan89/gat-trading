@@ -1,28 +1,52 @@
 {
- "date": "2026-11-20",
- "generated_utc": "2026-11-20T06:12:00Z",
+ "date": "2026-11-21",
+ "generated_utc": "2026-11-21T06:08:17Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Nvidia reports $115.8B quarterly revenue, up 103% year over year, and guides next quarter to $130B",
-     "why": "Data center revenue of $107.6B (up 110%) shows AI infrastructure spending still accelerating, and the guide implies roughly 12% sequential growth from an already enormous base.",
+     "headline": "Nvidia posts $115.8B quarter, up 103% year on year, and guides about $130B for the next",
+     "why": "A roughly $6B revenue beat and a raised growth outlook say AI infrastructure spending was still accelerating even as the wider tech tape sold off.",
      "sources": [
       {
-       "title": "NVIDIA Announces Financial Results for Third Quarter Fiscal 2027",
-       "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/"
+       "title": "Nvidia's Q3 revenue grows 103% to $115.8B (StockAnalysis)",
+       "url": "https://stockanalysis.com/news/nvda-q3-fy2027-earnings-beat/"
+      },
+      {
+       "title": "Daily US Equity Opening News, 18 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/daily-us-equity-opening-news-nvda-gains-on-strong-earnings-googs-waymo-suspends-california-freeway-operations"
       }
      ]
     },
     {
-     "headline": "Nvidia shares reversed from a 2.7% pre-open gain to close down 2.9% despite the beat",
-     "why": "A stock that sells off on a beat-and-raise tells you expectations were already priced in, so the AI trade now needs more than good numbers to move higher.",
+     "headline": "Nvidia's guide assumes zero China data-centre revenue after $2.4B of older-generation chips shipped there in the quarter",
+     "why": "China is now upside rather than base case for the largest AI chip supplier, so any export-licence change moves estimates without touching the core guide.",
      "sources": [
       {
-       "title": "Stock market today: Wall Street's fifth straight drop (AP)",
-       "url": "https://www.post-gazette.com/business/personal-finance/stock-market-today-november-18-2026-OPGMZLWL7E36MRNUL7DIGS5LLQ/"
+       "title": "Nvidia's Q3 revenue grows 103% to $115.8B (StockAnalysis)",
+       "url": "https://stockanalysis.com/news/nvda-q3-fy2027-earnings-beat/"
+      }
+     ]
+    },
+    {
+     "headline": "Nvidia's after-hours gain faded to about 1.5% by the end of extended trading, with a reported SEC inquiry into its disclosures",
+     "why": "Strong numbers did not buy a clean re-rating; regulatory overhang and a leadership change are capping the reaction.",
+     "sources": [
+      {
+       "title": "Daily US Equity Opening News, 18 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/daily-us-equity-opening-news-nvda-gains-on-strong-earnings-googs-waymo-suspends-california-freeway-operations"
+      }
+     ]
+    },
+    {
+     "headline": "California bans robotaxis from freeways; Waymo suspends freeway service there",
+     "why": "A state regulator curbing a leading autonomous-driving operator after a construction-zone incident raises the regulatory cost of scaling driverless fleets.",
+     "sources": [
+      {
+       "title": "Daily US Equity Opening News, 18 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/daily-us-equity-opening-news-nvda-gains-on-strong-earnings-googs-waymo-suspends-california-freeway-operations"
       }
      ]
     }
@@ -32,22 +56,32 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin slips to about $63,600 after Fed minutes show the October hold was a close call",
-     "why": "The FOMC held at 3.75%-4% on a 10-2 vote with two members wanting a hike, and December hike odds near 90% keep pressure on a risk asset with no yield.",
+     "headline": "Bitcoin sold off to about $62,000 over the weekend of 14-15 Nov, its lowest since July, then stabilised near $64,000-65,000",
+     "why": "Losing the mid-$60,000s on a risk-off weekend shows crypto is trading as a high-beta rate-sensitive asset, not a hedge.",
      "sources": [
       {
-       "title": "Bitcoin Slips to $63,600 as Fed Minutes Show October Hold Was a 'Close Call'",
-       "url": "https://www.coinreporter.io/2026/11/bitcoin-63600-fed-minutes-october-hold-close-call/"
+       "title": "Daily US Opening News, 16 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---16th-november-2026"
       }
      ]
     },
     {
-     "headline": "Bitcoin fell about 9% in the week to Nov 13, reaching roughly $62,100 on Sunday",
-     "why": "The drop came as the 10-year Treasury yield jumped to about 5.14% from 4.86%, reinforcing that crypto is trading as a rates-sensitive asset right now.",
+     "headline": "Spot bitcoin funds return to outflows; sentiment gauge at 11, 'Extreme Fear'",
+     "why": "Persistent ETF redemptions remove the main marginal buyer of the past two years, so rallies lack institutional support until flows turn.",
      "sources": [
       {
-       "title": "Fundies Cheat Sheet 2026-11-16: Fed minutes, Nvidia, bitcoin",
-       "url": "https://www.babypips.com/analysis/fundies-cheat-sheet-2026-11-16-fed-minutes-nvidia-bitcoin"
+       "title": "Market Quick Take, 18 Nov (Saxo)",
+       "url": "https://www.home.saxo/content/articles/macro/market-quick-take---nvidia-tries-to-stabilize-after-strong-earnings---18-november-2026-18112026"
+      }
+     ]
+    },
+    {
+     "headline": "Ether near $1,800 and bitcoin near $64,400 as of 18 Nov",
+     "why": "These are the reference levels for the week: a close back above the weekend range would be the first sign the selling has run its course.",
+     "sources": [
+      {
+       "title": "Market Quick Take, 18 Nov (Saxo)",
+       "url": "https://www.home.saxo/content/articles/macro/market-quick-take---nvidia-tries-to-stabilize-after-strong-earnings---18-november-2026-18112026"
       }
      ]
     }
@@ -57,26 +91,40 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "October Fed minutes: almost all officials judged further rate rises likely appropriate",
-     "why": "The committee is leaning toward continued tightening, and futures price roughly a 95% chance of a quarter-point hike at the Dec 8-9 meeting.",
+     "headline": "A regional Fed president says several rate increases are likely needed before spring 2027; 2-year yield 4.78%, 10-year just under 5.09%",
+     "why": "Officials signalling a multi-meeting path, not a one-off, means rate-sensitive assets are discounting a longer tightening cycle.",
      "sources": [
       {
-       "title": "Stock Market Today, November 18, 2026",
-       "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
+       "title": "US Equity Open, 17 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/us-equity-open-indices-in-the-red-as-tech-rout-eases-ahead-of-nvda-earnings-after-hours"
       },
       {
-       "title": "Gold plunges below $3,750 as hawkish Fed minutes pressure metals (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-11-18/gold-plunges-below-3750-silver-tumbles-hawkish-fed-minutes-pressure-metals"
+       "title": "Market Quick Take, 18 Nov (Saxo)",
+       "url": "https://www.home.saxo/content/articles/macro/market-quick-take---nvidia-tries-to-stabilize-after-strong-earnings---18-november-2026-18112026"
       }
      ]
     },
     {
-     "headline": "US October PPI came in at 6.5% year over year versus 6.6% expected, but two Fed officials still signalled more hikes",
-     "why": "A marginally cooler print did not change the policy path, and the 10-year yield rose to about 5.14% that day, tightening financial conditions further.",
+     "headline": "Iran claims drone launches at a Bahrain air base and says five tankers hit mines in 48 hours; a two-day peace proposal tied to reopening the strait is reported",
+     "why": "Shipping through the strait is the single biggest swing factor for oil, and the reported sequencing dispute means the supply risk is not resolved.",
      "sources": [
       {
-       "title": "investingLive Americas market news wrap: Hawkish Fed worries ebb after PPI",
-       "url": "https://investinglive.com/news/investinglive-americas-market-news-wrap-hawkish-fed-worries-ebb-after-ppi/"
+       "title": "Daily US Opening News, 16 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---16th-november-2026"
+      },
+      {
+       "title": "Daily US Equity Opening News, 18 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/daily-us-equity-opening-news-nvda-gains-on-strong-earnings-googs-waymo-suspends-california-freeway-operations"
+      }
+     ]
+    },
+    {
+     "headline": "China's October data misses: industrial output 4.8% (expected 5.3%), retail sales 0.4% (expected 0.8%)",
+     "why": "Weak domestic demand in the largest commodity importer weighs on metals and on global growth expectations.",
+     "sources": [
+      {
+       "title": "Daily US Opening News, 16 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---16th-november-2026"
       }
      ]
     }
@@ -86,22 +134,36 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Spot gold falls about 3.3% to near $3,723, its lowest level since September 2025; silver drops about 5%",
-     "why": "Hawkish minutes, a dollar index near its highest since April 2025 and a 10-year yield around 5.07% raise the opportunity cost of holding non-yielding metals.",
+     "headline": "Gold falls 1.9% to about $3,780, a 14-month low, with silver near $45",
+     "why": "Gold is falling alongside rising real yields and a firm dollar, breaking the idea that rate fears and geopolitics automatically support it.",
      "sources": [
       {
-       "title": "Gold plunges below $3,750, silver tumbles as hawkish Fed minutes pressure metals (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-11-18/gold-plunges-below-3750-silver-tumbles-hawkish-fed-minutes-pressure-metals"
+       "title": "Market Quick Take, 18 Nov (Saxo)",
+       "url": "https://www.home.saxo/content/articles/macro/market-quick-take---nvidia-tries-to-stabilize-after-strong-earnings---18-november-2026-18112026"
       }
      ]
     },
     {
-     "headline": "WTI settles at $83.26 (down 3.2%) after a 3.4M-barrel US crude build versus a 58,000-barrel build expected",
-     "why": "A much larger-than-expected inventory build undercuts the supply-risk premium, while Brent at $91.95 still sits well above WTI.",
+     "headline": "January Brent about $92 on 18 Nov, down from a $94-97 range on 16 Nov",
+     "why": "Oil is easing on peace-proposal headlines despite active attacks, so the market is pricing diplomacy over disruption for now.",
      "sources": [
       {
-       "title": "Gold plunges below $3,750, silver tumbles as hawkish Fed minutes pressure metals (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-11-18/gold-plunges-below-3750-silver-tumbles-hawkish-fed-minutes-pressure-metals"
+       "title": "Market Quick Take, 18 Nov (Saxo)",
+       "url": "https://www.home.saxo/content/articles/macro/market-quick-take---nvidia-tries-to-stabilize-after-strong-earnings---18-november-2026-18112026"
+      },
+      {
+       "title": "Daily US Opening News, 16 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---16th-november-2026"
+      }
+     ]
+    },
+    {
+     "headline": "LME copper traded $13,205-13,346 per tonne on 16 Nov, after a four-month low",
+     "why": "Copper sliding with weak China data is a read-through that industrial demand, not just financial conditions, is soft.",
+     "sources": [
+      {
+       "title": "Daily US Opening News, 16 Nov (Newsquawk)",
+       "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---16th-november-2026"
       }
      ]
     }
@@ -111,41 +173,37 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 closes at 7,323.63, its fifth straight decline and longest losing streak since June",
-     "why": "The index was near 7,564 at the Nov 13 close per one weekly recap, so the streak has erased roughly 3% and tests whether buyers defend the recent range.",
+     "headline": "S&P 500 closed at 7,340.53 on 17 Nov, its lowest since July",
+     "why": "A break to multi-month lows on rising yields makes the July area the structure to watch for either a base or a deeper correction.",
      "sources": [
       {
-       "title": "Stock market today: Wall Street's fifth straight drop (AP)",
-       "url": "https://www.post-gazette.com/business/personal-finance/stock-market-today-november-18-2026-OPGMZLWL7E36MRNUL7DIGS5LLQ/"
-      },
-      {
-       "title": "Fundies Cheat Sheet 2026-11-16: Fed minutes, Nvidia, bitcoin",
-       "url": "https://www.babypips.com/analysis/fundies-cheat-sheet-2026-11-16-fed-minutes-nvidia-bitcoin"
+       "title": "Market Quick Take, 18 Nov (Saxo)",
+       "url": "https://www.home.saxo/content/articles/macro/market-quick-take---nvidia-tries-to-stabilize-after-strong-earnings---18-november-2026-18112026"
       }
      ]
     },
     {
-     "headline": "Dow closes down 1.1% at 50,198.17 while the Nasdaq Composite gains to 24,429.88",
-     "why": "The split shows rotation out of cyclicals and energy (the two largest oil majors fell about 4% each) into tech, not a uniform sell-off.",
+     "headline": "Nasdaq 100 reversed from a 2.3% intraday drop to close down 0.7% at 27,001.78; Dow lost 1.6% to 50,759.42",
+     "why": "The tech intraday rebound held the 27,000 area while the Dow broke down harder, a rotation that matters more than the index headline.",
      "sources": [
       {
-       "title": "Stock market today: Wall Street's fifth straight drop (AP)",
-       "url": "https://www.post-gazette.com/business/personal-finance/stock-market-today-november-18-2026-OPGMZLWL7E36MRNUL7DIGS5LLQ/"
+       "title": "Market Quick Take, 18 Nov (Saxo)",
+       "url": "https://www.home.saxo/content/articles/macro/market-quick-take---nvidia-tries-to-stabilize-after-strong-earnings---18-november-2026-18112026"
       }
      ]
     },
     {
-     "headline": "Gold support at $3,719 (the intraday low) then $3,650; resistance at $3,750 then $3,780",
-     "why": "Spot sits right at the first support after a one-day break to a 14-month low, so a close back above $3,750 or a break below $3,719 sets the next move.",
+     "headline": "VIX at 25.46 and the 10-year Treasury yield just under 5.09%",
+     "why": "Elevated volatility with a 5% long yield is the combination that has capped equity rebounds; a yield break lower would be the cleaner all-clear.",
      "sources": [
       {
-       "title": "Gold plunges below $3,750, silver tumbles as hawkish Fed minutes pressure metals (Kitco)",
-       "url": "https://www.kitco.com/news/article/2026-11-18/gold-plunges-below-3750-silver-tumbles-hawkish-fed-minutes-pressure-metals"
+       "title": "Market Quick Take, 18 Nov (Saxo)",
+       "url": "https://www.home.saxo/content/articles/macro/market-quick-take---nvidia-tries-to-stabilize-after-strong-earnings---18-november-2026-18112026"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-11-20T06:22:26Z"
+ "published_utc": "2026-11-21T06:21:57Z"
 }
