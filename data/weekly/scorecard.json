@@ -1179,6 +1179,14 @@
       "scored_utc": "2026-10-31T02:04:11Z",
       "stance": "Wait",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-11-20",
+      "close": 3539.0,
+      "realized_pct": -11.695,
+      "range_hit": false,
+      "width_pct": 15.46,
+      "scored_utc": "2026-11-21T02:00:35Z"
      }
     },
     "silver": {
@@ -1191,6 +1199,14 @@
       "scored_utc": "2026-10-31T02:04:11Z",
       "stance": "Wait",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-11-20",
+      "close": 41.080002,
+      "realized_pct": -23.813,
+      "range_hit": false,
+      "width_pct": 28.04,
+      "scored_utc": "2026-11-21T02:00:35Z"
      }
     },
     "wti": {
@@ -1203,6 +1219,14 @@
       "scored_utc": "2026-10-31T02:04:11Z",
       "stance": "Hold",
       "stance_hit": false
+     },
+     "next_month": {
+      "target_date": "2026-11-20",
+      "close": 83.620003,
+      "realized_pct": -18.996,
+      "range_hit": false,
+      "width_pct": 31.04,
+      "scored_utc": "2026-11-21T02:00:35Z"
      }
     },
     "btc": {
@@ -1215,6 +1239,14 @@
       "scored_utc": "2026-10-31T02:04:11Z",
       "stance": "Flat",
       "stance_hit": false
+     },
+     "next_month": {
+      "target_date": "2026-11-20",
+      "close": 61901.820312,
+      "realized_pct": -23.882,
+      "range_hit": false,
+      "width_pct": 27.78,
+      "scored_utc": "2026-11-21T02:00:35Z"
      }
     },
     "spx": {
@@ -1227,6 +1259,14 @@
       "scored_utc": "2026-10-31T02:04:11Z",
       "stance": "Sell",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-11-20",
+      "close": 6910.390137,
+      "realized_pct": -9.356,
+      "range_hit": false,
+      "width_pct": 7.3,
+      "scored_utc": "2026-11-21T02:00:35Z"
      }
     },
     "ndx": {
@@ -1239,6 +1279,14 @@
       "scored_utc": "2026-10-31T02:04:11Z",
       "stance": "Flat",
       "stance_hit": true
+     },
+     "next_month": {
+      "target_date": "2026-11-20",
+      "close": 25028.982422,
+      "realized_pct": -13.567,
+      "range_hit": false,
+      "width_pct": 14.22,
+      "scored_utc": "2026-11-21T02:00:35Z"
      }
     }
    },
@@ -1409,34 +1457,123 @@
     }
    },
    "params_version": 3
+  },
+  "2026-W46": {
+   "assets": {
+    "gold": {
+     "next_week": {
+      "target_date": "2026-11-20",
+      "close": 3539.0,
+      "realized_pct": -8.967,
+      "range_hit": false,
+      "width_pct": 8.71,
+      "scored_utc": "2026-11-21T02:00:35Z",
+      "stance": "Wait",
+      "stance_hit": true
+     }
+    },
+    "silver": {
+     "next_week": {
+      "target_date": "2026-11-20",
+      "close": 41.080002,
+      "realized_pct": -15.56,
+      "range_hit": false,
+      "width_pct": 16.02,
+      "scored_utc": "2026-11-21T02:00:35Z",
+      "stance": "Wait",
+      "stance_hit": true
+     }
+    },
+    "wti": {
+     "next_week": {
+      "target_date": "2026-11-20",
+      "close": 83.620003,
+      "realized_pct": -5.96,
+      "range_hit": true,
+      "width_pct": 17.81,
+      "scored_utc": "2026-11-21T02:00:35Z",
+      "stance": "Flat",
+      "stance_hit": true
+     }
+    },
+    "btc": {
+     "next_week": {
+      "target_date": "2026-11-20",
+      "close": 61901.820312,
+      "realized_pct": -9.285,
+      "range_hit": false,
+      "width_pct": 14.72,
+      "scored_utc": "2026-11-21T02:00:35Z",
+      "stance": "Wait",
+      "stance_hit": true
+     }
+    },
+    "spx": {
+     "next_week": {
+      "target_date": "2026-11-20",
+      "close": 6910.390137,
+      "realized_pct": -8.613,
+      "range_hit": false,
+      "width_pct": 7.05,
+      "scored_utc": "2026-11-21T02:00:35Z",
+      "stance": "Flat",
+      "stance_hit": false
+     }
+    },
+    "ndx": {
+     "next_week": {
+      "target_date": "2026-11-20",
+      "close": 25028.982422,
+      "realized_pct": -10.431,
+      "range_hit": false,
+      "width_pct": 11.36,
+      "scored_utc": "2026-11-21T02:00:35Z",
+      "stance": "Flat",
+      "stance_hit": false
+     }
+    },
+    "dxy": {
+     "next_week": {
+      "target_date": "2026-11-20",
+      "close": 103.839996,
+      "realized_pct": 0.415,
+      "range_hit": true,
+      "width_pct": 2.0,
+      "scored_utc": "2026-11-21T02:00:35Z",
+      "stance": "Hold",
+      "stance_hit": true
+     }
+    }
+   },
+   "params_version": 3
   }
  },
  "aggregate": {
   "params_version": 3,
   "note": "Headline = parameters v3 only; versions are never pooled (signed 2026-10-05). Each version's own figures: by_version.",
   "weekly": {
-   "weeks": 5,
+   "weeks": 6,
    "directional": {
-    "n": 21,
-    "hit": 9,
-    "rate": 0.4286
+    "n": 25,
+    "hit": 13,
+    "rate": 0.52
    },
    "flat": {
-    "n": 11,
-    "hit": 6,
-    "rate": 0.5455
+    "n": 14,
+    "hit": 7,
+    "rate": 0.5
    },
    "range_1w": {
-    "n": 32,
-    "hit": 19,
-    "coverage": 0.5938
+    "n": 39,
+    "hit": 21,
+    "coverage": 0.5385
    },
-   "avg_width_pct": 9.43,
+   "avg_width_pct": 9.73,
    "best_read": {
-    "week": "2026-W43",
+    "week": "2026-W46",
     "asset": "silver",
     "stance": "Wait",
-    "realized_pct": -8.874
+    "realized_pct": -15.56
    },
    "worst_read": {
     "week": "2026-W44",
@@ -1446,28 +1583,28 @@
    }
   },
   "rolling_12w": {
-   "weeks": 5,
+   "weeks": 6,
    "directional": {
-    "n": 21,
-    "hit": 9,
-    "rate": 0.4286
+    "n": 25,
+    "hit": 13,
+    "rate": 0.52
    },
    "flat": {
-    "n": 11,
-    "hit": 6,
-    "rate": 0.5455
+    "n": 14,
+    "hit": 7,
+    "rate": 0.5
    },
    "range_1w": {
-    "n": 32,
-    "hit": 19,
-    "coverage": 0.5938
+    "n": 39,
+    "hit": 21,
+    "coverage": 0.5385
    },
-   "avg_width_pct": 9.43,
+   "avg_width_pct": 9.73,
    "best_read": {
-    "week": "2026-W43",
+    "week": "2026-W46",
     "asset": "silver",
     "stance": "Wait",
-    "realized_pct": -8.874
+    "realized_pct": -15.56
    },
    "worst_read": {
     "week": "2026-W44",
@@ -1543,28 +1680,28 @@
    },
    "3": {
     "weekly": {
-     "weeks": 5,
+     "weeks": 6,
      "directional": {
-      "n": 21,
-      "hit": 9,
-      "rate": 0.4286
+      "n": 25,
+      "hit": 13,
+      "rate": 0.52
      },
      "flat": {
-      "n": 11,
-      "hit": 6,
-      "rate": 0.5455
+      "n": 14,
+      "hit": 7,
+      "rate": 0.5
      },
      "range_1w": {
-      "n": 32,
-      "hit": 19,
-      "coverage": 0.5938
+      "n": 39,
+      "hit": 21,
+      "coverage": 0.5385
      },
-     "avg_width_pct": 9.43,
+     "avg_width_pct": 9.73,
      "best_read": {
-      "week": "2026-W43",
+      "week": "2026-W46",
       "asset": "silver",
       "stance": "Wait",
-      "realized_pct": -8.874
+      "realized_pct": -15.56
      },
      "worst_read": {
       "week": "2026-W44",
@@ -1574,28 +1711,28 @@
      }
     },
     "rolling_12w": {
-     "weeks": 5,
+     "weeks": 6,
      "directional": {
-      "n": 21,
-      "hit": 9,
-      "rate": 0.4286
+      "n": 25,
+      "hit": 13,
+      "rate": 0.52
      },
      "flat": {
-      "n": 11,
-      "hit": 6,
-      "rate": 0.5455
+      "n": 14,
+      "hit": 7,
+      "rate": 0.5
      },
      "range_1w": {
-      "n": 32,
-      "hit": 19,
-      "coverage": 0.5938
+      "n": 39,
+      "hit": 21,
+      "coverage": 0.5385
      },
-     "avg_width_pct": 9.43,
+     "avg_width_pct": 9.73,
      "best_read": {
-      "week": "2026-W43",
+      "week": "2026-W46",
       "asset": "silver",
       "stance": "Wait",
-      "realized_pct": -8.874
+      "realized_pct": -15.56
      },
      "worst_read": {
       "week": "2026-W44",
@@ -1611,5 +1748,5 @@
    "no_data": 2
   }
  },
- "updated_utc": "2026-11-14T02:03:12Z"
+ "updated_utc": "2026-11-21T02:00:35Z"
 }

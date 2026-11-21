@@ -1,47 +1,47 @@
 {
- "updated_utc": "2026-11-14T02:03:12Z",
+ "updated_utc": "2026-11-21T02:00:35Z",
  "note": "Measures the FROZEN formula's trailing coverage. Never re-fits. Headline = parameters v3 only; versions are never pooled.",
  "params_version": 3,
- "trailing_weeks": 5,
+ "trailing_weeks": 6,
  "per_asset": {
   "btc": {
+   "n": 6,
+   "coverage": 0.6667
+  },
+  "dxy": {
    "n": 5,
    "coverage": 0.8
   },
-  "dxy": {
-   "n": 4,
-   "coverage": 0.75
-  },
   "gold": {
-   "n": 4,
+   "n": 5,
    "coverage": 0.0
   },
   "ndx": {
-   "n": 5,
-   "coverage": 0.6
+   "n": 6,
+   "coverage": 0.5
   },
   "silver": {
-   "n": 5,
-   "coverage": 0.6
+   "n": 6,
+   "coverage": 0.5
   },
   "spx": {
-   "n": 4,
-   "coverage": 0.75
-  },
-  "wti": {
    "n": 5,
    "coverage": 0.6
+  },
+  "wti": {
+   "n": 6,
+   "coverage": 0.6667
   }
  },
  "pooled": {
-  "n": 32,
-  "coverage": 0.5938
+  "n": 39,
+  "coverage": 0.5385
  },
  "band": [
   0.7,
   0.9
  ],
- "flag": "INSUFFICIENT-HISTORY",
+ "flag": "COVERAGE-DRIFT",
  "by_version": {
   "2": {
    "trailing_weeks": 7,
@@ -82,42 +82,43 @@
    "flag": "OK"
   },
   "3": {
-   "trailing_weeks": 5,
+   "trailing_weeks": 6,
    "per_asset": {
     "btc": {
+     "n": 6,
+     "coverage": 0.6667
+    },
+    "dxy": {
      "n": 5,
      "coverage": 0.8
     },
-    "dxy": {
-     "n": 4,
-     "coverage": 0.75
-    },
     "gold": {
-     "n": 4,
+     "n": 5,
      "coverage": 0.0
     },
     "ndx": {
-     "n": 5,
-     "coverage": 0.6
+     "n": 6,
+     "coverage": 0.5
     },
     "silver": {
-     "n": 5,
-     "coverage": 0.6
+     "n": 6,
+     "coverage": 0.5
     },
     "spx": {
-     "n": 4,
-     "coverage": 0.75
-    },
-    "wti": {
      "n": 5,
      "coverage": 0.6
+    },
+    "wti": {
+     "n": 6,
+     "coverage": 0.6667
     }
    },
    "pooled": {
-    "n": 32,
-    "coverage": 0.5938
+    "n": 39,
+    "coverage": 0.5385
    },
-   "flag": "INSUFFICIENT-HISTORY"
+   "flag": "COVERAGE-DRIFT"
   }
- }
+ },
+ "action": "Raise for review. The frozen formula's trailing coverage left its band; re-fitting is NOT the fix and needs his sign-off."
 }
