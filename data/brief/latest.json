@@ -1,32 +1,32 @@
 {
- "date": "2026-11-23",
- "generated_utc": "2026-11-23T06:08:29Z",
+ "date": "2026-11-24",
+ "generated_utc": "2026-11-24T06:08:29Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Nvidia posts $115.8B quarterly revenue (+103% YoY) and guides to $130B, its first report since its CEO resigned",
-     "why": "The beat and a raised FY2028 growth outlook show AI chip demand is still accelerating, while the guide assumes no China data-center sales, so the number is not hostage to export approvals.",
+     "headline": "Nvidia fell 2.9% to $150.96 on Nov 18 despite strong results and a raised growth outlook",
+     "why": "When a beat plus higher guidance still sells off, the market is pricing leadership transition, export-restriction and regulatory risk above the earnings power of the AI-chip leader.",
      "sources": [
       {
-       "title": "Fox Business: Nvidia releases quarterly earnings after CEO resignation",
-       "url": "https://www.foxbusiness.com/markets/nvidia-releases-quarterly-earnings-after-jensen-huangs-resignation-ceo"
+       "title": "Stock Market Today, Nov. 18: Nvidia slips on strong results as succession and China business risks weigh",
+       "url": "https://www.fool.com/coverage/stock-market-today/2026/11/18/stock-market-today-nov-18-nvidia-slips-on-strong-results-as-succession-and-china-business-risks-weigh/"
       }
      ]
     },
     {
-     "headline": "Anthropic prices the largest IPO on record: about $81B raised at $83 a share, roughly a $1.5T valuation",
-     "why": "A record supply of new AI equity landed in the middle of an AI-led selloff, and the stock's opening pop faded the same session, which suggests investors are rationing capital for AI rather than adding to it.",
+     "headline": "Semiconductor index fell 17.1% in the week to Nov 20; Nvidia dropped 14% on Friday after a report of an SEC look at its accounting",
+     "why": "The drop is concentrated in the stock that anchors the whole AI-capex trade, so a confirmed accounting problem would hit index funds and suppliers well beyond one company (the SEC report is relayed second-hand and not independently confirmed here).",
      "sources": [
       {
-       "title": "Forbes: Anthropic IPO live",
-       "url": "https://www.forbes.com/sites/fionariley/2026/11/19/anthropic-ipo-live-nasdaq-futures-jump-2-ahead-of-record-stock-debut/"
+       "title": "US Week 21 Nov 2026: weekend wrap",
+       "url": "https://swingfolio.com/daily/us/2026-11-21/weekend"
       },
       {
-       "title": "Verified Investing: Trading the Close, 11-19-2026",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-19-2026-anthropic-ipo-sparks-tech-selloff-s-p-breaks-support-bitcoin-gold-at-risk"
+       "title": "The Nasdaq-100 Is Now Just 49 Points From a Bear Market",
+       "url": "https://247wallst.com/investing/2026/11/21/the-nasdaq-100-is-now-just-49-points-from-a-bear-market/"
       }
      ]
     }
@@ -36,22 +36,22 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin falls below $60,000 on Nov 20 for the first time since about July, with a low near $57,650",
-     "why": "The break of a five-month floor came alongside the equity selloff and roughly $580M of outflows from US spot ETFs in one day, so crypto is trading as a high-beta risk asset, not a hedge.",
+     "headline": "US spot bitcoin ETFs lost $1.79B last week, the fourth straight week of net outflows",
+     "why": "Four-week outflows of $4.34B show institutional demand, which drove the earlier rally, is now a source of selling pressure.",
      "sources": [
       {
-       "title": "Forbes: Bitcoin plunges below $60,000 as risk-off trading fuels losses",
-       "url": "https://www.forbes.com/sites/digital-assets/2026/11/20/bitcoin-plunges-below-60000-as-risk-off-trading-fuels-widespread-losses/"
+       "title": "Bitcoin ETF outflows hit $1.79 billion",
+       "url": "https://en.cryptonomist.ch/2026/11/23/bitcoin-etf-outflows-highest-june/"
       }
      ]
     },
     {
-     "headline": "Bitcoin daily RSI near 19 as technicians flag a head-and-shoulders measured move toward $37,500",
-     "why": "An RSI that low is deeply oversold and can allow a sharp bounce, but a failure to reclaim the $60,000 region keeps the lower target in play.",
+     "headline": "Bitcoin traded near $62,300 after the Fed minutes, below its 200-week moving average near $68,000",
+     "why": "A long-term average that previously acted as support is now overhead resistance, and a hawkish rate path is the backdrop for it (source is an automated market-analysis page).",
      "sources": [
       {
-       "title": "Verified Investing: Trading the Close, 11-19-2026",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-19-2026-anthropic-ipo-sparks-tech-selloff-s-p-breaks-support-bitcoin-gold-at-risk"
+       "title": "Fed Minutes Reveal Close Call on October Rates as December Hike Looms",
+       "url": "https://finscans.com/news/2026/11/19/fed-minutes-reveal-close-call-on-october-rates-as-december"
       }
      ]
     }
@@ -61,22 +61,26 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "Fed October minutes: nearly all officials see further rate hikes as likely; 10-year Treasury yield holds near 5.07%",
-     "why": "With the hold decided 10-2 (both dissenters wanted a hike) and about 90% odds of a quarter-point hike on Dec 8-9, the policy path is tightening, which is what is pressuring gold, crypto and long-duration tech.",
+     "headline": "Fed minutes: almost all officials see further rate increases as likely; December hike priced near 90%",
+     "why": "With the policy rate at 3.75-4% and tightening still the base case, rates are a headwind for equities and crypto rather than a tailwind.",
      "sources": [
       {
-       "title": "CEO Economy: Fed minutes point to more rate increases",
+       "title": "Fed minutes point to more rate increases as 10-year Treasury yield holds above 5%",
        "url": "https://ceoeconomy.com/article/fed-minutes-treasury-yields-5-percent"
       }
      ]
     },
     {
-     "headline": "A Fed governor says a 50bp December hike \"could be considered\"",
-     "why": "It widens the range of outcomes for the Dec 8-9 meeting beyond the 25bp that markets already price, and the minutes also tied AI-infrastructure demand to inflation and financial-stability risk.",
+     "headline": "10-year Treasury yield eased from about 5.07% on Nov 18 to roughly 4.92-4.95% by Nov 20-23",
+     "why": "A pullback below 5% takes some pressure off valuations, but it came alongside the equity selloff, not from softer rate expectations.",
      "sources": [
       {
-       "title": "KuCoin News: Fed minutes signal hawkish stance",
-       "url": "https://www.kucoin.com/news/flash/fed-minutes-signal-hawkish-stance-official-suggests-50-bp-rate-hike-in-december"
+       "title": "Gold price rallies above $3,600 as AI selloff reshapes Fed outlook",
+       "url": "https://www.kitco.com/news/article/2026-11-23/gold-price-rallies-above-3600-ai-selloff-reshapes-fed-outlook-kitco-am"
+      },
+      {
+       "title": "Gold Rises 2.33% to US$3,609 as Stocks Rally",
+       "url": "https://www.riotimesonline.com/gold-silver-precious-metals-monday-november-23-2026/"
       }
      ]
     }
@@ -86,22 +90,26 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Gold slides to about $3,540 on Nov 20, its lowest since September 2025, down nearly 9% on the week",
-     "why": "Hawkish Fed repricing and a stronger dollar are the stated drivers, and liquidity-driven selling from equities means gold is being sold as a source of cash rather than traded on its own fundamentals.",
+     "headline": "Gold fell about 9% last week, closing Friday at $3,526, then rebounded 2.3% to about $3,609-3,616 on Monday",
+     "why": "Gold fell with equities instead of hedging them, a sign of forced selling and a stronger dollar, so its safe-haven role is not reliable in this stretch.",
      "sources": [
       {
-       "title": "Trading Economics: Gold news",
-       "url": "https://tradingeconomics.com/commodity/gold/news/599634"
+       "title": "Gold price rallies above $3,600 as AI selloff reshapes Fed outlook",
+       "url": "https://www.kitco.com/news/article/2026-11-23/gold-price-rallies-above-3600-ai-selloff-reshapes-fed-outlook-kitco-am"
+      },
+      {
+       "title": "Gold Rises 2.33% to US$3,609 as Stocks Rally",
+       "url": "https://www.riotimesonline.com/gold-silver-precious-metals-monday-november-23-2026/"
       }
      ]
     },
     {
-     "headline": "Silver falls toward $43.21 with support at $39.47; gold watch levels $3,600 then about $3,496",
-     "why": "Both metals are oversold (gold daily RSI about 26), so the support levels, not the trend, decide whether the move is washed out or still extending.",
+     "headline": "Brent crude near $92 on Nov 23, down about 19% from $113.95 a month earlier",
+     "why": "A fall of that size cuts the energy-driven inflation pressure behind the Fed's hawkish stance, but it is still 47% above a year ago.",
      "sources": [
       {
-       "title": "Verified Investing: Trading the Close, 11-19-2026",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-19-2026-anthropic-ipo-sparks-tech-selloff-s-p-breaks-support-bitcoin-gold-at-risk"
+       "title": "Current price of oil as of November 23, 2026",
+       "url": "https://fortune.com/article/price-of-oil-11-23-2026/"
       }
      ]
     }
@@ -111,31 +119,45 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 proxy (SPY) closes near $715.87 on Nov 19, below $718.99 support; next levels $711.90 and about $696",
-     "why": "A close below support turns the former floor into resistance, with $740 as the reclaim zone; the Nasdaq-100 proxy (QQQ) is also below its Nov 5 bearish candle, and a close under $644.44 targets about $625.",
+     "headline": "S&P 500 closed Nov 20 at 6,910.39, down 8.6% on the week and 11.6% below its October record close",
+     "why": "The index is now only 0.95% above its 2025 close, so the year's gains are nearly gone and the next test is whether the 6,900 area holds on a retest.",
      "sources": [
       {
-       "title": "Verified Investing: Trading the Close, 11-19-2026",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-19-2026-anthropic-ipo-sparks-tech-selloff-s-p-breaks-support-bitcoin-gold-at-risk"
+       "title": "The S&P 500 Is Now Below Every Wall Street Year-End Target for 2026",
+       "url": "https://247wallst.com/investing/2026/11/21/the-sp-500-is-now-below-every-wall-street-year-end-target-for-2026/"
+      },
+      {
+       "title": "US Week 21 Nov 2026: weekend wrap",
+       "url": "https://swingfolio.com/daily/us/2026-11-21/weekend"
       }
      ]
     },
     {
-     "headline": "10-year Treasury yield sits just above 5%: support about 5.01%, reference level 5.157%",
-     "why": "A hold above 5% keeps pressure on equity valuations, while a break lower would ease the main headwind cited across assets this week.",
+     "headline": "Nasdaq-100 closed Nov 20 at 25,028.98, just 49 points above the bear-market line of 24,979.58",
+     "why": "A close below that level would confirm a 20% drawdown from the Oct 6 record, which tends to change positioning rules for trend-following funds.",
      "sources": [
       {
-       "title": "Verified Investing: Trading the Close, 11-19-2026",
-       "url": "https://verifiedinvesting.com/blogs/live-show-recap/trading-the-close-market-recap-11-19-2026-anthropic-ipo-sparks-tech-selloff-s-p-breaks-support-bitcoin-gold-at-risk"
+       "title": "The Nasdaq-100 Is Now Just 49 Points From a Bear Market",
+       "url": "https://247wallst.com/investing/2026/11/21/the-nasdaq-100-is-now-just-49-points-from-a-bear-market/"
+      }
+     ]
+    },
+    {
+     "headline": "S&P 500 rebounded 4.7% on Nov 23 to 7,237; VIX fell from 35.9 to 26.6",
+     "why": "A one-day bounce of this size after an 8.6% weekly drop is a volatility reset, not yet a confirmed low, until the index holds above Friday's close.",
+     "sources": [
+      {
+       "title": "Gold Rises 2.33% to US$3,609 as Stocks Rally",
+       "url": "https://www.riotimesonline.com/gold-silver-precious-metals-monday-november-23-2026/"
       },
       {
-       "title": "CEO Economy: Fed minutes point to more rate increases",
-       "url": "https://ceoeconomy.com/article/fed-minutes-treasury-yields-5-percent"
+       "title": "US Week 21 Nov 2026: weekend wrap",
+       "url": "https://swingfolio.com/daily/us/2026-11-21/weekend"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-11-23T06:13:43Z"
+ "published_utc": "2026-11-24T06:18:43Z"
 }
