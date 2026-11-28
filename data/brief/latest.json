@@ -1,56 +1,36 @@
 {
- "date": "2026-11-27",
- "generated_utc": "2026-11-27T06:07:52Z",
+ "date": "2026-11-28",
+ "generated_utc": "2026-11-28T06:08:15Z",
  "lookback_days": 7,
  "sections": [
   {
    "name": "Tech",
    "items": [
     {
-     "headline": "Nvidia's board reinstates its founder as CEO six days after he resigned, and the stock jumps roughly 30%",
-     "why": "A leadership reversal at the largest AI-chip supplier moved about $1 trillion of market value in one session, showing how much AI-sector pricing now hangs on one company's governance.",
+     "headline": "Nvidia's board reinstates its CEO on Nov 23, eleven days after he resigned",
+     "why": "Leadership at the largest AI-chip supplier is back to the pre-resignation status quo, but the reinstatement came with political pressure attached, so the regulatory overhang on the stock is not resolved.",
      "sources": [
       {
-       "title": "AI Tech Archive: AI news today, November 23, 2026",
-       "url": "https://aitecharchive.com/articles/ai-news-today-november-23-2026"
+       "title": "Huang is back at Nvidia. But the fight over who controls chip exports is just beginning. - Atlantic Council",
+       "url": "https://www.atlanticcouncil.org/dispatches/huang-is-back-at-nvidia-but-the-fight-over-who-controls-chip-exports-is-just-beginning/"
       },
       {
-       "title": "AI Frontier Daily, Nov 23, 2026",
-       "url": "https://kellyabbott1.substack.com/p/ai-frontier-daily-2026-11-23"
+       "title": "Democrats call for chip export and AI limits as Huang returns - Roll Call",
+       "url": "https://www.rollcall.com/2026/11/23/democrats-call-for-chip-export-and-ai-limits-as-huang-returns"
       }
      ]
     },
     {
-     "headline": "Semiconductor index falls 7.9% in one session and sits more than 40% below its June 2026 high",
-     "why": "Chip stocks are the leading edge of the AI unwind, and a drawdown this deep in the sector that carried the index higher is what pulled the broader Nasdaq toward bear-market territory this week.",
+     "headline": "Congress lines up chip-export scrutiny: Senate Banking hearing Dec 3, Commerce Secretary invited Dec 10",
+     "why": "A Nov 16 Commerce rule already requires licenses for advanced chips going to overseas data centers serving China-headquartered firms, and Democratic leaders are pushing for tighter limits, so export policy is the live risk for AI-chip revenue into December.",
      "sources": [
       {
-       "title": "Toobit: Crypto market recap, November 24, 2026",
-       "url": "https://www.toobit.com/en-US/news/crypto-market-daily-recap-24-nov-2026"
+       "title": "Democrats call for chip export and AI limits as Huang returns - Roll Call",
+       "url": "https://www.rollcall.com/2026/11/23/democrats-call-for-chip-export-and-ai-limits-as-huang-returns"
       },
       {
-       "title": "FXEmpire: Interest rate forecast, December Fed hike bets support US dollar",
-       "url": "https://www.fxempire.com/forecasts/article/interest-rate-forecast-december-fed-hike-bets-support-us-dollar-1646310"
-      }
-     ]
-    },
-    {
-     "headline": "Amazon reported to be buying the technology behind an AI optimization startup for about $7.5B; terms unconfirmed and the deal has not closed",
-     "why": "If it closes, it is another big-platform purchase of inference-efficiency tech, a sign hyperscalers are spending to cut AI serving costs rather than only buying more chips.",
-     "sources": [
-      {
-       "title": "AI Tech Archive: AI news today, November 23, 2026",
-       "url": "https://aitecharchive.com/articles/ai-news-today-november-23-2026"
-      }
-     ]
-    },
-    {
-     "headline": "Visa opens an invite-only pilot letting AI agents pay from card accounts, with stablecoin payouts",
-     "why": "Card networks are building rails for software agents to transact, which turns agent payments from a demo into a live distribution channel for stablecoins.",
-     "sources": [
-      {
-       "title": "AI Tech Archive: AI news today, November 23, 2026",
-       "url": "https://aitecharchive.com/articles/ai-news-today-november-23-2026"
+       "title": "Huang is back at Nvidia. But the fight over who controls chip exports is just beginning. - Atlantic Council",
+       "url": "https://www.atlanticcouncil.org/dispatches/huang-is-back-at-nvidia-but-the-fight-over-who-controls-chip-exports-is-just-beginning/"
       }
      ]
     }
@@ -60,46 +40,30 @@
    "name": "Crypto",
    "items": [
     {
-     "headline": "Bitcoin trades near $59,500 after a Nov 21 low around $55,100, down about 23% for November and about 53% below its October 2025 peak",
-     "why": "The market is in a deep drawdown with sentiment at an Extreme Fear reading of 13, so the $55,000 area is now the level to watch for whether the November low holds.",
+     "headline": "Bitcoin trades near $60,600 on Nov 26, up about 3% in 24 hours, with more than $5 billion of November spot-ETF outflows",
+     "why": "The bounce is happening against heavy fund selling, which is why one analyst firm called it fragile: price is rising without the ETF demand that drove earlier advances.",
      "sources": [
       {
-       "title": "Toobit: Crypto market recap, November 24, 2026",
-       "url": "https://www.toobit.com/en-US/news/crypto-market-daily-recap-24-nov-2026"
+       "title": "Bitcoin Near $61K: Asia Session Roundup, Nov. 26, 2026 - Coincu",
+       "url": "https://www.coincu.com/market-macro-asia-session-roundup-2026-11-26/"
       },
       {
-       "title": "Fortune: Current price of Bitcoin for November 24, 2026",
-       "url": "https://fortune.com/article/price-of-bitcoin-11-24-2026/"
+       "title": "Bitcoin Trades at $60,621 in Nov. 26 Market Observation - TokenPost",
+       "url": "https://www.tokenpost.com/news/investing/62782"
+      },
+      {
+       "title": "Crypto market daily recap - November 26, 2026 - Toobit",
+       "url": "https://www.toobit.com/en-US/news/crypto-market-daily-recap-november-26-2026"
       }
      ]
     },
     {
-     "headline": "US spot Bitcoin ETFs post a fifth straight outflow session; November outflows of about $4.71B are the largest month on record",
-     "why": "Persistent ETF redemptions remove the steady institutional bid that supported the previous leg up, which is why rallies have been sold.",
+     "headline": "About $7 billion of bitcoin options expire on Deribit on Nov 27, put/call open-interest ratio 0.89",
+     "why": "Large expiries can pin or jolt spot price around the settlement time; a ratio below 1 means calls slightly outnumber puts, so the positioning is not a one-sided bearish bet.",
      "sources": [
       {
-       "title": "Toobit: Crypto market recap, November 24, 2026",
-       "url": "https://www.toobit.com/en-US/news/crypto-market-daily-recap-24-nov-2026"
-      }
-     ]
-    },
-    {
-     "headline": "About $844M of crypto futures liquidated in 24 hours, split roughly evenly between longs and shorts",
-     "why": "Even long and short liquidations mean leverage was squeezed in both directions, a choppy forced-selling pattern rather than a one-way flush.",
-     "sources": [
-      {
-       "title": "Toobit: Crypto market recap, November 24, 2026",
-       "url": "https://www.toobit.com/en-US/news/crypto-market-daily-recap-24-nov-2026"
-      }
-     ]
-    },
-    {
-     "headline": "CFTC staff guidance lets exchanges count BTC, ETH and qualifying stablecoins toward operating financial resources, with haircuts of 20% and 2%",
-     "why": "It gives regulated venues a rule for holding crypto as capital, a structural plus for market infrastructure even as prices fall.",
-     "sources": [
-      {
-       "title": "Toobit: Crypto market recap, November 24, 2026",
-       "url": "https://www.toobit.com/en-US/news/crypto-market-daily-recap-24-nov-2026"
+       "title": "Crypto market daily recap - November 26, 2026 - Toobit",
+       "url": "https://www.toobit.com/en-US/news/crypto-market-daily-recap-november-26-2026"
       }
      ]
     }
@@ -109,54 +73,26 @@
    "name": "Macro & Geopolitics",
    "items": [
     {
-     "headline": "Markets price a near-certain 25bp Fed hike at the Dec 8-9 meeting after October core PCE ran 3.3% year on year against 3.2% expected",
-     "why": "An inflation print above consensus removes any cut narrative and keeps rate-hike pressure on equity valuations and the long end of the curve.",
+     "headline": "October core PCE hits 3.3% a year, above the 3.2% expected; Q3 GDP revised up to 4.3%; December Fed hike priced near 94%",
+     "why": "Hotter inflation plus stronger growth removes the argument for holding at the Dec 8-9 meeting, so markets now treat a quarter-point hike as the base case rather than a risk.",
      "sources": [
       {
-       "title": "Closing Look, Wednesday, November 25, 2026 (CappNotes)",
-       "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
+       "title": "US Core PCE Inflation Hits 3.3% as Fed Rate Hike Odds Reach 94.4% - FinScans",
+       "url": "https://finscans.com/news/2026/11/25/us-core-pce-inflation-hits-33-as-fed-rate-hike-odds-reach"
       },
       {
-       "title": "TLDR Daily News: Treasury yields hold steady as markets await PCE report",
-       "url": "https://tldrdailynews.com/news/business/economy/treasury-yields-hold-steady-as-markets-await-wednesday-pce-inflation-report-tzbpk5xso"
+       "title": "Market Review: November 27, 2026 - Investrade",
+       "url": "https://investrade.com/market-review-november-27-2026/"
       }
      ]
     },
     {
-     "headline": "10-year Treasury yield holds near 4.9% and the 30-year above 5.2%; the dollar index sits near its highest since April 2025",
-     "why": "High long-end yields and a strong dollar tighten financial conditions at the same moment the Fed is preparing to hike.",
+     "headline": "US 10-year Treasury yield rises about 8 basis points to roughly 4.93% on Nov 27",
+     "why": "Yields climbing into a likely hike keeps pressure on long-duration assets such as growth stocks and gold, even on a day equities rallied.",
      "sources": [
       {
-       "title": "FXEmpire: Interest rate forecast, December Fed hike bets support US dollar",
-       "url": "https://www.fxempire.com/forecasts/article/interest-rate-forecast-december-fed-hike-bets-support-us-dollar-1646310"
-      },
-      {
-       "title": "Closing Look, Wednesday, November 25, 2026 (CappNotes)",
-       "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
-      }
-     ]
-    },
-    {
-     "headline": "US trade office proposes Section 301 tariffs on 14 trading partners, including up to 20% on China",
-     "why": "A fresh tariff round adds to inflation pressure just as the Fed is tightening and fed into the Nov 25 equity sell-off.",
-     "sources": [
-      {
-       "title": "Closing Look, Wednesday, November 25, 2026 (CappNotes)",
-       "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
-      }
-     ]
-    },
-    {
-     "headline": "Reported sea-mine strikes on two tankers near the Strait of Hormuz and a Houthi-claimed attack on a Saudi refinery revive Gulf supply fears",
-     "why": "Attacks on shipping and refining in the Gulf feed directly into oil prices and, through fuel costs, into the inflation data the Fed is reacting to.",
-     "sources": [
-      {
-       "title": "Nation Thailand: Brent gains 2.07% on 26 Nov as OPEC+ weighs 2027 quotas",
-       "url": "https://www.nationthailand.com/news/world/40073981"
-      },
-      {
-       "title": "GSM Global News: Brent settles at $96.57 as Houthi attacks and Hormuz mine reports stoke supply fears",
-       "url": "https://gsmglobalnews.com/article/d20261126-brent96571.html"
+       "title": "Stocks Surge in Holiday-Shortened Session: Dow Gains 592 Points, Nasdaq Jumps 2.3%",
+       "url": "https://political.org/2026/11/27/stocks-surge-in-holiday-shortened-session-dow-gains-592-points-nasdaq-jumps-2-3/"
       }
      ]
     }
@@ -166,46 +102,30 @@
    "name": "Commodities",
    "items": [
     {
-     "headline": "Brent settles at $96.57 on Nov 26, a third straight gain and about 8% above Monday's $89.37 settlement",
-     "why": "A sharp three-day rally on Gulf disruption risk, with WTI near $84.84, puts crude back in focus as an inflation input.",
+     "headline": "Gold rises 1.94% to about $3,637 an ounce on Nov 27, still roughly a third below its Jan 28 high near $5,400",
+     "why": "The bounce is small against the drawdown, so gold has not yet recovered its role as the hedge it was earlier this year while rate-hike odds stay high.",
      "sources": [
       {
-       "title": "GSM Global News: Brent settles at $96.57 as Houthi attacks and Hormuz mine reports stoke supply fears",
-       "url": "https://gsmglobalnews.com/article/d20261126-brent96571.html"
+       "title": "Gold Rises 1.94% to US$3,637 as Silver Slips - Rio Times",
+       "url": "https://www.riotimesonline.com/gold-silver-precious-metals-friday-november-27-2026/"
       },
       {
-       "title": "Nation Thailand: Brent gains 2.07% on 26 Nov as OPEC+ weighs 2027 quotas",
-       "url": "https://www.nationthailand.com/news/world/40073981"
+       "title": "U.S. Stock Market Today, November 27, 2026: Tech Rebounds in Shortened Black Friday Session",
+       "url": "https://eurasiabusinessnews.com/2026/11/27/u-s-stock-market-today-november-27-2026-tech-rebounds-in-shortened-black-friday-session/"
       }
      ]
     },
     {
-     "headline": "OPEC+ meets Nov 29 and is expected to hold output targets unchanged at least through Q1 2027; one forecaster sees a 2027 surplus near 5M barrels a day",
-     "why": "A rollover keeps supply policy on hold while the surplus forecast caps how far a disruption-driven rally can run if the Gulf calms.",
+     "headline": "WTI crude falls 1.7% to $82.69 on Nov 27; Brent quoted near $96.60 intraday",
+     "why": "Oil is still elevated, which keeps inflation pressure alive for the Fed, though the one-day drop shows the price is not moving in a straight line.",
      "sources": [
       {
-       "title": "Nation Thailand: Brent gains 2.07% on 26 Nov as OPEC+ weighs 2027 quotas",
-       "url": "https://www.nationthailand.com/news/world/40073981"
-      }
-     ]
-    },
-    {
-     "headline": "Gold dips below $3,500 intraday for the first time since August 2025, then settles near $3,535 on Nov 25",
-     "why": "Gold is falling alongside risk assets as hike bets lift real yields, so it is not acting as the haven in this sell-off.",
-     "sources": [
+       "title": "Stocks Surge in Holiday-Shortened Session: Dow Gains 592 Points, Nasdaq Jumps 2.3%",
+       "url": "https://political.org/2026/11/27/stocks-surge-in-holiday-shortened-session-dow-gains-592-points-nasdaq-jumps-2-3/"
+      },
       {
-       "title": "Closing Look, Wednesday, November 25, 2026 (CappNotes)",
-       "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
-      }
-     ]
-    },
-    {
-     "headline": "US commercial crude stocks rise 1.1M barrels to 418.9M in the week to Nov 20, less than the 1.5M expected",
-     "why": "A smaller-than-expected build is a modest support for prices on top of the geopolitical premium.",
-     "sources": [
-      {
-       "title": "Nation Thailand: Brent gains 2.07% on 26 Nov as OPEC+ weighs 2027 quotas",
-       "url": "https://www.nationthailand.com/news/world/40073981"
+       "title": "U.S. Stock Market Today, November 27, 2026: Tech Rebounds in Shortened Black Friday Session",
+       "url": "https://eurasiabusinessnews.com/2026/11/27/u-s-stock-market-today-november-27-2026-tech-rebounds-in-shortened-black-friday-session/"
       }
      ]
     }
@@ -215,59 +135,35 @@
    "name": "Market TA",
    "items": [
     {
-     "headline": "S&P 500 closes at 7,182.78 on Nov 25 after falling as much as 3.2% intraday; the 7,000 level held",
-     "why": "A full reversal from a test of the psychological 7,000 line shows buyers defending it, so a close below 7,000 would be the structural break.",
+     "headline": "S&P 500 closes the holiday-shortened session at 7,297 (+1.60%); Nasdaq Composite 24,129 (+2.31%); Dow 50,775 (+1.18%)",
+     "why": "The index finished well above its 7,263 level at the open, so buyers held and extended the gain through the session, but it was a half-day on thin volume and one session does not make a trend.",
      "sources": [
       {
-       "title": "Closing Look, Wednesday, November 25, 2026 (CappNotes)",
-       "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
+       "title": "Market Review: November 27, 2026 - Investrade",
+       "url": "https://investrade.com/market-review-november-27-2026/"
       },
       {
-       "title": "Motley Fool: Stock Market Midday, Nov. 25",
-       "url": "https://www.fool.com/coverage/stock-market-today/2026/11/25/stock-market-midday-nov-25-nasdaq-plunges-4-as-ai-sell-off-deepens-and-inflation-remains-stubborn/"
+       "title": "U.S. Stock Market Today, November 27, 2026: Tech Rebounds in Shortened Black Friday Session",
+       "url": "https://eurasiabusinessnews.com/2026/11/27/u-s-stock-market-today-november-27-2026-tech-rebounds-in-shortened-black-friday-session/"
       }
      ]
     },
     {
-     "headline": "Dow recovers a 1,100-point intraday loss to close up 0.33% at 50,182.95",
-     "why": "A late-day recovery of that size on a day the Nasdaq fell as much as 4.6% marks a capitulation-style low, though a single session is not a trend change.",
+     "headline": "Breadth is wide: Russell 2000 +1.71% to 2,750, and ten of 11 S&P sectors were up at midday",
+     "why": "A rally led by small caps and nearly every sector is broader than a tech-only bounce, which makes it more durable than the headline index move alone suggests.",
      "sources": [
       {
-       "title": "Motley Fool: Stock Market Today, Nov. 25, Dow erases 1,100-point loss",
-       "url": "https://www.fool.com/coverage/stock-market-today/2026/11/25/stock-market-today-nov-25-dow-erases-1-100-point-loss-as-wall-street-stages-dramatic-late-day-comeback/"
+       "title": "Market Review: November 27, 2026 - Investrade",
+       "url": "https://investrade.com/market-review-november-27-2026/"
       },
       {
-       "title": "Closing Look, Wednesday, November 25, 2026 (CappNotes)",
-       "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
-      }
-     ]
-    },
-    {
-     "headline": "Nasdaq Composite closes at 23,585.80 after an intraday drop near 4.6%, within about 3% of bear-market territory at the lows",
-     "why": "Tech remains the weak leg, with the index close to the 20% drawdown line while small and mid caps and equal-weight outperformed.",
-     "sources": [
-      {
-       "title": "Closing Look, Wednesday, November 25, 2026 (CappNotes)",
-       "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
-      },
-      {
-       "title": "Motley Fool: Stock Market Midday, Nov. 25",
-       "url": "https://www.fool.com/coverage/stock-market-today/2026/11/25/stock-market-midday-nov-25-nasdaq-plunges-4-as-ai-sell-off-deepens-and-inflation-remains-stubborn/"
-      }
-     ]
-    },
-    {
-     "headline": "VIX closes at 28.29 after topping 30 in the morning; breadth is positive with 370 S&P 500 advancers to 128 decliners",
-     "why": "Rising fear alongside broad-based gains outside tech points to rotation rather than a market-wide exit.",
-     "sources": [
-      {
-       "title": "Closing Look, Wednesday, November 25, 2026 (CappNotes)",
-       "url": "https://cappnotes.substack.com/p/closing-look-wednesday-november-25"
+       "title": "US Market Wrap 27 November: Nasdaq 100 Closes Shortened Session Up 2.61%",
+       "url": "https://edgeconsultancykw.com/us-market-wrap-27-november-2026/"
       }
      ]
     }
    ]
   }
  ],
- "published_utc": "2026-11-27T06:13:49Z"
+ "published_utc": "2026-11-28T06:09:16Z"
 }
