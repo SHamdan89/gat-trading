@@ -1,16 +1,16 @@
 {
  "lane": "moneyflow",
- "run_utc": "2026-11-28T00:01:26Z",
- "date": "2026-11-25",
+ "run_utc": "2026-11-28T01:01:13Z",
+ "date": "2026-11-27",
  "status": "ok",
- "note": "not_a_trading_day",
+ "note": null,
  "signals": {
   "etf_flow": "ok",
   "futures_positioning": "ok",
   "options_hedging": "ok",
   "cross_asset": "ok"
  },
- "window_days": 70,
+ "window_days": 72,
  "warming_up": false,
  "served_week": "2026-W47",
  "served_from": "2026-11-20"
