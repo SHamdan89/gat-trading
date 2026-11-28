@@ -1,11 +1,11 @@
 {
  "schema": 1,
- "run_utc": "2026-11-28T09:01:51Z",
- "fetch_utc": "2026-11-28T09:01:50Z",
- "payload_sha256": "0757be4c9442cfc4ef64ef60c16cb1f1ce43bca8baefd92a42138cb2835475ca",
+ "run_utc": "2026-11-28T10:00:53Z",
+ "fetch_utc": "2026-11-28T10:00:52Z",
+ "payload_sha256": "ae3bac36feb541b5d28792c6bd20a3fb3c5c6f6f5da651f97371bf49297cfe11",
  "upstream": {
   "coingecko": {
-   "stamp": "2026-11-28T08:59:56Z",
+   "stamp": "2026-11-28T09:59:56Z",
    "observations": 9,
    "unparsed": 0,
    "expected_live": true
@@ -17,77 +17,22 @@
    "expected_live": false
   },
   "gold-api": {
-   "stamp": "2026-11-28T08:59:53Z",
+   "stamp": "2026-11-28T09:59:53Z",
    "observations": 1,
    "unparsed": 0,
    "expected_live": true
   },
   "yahoo": {
-   "stamp": "2026-11-28T09:00:53Z",
-   "observations": 29,
+   "stamp": "2026-11-28T10:00:39Z",
+   "observations": 38,
    "unparsed": 0,
    "expected_live": true
   }
  },
  "assets": 49,
- "feed_errors": 9,
+ "feed_errors": 0,
  "pull_rc": 0,
- "status": "ALARM",
- "alarms": [
-  {
-   "alarm": "row_withheld",
-   "asset": "bp",
-   "last_good_utc": "2026-11-28T06:01:25Z",
-   "detail": "bp is published as a dash - no fresh price this run (BP (BP): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 51] Network is unreachable>)); last good 2026-11-28T06:01:25Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "shel",
-   "last_good_utc": "2026-11-28T06:01:25Z",
-   "detail": "shel is published as a dash - no fresh price this run (Shell (SHEL): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 51] Network is unreachable>)); last good 2026-11-28T06:01:25Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "tte",
-   "last_good_utc": "2026-11-28T06:01:25Z",
-   "detail": "tte is published as a dash - no fresh price this run (TotalEnergies (TTE): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 51] Network is unreachable>)); last good 2026-11-28T06:01:25Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "xom",
-   "last_good_utc": "2026-11-28T06:01:25Z",
-   "detail": "xom is published as a dash - no fresh price this run (ExxonMobil (XOM): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 51] Network is unreachable>)); last good 2026-11-28T06:01:25Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "cvx",
-   "last_good_utc": "2026-11-28T06:01:25Z",
-   "detail": "cvx is published as a dash - no fresh price this run (Chevron (CVX): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 51] Network is unreachable>)); last good 2026-11-28T06:01:25Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "slb",
-   "last_good_utc": "2026-11-28T06:01:25Z",
-   "detail": "slb is published as a dash - no fresh price this run (SLB (SLB): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 51] Network is unreachable>)); last good 2026-11-28T06:01:25Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "hal",
-   "last_good_utc": "2026-11-28T06:01:25Z",
-   "detail": "hal is published as a dash - no fresh price this run (Halliburton (HAL): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 65] No route to host>)); last good 2026-11-28T06:01:25Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "wfrd",
-   "last_good_utc": "2026-11-28T06:01:25Z",
-   "detail": "wfrd is published as a dash - no fresh price this run (Weatherford (WFRD): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 65] No route to host>)); last good 2026-11-28T06:01:25Z"
-  },
-  {
-   "alarm": "row_withheld",
-   "asset": "bkr",
-   "last_good_utc": "2026-11-28T06:01:25Z",
-   "detail": "bkr is published as a dash - no fresh price this run (Baker Hughes (BKR): GET failed after 3 tries: query1.finance.yahoo.com (<urlopen error [Errno 65] No route to host>)); last good 2026-11-28T06:01:25Z"
-  }
- ],
+ "status": "ok",
+ "alarms": [],
  "note": "Emitted by every run, including failed ones. status ok means this run saw the feed advance; ALARM means it did not, and the prices on the page may be older than they look."
 }
